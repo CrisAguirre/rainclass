@@ -1,4 +1,4 @@
-﻿.lab-content {
+.lab-content {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -640,24 +640,27 @@
   opacity: 0.7;
 }
 
-/* AR Viewport (Fullscreen Camera) */
+/* AR Viewport (Fullscreen Camera UI Overlay) */
 .ar-viewport {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  min-height: 500px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999; /* On top of video and canvas */
+  background: transparent;
+  pointer-events: none; /* Let touches pass through to A-Frame if needed */
+}
+
+/* Fix AR.js video and canvas overflow globally */
+::ng-deep body.ar-active {
+  overflow: hidden !important;
+  width: 100vw !important;
+  height: 100vh !important;
 }
 
 .ar-scene-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  display: none; /* No longer needed as container, AR.js handles body append natively */
 }
 
 .ar-controls-overlay {
@@ -881,10 +884,6 @@
 @media (max-width: 768px) {
   .ar-markers-grid {
     grid-template-columns: 1fr;
-  }
-  .ar-viewport {
-    height: 70vh;
-    min-height: 400px;
   }
   .ar-start-btn {
     padding: 14px 30px !important;

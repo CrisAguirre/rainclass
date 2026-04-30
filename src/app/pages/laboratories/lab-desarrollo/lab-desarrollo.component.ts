@@ -190,10 +190,40 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       this.arActive = true;
       this.arLoading = false;
 
-      // Build the AR scene after Angular renders the container
+      // Build the AR scene
       setTimeout(() => {
         this.buildARScene();
         this.setupZoomControls();
+        document.body.classList.add('ar-active');
+
+        // Robust fix: Force AR.js video and canvas to be fullscreen overlays
+        const fixARjsVideo = setInterval(() => {
+          const video = document.querySelector('video');
+          if (video) {
+            // Force the video to sit on top of the app, but behind our UI overlay
+            video.style.setProperty('z-index', '9997', 'important');
+            video.style.setProperty('position', 'fixed', 'important');
+            video.style.setProperty('top', '0', 'important');
+            video.style.setProperty('left', '0', 'important');
+            video.style.setProperty('min-width', '100vw', 'important');
+            video.style.setProperty('min-height', '100vh', 'important');
+            video.style.setProperty('object-fit', 'cover', 'important');
+          }
+          
+          const canvas = document.querySelector('.a-canvas') as HTMLElement;
+          if (canvas) {
+            canvas.style.setProperty('z-index', '9998', 'important');
+            canvas.style.setProperty('position', 'fixed', 'important');
+          }
+
+          if (video && canvas) {
+            clearInterval(fixARjsVideo);
+          }
+        }, 500);
+        
+        // Safety clear after 10s
+        setTimeout(() => clearInterval(fixARjsVideo), 10000);
+
       }, 100);
 
     } catch (err: any) {
@@ -218,12 +248,19 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       this.arSceneElement = null;
     }
 
-    // Also remove any leftover A-Frame elements
+    // Also remove any leftover A-Frame elements or videos in body
     const leftoverScene = document.querySelector('a-scene');
     if (leftoverScene) {
       leftoverScene.remove();
     }
+    const strayVideo = document.querySelector('video');
+    if (strayVideo) {
+      const stream = strayVideo.srcObject as MediaStream;
+      if (stream) stream.getTracks().forEach(t => t.stop());
+      strayVideo.remove();
+    }
 
+    document.body.classList.remove('ar-active');
     this.arActive = false;
     this.arScale = 1.0;
   }
@@ -234,15 +271,17 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
 
     // Create the A-Frame AR scene
     const scene = document.createElement('a-scene');
-    scene.setAttribute('embedded', '');
     scene.setAttribute('arjs', 'sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;');
-    scene.setAttribute('renderer', 'logarithmicDepthBuffer: true; precision: medium;');
+    scene.setAttribute('renderer', 'logarithmicDepthBuffer: true; precision: medium; alpha: true;');
     scene.setAttribute('vr-mode-ui', 'enabled: false');
-    scene.style.position = 'absolute';
-    scene.style.top = '0';
-    scene.style.left = '0';
-    scene.style.width = '100%';
-    scene.style.height = '100%';
+    
+    // Force scene to be a fixed fullscreen overlay
+    scene.style.setProperty('position', 'fixed', 'important');
+    scene.style.setProperty('top', '0', 'important');
+    scene.style.setProperty('left', '0', 'important');
+    scene.style.setProperty('width', '100vw', 'important');
+    scene.style.setProperty('height', '100vh', 'important');
+    scene.style.setProperty('z-index', '9998', 'important');
 
     // Create markers for each model
     this.models.forEach(model => {
