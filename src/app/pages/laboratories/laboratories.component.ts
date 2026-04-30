@@ -41,6 +41,13 @@ export class LaboratoriesComponent {
       description: 'Escanea patrones QR con tu cámara y genera modelos 3D interactivos por asignatura.',
       link: null,
       icon: 'science'
+    },
+    {
+      id: 6,
+      title: 'Modelo con Geoposición',
+      description: 'Ancla modelos 3D a marcadores AR físicos manteniendo posición, ejes y nivelación en tiempo real.',
+      link: null,
+      icon: 'my_location'
     }
   ];
 }

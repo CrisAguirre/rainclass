@@ -913,6 +913,229 @@ export class LabEvaluacionComponent implements OnInit {
     }
   ];
 
+  geoposicionQuestions: Question[] = [
+    {
+      id: 1,
+      text: '¿Qué diferencia fundamental tiene la RA basada en marcadores respecto a la lectura simple de QR?',
+      options: [
+        'Requiere internet más rápido',
+        'El modelo 3D se ancla espacialmente al marcador manteniendo posición y rotación en tiempo real',
+        'Solo funciona con gafas VR',
+        'Genera modelos más coloridos'
+      ],
+      correct: 1
+    },
+    {
+      id: 2,
+      text: '¿Qué son los "6 grados de libertad" (6DoF) en el contexto de la RA?',
+      options: [
+        'Seis tipos de marcadores diferentes',
+        'Seis colores posibles para el modelo 3D',
+        '3 ejes de traslación (X,Y,Z) + 3 ejes de rotación (pitch, yaw, roll)',
+        'Seis niveles de dificultad'
+      ],
+      correct: 2
+    },
+    {
+      id: 3,
+      text: '¿Qué biblioteca JavaScript de código abierto se puede usar para crear experiencias WebAR con marcadores?',
+      options: [
+        'jQuery 3D',
+        'AR.js',
+        'Bootstrap AR',
+        'React Native VR'
+      ],
+      correct: 1
+    },
+    {
+      id: 4,
+      text: '¿Qué es una "matriz de transformación" en la RA basada en marcadores?',
+      options: [
+        'Una hoja de cálculo con datos del estudiante',
+        'Un filtro de color para la cámara',
+        'Una matriz 4x4 que contiene la posición, rotación y escala del marcador en el espacio 3D',
+        'Un código QR especial'
+      ],
+      correct: 2
+    },
+    {
+      id: 5,
+      text: '¿Qué es un "marcador fiducial"?',
+      options: [
+        'Un dispositivo electrónico con sensores',
+        'Un patrón visual de alto contraste que los algoritmos de visión por computadora reconocen fácilmente',
+        'Una marca de agua invisible',
+        'Un código de barras comercial'
+      ],
+      correct: 1
+    },
+    {
+      id: 6,
+      text: '¿Qué framework declarativo se integra con AR.js para construir escenas 3D usando HTML?',
+      options: [
+        'Angular Material',
+        'A-Frame',
+        'Three.js puro',
+        'WebGL directo'
+      ],
+      correct: 1
+    },
+    {
+      id: 7,
+      text: '¿Qué requisito del navegador es necesario para acceder a la cámara en una experiencia WebAR?',
+      options: [
+        'Solo funciona en Google Chrome',
+        'Requiere una extensión especial',
+        'El sitio debe servirse por HTTPS',
+        'Necesita Java instalado'
+      ],
+      correct: 2
+    },
+    {
+      id: 8,
+      text: '¿Qué proceso realiza el sistema de RA 60 veces por segundo?',
+      options: [
+        'Envía datos al servidor',
+        'Toma una foto del usuario',
+        'Estima la pose (posición + orientación) del marcador en el espacio',
+        'Descarga un nuevo modelo 3D'
+      ],
+      correct: 2
+    },
+    {
+      id: 9,
+      text: '¿Cuál es una ventaja educativa clave del anclaje AR respecto a un visor 3D convencional?',
+      options: [
+        'Los gráficos son más bonitos',
+        'El modelo vive en el espacio físico del estudiante, creando una experiencia cognitiva más profunda',
+        'Se pueden ver más modelos a la vez',
+        'No requiere ningún dispositivo'
+      ],
+      correct: 1
+    },
+    {
+      id: 10,
+      text: '¿Qué sucede con el modelo 3D cuando el usuario inclina el marcador físico?',
+      options: [
+        'El modelo desaparece',
+        'El modelo se inclina proporcionalmente, manteniendo la correspondencia espacial',
+        'El modelo se agranda',
+        'Nada, el modelo permanece estático'
+      ],
+      correct: 1
+    },
+    {
+      id: 11,
+      text: '¿Qué herramienta web gratuita permite crear marcadores AR personalizados?',
+      options: [
+        'Photoshop Express',
+        'El generador de marcadores de AR.js',
+        'Microsoft Paint',
+        'Google Slides'
+      ],
+      correct: 1
+    },
+    {
+      id: 12,
+      text: '¿En qué asignatura se podría usar un marcador AR para mostrar relieve topográfico sobre el pupitre?',
+      options: [
+        'Educación Física',
+        'Música',
+        'Geografía',
+        'Artes Plásticas'
+      ],
+      correct: 2
+    },
+    {
+      id: 13,
+      text: '¿Qué tipo de modelo 3D se puede visualizar con AR.js?',
+      options: [
+        'Solo cubos y esferas',
+        'Solo archivos PDF',
+        'Modelos en formato GLTF/GLB, OBJ y primitivas 3D',
+        'Solo imágenes 2D'
+      ],
+      correct: 2
+    },
+    {
+      id: 14,
+      text: '¿Qué estrategia pedagógica consiste en distribuir marcadores AR por el aula con diferentes contenidos?',
+      options: [
+        'Flipped Classroom',
+        'Laboratorio Virtual distribuido / Mapa Interactivo del Aula',
+        'Lectura en voz alta',
+        'Debate socrático'
+      ],
+      correct: 1
+    },
+    {
+      id: 15,
+      text: '¿Qué ventaja tiene AR.js respecto a aplicaciones nativas de RA?',
+      options: [
+        'Mejor calidad gráfica',
+        'No requiere instalación de aplicaciones; funciona directamente en el navegador',
+        'Funciona sin cámara',
+        'Solo funciona offline'
+      ],
+      correct: 1
+    },
+    {
+      id: 16,
+      text: '¿Qué marcador clásico viene preconfigurado en AR.js para pruebas rápidas?',
+      options: [
+        'El marcador QR',
+        'El marcador Hiro',
+        'El marcador GPS',
+        'El marcador Bluetooth'
+      ],
+      correct: 1
+    },
+    {
+      id: 17,
+      text: '¿Cómo puede un docente de anatomía usar marcadores AR?',
+      options: [
+        'Imprimiendo un marcador que, al escanearse, muestre un esqueleto 3D anclado sobre la mesa',
+        'Enviando un PDF por correo',
+        'Dibujando en la pizarra',
+        'Reproduciendo un video de YouTube'
+      ],
+      correct: 0
+    },
+    {
+      id: 18,
+      text: '¿Qué propiedad del marcador físico NO afecta la pose del modelo 3D?',
+      options: [
+        'Su rotación respecto a la cámara',
+        'Su distancia a la cámara',
+        'El color del papel donde está impreso',
+        'Su inclinación respecto al plano horizontal'
+      ],
+      correct: 2
+    },
+    {
+      id: 19,
+      text: '¿Por qué los marcadores AR deben tener alto contraste (blanco y negro)?',
+      options: [
+        'Porque los colores gastan más batería',
+        'Porque el algoritmo de detección necesita bordes definidos para calcular la pose con precisión',
+        'Por estética',
+        'Porque las impresoras solo imprimen en blanco y negro'
+      ],
+      correct: 1
+    },
+    {
+      id: 20,
+      text: '¿Cuál es una conclusión central del laboratorio de Modelo con Geoposición?',
+      options: [
+        'La RA solo es útil para juegos',
+        'Se necesitan equipos muy costosos para implementar RA en el aula',
+        'Con herramientas open source como AR.js, cualquier docente puede crear experiencias AR ancladas sin costo',
+        'Los marcadores AR son obsoletos'
+      ],
+      correct: 2
+    }
+  ];
+
   constructor(private route: ActivatedRoute, private evalService: EvaluationService) {}
 
   ngOnInit(): void {
@@ -932,6 +1155,7 @@ export class LabEvaluacionComponent implements OnInit {
     if (this.labId === '2') return this.quiverQuestions;
     if (this.labId === '3') return this.actionboundQuestions;
     if (this.labId === '4') return this.metaversoQuestions;
+    if (this.labId === '6') return this.geoposicionQuestions;
     return [];
   }
 
@@ -956,7 +1180,7 @@ export class LabEvaluacionComponent implements OnInit {
     let user = userStr ? JSON.parse(userStr) : { userId: 'anon', username: 'Docente Anónimo' };
 
     // Send results to backend
-    const labNames: { [key: string]: string } = { '1': 'Merge Cube', '2': 'QuiverVision', '3': 'Actionbound', '4': 'Metaverso Meta', '5': 'Laboratorio 5' };
+    const labNames: { [key: string]: string } = { '1': 'Merge Cube', '2': 'QuiverVision', '3': 'Actionbound', '4': 'Metaverso Meta', '5': 'Laboratorio 5', '6': 'Modelo con Geoposición' };
     this.evalService.saveResult({
       userId: user.userId,
       username: user.username,

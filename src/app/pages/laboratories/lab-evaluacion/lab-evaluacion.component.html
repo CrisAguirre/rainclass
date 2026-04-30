@@ -1,9 +1,9 @@
 <!-- EVALUACIÓN - Laboratorio -->
-<div *ngIf="['1', '2', '3', '4'].includes(labId || '')" class="lab-content">
+<div *ngIf="['1', '2', '3', '4', '6'].includes(labId || '')" class="lab-content">
 
   <!-- Quiz Header -->
   <div class="section-title" *ngIf="!submitted">
-    <h3>Evaluación: {{ labId === '1' ? 'Merge Cube' : (labId === '2' ? 'QuiverVision' : (labId === '3' ? 'Actionbound' : 'El Metaverso Meta')) }}</h3>
+    <h3>Evaluación: {{ labId === '1' ? 'Merge Cube' : (labId === '2' ? 'QuiverVision' : (labId === '3' ? 'Actionbound' : (labId === '4' ? 'El Metaverso Meta' : 'Modelo con Geoposición'))) }}</h3>
     <p class="section-subtitle">Responde las 20 preguntas para evaluar tu apropiación sobre esta tecnología.</p>
     <div class="title-line"></div>
   </div>
@@ -103,7 +103,7 @@
 </div>
 
 <!-- Generic placeholder for other labs -->
-<div *ngIf="!['1', '2', '3', '4'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
+<div *ngIf="!['1', '2', '3', '4', '6'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Evaluación</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Evaluación en desarrollo para este laboratorio.

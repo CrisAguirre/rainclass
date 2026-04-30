@@ -634,11 +634,183 @@
 
 </div>
 
+<!-- DESARROLLO - Laboratorio 6: Modelo con Geoposición (AR en Tiempo Real) -->
+<div *ngIf="labId === '6'" class="lab-content">
+
+  <div class="section-title">
+    <h3>Realidad Aumentada con Anclaje a Marcadores</h3>
+    <p class="section-subtitle">El modelo 3D sigue la posición y rotación del marcador físico en tiempo real</p>
+    <div class="title-line"></div>
+  </div>
+
+  <!-- AR Not Active: Show launch panel -->
+  <div *ngIf="!arActive" class="glass-panel ar-launch-panel">
+
+    <!-- Error message -->
+    <div *ngIf="arError" class="scan-error">
+      <span class="error-icon">⚠️</span>
+      <p>{{ arError }}</p>
+      <button class="glass-button" (click)="arError = null" style="margin-top: 10px; padding: 8px 20px;">Cerrar</button>
+    </div>
+
+    <div class="ar-intro">
+      <div class="ar-intro-icon">📡</div>
+      <h4>Experiencia de Realidad Aumentada</h4>
+      <p>
+        A diferencia del Laboratorio 5, aquí <strong>el modelo 3D se ancla al marcador físico</strong> y sigue
+        su posición, rotación e inclinación en tiempo real. Tú controlas la orientación del modelo
+        moviendo el marcador impreso frente a la cámara.
+      </p>
+
+      <div class="ar-differences">
+        <div class="ar-diff-item">
+          <span class="ar-diff-icon">🔄</span>
+          <div>
+            <strong>Rotación</strong>
+            <p>Controlada por la posición del marcador AR, no por el mouse</p>
+          </div>
+        </div>
+        <div class="ar-diff-item">
+          <span class="ar-diff-icon">🔍</span>
+          <div>
+            <strong>Zoom</strong>
+            <p>Scroll del mouse o pellizco (pinch) en pantalla táctil</p>
+          </div>
+        </div>
+        <div class="ar-diff-item">
+          <span class="ar-diff-icon">📐</span>
+          <div>
+            <strong>6 DoF</strong>
+            <p>El modelo replica los 6 grados de libertad del marcador</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="glass-button ar-start-btn" (click)="startAR()" [disabled]="arLoading">
+        <span *ngIf="!arLoading">🎯 Iniciar Realidad Aumentada</span>
+        <span *ngIf="arLoading">⏳ Cargando librerías AR...</span>
+      </button>
+
+      <p class="ar-note">
+        ⚠️ Requiere HTTPS y permisos de cámara. Imprime los marcadores de la sección inferior.
+      </p>
+    </div>
+  </div>
+
+  <!-- AR Active: Fullscreen AR Scene -->
+  <div *ngIf="arActive" class="ar-viewport">
+    <div id="ar-scene-container" class="ar-scene-container"></div>
+
+    <!-- AR Overlay Controls -->
+    <div class="ar-controls-overlay">
+      <button class="ar-control-btn ar-close-btn" (click)="stopAR()">✕ Cerrar AR</button>
+
+      <div class="ar-zoom-controls">
+        <button class="ar-control-btn" (click)="zoomIn()">🔍+</button>
+        <span class="ar-zoom-level">{{ (arScale * 100) | number:'1.0-0' }}%</span>
+        <button class="ar-control-btn" (click)="zoomOut()">🔍−</button>
+        <button class="ar-control-btn" (click)="resetZoom()">↺</button>
+      </div>
+
+      <!-- Model detection indicator -->
+      <div class="ar-detection-indicator" *ngIf="scannedModel">
+        <span class="detection-dot"></span>
+        <span>{{ scannedModel.icon }} {{ scannedModel.name }}</span>
+      </div>
+
+      <!-- CSS Light Beam Effect for Ciencias Naturales -->
+      <div *ngIf="scannedModel?.subject === 'Ciencias Naturales'" class="css-light-beam"></div>
+
+      <div class="ar-instructions-overlay">
+        <p>📷 Apunta la cámara hacia un marcador AR impreso</p>
+        <p>🔍 Usa scroll o pellizco para zoom</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Printable Markers Section -->
+  <div class="section-title" style="margin-top: 30px;">
+    <h3>Marcadores AR Imprimibles</h3>
+    <p class="section-subtitle">Imprime estos 3 marcadores y apunta la cámara hacia ellos para ver los modelos 3D</p>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="ar-markers-grid">
+    <div *ngFor="let model of models" class="glass-panel ar-marker-card" [style.border-top]="'3px solid ' + model.color">
+      <div class="marker-preview">
+        <div class="marker-barcode">
+          <div class="barcode-border">
+            <div class="barcode-pattern" [attr.data-id]="model.markerId">
+              <span class="barcode-id">{{ model.markerId }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="marker-info">
+        <span class="marker-model-icon">{{ model.icon }}</span>
+        <h4>{{ model.name }}</h4>
+        <span class="subject-badge" [style.background]="model.color">{{ model.subject }}</span>
+        <p>Marcador Barcode ID: <strong>{{ model.markerId }}</strong></p>
+        <a href="https://au.si/arjs-marker-barcode/{{ model.markerId }}" target="_blank" class="glass-button" style="margin-top: 8px; padding: 6px 14px; font-size: 0.8rem;">
+          🖨️ Descargar Marcador
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Model Info Cards -->
+  <div class="section-title" style="margin-top: 30px;">
+    <h3>Modelos 3D Disponibles</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="usage-grid">
+    <div *ngFor="let model of models; let i = index" class="glass-panel usage-card" [style.border-left]="'4px solid ' + model.color">
+      <div class="usage-number">{{ '0' + (i + 1) }}</div>
+      <h4>{{ model.icon }} {{ model.name }}</h4>
+      <p>{{ model.description }}</p>
+      <div class="usage-tag">Marcador {{ model.markerId }} → {{ model.subject }}</div>
+    </div>
+  </div>
+
+  <!-- Scan History (shared with Lab 5 logic) -->
+  <div *ngIf="scanHistory.length > 0" class="section-title" style="margin-top: 30px;">
+    <h3>Modelos Detectados</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div *ngIf="scanHistory.length > 0" class="scan-history-grid">
+    <div *ngFor="let model of scanHistory" class="glass-panel history-card"
+         [style.border-left]="'3px solid ' + model.color">
+      <span class="history-icon">{{ model.icon }}</span>
+      <div>
+        <strong>{{ model.subject }}</strong>
+        <p>{{ model.name }}</p>
+      </div>
+      <span class="history-action">Detectado ✓</span>
+    </div>
+  </div>
+
+  <!-- Progress -->
+  <div class="glass-panel scan-progress" style="margin-top: 20px;">
+    <h4>Progreso de Detección AR</h4>
+    <div class="progress-track" style="margin-top: 10px;">
+      <div class="progress-fill" [style.width.%]="(scanHistory.length / 3) * 100"></div>
+    </div>
+    <p style="margin-top: 10px; color: var(--text-secondary);">
+      {{ scanHistory.length }} de 3 modelos detectados
+      <span *ngIf="scanHistory.length === 3" style="color: #22c55e;"> — ¡Completado! 🎉</span>
+    </p>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="!['1', '2', '3', '4', '5'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
+<div *ngIf="!['1', '2', '3', '4', '5', '6'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Desarrollo</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.
   </p>
 </div>
+
 

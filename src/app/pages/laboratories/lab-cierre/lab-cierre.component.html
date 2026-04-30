@@ -1,4 +1,4 @@
-<!-- CIERRE - Laboratorio 1: Merge Cube -->
+﻿<!-- CIERRE - Laboratorio 1: Merge Cube -->
 <div *ngIf="labId === '1'" class="lab-content">
 
   <!-- Section 1: Reflexión Pedagógica -->
@@ -495,8 +495,102 @@
 
 </div>
 
+<!-- CIERRE - Laboratorio 6: Modelo con Geoposición -->
+<div *ngIf="labId === '6'" class="lab-content">
+
+  <div class="section-title">
+    <h3>Reflexión Pedagógica</h3>
+    <p class="section-subtitle">El anclaje espacial como puente entre lo físico y lo digital</p>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block">
+    <div class="reflection-intro">
+      <img src="assets/images/labs/merge_cube_classroom.png" alt="AR en el aula" class="reflection-image">
+      <div class="reflection-text">
+        <p>
+          La Realidad Aumentada basada en marcadores representa un avance significativo respecto a la simple 
+          lectura de códigos QR. Al <strong>anclar el modelo 3D al espacio físico</strong>, el estudiante experimenta 
+          una fusión natural entre el mundo tangible y el digital, donde mover un papel impreso equivale a 
+          manipular un objeto virtual con precisión milimétrica.
+        </p>
+        <p>
+          Para el docente, esta tecnología abre posibilidades inéditas: convertir cualquier pupitre en un 
+          <strong>laboratorio de anatomía</strong>, una <strong>mesa de arquitectura</strong> o un 
+          <strong>campo de exploración geográfica</strong>, sin más inversión que una impresora y un navegador web.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estrategias Pedagógicas -->
+  <div class="section-title">
+    <h3>Estrategias Pedagógicas con Marcadores AR</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="strategies-grid">
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">🔬</div>
+      <h4>Laboratorio Virtual de Ciencias</h4>
+      <p>Distribuye marcadores con diferentes moléculas o estructuras anatómicas. Los estudiantes "coleccionan" 
+         modelos 3D escaneando cada marcador y documentando sus observaciones en un cuaderno de laboratorio digital.</p>
+    </div>
+
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">🗺️</div>
+      <h4>Mapa Interactivo del Aula</h4>
+      <p>Pega marcadores en diferentes puntos del salón. Cada uno revela información contextual en 3D: una línea 
+         temporal en historia, un relieve topográfico en geografía, o un organismo en biología.</p>
+    </div>
+
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">🏗️</div>
+      <h4>Diseño y Prototipado</h4>
+      <p>Los estudiantes de tecnología o arte diseñan modelos en Tinkercad y los visualizan anclados a un marcador 
+         sobre su mesa, evaluando proporciones y perspectivas como en un taller real de arquitectura.</p>
+    </div>
+  </div>
+
+  <!-- Conclusiones -->
+  <div class="section-title">
+    <h3>Conclusiones del Laboratorio</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel conclusions-block">
+    <div class="conclusion-item">
+      <div class="conclusion-number">1</div>
+      <div class="conclusion-text">
+        <h4>Superioridad del Anclaje Espacial</h4>
+        <p>A diferencia de un visor de modelos 3D convencional, el anclaje a marcadores permite que el modelo 
+           "viva" en el espacio físico del estudiante, generando una experiencia cognitiva más profunda y natural.</p>
+      </div>
+    </div>
+
+    <div class="conclusion-item">
+      <div class="conclusion-number">2</div>
+      <div class="conclusion-text">
+        <h4>Tecnología Abierta y Gratuita</h4>
+        <p>AR.js y A-Frame son de código abierto. Un docente con conocimientos básicos de HTML puede crear sus 
+           propias experiencias AR sin depender de plataformas comerciales ni licencias costosas.</p>
+      </div>
+    </div>
+
+    <div class="conclusion-item">
+      <div class="conclusion-number">3</div>
+      <div class="conclusion-text">
+        <h4>Escalabilidad Curricular</h4>
+        <p>El mismo sistema de marcadores puede adaptarse a cualquier asignatura simplemente cambiando el modelo 3D 
+           asociado, permitiendo una integración transversal en todo el currículo escolar.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="!['1', '2', '3', '4', '5'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
+<div *ngIf="!['1', '2', '3', '4', '5', '6', '7'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Cierre</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.

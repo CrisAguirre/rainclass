@@ -1,4 +1,4 @@
-.lab-content {
+﻿.lab-content {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -542,3 +542,375 @@
   }
 }
 
+/* ========== LAB 6: AR MARKER TRACKING ========== */
+
+.ar-launch-panel {
+  padding: 40px 30px;
+}
+
+.ar-intro {
+  text-align: center;
+}
+
+.ar-intro-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.ar-intro h4 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.ar-intro > p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.ar-differences {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.ar-diff-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  max-width: 220px;
+  transition: all 0.3s ease;
+}
+
+.ar-diff-item:hover {
+  border-color: var(--accent-color);
+  background: rgba(77, 168, 218, 0.05);
+  transform: translateY(-2px);
+}
+
+.ar-diff-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.ar-diff-item strong {
+  color: var(--accent-color);
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.ar-diff-item p {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.ar-start-btn {
+  padding: 16px 40px !important;
+  font-size: 1.15rem !important;
+  background: linear-gradient(135deg, rgba(77, 168, 218, 0.3), rgba(34, 197, 94, 0.2)) !important;
+  border: 1px solid rgba(77, 168, 218, 0.5) !important;
+  animation: glow 2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.ar-start-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  animation: none;
+}
+
+.ar-note {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  margin-top: 15px;
+  opacity: 0.7;
+}
+
+/* AR Viewport (Fullscreen Camera) */
+.ar-viewport {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.ar-scene-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ar-controls-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.ar-control-btn {
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ar-control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.ar-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(239, 68, 68, 0.7) !important;
+  border-color: rgba(239, 68, 68, 0.5) !important;
+  font-weight: 600;
+}
+
+.ar-zoom-controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 8px 15px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: auto;
+}
+
+.ar-zoom-level {
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  min-width: 45px;
+  text-align: center;
+}
+
+.ar-detection-indicator {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(34, 197, 94, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(34, 197, 94, 0.4);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #86efac;
+  font-size: 0.85rem;
+  font-weight: 500;
+  pointer-events: none;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.detection-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.ar-instructions-overlay {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.ar-instructions-overlay p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  margin: 3px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Printable Markers Grid */
+.ar-markers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.ar-marker-card {
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.ar-marker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.marker-preview {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marker-barcode {
+  width: 120px;
+  height: 120px;
+}
+
+.barcode-border {
+  width: 100%;
+  height: 100%;
+  border: 8px solid #000;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.barcode-pattern {
+  width: 70%;
+  height: 70%;
+  background: repeating-linear-gradient(
+    90deg,
+    #000 0px, #000 8px,
+    white 8px, white 16px
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.barcode-pattern[data-id="0"] {
+  background: repeating-linear-gradient(90deg, #000 0px, #000 12px, white 12px, white 20px);
+}
+.barcode-pattern[data-id="1"] {
+  background: repeating-linear-gradient(0deg, #000 0px, #000 10px, white 10px, white 18px);
+}
+.barcode-pattern[data-id="2"] {
+  background: repeating-conic-gradient(#000 0% 25%, white 25% 50%);
+}
+
+.barcode-id {
+  position: absolute;
+  background: white;
+  color: #000;
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.marker-info h4 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.marker-model-icon {
+  font-size: 2rem;
+}
+
+.marker-info p {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  margin: 5px 0 0;
+}
+
+@media (max-width: 992px) {
+  .ar-markers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ar-differences {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ar-diff-item {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ar-markers-grid {
+    grid-template-columns: 1fr;
+  }
+  .ar-viewport {
+    height: 70vh;
+    min-height: 400px;
+  }
+  .ar-start-btn {
+    padding: 14px 30px !important;
+    font-size: 1rem !important;
+  }
+  .ar-intro h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* ========== EFECTO CSS DINÁMICO (CIENCIAS NATURALES) ========== */
+.css-light-beam {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.4) 50%, transparent);
+  transform: skewX(-20deg);
+  animation: sweep-beam 3s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 50;
+}
+
+@keyframes sweep-beam {
+  0% { left: -100%; }
+  50% { left: 200%; }
+  100% { left: 200%; }
+}
