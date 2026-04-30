@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { EvaluationService } from '../../../services/evaluation.service';
 
 interface Question {
   id: number;
@@ -243,7 +244,7 @@ export class LabEvaluacionComponent implements OnInit {
     }
   ];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private evalService: EvaluationService) {}
 
   ngOnInit(): void {
     this.route.parent?.paramMap.subscribe(params => {
@@ -277,7 +278,22 @@ export class LabEvaluacionComponent implements OnInit {
       }
     });
     this.submitted = true;
-    // TODO: Send results to backend
+
+    // Send results to backend
+    const labNames: { [key: string]: string } = { '1': 'Merge Cube', '2': 'QuiverVision', '3': 'Actionbound', '4': 'Metaverso Meta', '5': 'Laboratorio 5' };
+    this.evalService.saveResult({
+      userId: 'admin',
+      username: 'adminrainclass',
+      labId: parseInt(this.labId || '0'),
+      labName: labNames[this.labId || '1'] || 'Desconocido',
+      score: this.score,
+      totalQuestions: this.totalQuestions,
+      percentage: this.getPercentage(),
+      answers: this.answers
+    }).subscribe({
+      next: (res) => console.log('Resultado guardado:', res),
+      error: (err) => console.error('Error al guardar resultado:', err)
+    });
   }
 
   getPercentage(): number {
