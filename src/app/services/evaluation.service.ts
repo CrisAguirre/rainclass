@@ -31,7 +31,7 @@ export interface ConclusionResult {
 export class EvaluationService {
   // Cuando despliegues en Railway, cambia esta URL por la que te proporcione Railway.
   // Ejemplo: private BASE_URL = 'https://rainclassbkn-production.up.railway.app/api';
-  private BASE_URL = 'http://localhost:3000/api';
+  private BASE_URL = 'https://rainclassbkn-production.up.railway.app/api';
   
   private apiUrl = `${this.BASE_URL}/evaluations`;
   private conclusionsUrl = `${this.BASE_URL}/conclusions`;
