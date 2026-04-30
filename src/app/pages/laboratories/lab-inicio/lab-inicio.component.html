@@ -267,8 +267,120 @@
 
 </div>
 
+<!-- INICIO - Laboratorio 3: Actionbound -->
+<div *ngIf="labId === '3'" class="lab-content">
+
+  <!-- Hero Section -->
+  <div class="glass-panel hero-section">
+    <div class="hero-text">
+      <h2>Actionbound</h2>
+      <div class="subtitle">Gamificación y Exploración en el Mundo Real</div>
+      <p>
+        <strong>Actionbound</strong> es una plataforma innovadora que permite a educadores crear 
+        "Bounds" (búsquedas del tesoro digitales o rallies interactivos) utilizando dispositivos móviles. 
+        Combina el entorno físico real con elementos digitales como GPS, códigos QR, cuestionarios, 
+        tareas multimedia y misiones, transformando el aprendizaje en una aventura inmersiva.
+      </p>
+    </div>
+    <div class="hero-image">
+      <!-- Reusing an existing image as placeholder due to quota limit -->
+      <img src="assets/images/labs/merge_cube_classroom.png" alt="Actionbound en acción">
+    </div>
+  </div>
+
+  <!-- How it Works -->
+  <div class="section-title" style="margin-top: 20px;">
+    <h3>¿Cómo Funciona?</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel how-it-works">
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Crear</h4>
+        <p>El docente diseña el recorrido en el "Bound Creator" (web), añadiendo puntos GPS, acertijos y contenido.</p>
+      </div>
+      <div class="step-arrow">➔</div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Desplegar</h4>
+        <p>Se genera un código QR único para el Bound, que los estudiantes escanean con la app Actionbound.</p>
+      </div>
+      <div class="step-arrow">➔</div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Explorar</h4>
+        <p>Los equipos navegan por el espacio físico guiados por la brújula y el GPS del dispositivo.</p>
+      </div>
+      <div class="step-arrow">➔</div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4>Resolver</h4>
+        <p>Al llegar a los puntos, desbloquean misiones, responden preguntas o suben fotos/videos como evidencia.</p>
+      </div>
+    </div>
+
+    <div class="howto-image">
+      <img src="assets/images/labs/quiver_howto.png" alt="Proceso de Actionbound">
+    </div>
+  </div>
+
+  <!-- Applications and Uses -->
+  <div class="section-title">
+    <h3>Potencial Educativo</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="apps-grid">
+    <div class="glass-panel app-card">
+      <div class="app-icon">🏃</div>
+      <h4>Aprendizaje Cinestésico</h4>
+      <p>Rompe con el sedentarismo del aula. Los alumnos aprenden mientras se mueven y exploran su entorno.</p>
+    </div>
+    
+    <div class="glass-panel app-card">
+      <div class="app-icon">🤝</div>
+      <h4>Trabajo en Equipo</h4>
+      <p>Fomenta la colaboración, la delegación de tareas y la toma de decisiones conjuntas para ganar puntos.</p>
+    </div>
+
+    <div class="glass-panel app-card">
+      <div class="app-icon">📍</div>
+      <h4>Contextualización</h4>
+      <p>Vincula conceptos teóricos con lugares físicos específicos (ej. la historia de un monumento in situ).</p>
+    </div>
+  </div>
+
+  <!-- Key Features -->
+  <div class="section-title">
+    <h3>Características Clave</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="features-row">
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">GPS</div>
+      <p>Navegación guiada con brújula interactiva</p>
+    </div>
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">QR</div>
+      <p>Integración de códigos ocultos en el entorno</p>
+    </div>
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">Media</div>
+      <p>Subida de fotos, audio y video como respuestas</p>
+    </div>
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">Web</div>
+      <p>Creador intuitivo arrastrar-y-soltar para docentes</p>
+    </div>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="labId !== '1' && labId !== '2'" class="glass-panel" style="padding: 30px;">
+<div *ngIf="!['1', '2', '3'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Inicio</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.

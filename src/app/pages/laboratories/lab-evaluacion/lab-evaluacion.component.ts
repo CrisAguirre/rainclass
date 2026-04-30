@@ -467,6 +467,229 @@ export class LabEvaluacionComponent implements OnInit {
     }
   ];
 
+  actionboundQuestions: Question[] = [
+    {
+      id: 1,
+      text: '¿Qué es Actionbound?',
+      options: [
+        'Un software para hacer hojas de cálculo',
+        'Una plataforma para crear búsquedas del tesoro y rallies digitales en el mundo real',
+        'Un videojuego de disparos',
+        'Una aplicación para dibujar'
+      ],
+      correct: 1
+    },
+    {
+      id: 2,
+      text: '¿Cuáles son los dos componentes principales de Actionbound?',
+      options: [
+        'Cámara y micrófono',
+        'El Bound Creator (web) y la App Actionbound (móvil)',
+        'Teclado y ratón',
+        'Gafas VR y mandos'
+      ],
+      correct: 1
+    },
+    {
+      id: 3,
+      text: '¿Qué tecnología principal usa Actionbound para guiar a los estudiantes físicamente?',
+      options: [
+        'Cables conectados a un servidor',
+        'Coordenadas GPS y brújula del dispositivo',
+        'Impresión 3D',
+        'Proyectores holográficos'
+      ],
+      correct: 1
+    },
+    {
+      id: 4,
+      text: '¿Qué es un "Bound"?',
+      options: [
+        'Un límite de tiempo en la clase',
+        'El nombre que reciben las rutas, rallies o búsquedas creadas en la plataforma',
+        'Un libro de texto digital',
+        'Un error de programación'
+      ],
+      correct: 1
+    },
+    {
+      id: 5,
+      text: '¿Cómo ingresan los estudiantes a un Bound creado por el docente?',
+      options: [
+        'Escribiendo 10 páginas de código',
+        'Llamando por teléfono al soporte técnico',
+        'Escaneando un código QR único con la app Actionbound',
+        'Comprando un ticket físico'
+      ],
+      correct: 2
+    },
+    {
+      id: 6,
+      text: '¿Qué tipo de aprendizaje promueve principalmente Actionbound?',
+      options: [
+        'Aprendizaje memorístico y pasivo',
+        'Aprendizaje basado en proyectos y aprendizaje cinestésico (en movimiento)',
+        'Aprendizaje exclusivo en aislamiento',
+        'Aprendizaje únicamente auditivo'
+      ],
+      correct: 1
+    },
+    {
+      id: 7,
+      text: 'En un Bound, ¿qué función cumple el elemento "Información"?',
+      options: [
+        'Elimina a un jugador',
+        'Muestra textos, imágenes, videos o audios para contextualizar un lugar',
+        'Resta puntos al equipo',
+        'Cierra la aplicación'
+      ],
+      correct: 1
+    },
+    {
+      id: 8,
+      text: '¿Qué requiere hacer un alumno en una "Misión" de Actionbound?',
+      options: [
+        'Solo leer un texto largo',
+        'Resolver un desafío creativo, como tomar una foto o grabar un audio',
+        'Dormir 10 minutos',
+        'Esconder su celular'
+      ],
+      correct: 1
+    },
+    {
+      id: 9,
+      text: '¿Cómo se pueden incluir los Códigos QR físicos dentro de un Bound?',
+      options: [
+        'No se pueden usar QR en Actionbound',
+        'Solo sirven para descargar la app',
+        'El docente los esconde en el entorno y los alumnos deben escanearlos para poder avanzar',
+        'Se usan para pagar la licencia'
+      ],
+      correct: 2
+    },
+    {
+      id: 10,
+      text: '¿Qué beneficio ofrece Actionbound para la evaluación docente?',
+      options: [
+        'Califica automáticamente el comportamiento en el recreo',
+        'Genera informes analíticos detallados post-actividad (respuestas, tiempo, fotos) en la web',
+        'Reemplaza al Ministerio de Educación',
+        'Ninguno, el docente debe corregir todo a mano'
+      ],
+      correct: 1
+    },
+    {
+      id: 11,
+      text: '¿Cómo se puede usar Actionbound en la materia de Historia?',
+      options: [
+        'Jugando ajedrez',
+        'Creando un rally en sitios patrimoniales de la ciudad, desbloqueando datos in situ',
+        'Leyendo un PDF estático en el aula',
+        'No tiene aplicaciones en Historia'
+      ],
+      correct: 1
+    },
+    {
+      id: 12,
+      text: '¿Qué es el "Onboarding Escolar" propuesto como ejemplo de uso?',
+      options: [
+        'Enseñar a usar una patineta',
+        'Un rally de bienvenida para nuevos alumnos explorando las instalaciones del colegio',
+        'Una clase de inglés avanzado',
+        'Un sistema de castigos'
+      ],
+      correct: 1
+    },
+    {
+      id: 13,
+      text: '¿Qué impacto tiene Actionbound en la salud física de los estudiantes?',
+      options: [
+        'Fomenta el sedentarismo',
+        'Aumenta los problemas visuales exclusivamente',
+        'Promueve el movimiento y combate el sedentarismo al requerir desplazamiento físico',
+        'No tiene ningún impacto'
+      ],
+      correct: 2
+    },
+    {
+      id: 14,
+      text: '¿Qué habilidad blanda se desarrolla fuertemente al jugar Bounds en grupo?',
+      options: [
+        'Egoísmo',
+        'Competitividad destructiva',
+        'Colaboración, delegación de tareas y toma de decisiones conjuntas',
+        'Aislamiento social'
+      ],
+      correct: 2
+    },
+    {
+      id: 15,
+      text: '¿Cuál es el valor pedagógico de pedir a los propios estudiantes que CREEN un Bound?',
+      options: [
+        'Es para que el profesor no trabaje',
+        'Fomenta habilidades superiores: síntesis, estructuración lógica y empatía con el usuario',
+        'Es un castigo',
+        'Para que gasten la batería de sus dispositivos'
+      ],
+      correct: 1
+    },
+    {
+      id: 16,
+      text: 'En un Bound, si una pregunta tiene respuesta exacta, ¿qué sucede si los estudiantes se equivocan?',
+      options: [
+        'Pierden sus dispositivos',
+        'Dependiendo de la configuración, pueden perder puntos o recibir penalizaciones de tiempo',
+        'Ganan más puntos',
+        'El juego se borra'
+      ],
+      correct: 1
+    },
+    {
+      id: 17,
+      text: '¿Por qué se dice que Actionbound contextualiza el aprendizaje?',
+      options: [
+        'Porque usa mucho texto',
+        'Porque vincula los conceptos teóricos directamente con lugares físicos reales específicos',
+        'Porque requiere conexión a internet',
+        'Porque se traduce a varios idiomas'
+      ],
+      correct: 1
+    },
+    {
+      id: 18,
+      text: '¿Qué es un "Torneo" dentro del contexto de un Bound?',
+      options: [
+        'Peleas físicas entre equipos',
+        'Un modo donde los equipos compiten simultáneamente para completar retos y ganar puntos',
+        'Un juego de cartas',
+        'Una carrera de 100 metros planos'
+      ],
+      correct: 1
+    },
+    {
+      id: 19,
+      text: '¿Actionbound requiere saber programar código complejo para crear una ruta?',
+      options: [
+        'Sí, se necesita saber C++ y Python',
+        'No, el Bound Creator usa una interfaz intuitiva de arrastrar y soltar',
+        'Sí, requiere conocimientos de hacking',
+        'Solo si se usa en bachillerato'
+      ],
+      correct: 1
+    },
+    {
+      id: 20,
+      text: '¿Cuál es una conclusión central del Laboratorio Actionbound?',
+      options: [
+        'El uso de pantallas siempre significa quedarse sentado',
+        'La escuela ya no termina en las cuatro paredes del aula; el mundo real es el tablero de juego',
+        'Solo sirve para clases de Educación Física',
+        'Los docentes no deben usar GPS por privacidad'
+      ],
+      correct: 1
+    }
+  ];
+
   constructor(private route: ActivatedRoute, private evalService: EvaluationService) {}
 
   ngOnInit(): void {
@@ -484,6 +707,7 @@ export class LabEvaluacionComponent implements OnInit {
   getQuestions(): Question[] {
     if (this.labId === '1') return this.mergeCubeQuestions;
     if (this.labId === '2') return this.quiverQuestions;
+    if (this.labId === '3') return this.actionboundQuestions;
     return [];
   }
 

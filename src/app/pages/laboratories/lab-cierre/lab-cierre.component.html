@@ -235,8 +235,99 @@
 
 </div>
 
+<!-- CIERRE - Laboratorio 3: Actionbound -->
+<div *ngIf="labId === '3'" class="lab-content">
+
+  <div class="section-title">
+    <h3>Reflexión Pedagógica</h3>
+    <p class="section-subtitle">El mundo real como tablero de juego y aprendizaje</p>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block">
+    <div class="reflection-intro">
+      <img src="assets/images/labs/merge_cube_classroom.png" alt="Estudiantes usando Actionbound" class="reflection-image">
+      <div class="reflection-text">
+        <p>
+          Actionbound redefine el concepto tradicional de "excursión escolar" o "actividad de campo". 
+          Al superponer una capa narrativa y lúdica sobre el entorno físico, <strong>los espacios cotidianos 
+          se convierten en laboratorios vivos</strong>. La escuela ya no termina en las cuatro paredes del aula.
+        </p>
+        <p>
+          Desde la perspectiva docente, el verdadero valor no está solo en que los alumnos jueguen un Bound, 
+          sino en el proceso de <strong>creación</strong>. Cuando invitamos a los propios estudiantes a investigar un 
+          tema y diseñar un rally para sus compañeros, estamos fomentando habilidades superiores del 
+          pensamiento: síntesis, estructuración lógica de la información, empatía con el usuario y dominio tecnológico.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estrategias Pedagógicas -->
+  <div class="section-title">
+    <h3>Estrategias Pedagógicas Recomendadas</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="strategies-grid">
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">🛠️</div>
+      <h4>Alumnos como Creadores</h4>
+      <p>Proyecto final: En lugar de un examen tradicional, pide a los grupos que diseñen un Bound sobre el tema del bloque. Deberán investigar, formular preguntas y planificar las rutas.</p>
+    </div>
+
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">🕵️</div>
+      <h4>Escape Room Educativo</h4>
+      <p>Transforma el aula o la biblioteca en un "Escape Room" digital. Usa códigos QR escondidos en libros físicos que, al escanearse, revelen acertijos curriculares para "escapar".</p>
+    </div>
+
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">📊</div>
+      <h4>Evaluación Diagnóstica Activa</h4>
+      <p>Al inicio del ciclo escolar, realiza un rally de conocimientos previos. Mientras los alumnos se divierten compitiendo, el sistema recopila métricas exactas sobre su nivel.</p>
+    </div>
+  </div>
+
+  <!-- Conclusiones -->
+  <div class="section-title">
+    <h3>Conclusiones del Laboratorio</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel conclusions-block">
+    <div class="conclusion-item">
+      <div class="conclusion-number">1</div>
+      <div class="conclusion-text">
+        <h4>Salud y Aprendizaje Cinestésico</h4>
+        <p>Actionbound responde a la necesidad fisiológica de movimiento de niños y adolescentes, demostrando que 
+           el uso de pantallas no tiene que ser sinónimo de sedentarismo.</p>
+      </div>
+    </div>
+
+    <div class="conclusion-item">
+      <div class="conclusion-number">2</div>
+      <div class="conclusion-text">
+        <h4>Toma de Decisiones y Liderazgo</h4>
+        <p>Al enfrentarse a retos en tiempo real en un entorno no controlado (la calle, el parque), los equipos 
+           desarrollan habilidades blandas críticas como negociación, orientación espacial y liderazgo rotativo.</p>
+      </div>
+    </div>
+
+    <div class="conclusion-item">
+      <div class="conclusion-number">3</div>
+      <div class="conclusion-text">
+        <h4>Analítica de Aprendizaje</h4>
+        <p>La plataforma web proporciona al docente un informe detallado post-actividad: respuestas correctas, 
+           tiempo invertido y material multimedia recolectado, facilitando enormemente la calificación y retroalimentación.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="labId !== '1' && labId !== '2'" class="glass-panel" style="padding: 30px;">
+<div *ngIf="!['1', '2', '3'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Cierre</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.

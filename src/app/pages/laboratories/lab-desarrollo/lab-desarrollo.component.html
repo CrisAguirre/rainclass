@@ -290,8 +290,126 @@
 
 </div>
 
+<!-- DESARROLLO - Laboratorio 3: Actionbound -->
+<div *ngIf="labId === '3'" class="lab-content">
+
+  <div class="section-title">
+    <h3>¿En qué consiste Actionbound?</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block">
+    <div class="content-with-image">
+      <div class="text-content">
+        <p>
+          <strong>Actionbound</strong> funciona bajo la premisa de "Jugar aprendiendo". Consiste en dos componentes principales: 
+          el <strong>Bound Creator</strong> (una plataforma web donde el docente diseña la actividad) y la 
+          <strong>App Actionbound</strong> (la aplicación móvil donde los estudiantes juegan la actividad).
+        </p>
+        <p>
+          A diferencia de otras aplicaciones de RA que se limitan a la pantalla, Actionbound saca a los estudiantes 
+          del aula. Mediante coordenadas GPS, los guía hacia puntos de interés reales (un árbol en el patio, una estatua 
+          en el parque, un laboratorio del colegio). Al llegar al punto exacto, se desbloquean tareas, información, 
+          preguntas de opción múltiple o retos multimedia.
+        </p>
+        <p>
+          Este enfoque promueve el aprendizaje basado en proyectos y la resolución de problemas, ya que los equipos 
+          deben colaborar para descifrar pistas, orientarse en el espacio y completar las misiones creativas que 
+          el docente ha programado.
+        </p>
+      </div>
+      <div class="side-image">
+        <img src="assets/images/labs/merge_cube_howto.png" alt="Actionbound Desarrollo">
+      </div>
+    </div>
+  </div>
+
+  <!-- Uso en el Aula -->
+  <div class="section-title">
+    <h3>Tipos de Elementos en un Bound</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="usage-grid">
+    <div class="glass-panel usage-card">
+      <div class="usage-number">01</div>
+      <h4>Etapas de Información</h4>
+      <p>Muestra textos, imágenes, videos o audios al jugador cuando llega a un punto. Ideal para contextualizar un lugar histórico o dar instrucciones.</p>
+      <div class="usage-tag">Contenido</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">02</div>
+      <h4>Misiones</h4>
+      <p>Desafíos que requieren que los alumnos sean creativos. Pueden pedirles que graben un audio entrevistando a alguien o tomen una foto de un tipo de hoja.</p>
+      <div class="usage-tag">Creatividad</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">03</div>
+      <h4>Quizzes y Acertijos</h4>
+      <p>Preguntas de opción múltiple, respuestas exactas o estimaciones que otorgan puntos según la precisión y rapidez de la respuesta.</p>
+      <div class="usage-tag">Evaluación</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">04</div>
+      <h4>Torneos y Escaneo QR</h4>
+      <p>Códigos QR físicos escondidos en el entorno que deben escanear para avanzar, sumado a retos cronometrados donde los equipos compiten.</p>
+      <div class="usage-tag">Gamificación</div>
+    </div>
+  </div>
+
+  <!-- Real world applications -->
+  <div class="section-title">
+    <h3>Ejemplos de Aplicación Práctica</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block" style="padding: 40px;">
+    <div class="real-apps-grid">
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🏫</span>
+          <h4>Onboarding Escolar</h4>
+        </div>
+        <p>Rally de bienvenida para nuevos estudiantes. Tienen que navegar por el colegio encontrando la biblioteca, 
+           cafetería y coordinación, respondiendo preguntas sobre el reglamento en cada parada.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🌿</span>
+          <h4>Biología de Campo</h4>
+        </div>
+        <p>Excursión a un parque o reserva ecológica. El GPS guía a los alumnos a diferentes ecosistemas locales 
+           donde deben fotografiar insectos específicos o identificar flora y subirla a la app.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🏛️</span>
+          <h4>Recorridos Históricos</h4>
+        </div>
+        <p>Visita a sitios patrimoniales de la ciudad. Al llegar a una plaza histórica, la app despliega un video 
+           antiguo del lugar y pide a los alumnos que encuentren pistas arquitectónicas reales.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🧮</span>
+          <h4>Gymkhana Matemática</h4>
+        </div>
+        <p>Los alumnos deben medir el perímetro de la cancha de baloncesto, calcular el volumen de la piscina de la 
+           escuela e introducir los resultados en la app para poder recibir la siguiente coordenada.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="labId !== '1' && labId !== '2'" class="glass-panel" style="padding: 30px;">
+<div *ngIf="!['1', '2', '3'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Desarrollo</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.
