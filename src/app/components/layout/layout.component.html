@@ -1,0 +1,27 @@
+<div class="layout-container">
+  <!-- Navigation Header -->
+  <nav class="glass-panel main-nav">
+    <div class="nav-brand">
+      <h2>RainClass</h2>
+      <span class="badge">Edu</span>
+    </div>
+    
+    <div class="nav-links">
+      <a routerLink="/home" routerLinkActive="active" class="nav-link">Inicio</a>
+      <a routerLink="/sessions" routerLinkActive="active" class="nav-link">Mis Sesiones</a>
+      <a routerLink="/laboratories" routerLinkActive="active" class="nav-link">Laboratorios RA</a>
+      <a routerLink="/users" routerLinkActive="active" class="nav-link">Usuarios</a>
+      <a routerLink="/results" routerLinkActive="active" class="nav-link">Resultados</a>
+    </div>
+
+    <div class="nav-user">
+      <span class="username">Admin</span>
+      <button class="glass-button logout-btn" (click)="logout()">Salir</button>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="content-area">
+    <router-outlet></router-outlet>
+  </main>
+</div>

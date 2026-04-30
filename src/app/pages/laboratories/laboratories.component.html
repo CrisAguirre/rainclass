@@ -1,0 +1,15 @@
+<div class="page-header">
+  <h2>Laboratorios de Realidad Aumentada</h2>
+  <p>Explora y apropia los conceptos de RA a través de estos 5 módulos interactivos.</p>
+</div>
+
+<div class="labs-grid">
+  <div class="glass-panel lab-card" *ngFor="let lab of [1, 2, 3, 4, 5]">
+    <div class="card-content">
+      <div class="lab-number">{{ lab }}</div>
+      <h3>Laboratorio {{ lab }}</h3>
+      <p>Módulo de aprendizaje interactivo para la apropiación de tecnologías inmersivas.</p>
+      <button class="glass-button start-btn">Ingresar al Módulo</button>
+    </div>
+  </div>
+</div>
