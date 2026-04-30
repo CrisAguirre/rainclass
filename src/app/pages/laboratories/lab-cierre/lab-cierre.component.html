@@ -421,10 +421,85 @@
 
 </div>
 
+<!-- CIERRE - Laboratorio 5: Conclusiones -->
+<div *ngIf="labId === '5'" class="lab-content">
+
+  <div class="section-title">
+    <h3>Conclusiones del Laboratorio</h3>
+    <p class="section-subtitle">Registra tus reflexiones sobre la experiencia de crear tu propia RA</p>
+    <div class="title-line"></div>
+  </div>
+
+  <!-- Guiding Questions -->
+  <div class="glass-panel content-block" style="padding: 30px;">
+    <h4 style="color: var(--accent-color); margin-bottom: 15px;">💡 Preguntas guía para tu reflexión:</h4>
+    <ul class="reflection-questions">
+      <li>¿Qué te pareció la experiencia de escanear un QR y ver un modelo 3D generarse en pantalla?</li>
+      <li>¿Cómo podrías adaptar esta tecnología (QR + modelos 3D) en tu asignatura específica?</li>
+      <li>¿Qué ventajas ves en crear tus propios recursos de RA en lugar de usar plataformas externas?</li>
+      <li>¿Qué desafíos técnicos o pedagógicos enfrentarías al implementar esto con tus estudiantes?</li>
+      <li>Compara esta experiencia con los laboratorios anteriores (Merge Cube, QuiverVision, Actionbound, Metaverso). ¿Cuál te resultó más práctico y por qué?</li>
+    </ul>
+  </div>
+
+  <!-- Conclusion Text Area -->
+  <div *ngIf="!conclusionSaved" class="glass-panel conclusion-form">
+    <h4>📝 Escribe tu conclusión</h4>
+    <p class="form-hint">Tu reflexión será guardada como evidencia en la plataforma y podrá ser revisada por el administrador.</p>
+    
+    <textarea
+      [(ngModel)]="conclusionText"
+      class="conclusion-textarea"
+      placeholder="Escribe aquí tus conclusiones sobre la experiencia del Laboratorio 5: RA Propia..."
+      rows="10"
+      maxlength="3000">
+    </textarea>
+
+    <div class="textarea-footer">
+      <span class="char-count" [class.near-limit]="conclusionText.length > 2500">
+        {{ conclusionText.length }} / 3000 caracteres
+      </span>
+      <button 
+        class="glass-button submit-conclusion-btn" 
+        [disabled]="conclusionText.trim().length < 50 || conclusionSaving"
+        (click)="saveConclusion()">
+        <span *ngIf="!conclusionSaving">💾 Guardar Conclusión</span>
+        <span *ngIf="conclusionSaving">⏳ Guardando...</span>
+      </button>
+    </div>
+
+    <p *ngIf="conclusionText.trim().length > 0 && conclusionText.trim().length < 50" class="min-hint">
+      Escribe al menos 50 caracteres para poder guardar tu conclusión.
+    </p>
+
+    <div *ngIf="conclusionError" class="conclusion-error">
+      <span>⚠️</span> {{ conclusionError }}
+    </div>
+  </div>
+
+  <!-- Success Message -->
+  <div *ngIf="conclusionSaved" class="glass-panel conclusion-success">
+    <div class="success-icon">✅</div>
+    <h4>¡Conclusión guardada exitosamente!</h4>
+    <p>Tu reflexión ha sido registrada como evidencia en la base de datos. El administrador podrá revisar tus conclusiones desde el panel de Resultados.</p>
+    <div class="success-info">
+      <div class="info-item">
+        <span class="info-label">Docente:</span>
+        <span>{{ conclusionText.length > 0 ? (conclusionText | slice:0:80) + '...' : '' }}</span>
+      </div>
+    </div>
+    <button class="glass-button" (click)="resetConclusion()" style="margin-top: 20px;">
+      ✏️ Escribir otra conclusión
+    </button>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="!['1', '2', '3', '4'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
+<div *ngIf="!['1', '2', '3', '4', '5'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Cierre</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.
   </p>
 </div>
+

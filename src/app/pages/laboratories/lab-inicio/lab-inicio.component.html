@@ -490,10 +490,114 @@
 
 </div>
 
+<!-- INICIO - Laboratorio 5: RA Propia - Generador 3D -->
+<div *ngIf="labId === '5'" class="lab-content">
+
+  <!-- Hero Section -->
+  <div class="glass-panel hero-section">
+    <div class="hero-text">
+      <h2>RA Propia - Generador 3D</h2>
+      <div class="subtitle">Tu propia experiencia de Realidad Aumentada con tecnología web</div>
+      <p>
+        En este laboratorio pondrás en práctica todo lo aprendido construyendo tu propia experiencia 
+        de <strong>Realidad Aumentada</strong> usando tecnología web estándar. A través de la cámara de tu 
+        dispositivo (móvil o computador), escanearás códigos QR especiales que activarán la visualización 
+        de <strong>modelos 3D interactivos</strong> asociados a tres áreas del conocimiento.
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/labs/merge_cube_hero.png" alt="Generador 3D">
+    </div>
+  </div>
+
+  <!-- Objetivo -->
+  <div class="section-title" style="margin-top: 20px;">
+    <h3>Objetivo de la Actividad</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block" style="padding: 30px;">
+    <p style="font-size: 1.1rem; line-height: 1.8;">
+      Demostrar que un docente de secundaria puede implementar una experiencia básica de Realidad Aumentada 
+      utilizando únicamente herramientas web gratuitas y un dispositivo con cámara. Al escanear cada QR, 
+      se desplegará un modelo 3D diferente según la asignatura, permitiendo al docente experimentar 
+      de primera mano cómo la tecnología puede enriquecer su clase.
+    </p>
+  </div>
+
+  <!-- QR Codes Preview -->
+  <div class="section-title">
+    <h3>Los 3 Códigos QR por Asignatura</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="apps-grid">
+    <div class="glass-panel app-card" style="text-align: center;">
+      <div class="app-icon">📐</div>
+      <h4>Matemáticas</h4>
+      <p>Escanea este QR para visualizar un sólido geométrico 3D interactivo (tetraedro).</p>
+      <img src="assets/images/labs/qr/qr_matematicas.png" alt="QR Matemáticas" style="width: 150px; margin-top: 15px; border-radius: 10px;">
+      <div class="usage-tag" style="margin-top: 10px;">RAINCLASS_MATH_3D</div>
+    </div>
+    
+    <div class="glass-panel app-card" style="text-align: center;">
+      <div class="app-icon">🔬</div>
+      <h4>Ciencias Naturales</h4>
+      <p>Escanea este QR para visualizar una molécula 3D interactiva.</p>
+      <img src="assets/images/labs/qr/qr_ciencias.png" alt="QR Ciencias" style="width: 150px; margin-top: 15px; border-radius: 10px;">
+      <div class="usage-tag" style="margin-top: 10px;">RAINCLASS_SCIENCE_3D</div>
+    </div>
+
+    <div class="glass-panel app-card" style="text-align: center;">
+      <div class="app-icon">📖</div>
+      <h4>Literatura</h4>
+      <p>Escanea este QR para visualizar un libro 3D interactivo.</p>
+      <img src="assets/images/labs/qr/qr_literatura.png" alt="QR Literatura" style="width: 150px; margin-top: 15px; border-radius: 10px;">
+      <div class="usage-tag" style="margin-top: 10px;">RAINCLASS_LITERATURE_3D</div>
+    </div>
+  </div>
+
+  <!-- Instructions -->
+  <div class="section-title">
+    <h3>¿Cómo Funciona?</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel how-it-works">
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Imprime o muestra</h4>
+        <p>Imprime los QR de arriba o tenlos en otra pantalla para poder apuntar tu cámara hacia ellos.</p>
+      </div>
+      <div class="step-arrow">➔</div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Ve al Generador</h4>
+        <p>Navega a la pestaña "Generador 3D" de este laboratorio para activar tu cámara web/móvil.</p>
+      </div>
+      <div class="step-arrow">➔</div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Escanea el QR</h4>
+        <p>Apunta la cámara al código QR. El sistema lo reconocerá automáticamente y mostrará el modelo.</p>
+      </div>
+      <div class="step-arrow">➔</div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4>Interactúa</h4>
+        <p>Rota, amplía y examina el modelo 3D. Luego escribe tus conclusiones en la última pestaña.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="!['1', '2', '3', '4'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
+<div *ngIf="!['1', '2', '3', '4', '5'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Inicio</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.
   </p>
 </div>
+

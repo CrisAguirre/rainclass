@@ -224,3 +224,242 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ========== LAB 5: QR SCANNER & 3D VIEWER ========== */
+
+.scanner-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#qr-reader {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.scanner-placeholder {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.scanner-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.scanner-placeholder h4 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.scanner-placeholder p {
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+}
+
+.start-scan-btn {
+  padding: 14px 30px !important;
+  font-size: 1.05rem !important;
+  background: linear-gradient(135deg, rgba(77, 168, 218, 0.3), rgba(77, 168, 218, 0.1)) !important;
+  border: 1px solid rgba(77, 168, 218, 0.5) !important;
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 5px rgba(77, 168, 218, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(77, 168, 218, 0.5); }
+}
+
+.start-scan-btn span {
+  margin-right: 8px;
+}
+
+.scanner-instructions {
+  text-align: center;
+  padding: 15px;
+}
+
+.scanner-instructions p {
+  color: var(--accent-color);
+  font-weight: 500;
+  margin-bottom: 15px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.stop-scan-btn {
+  padding: 8px 20px !important;
+  background: rgba(239, 68, 68, 0.2) !important;
+  border: 1px solid rgba(239, 68, 68, 0.4) !important;
+  color: #fca5a5 !important;
+}
+
+.scan-error {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.error-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.scan-error p {
+  color: #fca5a5;
+}
+
+/* Model Viewer Section */
+.model-viewer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.model-info-card {
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.model-info-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.model-icon {
+  font-size: 2.5rem;
+}
+
+.model-info-header h4 {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  margin: 0 0 5px 0;
+}
+
+.subject-badge {
+  display: inline-block;
+  padding: 3px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: white;
+  font-weight: 600;
+}
+
+.model-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.model-container {
+  padding: 20px;
+  overflow: hidden;
+}
+
+.model-controls-hint {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.model-controls-hint span {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+}
+
+.scan-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.scan-actions .glass-button {
+  padding: 12px 25px;
+}
+
+/* Scan History */
+.scan-history-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.history-card {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.history-icon {
+  font-size: 1.8rem;
+}
+
+.history-card strong {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+}
+
+.history-card p {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin: 2px 0 0 0;
+}
+
+.history-action {
+  margin-left: auto;
+  color: var(--accent-color);
+  font-size: 0.85rem;
+}
+
+.scan-progress {
+  padding: 25px 30px;
+}
+
+.scan-progress h4 {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .scan-history-grid {
+    grid-template-columns: 1fr;
+  }
+  .model-controls-hint {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
