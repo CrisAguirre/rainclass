@@ -11,6 +11,11 @@ import { SessionsComponent } from './pages/sessions/sessions.component';
 import { LaboratoriesComponent } from './pages/laboratories/laboratories.component';
 import { UsersComponent } from './pages/users/users.component';
 import { ResultsComponent } from './pages/results/results.component';
+import { LabLayoutComponent } from './pages/laboratories/lab-layout/lab-layout.component';
+import { LabInicioComponent } from './pages/laboratories/lab-inicio/lab-inicio.component';
+import { LabDesarrolloComponent } from './pages/laboratories/lab-desarrollo/lab-desarrollo.component';
+import { LabCierreComponent } from './pages/laboratories/lab-cierre/lab-cierre.component';
+import { LabEvaluacionComponent } from './pages/laboratories/lab-evaluacion/lab-evaluacion.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { ResultsComponent } from './pages/results/results.component';
     SessionsComponent,
     LaboratoriesComponent,
     UsersComponent,
-    ResultsComponent
+    ResultsComponent,
+    LabLayoutComponent,
+    LabInicioComponent,
+    LabDesarrolloComponent,
+    LabCierreComponent,
+    LabEvaluacionComponent
   ],
   imports: [
     BrowserModule,

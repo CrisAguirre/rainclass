@@ -4,12 +4,12 @@
 </div>
 
 <div class="labs-grid">
-  <div class="glass-panel lab-card" *ngFor="let lab of [1, 2, 3, 4, 5]">
+  <div class="glass-panel lab-card" *ngFor="let lab of labs">
     <div class="card-content">
-      <div class="lab-number">{{ lab }}</div>
-      <h3>Laboratorio {{ lab }}</h3>
-      <p>Módulo de aprendizaje interactivo para la apropiación de tecnologías inmersivas.</p>
-      <button class="glass-button start-btn">Ingresar al Módulo</button>
+      <div class="lab-number">{{ lab.id }}</div>
+      <h3>{{ lab.title }}</h3>
+      <p>{{ lab.description }}</p>
+      <button class="glass-button start-btn" [routerLink]="['/laboratories', lab.id, 'inicio']">Ingresar al Módulo</button>
     </div>
   </div>
 </div>
