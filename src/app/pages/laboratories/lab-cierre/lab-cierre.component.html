@@ -326,8 +326,103 @@
 
 </div>
 
+<!-- CIERRE - Laboratorio 4: El Metaverso Meta -->
+<div *ngIf="labId === '4'" class="lab-content">
+
+  <div class="section-title">
+    <h3>Reflexión Pedagógica</h3>
+    <p class="section-subtitle">El delicado equilibrio entre inmersión y conexión humana</p>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block">
+    <div class="reflection-intro">
+      <img src="assets/images/labs/merge_cube_classroom.png" alt="Reflexión sobre Metaverso Educativo" class="reflection-image">
+      <div class="reflection-text">
+        <p>
+          El Metaverso ofrece un potencial sin precedentes para el aprendizaje experiencial. Sin embargo, su 
+          implementación en el aula debe ser <strong>intencional y moderada</strong>. La tecnología de Realidad Virtual 
+          puede ser abrumadora, y el aislamiento sensorial requiere que los educadores gestionen cuidadosamente los 
+          tiempos de uso para evitar fatiga visual o desconexión emocional.
+        </p>
+        <p>
+          La verdadera magia del Metaverso no reside en los gráficos en 3D, sino en el <strong>"Sentido de Co-presencia"</strong>. 
+          Saber que el avatar que está a tu lado es tu compañero de clase o un estudiante de otro continente, reaccionando 
+          en tiempo real, es lo que transforma la Realidad Virtual de una experiencia solitaria a una herramienta 
+          socioconstructivista.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estrategias Pedagógicas -->
+  <div class="section-title">
+    <h3>Estrategias Pedagógicas Recomendadas</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="strategies-grid">
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">⏱️</div>
+      <h4>Micro-Inmersiones</h4>
+      <p>No impartas una clase entera de 45 minutos en VR. Diseña sesiones de 10-15 minutos enfocadas en un objetivo muy específico (ej. examinar el motor de un coche) y vuelve al aula física para debatirlo.</p>
+    </div>
+
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">👥</div>
+      <h4>Modelo de Piloto y Copiloto</h4>
+      <p>Si hay escasez de visores, empareja a los estudiantes. Mientras uno tiene el visor puesto, el otro sigue la experiencia proyectada en una pantalla y guía a su compañero con las instrucciones.</p>
+    </div>
+
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">🌐</div>
+      <h4>Aulas Espejo Internacionales</h4>
+      <p>Contacta con un colegio en otro país. Organiza un debate en Horizon Workrooms donde los estudiantes deban presentar y defender un proyecto cultural ante una audiencia global virtual.</p>
+    </div>
+  </div>
+
+  <!-- Conclusiones -->
+  <div class="section-title">
+    <h3>Conclusiones del Laboratorio</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel conclusions-block">
+    <div class="conclusion-item">
+      <div class="conclusion-number">1</div>
+      <div class="conclusion-text">
+        <h4>Empatía Profunda</h4>
+        <p>La Realidad Virtual ha sido llamada "la máquina de empatía definitiva". Experimentar el mundo desde 
+           la perspectiva de otra persona o estar inmerso en un momento histórico genera conexiones emocionales que 
+           los libros de texto no pueden lograr.</p>
+      </div>
+    </div>
+
+    <div class="conclusion-item">
+      <div class="conclusion-number">2</div>
+      <div class="conclusion-text">
+        <h4>Democratización de Experiencias</h4>
+        <p>Aunque el hardware requiere inversión, el Metaverso a largo plazo democratiza el acceso: viajar al 
+           Louvre, hacer un experimento con uranio o visitar la luna es ahora accesible para cualquier escuela 
+           con conexión y visores.</p>
+      </div>
+    </div>
+
+    <div class="conclusion-item">
+      <div class="conclusion-number">3</div>
+      <div class="conclusion-text">
+        <h4>Consideraciones Éticas</h4>
+        <p>El uso del Metaverso exige alfabetización digital crítica. Se deben establecer normas claras sobre 
+           el comportamiento de los avatares, la privacidad de los datos biométricos recopilados por las gafas 
+           y el tiempo de exposición saludable.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="!['1', '2', '3'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
+<div *ngIf="!['1', '2', '3', '4'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Cierre</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.

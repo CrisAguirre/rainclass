@@ -14,10 +14,18 @@
     </div>
     
     <div class="lab-tabs">
-      <a [routerLink]="['/laboratories', labId, 'inicio']" routerLinkActive="active-tab" class="tab-link">Inicio</a>
-      <a [routerLink]="['/laboratories', labId, 'desarrollo']" routerLinkActive="active-tab" class="tab-link">Desarrollo</a>
-      <a [routerLink]="['/laboratories', labId, 'cierre']" routerLinkActive="active-tab" class="tab-link">Cierre</a>
-      <a [routerLink]="['/laboratories', labId, 'evaluacion']" routerLinkActive="active-tab" class="tab-link">Evaluación</a>
+      <a [routerLink]="['/laboratories', labId, 'inicio']" routerLinkActive="active-tab" class="tab-link">
+        {{ labId === '5' ? 'Introducción' : 'Inicio' }}
+      </a>
+      <a [routerLink]="['/laboratories', labId, 'desarrollo']" routerLinkActive="active-tab" class="tab-link">
+        {{ labId === '5' ? 'Generador 3D' : 'Desarrollo' }}
+      </a>
+      <a [routerLink]="['/laboratories', labId, 'cierre']" routerLinkActive="active-tab" class="tab-link">
+        {{ labId === '5' ? 'Conclusiones' : 'Cierre' }}
+      </a>
+      <a *ngIf="labId !== '5'" [routerLink]="['/laboratories', labId, 'evaluacion']" routerLinkActive="active-tab" class="tab-link">
+        Evaluación
+      </a>
     </div>
   </div>
 

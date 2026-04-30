@@ -37,8 +37,8 @@ export class LaboratoriesComponent {
     },
     {
       id: 5,
-      title: 'Laboratorio 5',
-      description: 'Módulo de aprendizaje interactivo adicional (Próximamente).',
+      title: 'RA Propia - Generador 3D',
+      description: 'Escanea patrones QR con tu cámara y genera modelos 3D interactivos por asignatura.',
       link: null,
       icon: 'science'
     }

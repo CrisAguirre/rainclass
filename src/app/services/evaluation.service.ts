@@ -15,11 +15,22 @@ export interface EvaluationResult {
   createdAt?: string;
 }
 
+export interface ConclusionResult {
+  userId: string;
+  username: string;
+  labId: number;
+  labName: string;
+  conclusionText: string;
+  scannedModels: string[];
+  createdAt?: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class EvaluationService {
   private apiUrl = 'http://localhost:3000/api/evaluations';
+  private conclusionsUrl = 'http://localhost:3000/api/conclusions';
 
   constructor(private http: HttpClient) {}
 
@@ -42,4 +53,18 @@ export class EvaluationService {
   getStats(): Observable<any[]> {
     return this.http.get<any[]>(`${this.apiUrl}/stats`);
   }
+
+  // Lab 5 - Conclusions
+  saveConclusion(conclusion: ConclusionResult): Observable<ConclusionResult> {
+    return this.http.post<ConclusionResult>(this.conclusionsUrl, conclusion);
+  }
+
+  getAllConclusions(): Observable<ConclusionResult[]> {
+    return this.http.get<ConclusionResult[]>(this.conclusionsUrl);
+  }
+
+  getConclusionsByUser(userId: string): Observable<ConclusionResult[]> {
+    return this.http.get<ConclusionResult[]>(`${this.conclusionsUrl}/user/${userId}`);
+  }
 }
+

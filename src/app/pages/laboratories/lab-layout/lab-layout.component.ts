@@ -16,7 +16,7 @@ export class LabLayoutComponent implements OnInit {
     '2': { title: 'QuiverVision', link: 'https://quivervision.com/' },
     '3': { title: 'Actionbound', link: 'https://en.actionbound.com/' },
     '4': { title: 'Metaverso Meta', link: null },
-    '5': { title: 'Laboratorio 5', link: null }
+    '5': { title: 'RA Propia - Generador 3D', link: null }
   };
 
   constructor(private route: ActivatedRoute) {}

@@ -408,8 +408,126 @@
 
 </div>
 
+<!-- DESARROLLO - Laboratorio 4: El Metaverso Meta -->
+<div *ngIf="labId === '4'" class="lab-content">
+
+  <div class="section-title">
+    <h3>¿En qué consiste el Metaverso Educativo?</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block">
+    <div class="content-with-image">
+      <div class="text-content">
+        <p>
+          El <strong>Metaverso Educativo</strong> busca eliminar las barreras geográficas y físicas en el aprendizaje. 
+          A través de gafas como las Meta Quest, los alumnos experimentan lo que los psicólogos llaman "sentido de 
+          presencia": el cerebro humano reacciona a las experiencias virtuales como si estuvieran ocurriendo realmente.
+        </p>
+        <p>
+          En la plataforma <strong>Horizon Workrooms</strong> (o espacios similares), un profesor puede tener una 
+          pizarra infinita, importar modelos 3D (como un motor de coche o un sistema solar) y pasarlos de mano en mano 
+          a los avatares de sus estudiantes. Además, con la tecnología de "Realidad Mixta" (Passthrough a color), 
+          los estudiantes pueden ver el aula física real mezclada con hologramas virtuales.
+        </p>
+        <p>
+          A diferencia de ver un documental sobre la Estación Espacial Internacional, el Metaverso permite a los alumnos 
+          "flotar" en ella, presionar sus botones y entender sus dimensiones reales a escala 1:1, logrando una 
+          retención de memoria muscular y espacial incomparable.
+        </p>
+      </div>
+      <div class="side-image">
+        <img src="assets/images/labs/merge_cube_howto.png" alt="Hardware de Realidad Virtual">
+      </div>
+    </div>
+  </div>
+
+  <!-- Uso en el Aula -->
+  <div class="section-title">
+    <h3>Herramientas y Dinámicas</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="usage-grid">
+    <div class="glass-panel usage-card">
+      <div class="usage-number">01</div>
+      <h4>Pizarras y Entornos Colaborativos</h4>
+      <p>Espacios como Horizon Workrooms permiten compartir presentaciones web, escribir en pizarrones virtuales enormes y organizar mesas redondas sin importar dónde estén físicamente.</p>
+      <div class="usage-tag">Trabajo Remoto</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">02</div>
+      <h4>Simuladores de Riesgo</h4>
+      <p>Aplicaciones para entrenar procedimientos de primeros auxilios, experimentos químicos inestables o mantenimiento de maquinaria pesada, donde el error no tiene consecuencias físicas.</p>
+      <div class="usage-tag">Seguridad</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">03</div>
+      <h4>Giras Virtuales Educativas</h4>
+      <p>Con documentales VR (videos 360°), los docentes pueden llevar a sus alumnos a bucear en la Gran Barrera de Coral o caminar por la superficie de Marte.</p>
+      <div class="usage-tag">Exploración</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">04</div>
+      <h4>Desarrollo de Soft Skills</h4>
+      <p>Aplicaciones como "Bodyswaps" permiten practicar entrevistas de trabajo o resolución de conflictos, donde una IA o un profesor controla los avatares e interactúa.</p>
+      <div class="usage-tag">Habilidades Blandas</div>
+    </div>
+  </div>
+
+  <!-- Real world applications -->
+  <div class="section-title">
+    <h3>Ejemplos de Aplicación por Áreas</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block" style="padding: 40px;">
+    <div class="real-apps-grid">
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🫀</span>
+          <h4>Anatomía y Medicina</h4>
+        </div>
+        <p>A través de apps como "Sharecare YOU", los alumnos pueden meterse literlamente dentro de un torrente 
+           sanguíneo o diseccionar un corazón palpitante, entendiendo la volumetría de los órganos.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🏛️</span>
+          <h4>Historia y Arqueología</h4>
+        </div>
+        <p>Los estudiantes viajan en el tiempo a través de reconstrucciones virtuales exactas. Pueden caminar por 
+           el Foro Romano durante su apogeo o visitar la casa de Ana Frank en VR.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🎨</span>
+          <h4>Arte y Diseño 3D</h4>
+        </div>
+        <p>Usando herramientas como "Gravity Sketch", los alumnos esculpen y pintan en el aire, caminando 
+           alrededor de sus obras de arte en tamaño real antes de mandarlas a una impresora 3D.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🗣️</span>
+          <h4>Idiomas</h4>
+        </div>
+        <p>Practicar inglés pidiendo comida en un restaurante virtual en Londres o negociando en una oficina 
+           en Nueva York, perdiendo el miedo escénico al estar "protegidos" tras un avatar.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="!['1', '2', '3'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
+<div *ngIf="!['1', '2', '3', '4'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Desarrollo</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.

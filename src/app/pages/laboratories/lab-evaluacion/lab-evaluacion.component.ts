@@ -690,6 +690,229 @@ export class LabEvaluacionComponent implements OnInit {
     }
   ];
 
+  metaversoQuestions: Question[] = [
+    {
+      id: 1,
+      text: '¿Qué es el Metaverso en un contexto educativo?',
+      options: [
+        'Un libro de texto digital en PDF',
+        'La evolución del internet hacia espacios virtuales tridimensionales y compartidos',
+        'Una red social exclusiva para profesores',
+        'Un sistema de calificaciones automático'
+      ],
+      correct: 1
+    },
+    {
+      id: 2,
+      text: '¿Qué dispositivo de hardware es el más representativo para acceder al Metaverso impulsado por Meta?',
+      options: [
+        'Un proyector de diapositivas',
+        'Meta Quest (visores de Realidad Virtual/Mixta)',
+        'Un ratón inalámbrico',
+        'Una calculadora científica'
+      ],
+      correct: 1
+    },
+    {
+      id: 3,
+      text: '¿Qué significa el "Sentido de Presencia" en la Realidad Virtual?',
+      options: [
+        'Estar físicamente en la escuela',
+        'La reacción del cerebro a la experiencia virtual como si estuviera ocurriendo realmente',
+        'Llamar lista en clase',
+        'Encender la cámara web'
+      ],
+      correct: 1
+    },
+    {
+      id: 4,
+      text: '¿Cómo se representa un estudiante dentro del Metaverso?',
+      options: [
+        'A través de un código de barras',
+        'Mediante un "Avatar" que replica sus movimientos y expresiones',
+        'Como un texto en pantalla',
+        'No tienen representación visual'
+      ],
+      correct: 1
+    },
+    {
+      id: 5,
+      text: '¿Qué es Horizon Workrooms?',
+      options: [
+        'Un programa para hacer hojas de cálculo',
+        'Un espacio virtual colaborativo donde equipos o clases pueden reunirse mediante avatares',
+        'Un juego de carreras de autos',
+        'Un motor de búsqueda de internet'
+      ],
+      correct: 1
+    },
+    {
+      id: 6,
+      text: '¿Qué tecnología permite ver el aula física mezclada con hologramas virtuales?',
+      options: [
+        'Realidad Mixta (Passthrough)',
+        'Cine 4D',
+        'Televisión por cable',
+        'Bluetooth'
+      ],
+      correct: 0
+    },
+    {
+      id: 7,
+      text: '¿Qué ventaja tiene la VR para estudiantes con problemas de atención o hiperactividad?',
+      options: [
+        'Les permite jugar videojuegos en clase',
+        'Al bloquear los estímulos visuales del mundo físico, reduce radicalmente las distracciones',
+        'Hace que el profesor hable más fuerte',
+        'Ninguna ventaja'
+      ],
+      correct: 1
+    },
+    {
+      id: 8,
+      text: '¿Qué es una "Micro-Inmersión" en la estrategia pedagógica de la VR?',
+      options: [
+        'Sumergir el visor en agua',
+        'Sesiones cortas (10-15 min) enfocadas en un objetivo específico, seguidas de un debate en el mundo real',
+        'Jugar 5 horas seguidas sin parar',
+        'Usar gafas pequeñas'
+      ],
+      correct: 1
+    },
+    {
+      id: 9,
+      text: 'En el Metaverso, ¿qué función cumple el "Audio Espacial"?',
+      options: [
+        'Escuchar música muy alto',
+        'Permite percibir de qué dirección y distancia provienen las voces, imitando la realidad',
+        'Traducir idiomas automáticamente',
+        'Grabar la clase'
+      ],
+      correct: 1
+    },
+    {
+      id: 10,
+      text: '¿Qué se conoce como el "Modelo de Piloto y Copiloto"?',
+      options: [
+        'Una clase sobre aviación',
+        'Una estrategia donde un estudiante usa el visor (piloto) y otro lo guía mirando la pantalla (copiloto)',
+        'Un juego de conducción',
+        'El profesor controla a todos los estudiantes'
+      ],
+      correct: 1
+    },
+    {
+      id: 11,
+      text: '¿Cómo puede utilizarse el Metaverso en Anatomía?',
+      options: [
+        'Viendo fotos en un libro de texto',
+        'Metidos virtualmente dentro de un torrente sanguíneo o diseccionando órganos a escala real',
+        'Escuchando una charla de un médico',
+        'Dibujando en la pizarra'
+      ],
+      correct: 1
+    },
+    {
+      id: 12,
+      text: '¿Qué es un "Aula Espejo Internacional"?',
+      options: [
+        'Poner espejos reales en el salón',
+        'Conectar estudiantes de diferentes países en una misma sala virtual para colaboración global',
+        'Grabar la clase y enviarla por correo',
+        'Usar gafas de sol en clase'
+      ],
+      correct: 1
+    },
+    {
+      id: 13,
+      text: '¿Por qué se considera a la VR "la máquina de empatía definitiva"?',
+      options: [
+        'Porque es muy barata',
+        'Porque permite experimentar el mundo desde la perspectiva en primera persona de otra persona o época',
+        'Porque te hace llorar siempre',
+        'Porque lee la mente'
+      ],
+      correct: 1
+    },
+    {
+      id: 14,
+      text: '¿Qué son los "Simuladores de Riesgo" en VR?',
+      options: [
+        'Juegos de azar',
+        'Apps para entrenar procedimientos peligrosos (ej. químicos o primeros auxilios) sin consecuencias reales',
+        'Antivirus para computadoras',
+        'Simuladores de bolsa de valores'
+      ],
+      correct: 1
+    },
+    {
+      id: 15,
+      text: '¿Cómo ayuda el Metaverso al aprendizaje de Idiomas?',
+      options: [
+        'Traduciendo el pensamiento',
+        'Practicando en escenarios virtuales (ej. un restaurante en Londres) donde el avatar reduce el miedo escénico',
+        'Imprimiendo diccionarios 3D',
+        'Leyendo subtítulos en el aire'
+      ],
+      correct: 1
+    },
+    {
+      id: 16,
+      text: '¿Es recomendable impartir una clase tradicional entera de 45 minutos dentro de la Realidad Virtual?',
+      options: [
+        'Sí, es lo más recomendado',
+        'No, puede causar fatiga visual y desconexión física. Se recomiendan sesiones más cortas.',
+        'Sí, hasta 3 horas seguidas',
+        'Depende de la conexión WiFi'
+      ],
+      correct: 1
+    },
+    {
+      id: 17,
+      text: '¿A qué se refiere la "Democratización de Experiencias" en el Metaverso?',
+      options: [
+        'A votar por el mejor juego',
+        'A que viajes imposibles o costosos (ir a la Luna o al Louvre) se vuelven accesibles para escuelas conectadas',
+        'A que la tecnología es gratis para todos',
+        'A jugar a la política'
+      ],
+      correct: 1
+    },
+    {
+      id: 18,
+      text: 'En el Metaverso, ¿cómo se interactúa de forma más natural sin mandos físicos?',
+      options: [
+        'A través de teclados especiales',
+        'A través del seguimiento de manos (Hand Tracking) que captan las cámaras del visor',
+        'Hablando fuerte',
+        'Pestañeando'
+      ],
+      correct: 1
+    },
+    {
+      id: 19,
+      text: '¿Qué es "Bodyswaps" según la información del laboratorio?',
+      options: [
+        'Una app de ejercicios físicos',
+        'Una aplicación para practicar entrevistas o resolución de conflictos y desarrollar habilidades blandas',
+        'Una tienda de ropa virtual',
+        'Un juego de acción'
+      ],
+      correct: 1
+    },
+    {
+      id: 20,
+      text: '¿Qué consideración ética es crítica al usar el Metaverso en la escuela?',
+      options: [
+        'Prohibir que los avatares usen sombreros',
+        'Establecer normas claras de comportamiento, proteger datos biométricos y controlar tiempos de exposición',
+        'Solo permitir jugar fuera del horario escolar',
+        'Evitar enseñar materias de ciencias'
+      ],
+      correct: 1
+    }
+  ];
+
   constructor(private route: ActivatedRoute, private evalService: EvaluationService) {}
 
   ngOnInit(): void {
@@ -708,6 +931,7 @@ export class LabEvaluacionComponent implements OnInit {
     if (this.labId === '1') return this.mergeCubeQuestions;
     if (this.labId === '2') return this.quiverQuestions;
     if (this.labId === '3') return this.actionboundQuestions;
+    if (this.labId === '4') return this.metaversoQuestions;
     return [];
   }
 
