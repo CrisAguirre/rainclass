@@ -15,6 +15,7 @@
 
 .hero-text {
   flex: 1;
+  min-width: 0;
 }
 
 .hero-text h2 {
@@ -92,6 +93,7 @@
   flex: 1;
   text-align: center;
   padding: 10px;
+  min-width: 0;
 }
 
 .step-number {
@@ -133,6 +135,7 @@
   color: var(--accent-color);
   padding-top: 15px;
   opacity: 0.5;
+  flex-shrink: 0;
 }
 
 .howto-image {
@@ -223,6 +226,7 @@
   display: flex;
   justify-content: center;
   gap: 50px;
+  flex-wrap: wrap;
 }
 
 .device {
@@ -248,27 +252,139 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .hero-section {
+    padding: 25px;
+    gap: 25px;
+  }
+  .hero-image {
+    flex: 0 0 250px;
+  }
+  .hero-text h2 {
+    font-size: 1.6rem;
+  }
+  .how-it-works {
+    padding: 25px;
+  }
+  .apps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .features-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lab-content {
+    gap: 25px;
+  }
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  .lab-content {
+    gap: 20px;
+  }
   .hero-section {
     flex-direction: column;
+    padding: 20px 15px;
+    gap: 20px;
   }
   .hero-image {
     flex: none;
     width: 100%;
   }
+  .hero-text h2 {
+    font-size: 1.3rem;
+  }
+  .hero-text .subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+  .hero-text p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+  .section-title h3 {
+    font-size: 1.2rem;
+  }
+  .how-it-works {
+    padding: 15px;
+  }
   .steps-container {
     flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  .step {
+    padding: 5px 0;
+  }
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  .step h4 {
+    font-size: 0.95rem;
+  }
+  .step p {
+    font-size: 0.82rem;
   }
   .step-arrow {
     transform: rotate(90deg);
     padding: 0;
     justify-content: center;
+    font-size: 1.2rem;
+  }
+  .howto-image img {
+    width: 100%;
   }
   .apps-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .app-card {
+    padding: 20px 15px;
+  }
+  .app-icon {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .app-card h4 {
+    font-size: 1rem;
+  }
+  .app-card p {
+    font-size: 0.82rem;
   }
   .features-row {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .feature-item {
+    padding: 20px 10px;
+  }
+  .feature-stat {
+    font-size: 2rem;
+  }
+  .feature-item p {
+    font-size: 0.78rem;
+  }
+  .devices-row {
+    gap: 25px;
+  }
+  .device-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-text h2 {
+    font-size: 1.15rem;
+  }
+  .features-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .feature-stat {
+    font-size: 1.6rem;
   }
 }

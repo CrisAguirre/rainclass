@@ -1,0 +1,401 @@
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInDown 0.6s ease-out;
+}
+
+.page-header h2 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Section Common */
+.section-container {
+  margin-top: 60px;
+  animation: fadeIn 0.8s ease-out backwards;
+}
+
+.section-container:nth-child(3) { animation-delay: 0.2s; }
+.section-container:nth-child(4) { animation-delay: 0.4s; }
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section-title h3 {
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.title-line {
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(77, 168, 218, 0.5);
+}
+
+/* Welcome Hero */
+.welcome-hero {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  gap: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.welcome-hero::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(77, 168, 218, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h3 {
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+}
+
+.primary-btn {
+  padding: 12px 25px;
+  font-size: 1.05rem;
+  background: rgba(77, 168, 218, 0.15);
+  border-color: var(--accent-color);
+  color: var(--text-primary);
+  box-shadow: 0 0 15px rgba(77, 168, 218, 0.2);
+}
+
+.primary-btn:hover {
+  background: var(--accent-color);
+  box-shadow: 0 0 20px rgba(77, 168, 218, 0.5);
+  transform: translateY(-2px);
+}
+
+/* 3D Cube CSS Animation */
+.hero-graphic {
+  flex: 0 0 200px;
+  display: flex;
+  justify-content: center;
+  perspective: 800px;
+}
+
+.floating-cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: float-spin 8s infinite linear;
+}
+
+.cube-face {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(77, 168, 218, 0.1);
+  border: 2px solid var(--accent-color);
+  box-shadow: inset 0 0 15px rgba(77, 168, 218, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  backdrop-filter: blur(2px);
+}
+
+.front  { transform: rotateY(  0deg) translateZ(50px); }
+.right  { transform: rotateY( 90deg) translateZ(50px); }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.top    { transform: rotateX( 90deg) translateZ(50px); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+@keyframes float-spin {
+  0% { transform: rotateX(-20deg) rotateY(0deg) translateY(0); }
+  25% { transform: rotateX(-10deg) rotateY(90deg) translateY(-10px); }
+  50% { transform: rotateX(-20deg) rotateY(180deg) translateY(0); }
+  75% { transform: rotateX(-30deg) rotateY(270deg) translateY(10px); }
+  100% { transform: rotateX(-20deg) rotateY(360deg) translateY(0); }
+}
+
+/* Labs Summary Grid */
+.labs-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.lab-summary-card {
+  padding: 25px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.lab-summary-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(77, 168, 218, 0.2);
+}
+
+.lab-summary-card.featured {
+  background: rgba(77, 168, 218, 0.05);
+  border: 1px solid rgba(77, 168, 218, 0.4);
+}
+
+.lab-badge {
+  position: absolute;
+  top: -12px;
+  background: var(--bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.featured-badge {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  box-shadow: 0 0 10px rgba(77, 168, 218, 0.3);
+}
+
+.lab-icon {
+  font-size: 2.5rem;
+  margin: 15px 0;
+}
+
+.lab-summary-card h4 {
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.lab-summary-card p {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+/* Methodology Timeline */
+.methodology-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.methodology-timeline::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(to bottom, 
+    var(--accent-color) 0%, 
+    rgba(77, 168, 218, 0.5) 50%, 
+    rgba(77, 168, 218, 0.1) 100%);
+}
+
+.timeline-step {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+
+.step-marker {
+  position: absolute;
+  left: -40px;
+  width: 32px;
+  height: 32px;
+  background: var(--bg-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 10px rgba(77, 168, 218, 0.4);
+}
+
+.marker-icon {
+  font-size: 0.9rem;
+}
+
+.step-content {
+  width: 100%;
+  padding: 20px 25px;
+  transition: transform 0.2s ease;
+}
+
+.step-content:hover {
+  transform: translateX(5px);
+  border-color: rgba(77, 168, 218, 0.3);
+}
+
+.step-content h4 {
+  color: var(--accent-color);
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .welcome-hero {
+    padding: 35px;
+    gap: 30px;
+  }
+  .labs-summary-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .page-header h2 {
+    font-size: 1.6rem;
+  }
+  .page-header p {
+    font-size: 0.95rem;
+  }
+  .section-container {
+    margin-top: 40px;
+  }
+  .section-title h3 {
+    font-size: 1.3rem;
+  }
+  .section-subtitle {
+    font-size: 0.85rem;
+  }
+  .welcome-hero {
+    flex-direction: column;
+    padding: 25px 20px;
+    text-align: center;
+  }
+  .hero-content h3 {
+    font-size: 1.4rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  .primary-btn {
+    width: 100%;
+  }
+  .hero-graphic {
+    flex: none;
+    height: 120px;
+    margin-top: 10px;
+  }
+  .floating-cube {
+    width: 80px;
+    height: 80px;
+  }
+  .cube-face {
+    width: 80px;
+    height: 80px;
+    font-size: 1.5rem;
+  }
+  .front  { transform: rotateY(  0deg) translateZ(40px); }
+  .right  { transform: rotateY( 90deg) translateZ(40px); }
+  .back   { transform: rotateY(180deg) translateZ(40px); }
+  .left   { transform: rotateY(-90deg) translateZ(40px); }
+  .top    { transform: rotateX( 90deg) translateZ(40px); }
+  .bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+  .labs-summary-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .lab-summary-card {
+    padding: 20px 15px;
+  }
+  .lab-icon {
+    font-size: 2rem;
+  }
+  
+  .methodology-timeline {
+    padding-left: 30px;
+  }
+  .methodology-timeline::before {
+    left: 10px;
+  }
+  .step-marker {
+    left: -30px;
+    width: 24px;
+    height: 24px;
+  }
+  .marker-icon {
+    font-size: 0.7rem;
+  }
+  .step-content {
+    padding: 15px;
+  }
+  .step-content h4 {
+    font-size: 1rem;
+  }
+  .step-content p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .labs-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

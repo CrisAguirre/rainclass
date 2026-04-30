@@ -88,3 +88,20 @@
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 20px;
+  }
+  .logo-container h2 {
+    font-size: 1.8rem;
+  }
+  .login-header p {
+    font-size: 0.85rem;
+  }
+  .login-btn {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

@@ -190,15 +190,87 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+  .lab-content {
+    gap: 25px;
+  }
+  .reflection-intro {
+    gap: 20px;
+  }
+  .reflection-image {
+    width: 220px;
+    flex-shrink: 0;
+  }
+  .strategies-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
+  .lab-content {
+    gap: 20px;
+  }
+  .section-title h3 {
+    font-size: 1.2rem;
+  }
+  .section-subtitle {
+    font-size: 0.85rem;
+  }
   .reflection-intro {
     flex-direction: column;
+    gap: 15px;
   }
   .reflection-image {
     width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .reflection-text p {
+    font-size: 0.88rem;
+    line-height: 1.7;
   }
   .strategies-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .strategy-card {
+    padding: 20px 15px;
+  }
+  .strategy-icon {
+    font-size: 1.6rem;
+  }
+  .strategy-card h4 {
+    font-size: 1rem;
+  }
+  .strategy-card p {
+    font-size: 0.85rem;
+  }
+  .conclusion-item {
+    padding: 15px;
+    gap: 12px;
+  }
+  .conclusion-number {
+    min-width: 32px;
+    height: 32px;
+    font-size: 0.85rem;
+  }
+  .conclusion-text h4 {
+    font-size: 1rem;
+  }
+  .conclusion-text p {
+    font-size: 0.85rem;
+  }
+  .reflection-final {
+    padding: 25px 15px;
+  }
+  .quote-text {
+    font-size: 0.95rem;
+  }
+  .quote-icon {
+    font-size: 2.5rem;
   }
 }
 
