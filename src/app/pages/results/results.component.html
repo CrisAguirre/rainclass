@@ -1,9 +1,89 @@
-<div class="page-header">
-  <h2>Resultados y Analíticas</h2>
-  <p>Monitorea el progreso de apropiación en Realidad Aumentada.</p>
-</div>
+<div class="results-container animate-fade-in">
+  <div class="page-header">
+    <h2>Resultados de Evaluaciones</h2>
+    <p>Monitoriza el progreso y apropiación de los docentes en cada laboratorio de Realidad Aumentada.</p>
+  </div>
 
-<div class="glass-panel" style="padding: 40px; text-align: center;">
-  <h3>Estadísticas Generales</h3>
-  <p style="color: var(--text-secondary); margin-top: 15px;">Módulo en construcción.</p>
+  <div *ngIf="loading" class="loading-state">
+    <div class="spinner"></div>
+    <p>Cargando resultados...</p>
+  </div>
+
+  <div *ngIf="!loading" class="dashboard-grid">
+    <!-- Stats Overview -->
+    <div class="stats-section">
+      <h3 class="section-title">Resumen por Laboratorio</h3>
+      <div class="stats-cards">
+        <div *ngFor="let stat of stats" class="glass-panel stat-card">
+          <h4>{{ stat.labName }}</h4>
+          <div class="stat-metrics">
+            <div class="metric">
+              <span class="value">{{ stat.totalAttempts }}</span>
+              <span class="label">Evaluaciones</span>
+            </div>
+            <div class="metric">
+              <span class="value">{{ stat.avgPercentage }}%</span>
+              <span class="label">Promedio</span>
+            </div>
+            <div class="metric">
+              <span class="value">{{ stat.uniqueUsers }}</span>
+              <span class="label">Docentes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Results Table -->
+    <div class="glass-panel table-container">
+      <div class="table-header">
+        <h3>Registro Detallado</h3>
+        <button class="glass-button small-btn" (click)="loadData()">Actualizar</button>
+      </div>
+      
+      <div class="table-responsive">
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Docente</th>
+              <th>Laboratorio</th>
+              <th>Intento</th>
+              <th>Puntaje</th>
+              <th>Porcentaje</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let result of results">
+              <td>{{ formatDate(result.createdAt) }}</td>
+              <td class="user-cell">
+                <span class="user-icon">👤</span>
+                {{ result.username }}
+              </td>
+              <td><span class="lab-badge">Lab {{ result.labId }}: {{ result.labName }}</span></td>
+              <td class="text-center">#{{ result.attemptNumber }}</td>
+              <td class="text-center"><strong>{{ result.score }}/{{ result.totalQuestions }}</strong></td>
+              <td class="text-center">
+                <div class="percentage-bar-wrapper">
+                  <div class="percentage-fill" [style.width.%]="result.percentage" 
+                       [class.good]="result.percentage >= 70" 
+                       [class.bad]="result.percentage < 70"></div>
+                  <span class="percentage-text">{{ result.percentage }}%</span>
+                </div>
+              </td>
+              <td>
+                <span class="status-badge" [class.success]="result.percentage >= 70" [class.danger]="result.percentage < 70">
+                  {{ result.percentage >= 70 ? 'Aprobado' : 'Requiere Repaso' }}
+                </span>
+              </td>
+            </tr>
+            <tr *ngIf="results.length === 0">
+              <td colspan="7" class="empty-state">No hay resultados registrados todavía.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>

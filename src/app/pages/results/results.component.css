@@ -1,0 +1,250 @@
+.results-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 30px;
+}
+
+.page-header h2 {
+  font-size: 2.2rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(77, 168, 218, 0.3);
+}
+
+.page-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Loading */
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: var(--text-secondary);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(77, 168, 218, 0.2);
+  border-top-color: var(--accent-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Stats Section */
+.section-title {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(77, 168, 218, 0.4);
+}
+
+.stat-card h4 {
+  color: var(--accent-color);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding-bottom: 10px;
+}
+
+.stat-metrics {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.metric .label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 5px;
+}
+
+/* Table Section */
+.table-container {
+  padding: 25px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-header h3 {
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.small-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.results-table th, 
+.results-table td {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.results-table th {
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.results-table td {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.results-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.results-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.user-icon {
+  background: rgba(77, 168, 218, 0.15);
+  padding: 5px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+
+.lab-badge {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.percentage-bar-wrapper {
+  position: relative;
+  width: 100px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.percentage-fill {
+  height: 100%;
+  border-radius: 12px;
+}
+
+.percentage-fill.good {
+  background: rgba(76, 175, 80, 0.6);
+}
+
+.percentage-fill.bad {
+  background: rgba(255, 152, 0, 0.6);
+}
+
+.percentage-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-shadow: 0 0 2px rgba(0,0,0,0.8);
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-badge.success {
+  background: rgba(76, 175, 80, 0.15);
+  color: #81c784;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.status-badge.danger {
+  background: rgba(255, 152, 0, 0.15);
+  color: #ffb74d;
+  border: 1px solid rgba(255, 152, 0, 0.3);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px !important;
+  color: var(--text-secondary) !important;
+  font-style: italic;
+}

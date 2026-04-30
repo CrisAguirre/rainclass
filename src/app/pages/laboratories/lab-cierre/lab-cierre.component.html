@@ -140,8 +140,103 @@
 
 </div>
 
+<!-- CIERRE - Laboratorio 2: QuiverVision -->
+<div *ngIf="labId === '2'" class="lab-content">
+
+  <div class="section-title">
+    <h3>Reflexión Pedagógica</h3>
+    <p class="section-subtitle">Conectando el arte físico con la tecnología inmersiva</p>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block">
+    <div class="reflection-intro">
+      <img src="assets/images/labs/quiver_classroom.png" alt="Docentes usando QuiverVision" class="reflection-image">
+      <div class="reflection-text">
+        <p>
+          QuiverVision nos enseña que la tecnología no tiene por qué reemplazar las actividades tradicionales 
+          de gran valor pedagógico, como el coloreado manual, sino que puede <strong>potenciarlas</strong>. 
+          Al requerir que el estudiante primero dedique tiempo, atención y motricidad fina a una hoja de papel, 
+          creamos un puente perfecto entre lo analógico y lo digital.
+        </p>
+        <p>
+          Esta herramienta tiene un poderoso <strong>efecto "Wow!"</strong> que capta inmediatamente la atención 
+          de los estudiantes. El desafío para el educador es usar ese asombro inicial como motor para profundizar 
+          en los objetivos curriculares: pasar de la simple sorpresa a la indagación científica, la narración de 
+          historias o la comprensión geométrica.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Estrategias Pedagógicas -->
+  <div class="section-title">
+    <h3>Estrategias Pedagógicas Recomendadas</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="strategies-grid">
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">📖</div>
+      <h4>Storytelling Digital</h4>
+      <p>Pide a los estudiantes que escriban un cuento corto sobre el personaje o animal de su plantilla. 
+         Luego, usan la animación 3D de Quiver como apoyo visual para relatar su historia frente a la clase.</p>
+    </div>
+
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">🔬</div>
+      <h4>Indagación Científica</h4>
+      <p>Con las plantillas de biología, usa la interactividad 3D para que descubran las partes de una célula 
+         o el ciclo de un volcán. Deben registrar los pasos del proceso que observan en su cuaderno.</p>
+    </div>
+
+    <div class="glass-panel strategy-card">
+      <div class="strategy-icon">🎨</div>
+      <h4>Arte y Emociones</h4>
+      <p>Trabaja la educación emocional pidiendo que coloreen plantillas expresando cómo se sienten a través 
+         del uso de determinados colores y trazos, para luego reflexionar sobre el resultado en 3D.</p>
+    </div>
+  </div>
+
+  <!-- Conclusiones -->
+  <div class="section-title">
+    <h3>Conclusiones del Laboratorio</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel conclusions-block">
+    <div class="conclusion-item">
+      <div class="conclusion-number">1</div>
+      <div class="conclusion-text">
+        <h4>Vínculo Analógico-Digital</h4>
+        <p>Demuestra que la Realidad Aumentada no aísla al estudiante en una pantalla, sino que puede 
+           nacer de una actividad física y manual, integrando lo mejor de ambos mundos educativos.</p>
+      </div>
+    </div>
+
+    <div class="conclusion-item">
+      <div class="conclusion-number">2</div>
+      <div class="conclusion-text">
+        <h4>Personalización y Pertenencia</h4>
+        <p>Al respetar los colores y trazos del alumno en el modelo 3D, se genera un fuerte sentido de autoría 
+           y orgullo, elementos fundamentales para la autoestima y motivación en el aprendizaje.</p>
+      </div>
+    </div>
+
+    <div class="conclusion-item">
+      <div class="conclusion-number">3</div>
+      <div class="conclusion-text">
+        <h4>Facilidad de Implementación</h4>
+        <p>Es una de las herramientas de RA con la curva de aprendizaje más baja para los docentes. Requiere 
+           mínima preparación técnica más allá de imprimir las hojas y descargar la app.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="labId !== '1'" class="glass-panel" style="padding: 30px;">
+<div *ngIf="labId !== '1' && labId !== '2'" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Cierre</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.

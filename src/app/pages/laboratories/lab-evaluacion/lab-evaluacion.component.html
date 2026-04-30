@@ -1,9 +1,9 @@
-<!-- EVALUACIÓN - Laboratorio 1: Merge Cube -->
-<div *ngIf="labId === '1'" class="lab-content">
+<!-- EVALUACIÓN - Laboratorio -->
+<div *ngIf="labId === '1' || labId === '2'" class="lab-content">
 
   <!-- Quiz Header -->
   <div class="section-title" *ngIf="!submitted">
-    <h3>Evaluación: Merge Cube</h3>
+    <h3>Evaluación: {{ labId === '1' ? 'Merge Cube' : 'QuiverVision' }}</h3>
     <p class="section-subtitle">Responde las 20 preguntas para evaluar tu apropiación sobre esta tecnología.</p>
     <div class="title-line"></div>
   </div>
@@ -103,7 +103,7 @@
 </div>
 
 <!-- Generic placeholder for other labs -->
-<div *ngIf="labId !== '1'" class="glass-panel" style="padding: 30px;">
+<div *ngIf="labId !== '1' && labId !== '2'" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Evaluación</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Evaluación en desarrollo para este laboratorio.

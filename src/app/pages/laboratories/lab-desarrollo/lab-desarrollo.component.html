@@ -169,8 +169,129 @@
 
 </div>
 
+<!-- DESARROLLO - Laboratorio 2: QuiverVision -->
+<div *ngIf="labId === '2'" class="lab-content">
+
+  <div class="section-title">
+    <h3>¿En qué consiste QuiverVision?</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block">
+    <div class="content-with-image">
+      <div class="text-content">
+        <p>
+          <strong>QuiverVision</strong> utiliza tecnología patentada de reconocimiento de imágenes para rastrear 
+          páginas para colorear específicas impresas en 2D y superponer modelos 3D animados interactivos.
+        </p>
+        <p>
+          Lo verdaderamente revolucionario de esta plataforma es su capacidad para capturar el arte del estudiante 
+          en tiempo real. Si un niño pinta un tucán con el pico morado a lunares verdes, el modelo 3D que cobra vida 
+          tendrá exactamente esas mismas características, texturas y colores. Esto crea un sentido de propiedad 
+          inmediato sobre la creación digital.
+        </p>
+        <p>
+          La aplicación ofrece cientos de páginas agrupadas en temas educativos, desde biología animal y vegetal 
+          hasta educación vial, astronomía, historia y festividades culturales, convirtiéndola en una herramienta 
+          versátil para múltiples áreas del currículo.
+        </p>
+      </div>
+      <div class="side-image">
+        <img src="assets/images/labs/quiver_hero.png" alt="QuiverVision Detalles">
+      </div>
+    </div>
+  </div>
+
+  <!-- Uso en el Aula -->
+  <div class="section-title">
+    <h3>Uso Práctico en el Aula</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="usage-grid">
+    <div class="glass-panel usage-card">
+      <div class="usage-number">01</div>
+      <h4>Selección Curricular</h4>
+      <p>El docente ingresa al portal Quiver Education, selecciona el tema a tratar (ej. ciclo del agua) y 
+         descarga la plantilla correspondiente en PDF para imprimir.</p>
+      <div class="usage-tag">Planificación</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">02</div>
+      <h4>Actividad Artística</h4>
+      <p>En clase, se introduce el tema. Los estudiantes colorean la plantilla cuidadosamente. Esta fase 
+         relajante ayuda a preparar la atención y fomenta la motricidad.</p>
+      <div class="usage-tag">Trabajo manual</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">03</div>
+      <h4>Revelación Digital</h4>
+      <p>Usando tablets del colegio, los estudiantes apuntan a su dibujo. Tras un breve escaneo (color azul a verde), 
+         el dibujo salta en 3D respetando sus colores originales.</p>
+      <div class="usage-tag">Interacción AR</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">04</div>
+      <h4>Interactividad</h4>
+      <p>Los alumnos tocan elementos en pantalla para activar animaciones (ej. hacer erupcionar un volcán), 
+         jugar minijuegos educativos o escuchar información en audio.</p>
+      <div class="usage-tag">Aprendizaje activo</div>
+    </div>
+  </div>
+
+  <!-- Real world applications -->
+  <div class="section-title">
+    <h3>Ejemplos de Aplicación por Áreas</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block" style="padding: 40px;">
+    <div class="real-apps-grid">
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🧬</span>
+          <h4>Ciencias Naturales</h4>
+        </div>
+        <p>Estudio detallado de células animal y vegetal. Al colorearlas y escanearlas, pueden observar cómo 
+           funciona cada orgánulo en 3D e interactuar con el núcleo, mitocondrias, etc.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🗺️</span>
+          <h4>Geografía e Historia</h4>
+        </div>
+        <p>Plantillas de mapas mundiales interactivos y monumentos históricos. Los estudiantes pueden colorear el 
+           mapamundi y ver modelos de los diferentes continentes, climas o banderas emergiendo.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">📏</span>
+          <h4>Matemáticas y Geometría</h4>
+        </div>
+        <p>Plantillas para sólidos platónicos. Pasan de redes planas 2D a la construcción de poliedros 3D interactivos 
+           que pueden rotar y desarmar digitalmente.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🗣️</span>
+          <h4>Lenguas y Literatura</h4>
+        </div>
+        <p>Personajes de cuentos (dragones, caballeros, animales) que cobran vida para inspirar la escritura 
+           creativa o facilitar la narración oral en idiomas extranjeros.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <!-- Generic placeholder for other labs -->
-<div *ngIf="labId !== '1'" class="glass-panel" style="padding: 30px;">
+<div *ngIf="labId !== '1' && labId !== '2'" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Desarrollo</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
     Contenido en desarrollo para este laboratorio.

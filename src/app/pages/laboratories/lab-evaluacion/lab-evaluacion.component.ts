@@ -244,6 +244,229 @@ export class LabEvaluacionComponent implements OnInit {
     }
   ];
 
+  quiverQuestions: Question[] = [
+    {
+      id: 1,
+      text: '¿Qué es QuiverVision?',
+      options: [
+        'Una herramienta de Realidad Virtual para dibujar en el aire',
+        'Una plataforma de Realidad Aumentada que da vida en 3D a dibujos coloreados en papel',
+        'Un software para imprimir libros en 3D',
+        'Una marca de crayones inteligentes'
+      ],
+      correct: 1
+    },
+    {
+      id: 2,
+      text: '¿Cuál es el primer paso para utilizar QuiverVision en el aula?',
+      options: [
+        'Comprar un Merge Cube',
+        'Pintar la pantalla de la tablet',
+        'Descargar e imprimir las plantillas desde el portal de Quiver',
+        'Escuchar un audio explicativo'
+      ],
+      correct: 2
+    },
+    {
+      id: 3,
+      text: '¿Qué sucede cuando se escanea un dibujo coloreado con la app de Quiver?',
+      options: [
+        'El dibujo se borra de la hoja',
+        'Aparece un modelo genérico en 3D',
+        'Aparece un modelo 3D que conserva los mismos colores y texturas usados por el estudiante',
+        'El dibujo se convierte en una foto 2D'
+      ],
+      correct: 2
+    },
+    {
+      id: 4,
+      text: '¿Qué habilidad principal se fomenta durante la etapa de coloreado manual en QuiverVision?',
+      options: [
+        'Programación avanzada',
+        'Motricidad fina y expresión artística',
+        'Matemáticas abstractas',
+        'Lectura rápida'
+      ],
+      correct: 1
+    },
+    {
+      id: 5,
+      text: '¿Qué ventaja tiene QuiverVision sobre la Realidad Virtual en educación infantil?',
+      options: [
+        'Es más costosa',
+        'Aísla completamente al estudiante del entorno real',
+        'Combina una actividad manual tradicional (colorear) con la innovación digital',
+        'Requiere computadoras de alto rendimiento'
+      ],
+      correct: 2
+    },
+    {
+      id: 6,
+      text: '¿Cómo contribuye Quiver a la autoestima del estudiante?',
+      options: [
+        'Dándole recompensas virtuales por jugar rápido',
+        'Al ver que su propia creación, con sus colores únicos, cobra vida y es la protagonista',
+        'Calificando su dibujo con notas del 1 al 10',
+        'Comparando su dibujo con el de sus compañeros'
+      ],
+      correct: 1
+    },
+    {
+      id: 7,
+      text: '¿En qué área se puede utilizar la plantilla de un volcán de QuiverVision?',
+      options: [
+        'Música',
+        'Ciencias Naturales o Geografía',
+        'Matemáticas',
+        'Educación Física'
+      ],
+      correct: 1
+    },
+    {
+      id: 8,
+      text: '¿Qué portal específico ofrece Quiver para planes de estudio y educadores?',
+      options: [
+        'Quiver Entertainment',
+        'Quiver Education',
+        'Quiver Pro 3D',
+        'Quiver Teachers Only'
+      ],
+      correct: 1
+    },
+    {
+      id: 9,
+      text: '¿Cuál de las siguientes acciones NO es posible en la app de Quiver?',
+      options: [
+        'Interactuar tocando elementos en la pantalla',
+        'Hacer que personajes animados realicen acciones',
+        'Modificar el código fuente de la aplicación en tiempo real',
+        'Escuchar audios informativos o cuestionarios en la app'
+      ],
+      correct: 2
+    },
+    {
+      id: 10,
+      text: '¿Cómo se pueden integrar las lenguas y la literatura con QuiverVision?',
+      options: [
+        'Haciendo que la app escriba ensayos automáticamente',
+        'Usando los personajes 3D como inspiración para crear relatos o practicar narración oral',
+        'Coloreando el abecedario sin usar tecnología',
+        'QuiverVision no se puede usar para literatura'
+      ],
+      correct: 1
+    },
+    {
+      id: 11,
+      text: '¿Qué tecnología utiliza Quiver para detectar las páginas impresas?',
+      options: [
+        'Geolocalización GPS',
+        'Reconocimiento de imágenes patentado',
+        'Lectura de chips RFID',
+        'Sensores de temperatura'
+      ],
+      correct: 1
+    },
+    {
+      id: 12,
+      text: '¿Qué es el "efecto Wow" en el contexto de QuiverVision?',
+      options: [
+        'El sonido que hace la app al iniciar',
+        'El asombro inmediato que capta la atención del alumno al ver su dibujo cobrar vida',
+        'Un botón especial para ganar puntos',
+        'Un filtro de cámara para hacer las fotos más brillantes'
+      ],
+      correct: 1
+    },
+    {
+      id: 13,
+      text: '¿Cuál es el rol del docente durante una actividad con QuiverVision?',
+      options: [
+        'Solo observar cómo los niños colorean',
+        'Aprovechar el asombro inicial para guiar a los estudiantes hacia la indagación y el objetivo curricular',
+        'Colorear por los estudiantes',
+        'Apagar los dispositivos para no distraer'
+      ],
+      correct: 1
+    },
+    {
+      id: 14,
+      text: 'En Matemáticas y Geometría, ¿qué permite visualizar QuiverVision?',
+      options: [
+        'Ecuaciones algebraicas complejas resueltas',
+        'La transición de redes planas 2D a poliedros sólidos 3D que se pueden rotar',
+        'La tabla de multiplicar cantada',
+        'Estadísticas avanzadas de la clase'
+      ],
+      correct: 1
+    },
+    {
+      id: 15,
+      text: '¿Es necesario que el colegio adquiera hardware costoso específico (como cascos VR) para usar Quiver?',
+      options: [
+        'Sí, requiere cascos de $500 USD por estudiante',
+        'No, basta con hojas impresas, lápices de colores y dispositivos móviles o tablets estándar',
+        'Sí, se necesitan proyectores holográficos',
+        'No, funciona en calculadoras'
+      ],
+      correct: 1
+    },
+    {
+      id: 16,
+      text: '¿Qué color de escaneo indica en la app de Quiver que ha detectado correctamente la plantilla entera?',
+      options: [
+        'Rojo a naranja',
+        'Gris a blanco',
+        'Azul a verde',
+        'Negro a amarillo'
+      ],
+      correct: 2
+    },
+    {
+      id: 17,
+      text: 'Para trabajar educación emocional con Quiver, ¿qué estrategia es efectiva?',
+      options: [
+        'Obligar a todos a pintar de color gris',
+        'Pedir que usen colores que expresen su estado de ánimo y reflexionar sobre la animación resultante',
+        'Jugar carreras para ver quién termina primero',
+        'Esconder la tablet si se portan mal'
+      ],
+      correct: 1
+    },
+    {
+      id: 18,
+      text: '¿Qué pasa si el estudiante colorea fuera de las líneas en la plantilla de Quiver?',
+      options: [
+        'La aplicación se bloquea',
+        'El modelo 3D refleja esos trazos fuera de línea, mostrando fielmente la creación del niño',
+        'El dibujo se auto-corrige y queda perfecto',
+        'El modelo pierde todo el color y se vuelve blanco'
+      ],
+      correct: 1
+    },
+    {
+      id: 19,
+      text: 'Además de la cámara, ¿qué otro recurso multimedia suele integrarse en las animaciones de Quiver?',
+      options: [
+        'Solo imágenes sin sonido',
+        'Efectos de sonido, información en audio y minijuegos',
+        'Chat en vivo con el profesor',
+        'Videollamadas con otros colegios'
+      ],
+      correct: 1
+    },
+    {
+      id: 20,
+      text: '¿Cuál es una conclusión pedagógica clave del Laboratorio de QuiverVision?',
+      options: [
+        'La tecnología debe eliminar el uso de papel en las escuelas',
+        'La RA es demasiado compleja para niños pequeños',
+        'Se puede crear un vínculo perfecto y significativo entre actividades analógicas manuales y la tecnología inmersiva',
+        'Colorear es una pérdida de tiempo en la era digital'
+      ],
+      correct: 2
+    }
+  ];
+
   constructor(private route: ActivatedRoute, private evalService: EvaluationService) {}
 
   ngOnInit(): void {
@@ -260,6 +483,7 @@ export class LabEvaluacionComponent implements OnInit {
 
   getQuestions(): Question[] {
     if (this.labId === '1') return this.mergeCubeQuestions;
+    if (this.labId === '2') return this.quiverQuestions;
     return [];
   }
 
@@ -279,11 +503,15 @@ export class LabEvaluacionComponent implements OnInit {
     });
     this.submitted = true;
 
+    // Get user from localStorage
+    let userStr = localStorage.getItem('currentUser');
+    let user = userStr ? JSON.parse(userStr) : { userId: 'anon', username: 'Docente Anónimo' };
+
     // Send results to backend
     const labNames: { [key: string]: string } = { '1': 'Merge Cube', '2': 'QuiverVision', '3': 'Actionbound', '4': 'Metaverso Meta', '5': 'Laboratorio 5' };
     this.evalService.saveResult({
-      userId: 'admin',
-      username: 'adminrainclass',
+      userId: user.userId,
+      username: user.username,
       labId: parseInt(this.labId || '0'),
       labName: labNames[this.labId || '1'] || 'Desconocido',
       score: this.score,
