@@ -43,6 +43,10 @@
 
 .hero-image {
   flex: 0 0 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
 }
 
 .hero-image img {
@@ -54,6 +58,47 @@
 
 .hero-image img:hover {
   transform: scale(1.03);
+}
+
+/* 3D Cube Animation */
+.floating-cube {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: floatAndRotate 12s infinite linear;
+}
+
+.cube-face {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: rgba(77, 168, 218, 0.15);
+  border: 2px solid rgba(77, 168, 218, 0.6);
+  box-shadow: inset 0 0 30px rgba(77, 168, 218, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  backdrop-filter: blur(8px);
+  text-shadow: 0 0 10px rgba(77, 168, 218, 0.8);
+}
+
+.front  { transform: translateZ(80px); }
+.back   { transform: rotateY(180deg) translateZ(80px); }
+.right  { transform: rotateY(90deg) translateZ(80px); }
+.left   { transform: rotateY(-90deg) translateZ(80px); }
+.top    { transform: rotateX(90deg) translateZ(80px); }
+.bottom { transform: rotateX(-90deg) translateZ(80px); }
+
+@keyframes floatAndRotate {
+  0% { transform: rotateX(0deg) rotateY(0deg) translateY(0); }
+  25% { transform: rotateX(90deg) rotateY(90deg) translateY(-25px); }
+  50% { transform: rotateX(180deg) rotateY(180deg) translateY(0); }
+  75% { transform: rotateX(270deg) rotateY(270deg) translateY(25px); }
+  100% { transform: rotateX(360deg) rotateY(360deg) translateY(0); }
 }
 
 /* Section Titles */
