@@ -1,6 +1,165 @@
-<div class="glass-panel" style="padding: 30px;">
+<!-- INICIO - Laboratorio 1: Merge Cube -->
+<div *ngIf="labId === '1'" class="lab-content">
+  
+  <!-- Hero Section -->
+  <div class="hero-section glass-panel">
+    <div class="hero-text">
+      <h2>¿Qué es el Merge Cube?</h2>
+      <p class="subtitle">La Realidad Aumentada en la palma de tu mano</p>
+      <p>
+        El <strong>Merge Cube</strong> es un dispositivo físico de realidad aumentada revolucionario que permite 
+        a los usuarios sostener y manipular objetos digitales 3D en sus manos. Es un cubo de gomaespuma suave 
+        con patrones geométricos únicos en cada una de sus seis caras, que actúan como marcadores de RA reconocidos 
+        por la cámara de un dispositivo móvil (teléfono o tableta).
+      </p>
+      <p>
+        Desarrollado por <strong>Merge EDU</strong>, esta herramienta ha sido adoptada por millones de educadores 
+        y estudiantes en todo el mundo, transformando la forma en que se enseñan conceptos abstractos de ciencias, 
+        tecnología, ingeniería y matemáticas (STEM).
+      </p>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/labs/merge_cube_hero.png" alt="Merge Cube con holograma">
+    </div>
+  </div>
+
+  <!-- How it Works -->
+  <div class="section-title">
+    <h3>¿Cómo Funciona?</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="how-it-works glass-panel">
+    <div class="steps-container">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4>Obtén el Cubo</h4>
+        <p>Adquiere un Merge Cube físico o imprime la plantilla gratuita en papel. El cubo tiene patrones especiales que la cámara reconoce.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4>Descarga la App</h4>
+        <p>Instala aplicaciones compatibles como <strong>Merge Explorer</strong>, <strong>Object Viewer</strong> o <strong>HoloGlobe</strong> en tu dispositivo iOS, Android o Chromebook.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4>Apunta la Cámara</h4>
+        <p>Abre la aplicación y enfoca el cubo con la cámara. El software reconoce los patrones y proyecta objetos 3D sobre el cubo en tiempo real.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4>¡Explora en 3D!</h4>
+        <p>Gira, acerca e inspecciona el objeto digital desde cualquier ángulo moviendo el cubo en tu mano. ¡La interacción es totalmente natural!</p>
+      </div>
+    </div>
+    <div class="howto-image">
+      <img src="assets/images/labs/merge_cube_howto.png" alt="Cómo funciona el Merge Cube">
+    </div>
+  </div>
+
+  <!-- Applications -->
+  <div class="section-title">
+    <h3>Aplicaciones Educativas</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="apps-grid">
+    <div class="glass-panel app-card">
+      <div class="app-icon">🪐</div>
+      <h4>Sistema Solar</h4>
+      <p>Sostén planetas, lunas y cuerpos celestes en tu mano. Explora el universo desde cualquier ángulo y comprende las escalas astronómicas.</p>
+    </div>
+    <div class="glass-panel app-card">
+      <div class="app-icon">🧬</div>
+      <h4>Biología y Ciencias</h4>
+      <p>Examina estructuras celulares, disecciona una rana virtual, explora órganos del cuerpo humano y comprende ecosistemas completos.</p>
+    </div>
+    <div class="glass-panel app-card">
+      <div class="app-icon">⚗️</div>
+      <h4>Química Molecular</h4>
+      <p>Visualiza y manipula moléculas de ADN, estructuras moleculares complejas y reacciones químicas en tres dimensiones.</p>
+    </div>
+    <div class="glass-panel app-card">
+      <div class="app-icon">🌋</div>
+      <h4>Geología</h4>
+      <p>Investiga el núcleo de la Tierra, estudia fósiles y artefactos antiguos, y comprende procesos geológicos de forma interactiva.</p>
+    </div>
+    <div class="glass-panel app-card">
+      <div class="app-icon">🎨</div>
+      <h4>Creación 3D</h4>
+      <p>Los estudiantes pueden diseñar objetos en herramientas como Tinkercad o Paint 3D y verlos materializados sobre el cubo.</p>
+    </div>
+    <div class="glass-panel app-card">
+      <div class="app-icon">🌍</div>
+      <h4>HoloGlobe</h4>
+      <p>Visualiza datos globales en tiempo real sobre un globo terráqueo holográfico: clima, población, geografía y más.</p>
+    </div>
+  </div>
+
+  <!-- Key Features -->
+  <div class="section-title">
+    <h3>Características Clave</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="features-row">
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">1000+</div>
+      <p>Objetos digitales 3D disponibles</p>
+    </div>
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">100+</div>
+      <p>Simulaciones interactivas</p>
+    </div>
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">4</div>
+      <p>Sentidos involucrados (visual, auditivo, cinestésico, táctil)</p>
+    </div>
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">∞</div>
+      <p>Posibilidades educativas</p>
+    </div>
+  </div>
+
+  <!-- Device Compatibility -->
+  <div class="section-title">
+    <h3>Compatibilidad de Dispositivos</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel compatibility-section">
+    <p style="text-align: center; margin-bottom: 20px;">
+      El Merge Cube funciona con los dispositivos que ya tienes. No necesitas hardware costoso.
+    </p>
+    <div class="devices-row">
+      <div class="device">
+        <div class="device-icon">📱</div>
+        <span>iOS</span>
+      </div>
+      <div class="device">
+        <div class="device-icon">📱</div>
+        <span>Android</span>
+      </div>
+      <div class="device">
+        <div class="device-icon">💻</div>
+        <span>Chromebook</span>
+      </div>
+      <div class="device">
+        <div class="device-icon">🖥️</div>
+        <span>Windows</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Generic placeholder for other labs -->
+<div *ngIf="labId !== '1'" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Inicio</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
-    En esta etapa introductoria, exploraremos los fundamentos de esta plataforma de Realidad Aumentada y prepararemos el entorno de trabajo.
+    Contenido en desarrollo para este laboratorio.
   </p>
 </div>

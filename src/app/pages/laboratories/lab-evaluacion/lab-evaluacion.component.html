@@ -1,6 +1,111 @@
-<div class="glass-panel" style="padding: 30px;">
+<!-- EVALUACIÓN - Laboratorio 1: Merge Cube -->
+<div *ngIf="labId === '1'" class="lab-content">
+
+  <!-- Quiz Header -->
+  <div class="section-title" *ngIf="!submitted">
+    <h3>Evaluación: Merge Cube</h3>
+    <p class="section-subtitle">Responde las 20 preguntas para evaluar tu apropiación sobre esta tecnología.</p>
+    <div class="title-line"></div>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="glass-panel progress-bar-container" *ngIf="!submitted">
+    <div class="progress-info">
+      <span>Progreso</span>
+      <span class="progress-count">{{ (answers | keyvalue).length }} / {{ getQuestions().length }}</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" [style.width.%]="((answers | keyvalue).length / getQuestions().length) * 100"></div>
+    </div>
+  </div>
+
+  <!-- Questions -->
+  <div *ngIf="!submitted" class="questions-container">
+    <div *ngFor="let question of getQuestions(); let i = index" class="glass-panel question-card">
+      <div class="question-header">
+        <span class="question-number">{{ question.id }}</span>
+        <p class="question-text">{{ question.text }}</p>
+      </div>
+      <div class="options-list">
+        <div 
+          *ngFor="let option of question.options; let j = index" 
+          class="option-item"
+          [class.selected]="answers[question.id] === j"
+          (click)="selectAnswer(question.id, j)">
+          <div class="option-radio">
+            <div class="radio-inner" *ngIf="answers[question.id] === j"></div>
+          </div>
+          <span>{{ option }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="submit-section" *ngIf="!submitted">
+    <button 
+      class="glass-button submit-btn" 
+      [disabled]="!canSubmit()" 
+      (click)="submitEvaluation()">
+      Enviar Evaluación
+    </button>
+    <p *ngIf="!canSubmit()" class="submit-hint">Debes responder todas las preguntas antes de enviar.</p>
+  </div>
+
+  <!-- Results -->
+  <div *ngIf="submitted" class="results-container">
+    <div class="section-title">
+      <h3>Resultados de la Evaluación</h3>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="glass-panel results-card">
+      <div class="score-circle" [class.score-high]="getPercentage() >= 70" [class.score-low]="getPercentage() < 70">
+        <div class="score-value">{{ getPercentage() }}%</div>
+        <div class="score-label">Puntaje</div>
+      </div>
+      <div class="results-detail">
+        <h4>{{ score }} de {{ totalQuestions }} respuestas correctas</h4>
+        <p *ngIf="getPercentage() >= 90">¡Excelente! Demuestras un dominio sobresaliente del tema.</p>
+        <p *ngIf="getPercentage() >= 70 && getPercentage() < 90">¡Muy bien! Tu apropiación del tema es sólida.</p>
+        <p *ngIf="getPercentage() >= 50 && getPercentage() < 70">Buen esfuerzo. Revisa los contenidos para mejorar tu comprensión.</p>
+        <p *ngIf="getPercentage() < 50">Te recomendamos repasar las pestañas de Inicio, Desarrollo y Cierre antes de reintentar.</p>
+      </div>
+    </div>
+
+    <!-- Answer Review -->
+    <div class="review-section">
+      <h4 class="review-title">Revisión de Respuestas</h4>
+      <div *ngFor="let question of getQuestions()" class="glass-panel review-card" 
+           [class.correct]="answers[question.id] === question.correct"
+           [class.incorrect]="answers[question.id] !== question.correct">
+        <div class="review-header">
+          <span class="review-icon" *ngIf="answers[question.id] === question.correct">✓</span>
+          <span class="review-icon wrong" *ngIf="answers[question.id] !== question.correct">✗</span>
+          <p>{{ question.text }}</p>
+        </div>
+        <div class="review-answer">
+          <span class="your-answer" *ngIf="answers[question.id] !== question.correct">
+            Tu respuesta: {{ question.options[answers[question.id]] }}
+          </span>
+          <span class="correct-answer">
+            Respuesta correcta: {{ question.options[question.correct] }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="retry-section">
+      <button class="glass-button retry-btn" (click)="retryEvaluation()">Reintentar Evaluación</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Generic placeholder for other labs -->
+<div *ngIf="labId !== '1'" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Evaluación</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
-    Mide tu apropiación tecnológica respondiendo el cuestionario asociado a esta plataforma inmersiva.
+    Evaluación en desarrollo para este laboratorio.
   </p>
 </div>

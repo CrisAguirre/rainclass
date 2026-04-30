@@ -1,0 +1,226 @@
+.lab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Section Titles */
+.section-title {
+  text-align: center;
+}
+
+.section-title h3 {
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.title-line {
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(77, 168, 218, 0.5);
+}
+
+/* Content Block */
+.content-block {
+  padding: 40px;
+}
+
+.content-with-image {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.text-content {
+  flex: 1;
+}
+
+.text-content p {
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.text-content strong {
+  color: var(--text-primary);
+}
+
+.side-image {
+  flex: 0 0 350px;
+}
+
+.side-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease;
+}
+
+.side-image img:hover {
+  transform: scale(1.03);
+}
+
+/* Usage Grid */
+.usage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.usage-card {
+  padding: 30px;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.usage-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(77, 168, 218, 0.15);
+}
+
+.usage-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgba(77, 168, 218, 0.15);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-family: 'Outfit', sans-serif;
+}
+
+.usage-card h4 {
+  color: var(--accent-color);
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+.usage-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.usage-tag {
+  display: inline-block;
+  background: rgba(77, 168, 218, 0.15);
+  border: 1px solid rgba(77, 168, 218, 0.3);
+  color: var(--accent-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Real Applications */
+.real-apps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.real-app {
+  padding: 10px 0;
+}
+
+.real-app-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.real-app-icon {
+  font-size: 1.8rem;
+}
+
+.real-app h4 {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.real-app p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 48px;
+}
+
+/* Ecosystem */
+.ecosystem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.eco-card {
+  padding: 30px 25px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.eco-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(77, 168, 218, 0.2);
+}
+
+.eco-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.eco-card h4 {
+  color: var(--accent-color);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.eco-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.eco-link {
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 8px 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .content-with-image {
+    flex-direction: column;
+  }
+  .side-image {
+    flex: none;
+    width: 100%;
+  }
+  .usage-grid,
+  .real-apps-grid {
+    grid-template-columns: 1fr;
+  }
+  .ecosystem-grid {
+    grid-template-columns: 1fr;
+  }
+}

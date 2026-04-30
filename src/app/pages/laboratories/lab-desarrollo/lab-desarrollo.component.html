@@ -1,6 +1,178 @@
-<div class="glass-panel" style="padding: 30px;">
+<!-- DESARROLLO - Laboratorio 1: Merge Cube -->
+<div *ngIf="labId === '1'" class="lab-content">
+
+  <!-- Section 1: ¿En qué consiste? -->
+  <div class="section-title">
+    <h3>¿En qué consiste el Merge Cube?</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block">
+    <div class="content-with-image">
+      <div class="text-content">
+        <p>
+          El <strong>Merge Cube</strong> es un cubo físico de aproximadamente 7 cm por lado, fabricado en gomaespuma suave 
+          y duradera, con un patrón geométrico plateado impreso en cada una de sus seis caras. Estos patrones funcionan como 
+          <strong>marcadores de realidad aumentada (RA)</strong> que son reconocidos por la cámara de un smartphone o tableta.
+        </p>
+        <p>
+          Cuando una aplicación compatible escanea estos marcadores, el software superpone <strong>objetos 3D interactivos</strong> 
+          sobre el cubo en la pantalla del dispositivo. Al girar y mover el cubo físico con las manos, el objeto digital se mueve 
+          de forma sincronizada, creando la ilusión de que estás sosteniendo un holograma.
+        </p>
+        <p>
+          La tecnología detrás del Merge Cube se basa en <strong>visión por computadora</strong> y algoritmos de seguimiento 
+          espacial que procesan en tiempo real la posición y orientación del cubo, lo que permite una experiencia fluida y precisa.
+        </p>
+      </div>
+      <div class="side-image">
+        <img src="assets/images/labs/merge_cube_howto.png" alt="Funcionamiento del Merge Cube">
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: ¿Cómo se puede utilizar? -->
+  <div class="section-title">
+    <h3>¿Cómo se utiliza en el aula?</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="usage-grid">
+    <div class="glass-panel usage-card">
+      <div class="usage-number">01</div>
+      <h4>Preparación del Entorno</h4>
+      <p>El docente prepara los dispositivos (tabletas o smartphones) con las aplicaciones compatibles descargadas. 
+         Se distribuyen los cubos entre los estudiantes, ya sean físicos o impresos en papel.</p>
+      <div class="usage-tag">Antes de la clase</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">02</div>
+      <h4>Contextualización Temática</h4>
+      <p>Se introduce el tema con una breve explicación teórica. Por ejemplo: "Hoy exploraremos 
+         el sistema solar" o "Vamos a analizar la estructura celular de un organismo".</p>
+      <div class="usage-tag">Motivación inicial</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">03</div>
+      <h4>Exploración Interactiva</h4>
+      <p>Los estudiantes apuntan la cámara del dispositivo al cubo y comienzan a explorar los modelos 3D. 
+         Pueden girar el cubo, acercarse para ver detalles, y descubrir información emergente sobre el objeto.</p>
+      <div class="usage-tag">Actividad central</div>
+    </div>
+
+    <div class="glass-panel usage-card">
+      <div class="usage-number">04</div>
+      <h4>Registro y Reflexión</h4>
+      <p>Los estudiantes documentan sus hallazgos a través de capturas de pantalla, notas o dibujos. 
+         Se fomenta la reflexión: ¿Qué aprendí? ¿Qué me sorprendió? ¿Qué preguntas me surgen?</p>
+      <div class="usage-tag">Consolidación</div>
+    </div>
+  </div>
+
+  <!-- Section 3: Aplicaciones en la vida real -->
+  <div class="section-title">
+    <h3>Aplicaciones en la Vida Real</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block" style="padding: 40px;">
+    <div class="real-apps-grid">
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🏫</span>
+          <h4>Educación K-12</h4>
+        </div>
+        <p>Usado en miles de escuelas a nivel mundial para hacer tangibles conceptos abstractos de ciencias naturales, 
+           matemáticas y geografía. Los estudiantes retienen hasta un 90% más al aprender de forma multisensorial.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🏥</span>
+          <h4>Ciencias de la Salud</h4>
+        </div>
+        <p>Estudiantes de medicina y enfermería utilizan el cubo para examinar modelos anatómicos detallados 
+           del corazón, cerebro, sistema óseo y órganos internos antes de prácticas con pacientes reales.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🏛️</span>
+          <h4>Museos y Exposiciones</h4>
+        </div>
+        <p>Museos integran el Merge Cube en sus exhibiciones para que los visitantes puedan sostener 
+           réplicas virtuales de artefactos históricos, fósiles o piezas artísticas frágiles.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🏗️</span>
+          <h4>Arquitectura e Ingeniería</h4>
+        </div>
+        <p>Profesionales y estudiantes visualizan maquetas y prototipos 3D de edificios, puentes y 
+           estructuras directamente en sus manos, facilitando la comprensión espacial de los diseños.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🎮</span>
+          <h4>Entretenimiento Educativo</h4>
+        </div>
+        <p>Juegos educativos basados en RA que combinan diversión con aprendizaje: resolver puzzles 3D, 
+           explorar mundos virtuales y participar en aventuras científicas interactivas.</p>
+      </div>
+
+      <div class="real-app">
+        <div class="real-app-header">
+          <span class="real-app-icon">🔬</span>
+          <h4>Investigación Científica</h4>
+        </div>
+        <p>Investigadores validan la efectividad del aprendizaje táctil a través de RA. Estudios demuestran 
+           mejora significativa en comprensión y retención de conceptos complejos.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ecosystem Apps -->
+  <div class="section-title">
+    <h3>Ecosistema de Aplicaciones Merge</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="ecosystem-grid">
+    <div class="glass-panel eco-card">
+      <div class="eco-icon">🔭</div>
+      <h4>Merge Explorer</h4>
+      <p>La aplicación principal del ecosistema. Accede a más de 1000 objetos 3D y más de 100 simulaciones 
+         interactivas organizadas por áreas curriculares: ciencias, biología, química, geografía y más.</p>
+      <a href="https://mergeedu.com/explorer" target="_blank" class="glass-button eco-link">Conocer más</a>
+    </div>
+
+    <div class="glass-panel eco-card">
+      <div class="eco-icon">📦</div>
+      <h4>Object Viewer</h4>
+      <p>Permite cargar y visualizar tus propios modelos 3D sobre el Merge Cube. Ideal para que los estudiantes 
+         vean sus creaciones de Tinkercad o Paint 3D materializadas en realidad aumentada.</p>
+      <a href="https://mergeedu.com/object-viewer" target="_blank" class="glass-button eco-link">Conocer más</a>
+    </div>
+
+    <div class="glass-panel eco-card">
+      <div class="eco-icon">🌐</div>
+      <h4>HoloGlobe</h4>
+      <p>Convierte el Merge Cube en un globo terráqueo holográfico interactivo. Explora datos globales en tiempo 
+         real: clima, población, relieve, placas tectónicas y fenómenos naturales.</p>
+      <a href="https://mergeedu.com/hologlobe" target="_blank" class="glass-button eco-link">Conocer más</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Generic placeholder for other labs -->
+<div *ngIf="labId !== '1'" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Desarrollo</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
-    Durante esta etapa práctica, interactuaremos con los modelos 3D y realizaremos las actividades centrales propuestas en el laboratorio.
+    Contenido en desarrollo para este laboratorio.
   </p>
 </div>
