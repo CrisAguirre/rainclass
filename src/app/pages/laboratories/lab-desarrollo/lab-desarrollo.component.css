@@ -653,10 +653,27 @@
 }
 
 /* Fix AR.js video and canvas overflow globally */
+::ng-deep html.ar-active,
 ::ng-deep body.ar-active {
   overflow: hidden !important;
   width: 100vw !important;
   height: 100vh !important;
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  position: fixed !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  touch-action: none !important;
+}
+
+/* Ensure AR video and canvas are strictly fixed to avoid resizing the body */
+::ng-deep html.ar-active video,
+::ng-deep body.ar-active video,
+::ng-deep html.ar-active .a-canvas,
+::ng-deep body.ar-active .a-canvas {
+  position: fixed !important;
+  max-width: none !important;
+  max-height: none !important;
 }
 
 .ar-scene-container {
@@ -891,6 +908,9 @@
   }
   .ar-intro h4 {
     font-size: 1.2rem;
+  }
+  .ar-launch-panel {
+    padding: 25px 15px;
   }
 }
 

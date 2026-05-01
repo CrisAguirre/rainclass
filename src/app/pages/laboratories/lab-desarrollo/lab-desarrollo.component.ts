@@ -42,7 +42,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Tetraedro Geométrico',
       subject: 'Matemáticas',
       icon: '📐',
-      modelPath: 'assets/models/math_model.glb',
+      modelPath: '/assets/models/math_model.glb',
       color: '#3b82f6',
       description: 'Sólido geométrico regular de 4 caras triangulares equiláteras. Fundamental en geometría espacial y topología.',
       markerId: 0
@@ -51,7 +51,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Molécula Científica',
       subject: 'Ciencias Naturales',
       icon: '🔬',
-      modelPath: 'assets/models/science_model.glb',
+      modelPath: '/assets/models/science_model.glb',
       color: '#22c55e',
       description: 'Estructura molecular representativa. Las moléculas son la base de la materia y sus interacciones químicas.',
       markerId: 1
@@ -60,7 +60,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Libro Literario',
       subject: 'Literatura',
       icon: '📖',
-      modelPath: 'assets/models/literature_model.glb',
+      modelPath: '/assets/models/literature_model.glb',
       color: '#ef4444',
       description: 'Representación 3D de un libro abierto. Símbolo del conocimiento narrativo y la imaginación creativa.',
       markerId: 2
@@ -194,6 +194,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       setTimeout(() => {
         this.buildARScene();
         this.setupZoomControls();
+        document.documentElement.classList.add('ar-active');
         document.body.classList.add('ar-active');
 
         // Robust fix: Force AR.js video and canvas to be fullscreen overlays
@@ -253,14 +254,30 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
     if (leftoverScene) {
       leftoverScene.remove();
     }
-    const strayVideo = document.querySelector('video');
-    if (strayVideo) {
-      const stream = strayVideo.srcObject as MediaStream;
+    
+    // Stop all video streams (AR.js often appends to body)
+    document.querySelectorAll('video').forEach(v => {
+      const stream = (v as HTMLVideoElement).srcObject as MediaStream;
       if (stream) stream.getTracks().forEach(t => t.stop());
-      strayVideo.remove();
-    }
+      v.remove();
+    });
 
-    document.body.classList.remove('ar-active');
+    // Remove any leftover AR canvas
+    document.querySelectorAll('.a-canvas').forEach(c => c.remove());
+    document.querySelectorAll('#arjs-video-elements').forEach(e => e.remove());
+
+    document.documentElement.classList.remove('ar-active', 'a-fullscreen');
+    document.body.classList.remove('ar-active', 'a-fullscreen');
+    
+    // AR.js injects inline styles to body and html that break scrolling/navigation
+    document.body.style.removeProperty('overflow');
+    document.body.style.removeProperty('margin');
+    document.body.style.removeProperty('width');
+    document.body.style.removeProperty('height');
+    document.documentElement.style.removeProperty('overflow');
+    document.documentElement.style.removeProperty('width');
+    document.documentElement.style.removeProperty('height');
+
     this.arActive = false;
     this.arScale = 1.0;
   }
