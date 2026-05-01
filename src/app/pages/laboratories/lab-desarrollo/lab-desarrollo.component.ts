@@ -303,12 +303,18 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
     // Create markers for each model
     this.models.forEach(model => {
       const marker = document.createElement('a-marker');
-      marker.setAttribute('type', 'barcode');
-      marker.setAttribute('value', model.markerId.toString());
+      if (model.markerId === 0) {
+        marker.setAttribute('preset', 'hiro');
+      } else if (model.markerId === 1) {
+        marker.setAttribute('preset', 'kanji');
+      } else {
+        marker.setAttribute('type', 'barcode');
+        marker.setAttribute('value', model.markerId.toString());
+      }
       marker.setAttribute('id', `marker-${model.markerId}`);
 
       const entity = document.createElement('a-entity');
-      entity.setAttribute('gltf-model', `url(${model.modelPath})`);
+      entity.setAttribute('gltf-model', model.modelPath);
       entity.setAttribute('scale', '0.5 0.5 0.5');
       entity.setAttribute('position', '0 0 0');
       entity.setAttribute('rotation', '-90 0 0');
