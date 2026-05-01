@@ -234,49 +234,49 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
   }
 
   stopAR(): void {
-    // Remove the AR scene
     if (this.arSceneElement) {
-      // Stop any camera streams
       const videos = this.arSceneElement.querySelectorAll('video');
       videos.forEach(v => {
         const stream = (v as HTMLVideoElement).srcObject as MediaStream;
-        if (stream) {
-          stream.getTracks().forEach(t => t.stop());
-        }
+        if (stream) stream.getTracks().forEach(t => t.stop());
       });
-
       this.arSceneElement.remove();
       this.arSceneElement = null;
     }
 
-    // Also remove any leftover A-Frame elements or videos in body
     const leftoverScene = document.querySelector('a-scene');
-    if (leftoverScene) {
-      leftoverScene.remove();
-    }
+    if (leftoverScene) leftoverScene.remove();
     
-    // Stop all video streams (AR.js often appends to body)
     document.querySelectorAll('video').forEach(v => {
       const stream = (v as HTMLVideoElement).srcObject as MediaStream;
       if (stream) stream.getTracks().forEach(t => t.stop());
       v.remove();
     });
 
-    // Remove any leftover AR canvas
     document.querySelectorAll('.a-canvas').forEach(c => c.remove());
     document.querySelectorAll('#arjs-video-elements').forEach(e => e.remove());
 
-    document.documentElement.classList.remove('ar-active', 'a-fullscreen');
-    document.body.classList.remove('ar-active', 'a-fullscreen');
-    
-    // AR.js injects inline styles to body and html that break scrolling/navigation
-    document.body.style.removeProperty('overflow');
-    document.body.style.removeProperty('margin');
-    document.body.style.removeProperty('width');
-    document.body.style.removeProperty('height');
-    document.documentElement.style.removeProperty('overflow');
-    document.documentElement.style.removeProperty('width');
-    document.documentElement.style.removeProperty('height');
+    const cleanupStyles = () => {
+      document.documentElement.classList.remove('ar-active', 'a-fullscreen', 'a-hidden');
+      document.body.classList.remove('ar-active', 'a-fullscreen', 'a-hidden');
+      
+      const propsToRemove = ['overflow', 'position', 'margin', 'padding', 'width', 'height', 'top', 'left', 'bottom', 'right', 'transform'];
+      propsToRemove.forEach(prop => {
+        document.body.style.removeProperty(prop);
+        document.documentElement.style.removeProperty(prop);
+      });
+      
+      document.querySelectorAll('.a-enter-vr, .a-enter-ar, .a-orientation-modal, .a-modal, .a-dialog').forEach(e => e.remove());
+      
+      // Force scroll reset
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      window.scrollTo(0, 0);
+    };
+
+    cleanupStyles();
+    setTimeout(cleanupStyles, 100);
+    setTimeout(cleanupStyles, 500);
 
     this.arActive = false;
     this.arScale = 1.0;
