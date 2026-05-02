@@ -688,7 +688,8 @@
 }
 
 .ar-scene-container {
-  display: none; /* No longer needed as container, AR.js handles body append natively */
+  /* AR.js agrega la escena directamente al body, este div ya no se usa como contenedor */
+  display: none;
 }
 
 .ar-controls-overlay {

@@ -288,16 +288,18 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
   }
 
   private buildARScene(): void {
-    const container = document.getElementById('ar-scene-container');
-    if (!container) return;
+    // AR.js necesita que la escena esté directamente en el body
+    // para tener acceso completo al canvas y al stream de video
+    const container = document.body;
 
     // Create the A-Frame AR scene
     const scene = document.createElement('a-scene');
     scene.setAttribute('arjs', 'sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;');
     scene.setAttribute('renderer', 'logarithmicDepthBuffer: true; precision: medium; alpha: true;');
     scene.setAttribute('vr-mode-ui', 'enabled: false');
+    scene.setAttribute('embedded', '');
     
-    // Force scene to be a fixed fullscreen overlay
+    // La escena ocupa toda la pantalla como overlay, debajo de nuestra UI
     scene.style.setProperty('position', 'fixed', 'important');
     scene.style.setProperty('top', '0', 'important');
     scene.style.setProperty('left', '0', 'important');
@@ -345,7 +347,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
     sceneContent += `<a-entity camera></a-entity>`;
     
     scene.innerHTML = sceneContent;
-    container.appendChild(scene);
+    document.body.appendChild(scene);
     this.arSceneElement = scene;
 
     // Add event listeners after attaching to DOM
@@ -376,11 +378,12 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
   }
 
   private setupZoomControls(): void {
-    const container = document.getElementById('ar-scene-container');
-    if (!container) return;
+    // Los controles de zoom se registran en el document para capturar
+    // eventos aunque el foco esté en el canvas de A-Frame
+    const container = document;
 
     // Mouse wheel zoom
-    container.addEventListener('wheel', (e: WheelEvent) => {
+    document.addEventListener('wheel', (e: WheelEvent) => {
       e.preventDefault();
       const delta = e.deltaY > 0 ? -0.05 : 0.05;
       this.arScale = Math.max(0.2, Math.min(3.0, this.arScale + delta));
@@ -391,7 +394,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
     let initialDistance = 0;
     let initialScale = 1;
 
-    container.addEventListener('touchstart', (e: TouchEvent) => {
+    document.addEventListener('touchstart', (e: TouchEvent) => {
       if (e.touches.length === 2) {
         initialDistance = Math.hypot(
           e.touches[0].clientX - e.touches[1].clientX,
@@ -401,7 +404,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       }
     });
 
-    container.addEventListener('touchmove', (e: TouchEvent) => {
+    document.addEventListener('touchmove', (e: TouchEvent) => {
       if (e.touches.length === 2) {
         e.preventDefault();
         const currentDistance = Math.hypot(
