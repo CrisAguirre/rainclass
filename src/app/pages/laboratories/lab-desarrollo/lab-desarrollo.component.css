@@ -867,64 +867,6 @@
   margin: 0;
 }
 
-.marker-preview {
-  width: 130px;
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.marker-barcode {
-  width: 120px;
-  height: 120px;
-}
-
-.barcode-border {
-  width: 100%;
-  height: 100%;
-  border: 8px solid #000;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-}
-
-.barcode-pattern {
-  width: 70%;
-  height: 70%;
-  background: repeating-linear-gradient(
-    90deg,
-    #000 0px, #000 8px,
-    white 8px, white 16px
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.barcode-pattern[data-id="0"] {
-  background: repeating-linear-gradient(90deg, #000 0px, #000 12px, white 12px, white 20px);
-}
-.barcode-pattern[data-id="1"] {
-  background: repeating-linear-gradient(0deg, #000 0px, #000 10px, white 10px, white 18px);
-}
-.barcode-pattern[data-id="2"] {
-  background: repeating-conic-gradient(#000 0% 25%, white 25% 50%);
-}
-
-.barcode-id {
-  position: absolute;
-  background: white;
-  color: #000;
-  font-weight: 800;
-  font-size: 1.5rem;
-  padding: 2px 8px;
-  border-radius: 4px;
-}
-
 .marker-info h4 {
   color: var(--text-primary);
   font-size: 1rem;
