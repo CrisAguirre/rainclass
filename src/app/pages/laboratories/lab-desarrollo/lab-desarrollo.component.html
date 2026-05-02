@@ -737,14 +737,10 @@
 
   <div class="ar-markers-grid">
     <div *ngFor="let model of models" class="glass-panel ar-marker-card" [style.border-top]="'3px solid ' + model.color">
-      <div class="marker-preview">
-        <div class="marker-barcode">
-          <div class="barcode-border">
-            <div class="barcode-pattern" [attr.data-id]="model.markerId">
-              <span class="barcode-id">{{ model.markerId }}</span>
-            </div>
-          </div>
-        </div>
+      <div class="marker-preview" style="display: flex; justify-content: center; padding: 20px;">
+        <img *ngIf="model.markerId === 0" src="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/pattern-images/pattern-hiro.png" alt="Hiro Marker" style="width: 150px; border: 10px solid white; border-radius: 8px;">
+        <img *ngIf="model.markerId === 1" src="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/pattern-images/pattern-kanji.png" alt="Kanji Marker" style="width: 150px; border: 10px solid white; border-radius: 8px;">
+        <img *ngIf="model.markerId === 2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Barcode 2 Placeholder" style="width: 150px; border: 10px solid white; border-radius: 8px; filter: grayscale(100%);">
       </div>
       <div class="marker-info">
         <span class="marker-model-icon">{{ model.icon }}</span>
