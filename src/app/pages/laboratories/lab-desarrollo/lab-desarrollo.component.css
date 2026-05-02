@@ -810,6 +810,8 @@
 .ar-marker-card {
   padding: 25px;
   text-align: center;
+}
+
 .ar-marker-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
