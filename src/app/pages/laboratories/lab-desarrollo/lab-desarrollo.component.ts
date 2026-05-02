@@ -315,8 +315,24 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       
       sceneContent += `
         ${markerTag}
-          <a-box position="0 0.5 0" scale="1 1 1" color="${model.color}" opacity="0.8" animation="property: rotation; to: 0 360 0; loop: true; dur: 3000"></a-box>
-          <a-entity gltf-model="${model.modelPath}" scale="0.5 0.5 0.5" position="0 0 0" rotation="-90 0 0" class="ar-model" id="ar-model-${model.markerId}"></a-entity>
+          <!-- Boceto liviano de persona usando primitivas A-Frame (0 bytes de descarga) -->
+          <a-entity position="0 0 0" rotation="-90 0 0" scale="0.8 0.8 0.8">
+            <!-- Animación de flotación suave -->
+            <a-entity animation="property: position; to: 0 0.2 0; dir: alternate; duration: 2000; loop: true">
+              <!-- Cabeza -->
+              <a-sphere position="0 1.8 0" radius="0.3" color="${model.color}" opacity="0.9"></a-sphere>
+              <!-- Cuerpo -->
+              <a-cylinder position="0 1.0 0" radius="0.3" height="1.0" color="${model.color}" opacity="0.8"></a-cylinder>
+              <!-- Brazo Izquierdo -->
+              <a-cylinder position="-0.4 1.2 0" radius="0.1" height="0.8" rotation="0 0 30" color="${model.color}" opacity="0.9"></a-cylinder>
+              <!-- Brazo Derecho -->
+              <a-cylinder position="0.4 1.2 0" radius="0.1" height="0.8" rotation="0 0 -30" color="${model.color}" opacity="0.9"></a-cylinder>
+              <!-- Pierna Izquierda -->
+              <a-cylinder position="-0.15 0.4 0" radius="0.1" height="0.8" color="${model.color}" opacity="0.9"></a-cylinder>
+              <!-- Pierna Derecha -->
+              <a-cylinder position="0.15 0.4 0" radius="0.1" height="0.8" color="${model.color}" opacity="0.9"></a-cylinder>
+            </a-entity>
+          </a-entity>
         </a-marker>
       `;
     });
