@@ -175,6 +175,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
     this.arError = null;
     this.arLoading = true;
     this.arScale = 1.0;
+    this.scannedModel = null; // Reset to avoid carrying over Lab 5 state
 
     try {
       // Load AR.js + A-Frame scripts dynamically
@@ -218,6 +219,10 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
           }
 
           if (video && canvas) {
+            // Success: Clean up any previous video elements from past sessions
+            document.querySelectorAll('video').forEach(v => {
+              if (v !== video) v.remove();
+            });
             clearInterval(fixARjsVideo);
           }
         }, 500);
@@ -316,7 +321,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       sceneContent += `
         ${markerTag}
           <!-- Boceto liviano de persona usando primitivas A-Frame (0 bytes de descarga) -->
-          <a-entity position="0 0 0" rotation="-90 0 0" scale="0.8 0.8 0.8">
+          <a-entity id="ar-model-${model.markerId}" position="0 0 0" rotation="-90 0 0" scale="0.8 0.8 0.8">
             <!-- Animación de flotación suave -->
             <a-entity animation="property: position; to: 0 0.2 0; dir: alternate; duration: 2000; loop: true">
               <!-- Cabeza -->
@@ -353,6 +358,15 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
               this.scannedModel = model;
               if (!this.scanHistory.find(m => m.name === model.name)) {
                 this.scanHistory.push(model);
+              }
+            });
+          });
+
+          markerEl.addEventListener('markerLost', () => {
+            this.ngZone.run(() => {
+              // Only clear if it's the currently scanned model
+              if (this.scannedModel?.markerId === model.markerId) {
+                this.scannedModel = null;
               }
             });
           });

@@ -570,7 +570,10 @@
 
     <div class="glass-panel model-info-card" [style.border-left]="'4px solid ' + scannedModel.color">
       <div class="model-info-header">
-        <span class="model-icon">{{ scannedModel.icon }}</span>
+        <div class="model-visual-wrapper">
+          <img *ngIf="scannedModel.subject === 'Literatura'" src="assets/images/labs/literature_hero.png" class="model-hero-img" alt="Literature Hero">
+          <span *ngIf="scannedModel.subject !== 'Literatura'" class="model-icon">{{ scannedModel.icon }}</span>
+        </div>
         <div>
           <h4>{{ scannedModel.name }}</h4>
           <span class="subject-badge" [style.background]="scannedModel.color">{{ scannedModel.subject }}</span>
@@ -740,7 +743,14 @@
       <div class="marker-preview" style="display: flex; justify-content: center; padding: 20px;">
         <img *ngIf="model.markerId === 0" src="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/pattern-images/pattern-hiro.png" alt="Hiro Marker" style="width: 150px; border: 10px solid white; border-radius: 8px;">
         <img *ngIf="model.markerId === 1" src="https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/pattern-images/pattern-kanji.png" alt="Kanji Marker" style="width: 150px; border: 10px solid white; border-radius: 8px;">
-        <img *ngIf="model.markerId === 2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png" alt="Barcode 2 Placeholder" style="width: 150px; border: 10px solid white; border-radius: 8px; filter: grayscale(100%);">
+        <div *ngIf="model.markerId === 2" class="barcode-marker-visual">
+          <div class="barcode-marker-frame">
+            <div class="barcode-marker-pattern">
+              <span class="barcode-id">2</span>
+            </div>
+          </div>
+          <p class="marker-caption">Marcador Barcode #2</p>
+        </div>
       </div>
       <div class="marker-info">
         <span class="marker-model-icon">{{ model.icon }}</span>
