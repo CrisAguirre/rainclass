@@ -313,14 +313,23 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       }
       marker.setAttribute('id', `marker-${model.markerId}`);
 
+      // Simple box for instant visual feedback (proves tracking works while 80MB model loads)
+      const box = document.createElement('a-box');
+      box.setAttribute('position', '0 0.5 0');
+      box.setAttribute('scale', '1 1 1');
+      box.setAttribute('color', model.color);
+      box.setAttribute('opacity', '0.7');
+      box.setAttribute('animation', 'property: rotation; to: 0 360 0; loop: true; dur: 3000');
+      
       const entity = document.createElement('a-entity');
-      entity.setAttribute('gltf-model', model.modelPath);
+      entity.setAttribute('gltf-model', `url(${model.modelPath})`);
       entity.setAttribute('scale', '0.5 0.5 0.5');
       entity.setAttribute('position', '0 0 0');
       entity.setAttribute('rotation', '-90 0 0');
       entity.setAttribute('class', 'ar-model');
       entity.setAttribute('id', `ar-model-${model.markerId}`);
 
+      marker.appendChild(box);
       marker.appendChild(entity);
 
       // Listen for marker found/lost events
