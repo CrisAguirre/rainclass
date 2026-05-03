@@ -1,9 +1,110 @@
-<div class="page-header">
-  <h2>Mis Sesiones</h2>
-  <p>Gestiona tus clases y sesiones de Realidad Aumentada.</p>
-</div>
+<!-- ╔══════════════════════════════════════════════════════╗ -->
+<!--   MIS MISIONES — Panel principal de gamificación        -->
+<!-- ╚══════════════════════════════════════════════════════╝ -->
 
-<div class="glass-panel" style="padding: 40px; text-align: center;">
-  <h3>No hay sesiones activas</h3>
-  <p style="color: var(--text-secondary); margin-top: 15px;">Próximamente podrás programar tus clases aquí.</p>
+<div class="missions-root">
+
+  <!-- ── Hero: perfil + XP ─────────────────────────────────── -->
+  <div class="hero-panel glass-panel">
+    <div class="hero-left">
+      <div class="avatar">🧑‍🚀</div>
+      <div class="profile-info">
+        <h2 class="level-name">{{ getLevelName(level) }}</h2>
+        <span class="level-badge">Nivel {{ level }}</span>
+      </div>
+    </div>
+
+    <div class="hero-center">
+      <div class="global-progress-label">
+        <span>Progreso global</span>
+        <strong>{{ completedCount }} / 6 misiones</strong>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" [style.width.%]="globalPercent">
+          <span class="progress-text" *ngIf="globalPercent > 8">{{ globalPercent }}%</span>
+        </div>
+      </div>
+      <!-- Checkpoints de misiones -->
+      <div class="checkpoints">
+        <div class="checkpoint"
+             *ngFor="let m of missions"
+             [class.done]="m.status === 'completed'"
+             [class.active]="m.status === 'in-progress' || m.status === 'available'"
+             [title]="m.title">
+          {{ m.status === 'completed' ? '✅' : m.status === 'in-progress' ? '⚡' : m.status === 'available' ? '🚀' : '🔒' }}
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="xp-block">
+        <span class="xp-value">{{ totalXP }} XP</span>
+        <span class="xp-label">{{ xpToNextLevel() }} XP para nivel {{ level + 1 }}</span>
+        <div class="xp-bar-track">
+          <div class="xp-bar-fill" [style.width.%]="xpLevelPercent()"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Título sección ─────────────────────────────────────── -->
+  <div class="section-header">
+    <h3>🎯 Ruta de Misiones</h3>
+    <p>Completa cada laboratorio en orden para desbloquear el siguiente. ¡Cada misión te da <strong>150 XP</strong>!</p>
+  </div>
+
+  <!-- ── Lista de misiones ──────────────────────────────────── -->
+  <div class="missions-list">
+    <div class="mission-row glass-panel"
+         *ngFor="let m of missions; let i = index"
+         [class.status-locked]="m.status === 'locked'"
+         [class.status-available]="m.status === 'available'"
+         [class.status-inprogress]="m.status === 'in-progress'"
+         [class.status-completed]="m.status === 'completed'">
+
+      <!-- Número / conector vertical -->
+      <div class="mission-step">
+        <div class="step-circle">{{ m.status === 'completed' ? '✅' : m.status === 'locked' ? '🔒' : m.icon }}</div>
+        <div class="step-line" *ngIf="i < missions.length - 1"></div>
+      </div>
+
+      <!-- Contenido -->
+      <div class="mission-body">
+        <div class="mission-meta">
+          <span class="mission-num">Misión {{ m.id }}</span>
+          <span class="mission-status-badge status-{{ m.status }}">
+            {{ statusIcon(m.status) }} {{ statusLabel(m.status) }}
+          </span>
+        </div>
+        <h4>{{ m.title }}</h4>
+        <p>{{ m.description }}</p>
+        <div class="mission-footer">
+          <span class="xp-reward">+{{ m.xp }} XP</span>
+          <span class="completed-date" *ngIf="m.completedAt">
+            Completada el {{ m.completedAt | date:'dd/MM/yyyy' }}
+          </span>
+        </div>
+      </div>
+
+      <!-- Acción -->
+      <div class="mission-action">
+        <button class="glass-button action-btn"
+                [disabled]="m.status === 'locked'"
+                [class.btn-completed]="m.status === 'completed'"
+                (click)="goToMission(m.id)">
+          <span *ngIf="m.status === 'locked'">🔒 Bloqueada</span>
+          <span *ngIf="m.status === 'available'">🚀 Comenzar</span>
+          <span *ngIf="m.status === 'in-progress'">⚡ Continuar</span>
+          <span *ngIf="m.status === 'completed'">🔁 Repetir</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Footer: resetear ───────────────────────────────────── -->
+  <div class="footer-actions">
+    <button class="glass-button reset-btn" (click)="resetProgress()">↺ Reiniciar progreso</button>
+  </div>
+
 </div>

@@ -73,7 +73,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
     'RAINCLASS_LITERATURE_3D': this.models[2]
   };
 
-  constructor(private route: ActivatedRoute, private ngZone: NgZone) { }
+  constructor(private route: ActivatedRoute, private ngZone: NgZone) {}
 
   ngOnInit(): void {
     this.route.parent?.paramMap.subscribe(params => {
@@ -124,7 +124,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
           (decodedText: string) => {
             this.onScanSuccess(decodedText);
           },
-          () => { }
+          () => {}
         );
         this.scannerReady = true;
       } catch (err2: any) {
@@ -138,7 +138,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
     if (this.html5QrCode) {
       try {
         await this.html5QrCode.stop();
-      } catch (e) { }
+      } catch (e) {}
       this.html5QrCode = null;
     }
     this.scannerActive = false;
@@ -211,7 +211,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
             video.style.setProperty('min-height', '100vh', 'important');
             video.style.setProperty('object-fit', 'cover', 'important');
           }
-
+          
           const canvas = document.querySelector('.a-canvas') as HTMLElement;
           if (canvas) {
             canvas.style.setProperty('z-index', '9998', 'important');
@@ -226,7 +226,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
             clearInterval(fixARjsVideo);
           }
         }, 500);
-
+        
         // Safety clear after 10s
         setTimeout(() => clearInterval(fixARjsVideo), 10000);
 
@@ -251,7 +251,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
 
     const leftoverScene = document.querySelector('a-scene');
     if (leftoverScene) leftoverScene.remove();
-
+    
     document.querySelectorAll('video').forEach(v => {
       const stream = (v as HTMLVideoElement).srcObject as MediaStream;
       if (stream) stream.getTracks().forEach(t => t.stop());
@@ -264,15 +264,15 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
     const cleanupStyles = () => {
       document.documentElement.classList.remove('ar-active', 'a-fullscreen', 'a-hidden');
       document.body.classList.remove('ar-active', 'a-fullscreen', 'a-hidden');
-
+      
       const propsToRemove = ['overflow', 'position', 'margin', 'padding', 'width', 'height', 'top', 'left', 'bottom', 'right', 'transform'];
       propsToRemove.forEach(prop => {
         document.body.style.removeProperty(prop);
         document.documentElement.style.removeProperty(prop);
       });
-
+      
       document.querySelectorAll('.a-enter-vr, .a-enter-ar, .a-orientation-modal, .a-modal, .a-dialog').forEach(e => e.remove());
-
+      
       // Force scroll reset
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
@@ -295,7 +295,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       init: function (this: any) {
         const TEX_W = 512, TEX_H = 1024;
         const offscreen = document.createElement('canvas');
-        offscreen.width = TEX_W;
+        offscreen.width  = TEX_W;
         offscreen.height = TEX_H;
         const ctx = offscreen.getContext('2d') as CanvasRenderingContext2D;
 
@@ -311,11 +311,11 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
         this.el.object3D.add(mesh);
 
         // Guardamos estado en el componente para que tick() lo acceda
-        this._ctx = ctx;
-        this._texture = texture;
-        this._phase = 0;
-        this._TEX_W = TEX_W;
-        this._TEX_H = TEX_H;
+        this._ctx      = ctx;
+        this._texture  = texture;
+        this._phase    = 0;
+        this._TEX_W    = TEX_W;
+        this._TEX_H    = TEX_H;
 
         this._organs = [
           [0.50, 0.16, 0.14, 0.07, '#EF9F27', 'Cerebro'],
@@ -329,20 +329,20 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
         ];
 
         this._paths = [
-          { pts: [[0.46, 0.42], [0.46, 0.55], [0.46, 0.72], [0.46, 0.88]], col: '#E24B4A', w: 2.5 },
-          { pts: [[0.47, 0.40], [0.47, 0.24], [0.47, 0.16]], col: '#E24B4A', w: 2 },
-          { pts: [[0.49, 0.37], [0.54, 0.35], [0.59, 0.34]], col: '#378ADD', w: 1.8 },
-          { pts: [[0.42, 0.37], [0.37, 0.35], [0.30, 0.34]], col: '#378ADD', w: 1.8 },
-          { pts: [[0.58, 0.37], [0.53, 0.38], [0.49, 0.39]], col: '#E24B4A', w: 1.5 },
-          { pts: [[0.30, 0.37], [0.36, 0.38], [0.42, 0.39]], col: '#E24B4A', w: 1.5 },
-          { pts: [[0.50, 0.20], [0.50, 0.30], [0.50, 0.38]], col: '#378ADD', w: 2 },
-          { pts: [[0.51, 0.88], [0.51, 0.72], [0.51, 0.55], [0.51, 0.44]], col: '#378ADD', w: 2.5 },
-          { pts: [[0.46, 0.50], [0.42, 0.51], [0.38, 0.53]], col: '#E24B4A', w: 1.5 },
-          { pts: [[0.36, 0.55], [0.44, 0.55], [0.51, 0.54]], col: '#378ADD', w: 1.5 },
-          { pts: [[0.46, 0.65], [0.40, 0.66], [0.35, 0.68]], col: '#E24B4A', w: 1.3 },
-          { pts: [[0.46, 0.65], [0.53, 0.66], [0.59, 0.68]], col: '#E24B4A', w: 1.3 },
-          { pts: [[0.34, 0.70], [0.42, 0.70], [0.51, 0.68]], col: '#378ADD', w: 1.3 },
-          { pts: [[0.61, 0.70], [0.55, 0.70], [0.51, 0.68]], col: '#378ADD', w: 1.3 },
+          {pts:[[0.46,0.42],[0.46,0.55],[0.46,0.72],[0.46,0.88]], col:'#E24B4A', w:2.5},
+          {pts:[[0.47,0.40],[0.47,0.24],[0.47,0.16]],             col:'#E24B4A', w:2},
+          {pts:[[0.49,0.37],[0.54,0.35],[0.59,0.34]],             col:'#378ADD', w:1.8},
+          {pts:[[0.42,0.37],[0.37,0.35],[0.30,0.34]],             col:'#378ADD', w:1.8},
+          {pts:[[0.58,0.37],[0.53,0.38],[0.49,0.39]],             col:'#E24B4A', w:1.5},
+          {pts:[[0.30,0.37],[0.36,0.38],[0.42,0.39]],             col:'#E24B4A', w:1.5},
+          {pts:[[0.50,0.20],[0.50,0.30],[0.50,0.38]],             col:'#378ADD', w:2},
+          {pts:[[0.51,0.88],[0.51,0.72],[0.51,0.55],[0.51,0.44]], col:'#378ADD', w:2.5},
+          {pts:[[0.46,0.50],[0.42,0.51],[0.38,0.53]],             col:'#E24B4A', w:1.5},
+          {pts:[[0.36,0.55],[0.44,0.55],[0.51,0.54]],             col:'#378ADD', w:1.5},
+          {pts:[[0.46,0.65],[0.40,0.66],[0.35,0.68]],             col:'#E24B4A', w:1.3},
+          {pts:[[0.46,0.65],[0.53,0.66],[0.59,0.68]],             col:'#E24B4A', w:1.3},
+          {pts:[[0.34,0.70],[0.42,0.70],[0.51,0.68]],             col:'#378ADD', w:1.3},
+          {pts:[[0.61,0.70],[0.55,0.70],[0.51,0.68]],             col:'#378ADD', w:1.3},
         ];
 
         this._particles = [];
@@ -357,7 +357,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       // A-Frame llama tick() en cada frame — NO interfiere con el loop de AR.js
       tick: function (this: any) {
         const { _ctx: c, _texture: tex, _TEX_W: W, _TEX_H: H,
-          _organs, _paths, _particles } = this;
+                _organs, _paths, _particles } = this;
         if (!c) return;
 
         this._phase += 0.018;
@@ -375,24 +375,24 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
         // ── Silueta corporal ──────────────────────────────────────────────────
         c.save();
         c.beginPath();
-        c.ellipse(W * 0.50, H * 0.10, W * 0.12, H * 0.09, 0, 0, Math.PI * 2);
-        c.moveTo(W * 0.44, H * 0.18);
-        c.bezierCurveTo(W * 0.38, H * 0.22, W * 0.28, H * 0.38, W * 0.28, H * 0.52);
-        c.bezierCurveTo(W * 0.28, H * 0.60, W * 0.32, H * 0.64, W * 0.35, H * 0.72);
-        c.bezierCurveTo(W * 0.35, H * 0.80, W * 0.33, H * 0.90, W * 0.33, H * 0.98);
-        c.lineTo(W * 0.42, H * 0.98);
-        c.bezierCurveTo(W * 0.42, H * 0.90, W * 0.44, H * 0.80, W * 0.44, H * 0.72);
-        c.lineTo(W * 0.56, H * 0.72);
-        c.bezierCurveTo(W * 0.56, H * 0.80, W * 0.58, H * 0.90, W * 0.58, H * 0.98);
-        c.lineTo(W * 0.67, H * 0.98);
-        c.bezierCurveTo(W * 0.67, H * 0.90, W * 0.65, H * 0.80, W * 0.65, H * 0.72);
-        c.bezierCurveTo(W * 0.68, H * 0.64, W * 0.72, H * 0.60, W * 0.72, H * 0.52);
-        c.bezierCurveTo(W * 0.72, H * 0.38, W * 0.62, H * 0.22, W * 0.56, H * 0.18);
+        c.ellipse(W*0.50, H*0.10, W*0.12, H*0.09, 0, 0, Math.PI*2);
+        c.moveTo(W*0.44, H*0.18);
+        c.bezierCurveTo(W*0.38, H*0.22, W*0.28, H*0.38, W*0.28, H*0.52);
+        c.bezierCurveTo(W*0.28, H*0.60, W*0.32, H*0.64, W*0.35, H*0.72);
+        c.bezierCurveTo(W*0.35, H*0.80, W*0.33, H*0.90, W*0.33, H*0.98);
+        c.lineTo(W*0.42, H*0.98);
+        c.bezierCurveTo(W*0.42, H*0.90, W*0.44, H*0.80, W*0.44, H*0.72);
+        c.lineTo(W*0.56, H*0.72);
+        c.bezierCurveTo(W*0.56, H*0.80, W*0.58, H*0.90, W*0.58, H*0.98);
+        c.lineTo(W*0.67, H*0.98);
+        c.bezierCurveTo(W*0.67, H*0.90, W*0.65, H*0.80, W*0.65, H*0.72);
+        c.bezierCurveTo(W*0.68, H*0.64, W*0.72, H*0.60, W*0.72, H*0.52);
+        c.bezierCurveTo(W*0.72, H*0.38, W*0.62, H*0.22, W*0.56, H*0.18);
         c.closePath();
         const grad = c.createLinearGradient(0, 0, W, H);
-        grad.addColorStop(0, 'rgba(255,220,180,0.20)');
+        grad.addColorStop(0,   'rgba(255,220,180,0.20)');
         grad.addColorStop(0.5, 'rgba(240,200,160,0.25)');
-        grad.addColorStop(1, 'rgba(220,180,140,0.20)');
+        grad.addColorStop(1,   'rgba(220,180,140,0.20)');
         c.fillStyle = grad;
         c.fill();
         c.strokeStyle = 'rgba(255,220,180,0.65)';
@@ -400,10 +400,10 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
         c.stroke();
         // Brazos
         c.beginPath();
-        c.moveTo(W * 0.29, H * 0.24);
-        c.bezierCurveTo(W * 0.18, H * 0.30, W * 0.14, H * 0.50, W * 0.16, H * 0.65);
-        c.lineTo(W * 0.22, H * 0.65);
-        c.bezierCurveTo(W * 0.21, H * 0.50, W * 0.24, H * 0.30, W * 0.34, H * 0.25);
+        c.moveTo(W*0.29, H*0.24);
+        c.bezierCurveTo(W*0.18, H*0.30, W*0.14, H*0.50, W*0.16, H*0.65);
+        c.lineTo(W*0.22, H*0.65);
+        c.bezierCurveTo(W*0.21, H*0.50, W*0.24, H*0.30, W*0.34, H*0.25);
         c.closePath();
         c.fillStyle = 'rgba(255,220,180,0.20)';
         c.fill();
@@ -411,10 +411,10 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
         c.lineWidth = 2;
         c.stroke();
         c.beginPath();
-        c.moveTo(W * 0.71, H * 0.24);
-        c.bezierCurveTo(W * 0.82, H * 0.30, W * 0.86, H * 0.50, W * 0.84, H * 0.65);
-        c.lineTo(W * 0.78, H * 0.65);
-        c.bezierCurveTo(W * 0.79, H * 0.50, W * 0.76, H * 0.30, W * 0.66, H * 0.25);
+        c.moveTo(W*0.71, H*0.24);
+        c.bezierCurveTo(W*0.82, H*0.30, W*0.86, H*0.50, W*0.84, H*0.65);
+        c.lineTo(W*0.78, H*0.65);
+        c.bezierCurveTo(W*0.79, H*0.50, W*0.76, H*0.30, W*0.66, H*0.25);
         c.closePath();
         c.fill();
         c.stroke();
@@ -423,9 +423,9 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
         // ── Vasos sanguíneos (fondo tenue) ────────────────────────────────────
         _paths.forEach((path: any) => {
           c.beginPath();
-          c.moveTo(path.pts[0][0] * W, path.pts[0][1] * H);
+          c.moveTo(path.pts[0][0]*W, path.pts[0][1]*H);
           for (let i = 1; i < path.pts.length; i++) {
-            c.lineTo(path.pts[i][0] * W, path.pts[i][1] * H);
+            c.lineTo(path.pts[i][0]*W, path.pts[i][1]*H);
           }
           c.strokeStyle = path.col + '44';
           c.lineWidth = path.w;
@@ -435,18 +435,18 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
 
         // ── Órganos pulsantes ────────────────────────────────────────────────
         _organs.forEach(([nx, ny, rx, ry, col, label]: any) => {
-          const cx = nx * W, cy = ny * H;
+          const cx = nx*W, cy = ny*H;
           const pulse = 1 + 0.04 * Math.sin(phase * 5 + nx * 10);
           c.save();
           c.beginPath();
-          c.ellipse(cx, cy, rx * W * pulse, ry * H * pulse, 0, 0, Math.PI * 2);
+          c.ellipse(cx, cy, rx*W*pulse, ry*H*pulse, 0, 0, Math.PI*2);
           c.fillStyle = col + '55';
           c.strokeStyle = col + 'CC';
           c.lineWidth = 1.5;
           c.fill();
           c.stroke();
           c.fillStyle = col;
-          c.font = `bold ${W * 0.026}px sans-serif`;
+          c.font = `bold ${W*0.026}px sans-serif`;
           c.textAlign = 'center';
           c.textBaseline = 'middle';
           c.fillText(label, cx, cy);
@@ -455,17 +455,17 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
 
         // ── Latido del corazón ───────────────────────────────────────────────
         const beat = 1 + 0.10 * Math.abs(Math.sin(phase * 8));
-        const hx = 0.44 * W, hy = 0.37 * H;
+        const hx = 0.44*W, hy = 0.37*H;
         c.save();
         c.beginPath();
-        c.ellipse(hx, hy, 0.08 * W * beat, 0.07 * H * beat, 0, 0, Math.PI * 2);
+        c.ellipse(hx, hy, 0.08*W*beat, 0.07*H*beat, 0, 0, Math.PI*2);
         c.fillStyle = '#D4537E99';
         c.strokeStyle = '#D4537EFF';
         c.lineWidth = 2;
         c.fill();
         c.stroke();
         c.fillStyle = '#fff';
-        c.font = `bold ${W * 0.026}px sans-serif`;
+        c.font = `bold ${W*0.026}px sans-serif`;
         c.textAlign = 'center';
         c.textBaseline = 'middle';
         c.fillText('Corazon', hx, hy);
@@ -474,15 +474,15 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
         // ── Partículas en flujo ──────────────────────────────────────────────
         _particles.forEach((p: any) => {
           const path = _paths[p.pathIdx];
-          const pts = path.pts;
+          const pts  = path.pts;
           const total = pts.length - 1;
           const seg = p.progress * total;
           const i = Math.min(Math.floor(seg), total - 1);
           const f = seg - i;
-          const px = (pts[i][0] + (pts[i + 1][0] - pts[i][0]) * f) * W;
-          const py = (pts[i][1] + (pts[i + 1][1] - pts[i][1]) * f) * H;
+          const px = (pts[i][0] + (pts[i+1][0] - pts[i][0]) * f) * W;
+          const py = (pts[i][1] + (pts[i+1][1] - pts[i][1]) * f) * H;
           c.beginPath();
-          c.arc(px, py, path.w * 1.5, 0, Math.PI * 2);
+          c.arc(px, py, path.w * 1.5, 0, Math.PI*2);
           c.fillStyle = path.col;
           c.fill();
         });

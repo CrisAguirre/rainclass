@@ -1,15 +1,39 @@
 <div class="page-header">
-  <h2>Laboratorios de Realidad Aumentada</h2>
-  <p>Explora y apropia los conceptos de RA a través de estos 6 módulos interactivos.</p>
+  <h2>🎮 Misiones</h2>
+  <p>Completa cada misión en orden para desbloquear la siguiente. ¡Tu progreso se guarda automáticamente!</p>
 </div>
 
 <div class="labs-grid">
-  <div class="glass-panel lab-card" *ngFor="let lab of labs">
+  <div class="glass-panel lab-card"
+       *ngFor="let lab of labs; let i = index"
+       [class.locked]="isLocked(lab)"
+       [class.completed]="lab.status === 'completed'"
+       [class.available]="lab.status === 'available'"
+       [class.inprogress]="lab.status === 'in-progress'">
+
+    <!-- Status ribbon -->
+    <div class="ribbon" *ngIf="lab.status === 'completed'">✅ Completada</div>
+    <div class="ribbon ribbon-progress" *ngIf="lab.status === 'in-progress'">⚡ En progreso</div>
+
+    <!-- Lock overlay -->
+    <div class="lock-overlay" *ngIf="isLocked(lab)">
+      <span class="lock-icon">🔒</span>
+      <span class="lock-text">Completa la misión anterior</span>
+    </div>
+
     <div class="card-content">
-      <div class="lab-number">{{ lab.id }}</div>
+      <div class="lab-number">{{ isLocked(lab) ? '🔒' : lab.icon }}</div>
+      <div class="mission-label">Misión {{ lab.id }}</div>
       <h3>{{ lab.title }}</h3>
       <p>{{ lab.description }}</p>
-      <button class="glass-button start-btn" [routerLink]="['/laboratories', lab.id, 'inicio']">Ingresar al Módulo</button>
+      <div class="xp-tag">+150 XP</div>
+      <button class="glass-button start-btn"
+              [disabled]="isLocked(lab)"
+              [class.btn-locked]="isLocked(lab)"
+              [class.btn-done]="lab.status === 'completed'"
+              (click)="enter(lab)">
+        {{ btnLabel(lab.status) }}
+      </button>
     </div>
   </div>
 </div>

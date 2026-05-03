@@ -149,3 +149,70 @@
     transform: translateY(-5px) scale(1.01);
   }
 }
+
+/* ── Gamificación: estados de las misiones ─────────────── */
+.lab-card { position: relative; overflow: hidden; }
+
+.lab-card.locked { opacity: 0.55; pointer-events: auto; }
+.lab-card.locked:hover { transform: none; box-shadow: none; border-color: inherit; }
+
+.lab-card.completed { border-color: #5cb85c !important; }
+.lab-card.available { border-color: var(--accent-color) !important; }
+.lab-card.inprogress { border-color: #f7c948 !important; }
+
+/* Ribbon */
+.ribbon {
+  position: absolute;
+  top: 14px; right: -28px;
+  background: #5cb85c;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 36px;
+  transform: rotate(35deg);
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.ribbon-progress { background: #f7a500; right: -32px; }
+
+/* Lock overlay */
+.lock-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(0,0,0,0.25);
+  z-index: 2;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.lock-icon  { font-size: 2rem; }
+.lock-text  { font-size: 0.78rem; color: var(--text-secondary); text-align: center; padding: 0 20px; }
+
+/* Mission label */
+.mission-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: -8px;
+}
+
+/* XP tag */
+.xp-tag {
+  display: inline-block;
+  background: rgba(247,201,72,0.12);
+  border: 1px solid rgba(247,201,72,0.3);
+  color: #f7c948;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 2px 12px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.btn-locked { opacity: 0.4; cursor: not-allowed; pointer-events: none; }
+.btn-done   { border-color: #5cb85c; color: #5cb85c; }
