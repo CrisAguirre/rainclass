@@ -173,3 +173,13 @@
     padding: 10px 6px;
   }
 }
+
+.role-badge {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.admin-badge { background: rgba(246,173,85,0.18); color: #f6ad55; }
+.docente-badge { background: rgba(99,179,237,0.18); color: #63b3ed; }

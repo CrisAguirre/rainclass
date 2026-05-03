@@ -30,16 +30,20 @@ export class LabCierreComponent implements OnInit {
   saveConclusion(): void {
     if (!this.conclusionText.trim()) return;
 
-    const userId = localStorage.getItem('userId') || 'anonymous';
-    const username = localStorage.getItem('username') || 'Anónimo';
+    let userId = 'anonymous';
+    let username = 'Anónimo';
+    try {
+      const raw = localStorage.getItem('currentUser');
+      if (raw) { const u = JSON.parse(raw); userId = u.userId; username = u.displayName || u.username; }
+    } catch {}
 
     const conclusion: ConclusionResult = {
       userId,
       username,
-      labId: 5,
+      labId: 6,
       labName: 'RA Propia - Generador 3D',
       conclusionText: this.conclusionText.trim(),
-      scannedModels: [] // Could be populated from desarrollo component if needed
+      scannedModels: []
     };
 
     this.conclusionSaving = true;

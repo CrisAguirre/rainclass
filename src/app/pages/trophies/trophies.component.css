@@ -1,0 +1,32 @@
+.trophies-container { padding: 0; }
+.loading-state { display:flex; flex-direction:column; align-items:center; padding:3rem; color:var(--text-secondary); }
+.spinner { width:40px;height:40px;border:3px solid rgba(255,255,255,0.1);border-top-color:var(--accent-blue);border-radius:50%;animation:spin 0.8s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
+
+.summary-banner { display:flex;align-items:center;gap:1rem;padding:1.5rem 2rem;margin-bottom:1.5rem; }
+.big-number { font-size:3rem;font-weight:700;color:var(--accent-blue); }
+.summary-label { font-size:1.2rem;color:var(--text-secondary); }
+
+.trophies-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.2rem; }
+.trophy-card { padding:1.5rem;text-align:center;transition:transform 0.2s; }
+.trophy-card.locked { opacity:0.45;filter:grayscale(1); }
+.trophy-card.earned { border:1px solid rgba(99,179,237,0.4); }
+.trophy-card:hover { transform:translateY(-3px); }
+.trophy-icon { font-size:2.5rem;margin-bottom:0.5rem; }
+.trophy-card h4 { margin:0 0 0.3rem;font-size:0.95rem; }
+.trophy-card p { font-size:0.8rem;color:var(--text-secondary);margin:0 0 0.8rem; }
+.trophy-status { font-size:0.78rem; }
+.earned-badge { color:#68d391; }
+
+.docente-block { padding:1.5rem;margin-bottom:1rem; }
+.docente-header { display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem; }
+.docente-header h3 { margin:0;flex:1; }
+.docente-icon { font-size:1.5rem; }
+.earned-count { background:rgba(99,179,237,0.15);padding:0.25rem 0.75rem;border-radius:20px;font-size:0.85rem;color:var(--accent-blue); }
+.trophies-row { display:flex;flex-wrap:wrap;gap:0.75rem; }
+.mini-trophy { display:flex;flex-direction:column;align-items:center;width:80px;padding:0.5rem;border-radius:8px;background:rgba(255,255,255,0.03);text-align:center; }
+.mini-trophy.locked { opacity:0.4;filter:grayscale(1); }
+.mini-icon { font-size:1.5rem; }
+.mini-name { font-size:0.65rem;color:var(--text-secondary);margin-top:0.2rem; }
+.mini-lock { font-size:0.7rem;margin-top:0.1rem; }
+.empty-state { text-align:center;padding:3rem;color:var(--text-secondary); }

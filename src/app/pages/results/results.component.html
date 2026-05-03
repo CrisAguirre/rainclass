@@ -1,7 +1,8 @@
 <div class="results-container animate-fade-in">
   <div class="page-header">
-    <h2>Resultados de Evaluaciones</h2>
-    <p>Monitoriza el progreso y apropiación de los docentes en cada laboratorio de Realidad Aumentada.</p>
+    <h2>{{ isAdmin ? 'Resultados de Evaluaciones' : 'Mis Resultados' }}</h2>
+    <p *ngIf="isAdmin">Monitoriza el progreso y apropiación de los docentes en cada misión de Realidad Aumentada.</p>
+    <p *ngIf="!isAdmin">Aquí puedes ver el historial de tus evaluaciones realizadas en la plataforma.</p>
   </div>
 
   <div *ngIf="loading" class="loading-state">
@@ -10,9 +11,9 @@
   </div>
 
   <div *ngIf="!loading" class="dashboard-grid">
-    <!-- Stats Overview -->
-    <div class="stats-section">
-      <h3 class="section-title">Resumen por Laboratorio</h3>
+    <!-- Stats Overview (admin only) -->
+    <div *ngIf="isAdmin" class="stats-section">
+      <h3 class="section-title">Resumen por Misión</h3>
       <div class="stats-cards">
         <div *ngFor="let stat of stats" class="glass-panel stat-card">
           <h4>{{ stat.labName }}</h4>
@@ -46,8 +47,8 @@
           <thead>
             <tr>
               <th>Fecha</th>
-              <th>Docente</th>
-              <th>Laboratorio</th>
+              <th *ngIf="isAdmin">Docente</th>
+              <th>Misión</th>
               <th>Intento</th>
               <th>Puntaje</th>
               <th>Porcentaje</th>
@@ -57,11 +58,11 @@
           <tbody>
             <tr *ngFor="let result of results">
               <td>{{ formatDate(result.createdAt) }}</td>
-              <td class="user-cell">
+              <td *ngIf="isAdmin" class="user-cell">
                 <span class="user-icon">👤</span>
                 {{ result.username }}
               </td>
-              <td><span class="lab-badge">Lab {{ result.labId }}: {{ result.labName }}</span></td>
+              <td><span class="lab-badge">Misión {{ result.labId }}: {{ result.labName }}</span></td>
               <td class="text-center">#{{ result.attemptNumber }}</td>
               <td class="text-center"><strong>{{ result.score }}/{{ result.totalQuestions }}</strong></td>
               <td class="text-center">
@@ -79,7 +80,7 @@
               </td>
             </tr>
             <tr *ngIf="results.length === 0">
-              <td colspan="7" class="empty-state">No hay resultados registrados todavía.</td>
+              <td [attr.colspan]="isAdmin ? 7 : 6" class="empty-state">No hay resultados registrados todavía.</td>
             </tr>
           </tbody>
         </table>

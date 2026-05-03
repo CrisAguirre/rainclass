@@ -1151,11 +1151,11 @@ export class LabEvaluacionComponent implements OnInit {
   }
 
   getQuestions(): Question[] {
-    if (this.labId === '1') return this.mergeCubeQuestions;
-    if (this.labId === '2') return this.quiverQuestions;
-    if (this.labId === '3') return this.actionboundQuestions;
-    if (this.labId === '4') return this.metaversoQuestions;
-    if (this.labId === '6') return this.geoposicionQuestions;
+    if (this.labId === '2') return this.mergeCubeQuestions;
+    if (this.labId === '3') return this.quiverQuestions;
+    if (this.labId === '4') return this.actionboundQuestions;
+    if (this.labId === '5') return this.metaversoQuestions;
+    if (this.labId === '7') return this.geoposicionQuestions;
     return [];
   }
 
@@ -1180,7 +1180,7 @@ export class LabEvaluacionComponent implements OnInit {
     let user = userStr ? JSON.parse(userStr) : { userId: 'anon', username: 'Docente Anónimo' };
 
     // Send results to backend
-    const labNames: { [key: string]: string } = { '1': 'Merge Cube', '2': 'QuiverVision', '3': 'Actionbound', '4': 'Metaverso Meta', '5': 'Laboratorio 5', '6': 'Modelo con Geoposición' };
+    const labNames: { [key: string]: string } = { '1': 'Introducción', '2': 'Merge Cube', '3': 'QuiverVision', '4': 'Actionbound', '5': 'Metaverso Meta', '6': 'RA Propia – Generador 3D', '7': 'Modelo con Geoposición' };
     this.evalService.saveResult({
       userId: user.userId,
       username: user.username,

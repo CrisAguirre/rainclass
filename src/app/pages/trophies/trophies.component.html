@@ -1,0 +1,49 @@
+<div class="trophies-container animate-fade-in">
+  <div class="page-header">
+    <h2>🏆 Trofeos</h2>
+    <p *ngIf="!isAdmin">Logros obtenidos al completar misiones y evaluaciones.</p>
+    <p *ngIf="isAdmin">Trofeos vigentes de todos los docentes de la plataforma.</p>
+  </div>
+
+  <div *ngIf="loading" class="loading-state">
+    <div class="spinner"></div><p>Cargando trofeos...</p>
+  </div>
+
+  <!-- DOCENTE VIEW -->
+  <div *ngIf="!loading && !isAdmin">
+    <div class="glass-panel summary-banner">
+      <span class="big-number">{{ earnedCount }}</span>
+      <span class="summary-label">/ {{ myTrophies.length }} trofeos obtenidos</span>
+    </div>
+    <div class="trophies-grid">
+      <div *ngFor="let t of myTrophies" class="glass-panel trophy-card" [class.earned]="t.earned" [class.locked]="!t.earned">
+        <div class="trophy-icon">{{ t.icon }}</div>
+        <h4>{{ t.name }}</h4>
+        <p>{{ t.description }}</p>
+        <span class="trophy-status" *ngIf="!t.earned">🔒 Sin obtener</span>
+        <span class="trophy-status earned-badge" *ngIf="t.earned">✅ Obtenido</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN VIEW -->
+  <div *ngIf="!loading && isAdmin">
+    <div *ngIf="docenteList.length === 0" class="empty-state">
+      <p>No hay docentes con evaluaciones registradas todavía.</p>
+    </div>
+    <div *ngFor="let d of docenteList" class="glass-panel docente-block">
+      <div class="docente-header">
+        <span class="docente-icon">👤</span>
+        <h3>{{ d.displayName }}</h3>
+        <span class="earned-count">{{ d.earned }} trofeos</span>
+      </div>
+      <div class="trophies-row">
+        <div *ngFor="let t of d.trophies" class="mini-trophy" [class.earned]="t.earned" [title]="t.name + ': ' + t.description">
+          <span class="mini-icon">{{ t.icon }}</span>
+          <span class="mini-name">{{ t.name }}</span>
+          <span *ngIf="!t.earned" class="mini-lock">🔒</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

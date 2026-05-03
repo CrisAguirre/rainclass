@@ -1,0 +1,50 @@
+<div class="collectibles-container animate-fade-in">
+  <div class="page-header">
+    <h2>✨ Coleccionables</h2>
+    <p *ngIf="!isAdmin">Objetos únicos que desbloqueas al avanzar en la plataforma.</p>
+    <p *ngIf="isAdmin">Coleccionables de todos los docentes de la plataforma.</p>
+  </div>
+
+  <div *ngIf="loading" class="loading-state">
+    <div class="spinner"></div><p>Cargando coleccionables...</p>
+  </div>
+
+  <!-- DOCENTE VIEW -->
+  <div *ngIf="!loading && !isAdmin">
+    <div class="glass-panel summary-banner">
+      <span class="big-number">{{ earnedCount }}</span>
+      <span class="summary-label">/ {{ myCollectibles.length }} coleccionables</span>
+    </div>
+    <div class="collectibles-grid">
+      <div *ngFor="let c of myCollectibles" class="glass-panel collectible-card" [class.earned]="c.earned" [class.locked]="!c.earned" [class]="'rarity-' + c.rarity">
+        <div class="rarity-tag">{{ rarityLabel(c.rarity) }}</div>
+        <div class="col-icon">{{ c.icon }}</div>
+        <h4>{{ c.name }}</h4>
+        <p>{{ c.description }}</p>
+        <span class="col-status" *ngIf="!c.earned">🔒 Bloqueado</span>
+        <span class="col-status unlocked" *ngIf="c.earned">✅ Desbloqueado</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN VIEW -->
+  <div *ngIf="!loading && isAdmin">
+    <div *ngIf="docenteList.length === 0" class="empty-state">
+      <p>No hay docentes con evaluaciones registradas todavía.</p>
+    </div>
+    <div *ngFor="let d of docenteList" class="glass-panel docente-block">
+      <div class="docente-header">
+        <span class="docente-icon">👤</span>
+        <h3>{{ d.username }}</h3>
+        <span class="earned-count">{{ d.earned }} coleccionables</span>
+      </div>
+      <div class="cols-row">
+        <div *ngFor="let c of d.collectibles" class="mini-col" [class.earned]="c.earned" [title]="c.name + ': ' + c.description">
+          <span class="mini-icon">{{ c.icon }}</span>
+          <span class="mini-name">{{ c.name }}</span>
+          <span *ngIf="!c.earned" class="mini-lock">🔒</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

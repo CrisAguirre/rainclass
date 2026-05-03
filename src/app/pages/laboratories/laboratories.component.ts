@@ -11,12 +11,13 @@ import { ProgressService } from '../../services/progress.service';
 export class LaboratoriesComponent implements OnInit, OnDestroy {
 
   labs = [
-    { id: 1, title: 'Merge Cube',               icon: '🧊', description: 'Explora objetos 3D y simulaciones en la palma de tu mano.',                          status: 'locked' as const },
-    { id: 2, title: 'QuiverVision',             icon: '🎨', description: 'Dale vida a páginas para colorear con realidad aumentada interactiva.',               status: 'locked' as const },
-    { id: 3, title: 'Actionbound',              icon: '🗺️', description: 'Recorridos, búsquedas del tesoro y aventuras de aprendizaje gamificadas.',            status: 'locked' as const },
-    { id: 4, title: 'Metaverso Meta',           icon: '🌐', description: 'Conéctate, colabora y aprende en entornos virtuales inmersivos.',                     status: 'locked' as const },
-    { id: 5, title: 'RA Propia – Generador 3D', icon: '🔬', description: 'Escanea patrones QR y genera modelos 3D interactivos por asignatura.',               status: 'locked' as const },
-    { id: 6, title: 'Modelo con Geoposición',   icon: '📍', description: 'Ancla modelos 3D a marcadores AR físicos con posición y nivelación en tiempo real.', status: 'locked' as const },
+    { id: 1, title: 'Introducción',             icon: '🎯', description: 'Conoce los fundamentos de la Realidad Aumentada y la ruta de aprendizaje que recorrerás.',          status: 'locked' as const },
+    { id: 2, title: 'Merge Cube',               icon: '🧊', description: 'Explora objetos 3D y simulaciones en la palma de tu mano.',                                         status: 'locked' as const },
+    { id: 3, title: 'QuiverVision',             icon: '🎨', description: 'Dale vida a páginas para colorear con realidad aumentada interactiva.',                              status: 'locked' as const },
+    { id: 4, title: 'Actionbound',              icon: '🗺️', description: 'Recorridos, búsquedas del tesoro y aventuras de aprendizaje gamificadas.',                         status: 'locked' as const },
+    { id: 5, title: 'Metaverso Meta',           icon: '🌐', description: 'Conéctate, colabora y aprende en entornos virtuales inmersivos.',                                   status: 'locked' as const },
+    { id: 6, title: 'RA Propia – Generador 3D', icon: '🔬', description: 'Escanea patrones QR y genera modelos 3D interactivos por asignatura.',                             status: 'locked' as const },
+    { id: 7, title: 'Modelo con Geoposición',   icon: '📍', description: 'Ancla modelos 3D a marcadores AR físicos con posición y nivelación en tiempo real.',               status: 'locked' as const },
   ] as { id: number; title: string; icon: string; description: string; status: string }[];
 
   private sub!: Subscription;

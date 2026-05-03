@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,17 +12,13 @@ export class LoginComponent {
   password = '';
   error = '';
 
-  constructor(private router: Router) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   onLogin(event: Event) {
     event.preventDefault();
-    if (this.username === 'adminrainclass' && this.password === 'r@inClass2620') {
+    const user = this.authService.login(this.username, this.password);
+    if (user) {
       this.error = '';
-      localStorage.setItem('currentUser', JSON.stringify({ 
-        username: this.username, 
-        role: 'admin',
-        userId: 'u_' + Math.random().toString(36).substr(2, 9) // Simulated ID
-      }));
       this.router.navigate(['/home']);
     } else {
       this.error = 'Credenciales incorrectas. Intente nuevamente.';

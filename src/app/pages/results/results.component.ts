@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EvaluationService, EvaluationResult } from '../../services/evaluation.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-results',
@@ -10,35 +11,37 @@ export class ResultsComponent implements OnInit {
   results: EvaluationResult[] = [];
   stats: any[] = [];
   loading = true;
+  isAdmin = false;
 
-  constructor(private evalService: EvaluationService) {}
+  constructor(private evalService: EvaluationService, private authService: AuthService) {}
 
   ngOnInit(): void {
+    this.isAdmin = this.authService.isAdmin();
     this.loadData();
   }
 
   loadData(): void {
     this.loading = true;
-    
-    // Load all results
-    this.evalService.getAllResults().subscribe({
-      next: (data) => {
-        this.results = data;
-        this.loading = false;
-      },
-      error: (err) => {
-        console.error('Error fetching results:', err);
-        this.loading = false;
-      }
-    });
+    const user = this.authService.getCurrentUser();
 
-    // Load stats
-    this.evalService.getStats().subscribe({
-      next: (data) => {
-        this.stats = data;
-      },
-      error: (err) => console.error('Error fetching stats:', err)
-    });
+    if (this.isAdmin) {
+      this.evalService.getAllResults().subscribe({
+        next: (data) => { this.results = data; this.loading = false; },
+        error: () => { this.loading = false; }
+      });
+      this.evalService.getStats().subscribe({
+        next: (data) => { this.stats = data; },
+        error: (err) => console.error('Error stats:', err)
+      });
+    } else {
+      // Docente: only their own results
+      if (user) {
+        this.evalService.getResultsByUser(user.userId).subscribe({
+          next: (data) => { this.results = data; this.loading = false; },
+          error: () => { this.loading = false; }
+        });
+      }
+    }
   }
 
   formatDate(dateString?: string): string {

@@ -16,7 +16,7 @@ export interface UserProgress {
 }
 
 const STORAGE_KEY = 'rainclass_progress';
-const TOTAL_LABS = 6;
+const TOTAL_LABS = 7;
 const XP_PER_LAB = 150;
 
 @Injectable({ providedIn: 'root' })
@@ -39,7 +39,16 @@ export class ProgressService {
   private load(): UserProgress {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) return JSON.parse(raw);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        // Migrate if old save had 6 labs → expand to 7
+        if (parsed.labs && parsed.labs.length < TOTAL_LABS) {
+          while (parsed.labs.length < TOTAL_LABS) {
+            parsed.labs.push({ id: parsed.labs.length + 1, status: 'locked', xpEarned: 0 });
+          }
+        }
+        return parsed;
+      }
     } catch {}
     return this.defaultProgress();
   }
@@ -49,7 +58,6 @@ export class ProgressService {
     this._progress$.next(p);
   }
 
-  /** Marca un lab como "en progreso" si estaba disponible */
   startLab(labId: number): void {
     const p = { ...this.snapshot, labs: [...this.snapshot.labs] };
     const lab = p.labs.find(l => l.id === labId);
@@ -59,7 +67,6 @@ export class ProgressService {
     }
   }
 
-  /** Marca un lab como completado y desbloquea el siguiente */
   completeLab(labId: number): void {
     const p = { ...this.snapshot, labs: this.snapshot.labs.map(l => ({ ...l })) };
     const lab = p.labs.find(l => l.id === labId);
@@ -72,14 +79,12 @@ export class ProgressService {
     p.level = Math.floor(p.totalXP / 300) + 1;
     p.lastActivity = new Date().toISOString();
 
-    // Desbloquear el siguiente lab
     const next = p.labs.find(l => l.id === labId + 1);
     if (next && next.status === 'locked') next.status = 'available';
 
     this.save(p);
   }
 
-  /** Retorna el % de progreso global (0–100) */
   get globalPercent(): number {
     const completed = this.snapshot.labs.filter(l => l.status === 'completed').length;
     return Math.round((completed / TOTAL_LABS) * 100);
@@ -90,7 +95,6 @@ export class ProgressService {
     return !!lab && lab.status !== 'locked';
   }
 
-  /** Reinicia todo el progreso (para pruebas) */
   resetProgress(): void {
     localStorage.removeItem(STORAGE_KEY);
     this.save(this.defaultProgress());

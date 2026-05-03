@@ -3,7 +3,7 @@
     <div class="header-content">
       <button class="back-btn" routerLink="/laboratories">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-        Volver a Laboratorios
+        Volver a Misiones
       </button>
       <h2>{{ labTitle }}</h2>
       <a *ngIf="labLink" [href]="labLink" target="_blank" class="glass-button external-link-btn">
@@ -15,15 +15,15 @@
     
     <div class="lab-tabs">
       <a [routerLink]="['/laboratories', labId, 'inicio']" routerLinkActive="active-tab" class="tab-link">
-        {{ labId === '5' ? 'Introducción' : 'Inicio' }}
+        {{ labId === '6' ? 'Introducción' : 'Inicio' }}
       </a>
       <a [routerLink]="['/laboratories', labId, 'desarrollo']" routerLinkActive="active-tab" class="tab-link">
-        {{ labId === '5' ? 'Generador 3D' : 'Desarrollo' }}
+        {{ labId === '6' ? 'Generador 3D' : 'Desarrollo' }}
       </a>
       <a [routerLink]="['/laboratories', labId, 'cierre']" routerLinkActive="active-tab" class="tab-link">
-        {{ labId === '5' ? 'Conclusiones' : 'Cierre' }}
+        {{ labId === '6' ? 'Conclusiones' : 'Cierre' }}
       </a>
-      <a *ngIf="labId !== '5'" [routerLink]="['/laboratories', labId, 'evaluacion']" routerLinkActive="active-tab" class="tab-link">
+      <a *ngIf="labId !== '6'" [routerLink]="['/laboratories', labId, 'evaluacion']" routerLinkActive="active-tab" class="tab-link">
         Evaluación
       </a>
     </div>

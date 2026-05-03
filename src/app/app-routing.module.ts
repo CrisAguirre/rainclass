@@ -12,6 +12,8 @@ import { LabInicioComponent } from './pages/laboratories/lab-inicio/lab-inicio.c
 import { LabDesarrolloComponent } from './pages/laboratories/lab-desarrollo/lab-desarrollo.component';
 import { LabCierreComponent } from './pages/laboratories/lab-cierre/lab-cierre.component';
 import { LabEvaluacionComponent } from './pages/laboratories/lab-evaluacion/lab-evaluacion.component';
+import { TrophiesComponent } from './pages/trophies/trophies.component';
+import { CollectiblesComponent } from './pages/collectibles/collectibles.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -35,6 +37,8 @@ const routes: Routes = [
       },
       { path: 'users', component: UsersComponent },
       { path: 'results', component: ResultsComponent },
+      { path: 'trophies', component: TrophiesComponent },
+      { path: 'collectibles', component: CollectiblesComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
   },

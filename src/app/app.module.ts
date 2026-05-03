@@ -18,6 +18,8 @@ import { LabInicioComponent } from './pages/laboratories/lab-inicio/lab-inicio.c
 import { LabDesarrolloComponent } from './pages/laboratories/lab-desarrollo/lab-desarrollo.component';
 import { LabCierreComponent } from './pages/laboratories/lab-cierre/lab-cierre.component';
 import { LabEvaluacionComponent } from './pages/laboratories/lab-evaluacion/lab-evaluacion.component';
+import { TrophiesComponent } from './pages/trophies/trophies.component';
+import { CollectiblesComponent } from './pages/collectibles/collectibles.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { LabEvaluacionComponent } from './pages/laboratories/lab-evaluacion/lab-
     LabInicioComponent,
     LabDesarrolloComponent,
     LabCierreComponent,
-    LabEvaluacionComponent
+    LabEvaluacionComponent,
+    TrophiesComponent,
+    CollectiblesComponent,
   ],
   imports: [
     BrowserModule,

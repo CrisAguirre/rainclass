@@ -29,8 +29,6 @@ export interface ConclusionResult {
   providedIn: 'root'
 })
 export class EvaluationService {
-  // Cuando despliegues en Railway, cambia esta URL por la que te proporcione Railway.
-  // Ejemplo: private BASE_URL = 'https://rainclassbkn-production.up.railway.app/api';
   private BASE_URL = 'https://rainclassbkn-production.up.railway.app/api';
   
   private apiUrl = `${this.BASE_URL}/evaluations`;
@@ -58,7 +56,7 @@ export class EvaluationService {
     return this.http.get<any[]>(`${this.apiUrl}/stats`);
   }
 
-  // Lab 5 - Conclusions
+  // Conclusions
   saveConclusion(conclusion: ConclusionResult): Observable<ConclusionResult> {
     return this.http.post<ConclusionResult>(this.conclusionsUrl, conclusion);
   }
@@ -72,3 +70,28 @@ export class EvaluationService {
   }
 }
 
+  // Trophies
+  awardTrophy(trophy: any): any {
+    return this.http.post(`${this.BASE_URL}/trophies`, trophy);
+  }
+
+  getTrophiesByUser(userId: string): any {
+    return this.http.get(`${this.BASE_URL}/trophies/user/${userId}`);
+  }
+
+  getAllTrophies(): any {
+    return this.http.get(`${this.BASE_URL}/trophies`);
+  }
+
+  // Collectibles
+  unlockCollectible(col: any): any {
+    return this.http.post(`${this.BASE_URL}/collectibles`, col);
+  }
+
+  getCollectiblesByUser(userId: string): any {
+    return this.http.get(`${this.BASE_URL}/collectibles/user/${userId}`);
+  }
+
+  getAllCollectibles(): any {
+    return this.http.get(`${this.BASE_URL}/collectibles`);
+  }

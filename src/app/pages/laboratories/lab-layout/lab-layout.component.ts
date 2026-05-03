@@ -12,12 +12,13 @@ export class LabLayoutComponent implements OnInit {
   labLink: string | null = null;
 
   labsInfo: { [key: string]: { title: string, link: string | null } } = {
-    '1': { title: 'Merge Cube', link: 'https://mergeedu.com/merge-cube' },
-    '2': { title: 'QuiverVision', link: 'https://quivervision.com/' },
-    '3': { title: 'Actionbound', link: 'https://en.actionbound.com/' },
-    '4': { title: 'Metaverso Meta', link: null },
-    '5': { title: 'RA Propia - Generador 3D', link: null },
-    '6': { title: 'Modelo con Geoposición', link: null }
+    '1': { title: 'Introducción',             link: null },
+    '2': { title: 'Merge Cube',               link: 'https://mergeedu.com/merge-cube' },
+    '3': { title: 'QuiverVision',             link: 'https://quivervision.com/' },
+    '4': { title: 'Actionbound',              link: 'https://en.actionbound.com/' },
+    '5': { title: 'Metaverso Meta',           link: null },
+    '6': { title: 'RA Propia - Generador 3D', link: null },
+    '7': { title: 'Modelo con Geoposición',   link: null }
   };
 
   constructor(private route: ActivatedRoute) {}
