@@ -30,11 +30,11 @@ export interface ConclusionResult {
 })
 export class EvaluationService {
   private BASE_URL = 'https://rainclassbkn-production.up.railway.app/api';
-  
+
   private apiUrl = `${this.BASE_URL}/evaluations`;
   private conclusionsUrl = `${this.BASE_URL}/conclusions`;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   saveResult(result: EvaluationResult): Observable<EvaluationResult> {
     return this.http.post<EvaluationResult>(this.apiUrl, result);
@@ -68,7 +68,6 @@ export class EvaluationService {
   getConclusionsByUser(userId: string): Observable<ConclusionResult[]> {
     return this.http.get<ConclusionResult[]>(`${this.conclusionsUrl}/user/${userId}`);
   }
-}
 
   // Trophies
   awardTrophy(trophy: any): any {
@@ -95,3 +94,4 @@ export class EvaluationService {
   getAllCollectibles(): any {
     return this.http.get(`${this.BASE_URL}/collectibles`);
   }
+}
