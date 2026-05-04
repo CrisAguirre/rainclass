@@ -1,27 +1,187 @@
 <!-- DESARROLLO - Misión 1: Introducción -->
 <div *ngIf="labId === '1'" class="lab-content">
-  <div class="glass-panel" style="padding: 2rem;">
-    <h2>⚙️ Exploración Práctica – ¿Cómo funciona la RA?</h2>
-    <p>La Realidad Aumentada funciona gracias a la combinación de tres elementos clave:</p>
-    <div style="display:grid; gap:1rem; margin-top:1rem;">
-      <div class="glass-panel" style="padding:1rem;">
-        <strong>📷 Cámara + Sensor</strong>
-        <p>Captura el entorno físico en tiempo real y detecta marcadores, superficies o el espacio tridimensional.</p>
+
+  <!-- ============================================================
+       DESARROLLO: Exploración práctica profunda — Misión 1
+  ============================================================ -->
+
+  <!-- Intro motivacional -->
+  <div class="glass-panel m1-dev-intro">
+    <div class="m1-dev-intro-icon">⚙️</div>
+    <div>
+      <h2>Exploración Práctica</h2>
+      <p>
+        En esta sección profundizarás en el <strong>funcionamiento técnico de la RA</strong>,
+        conocerás los tipos de marcadores que existen, explorarás casos de uso reales en el aula
+        y aprenderás a evaluar cuándo —y cómo— integrar la RA en tus actividades docentes.
+      </p>
+    </div>
+  </div>
+
+  <!-- Sección 1: Cómo funciona técnicamente -->
+  <div class="section-title">
+    <h3>El Motor de la RA: Cómo funciona por dentro</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="m1-tech-grid glass-panel">
+    <div class="m1-tech-step">
+      <div class="m1-tech-num">1</div>
+      <div class="m1-tech-icon">📷</div>
+      <h4>Captura de imagen</h4>
+      <p>La cámara envía fotogramas continuos (30–60 fps) al procesador. Cada fotograma es un mapa del entorno físico en ese instante preciso.</p>
+    </div>
+    <div class="m1-tech-arrow">▶</div>
+    <div class="m1-tech-step">
+      <div class="m1-tech-num">2</div>
+      <div class="m1-tech-icon">🔍</div>
+      <h4>Detección de marcador</h4>
+      <p>Un algoritmo de <em>visión por computadora</em> analiza el fotograma, busca patrones conocidos (marcadores fiduciales, planos, caras o GPS) y calcula su posición 3D.</p>
+    </div>
+    <div class="m1-tech-arrow">▶</div>
+    <div class="m1-tech-step">
+      <div class="m1-tech-num">3</div>
+      <div class="m1-tech-icon">📐</div>
+      <h4>Cálculo de pose</h4>
+      <p>El sistema determina la <strong>posición</strong>, <strong>rotación</strong> y <strong>escala</strong> exactas del marcador respecto a la cámara mediante álgebra matricial.</p>
+    </div>
+    <div class="m1-tech-arrow">▶</div>
+    <div class="m1-tech-step">
+      <div class="m1-tech-num">4</div>
+      <div class="m1-tech-icon">🎨</div>
+      <h4>Renderizado y fusión</h4>
+      <p>El motor gráfico dibuja el objeto 3D con la perspectiva correcta y lo <em>compone</em> sobre la imagen real, produciendo el fotograma final que ve el usuario.</p>
+    </div>
+  </div>
+
+  <!-- Sección 2: Tipos de marcadores -->
+  <div class="section-title">
+    <h3>Tipos de Marcadores en RA</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="m1-markers-grid">
+    <div class="glass-panel m1-marker-card">
+      <div class="m1-mk-icon">⬛</div>
+      <h4>Marcadores Fiduciales</h4>
+      <p>Patrones geométricos impresos en papel (QR-like). Muy precisos y económicos. Ejemplo: Merge Cube, marcadores de Vuforia.</p>
+      <div class="m1-mk-tag">Costo: $0 — Precisión: ★★★★★</div>
+    </div>
+    <div class="glass-panel m1-marker-card">
+      <div class="m1-mk-icon">🖼️</div>
+      <h4>Reconocimiento de Imagen</h4>
+      <p>Cualquier imagen puede ser marcador (portada de libro, lámina, foto). La app la detecta y superpone contenido. Ejemplo: QuiverVision.</p>
+      <div class="m1-mk-tag">Costo: $0 — Precisión: ★★★★☆</div>
+    </div>
+    <div class="glass-panel m1-marker-card">
+      <div class="m1-mk-icon">📍</div>
+      <h4>Geoposición (GPS)</h4>
+      <p>Coordenadas geográficas anclan objetos AR al mundo real. El contenido aparece al apuntar al lugar correcto. Ejemplo: Actionbound, ARCore Geospatial.</p>
+      <div class="m1-mk-tag">Costo: $0 — Precisión: ★★★☆☆</div>
+    </div>
+    <div class="glass-panel m1-marker-card">
+      <div class="m1-mk-icon">🏠</div>
+      <h4>Detección de Superficie</h4>
+      <p>La RA detecta planos horizontales y verticales sin marcadores. Ideal para colocar objetos sobre mesas, suelos o paredes. Ejemplo: ARCore, ARKit.</p>
+      <div class="m1-mk-tag">Costo: $0 — Precisión: ★★★★☆</div>
+    </div>
+  </div>
+
+  <!-- Sección 3: RA en el aula — Casos de uso por asignatura -->
+  <div class="section-title">
+    <h3>RA en el Aula: Casos de Uso por Asignatura</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="m1-subjects-grid">
+    <div class="glass-panel m1-subject">
+      <div class="m1-sub-icon">🔬</div>
+      <h4>Ciencias Naturales</h4>
+      <ul>
+        <li>Explorar el sistema solar en la mesa del aula</li>
+        <li>Rotar y diseccionar una célula 3D interactiva</li>
+        <li>Visualizar volcanes, capas geológicas, ecosistemas</li>
+      </ul>
+    </div>
+    <div class="glass-panel m1-subject">
+      <div class="m1-sub-icon">📐</div>
+      <h4>Matemáticas</h4>
+      <ul>
+        <li>Manipular figuras geométricas 3D en el espacio</li>
+        <li>Visualizar funciones y transformaciones algebraicas</li>
+        <li>Recorridos gamificados con resolución de problemas</li>
+      </ul>
+    </div>
+    <div class="glass-panel m1-subject">
+      <div class="m1-sub-icon">📚</div>
+      <h4>Lenguaje e Historia</h4>
+      <ul>
+        <li>Personajes literarios que cobran vida al escanear el libro</li>
+        <li>Reconstrucción de monumentos históricos en 3D</li>
+        <li>Mapas interactivos con eventos históricos georeferenciados</li>
+      </ul>
+    </div>
+    <div class="glass-panel m1-subject">
+      <div class="m1-sub-icon">🎭</div>
+      <h4>Arte y Creatividad</h4>
+      <ul>
+        <li>Páginas para colorear que cobran vida en 3D (QuiverVision)</li>
+        <li>Galerías de arte aumentadas con contexto del artista</li>
+        <li>Creación de historias en entornos virtuales (Metaverso)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sección 4: Cómo integrar RA en tu clase — Marco pedagógico -->
+  <div class="section-title">
+    <h3>Marco para Integrar la RA en tu Práctica Docente</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel m1-framework-panel">
+    <div class="m1-fw-steps">
+      <div class="m1-fw-step">
+        <div class="m1-fw-circle">🎯</div>
+        <div class="m1-fw-content">
+          <h4>1. Define el objetivo pedagógico</h4>
+          <p>Antes de elegir la herramienta, pregúntate: <em>¿qué concepto abstracto quiero hacer concreto? ¿qué experiencia quiero que mi estudiante tenga?</em> El objetivo guía la tecnología, no al revés.</p>
+        </div>
       </div>
-      <div class="glass-panel" style="padding:1rem;">
-        <strong>🧠 Procesamiento</strong>
-        <p>El software analiza la imagen, reconoce patrones o planos, y calcula dónde insertar el contenido digital.</p>
+      <div class="m1-fw-step">
+        <div class="m1-fw-circle">🛠️</div>
+        <div class="m1-fw-content">
+          <h4>2. Elige la herramienta adecuada</h4>
+          <p>Cada misión de RainClass cubre una herramienta diferente. No todas sirven para todo. Evalúa disponibilidad de dispositivos, conectividad y edad de los estudiantes.</p>
+        </div>
       </div>
-      <div class="glass-panel" style="padding:1rem;">
-        <strong>🖥️ Pantalla / Visor</strong>
-        <p>Muestra la capa digital superpuesta sobre la imagen real, creando la ilusión de que el objeto existe en el mundo físico.</p>
+      <div class="m1-fw-step">
+        <div class="m1-fw-circle">🧪</div>
+        <div class="m1-fw-content">
+          <h4>3. Diseña la actividad</h4>
+          <p>La RA es el <em>detonante</em> de la curiosidad; el docente le da forma pedagógica. Diseña preguntas, retos o proyectos que conviertan la exploración en aprendizaje significativo.</p>
+        </div>
+      </div>
+      <div class="m1-fw-step">
+        <div class="m1-fw-circle">📊</div>
+        <div class="m1-fw-content">
+          <h4>4. Evalúa y refleja</h4>
+          <p>Observa cómo responden los estudiantes, qué preguntas surgen, qué conceptos se consolidan. La evaluación de la actividad guía la siguiente iteración.</p>
+        </div>
       </div>
     </div>
-    <p style="margin-top:1rem;">Ejemplos cotidianos que ya conoces: filtros de Instagram, Pokémon GO, IKEA Place, Google Translate con cámara.</p>
   </div>
-</div>
 
-<!-- DESARROLLO - Misión 2: Merge Cube -->
+  <!-- Tip cierre de desarrollo -->
+  <div class="glass-panel tip-panel">
+    <h3>💡 Consejo para esta misión</h3>
+    <p>
+      Una vez que comprendas los conceptos de esta sección, avanza a <strong>Cierre</strong>
+      para consolidar lo aprendido y luego a <strong>Evaluación</strong> para ganar tu primer trofeo.
+      Recuerda: puedes repetir la evaluación cuantas veces quieras. ¡Apunta al Platino!
+    </p>
+  </div>
+
+</div>
 <div *ngIf="labId === '2'" class="lab-content">
 
   <!-- Sección 1: Funcionamiento técnico -->

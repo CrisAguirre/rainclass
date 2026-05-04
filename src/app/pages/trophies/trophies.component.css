@@ -140,3 +140,88 @@
 .mini-medal { font-size: 1.25rem; }
 .mini-name { font-size: 0.65rem; color: var(--text-secondary); font-weight: 600; }
 .mini-pct { font-size: 0.62rem; color: var(--accent-blue); }
+
+/* ================================================================
+   ADMIN VIEW — Estilos nuevos
+================================================================ */
+/* Admin summary banner */
+.admin-summary-banner {
+  display: flex; align-items: center; gap: 1.5rem; padding: 1.25rem 1.75rem;
+  margin-bottom: 1.5rem; flex-wrap: wrap;
+}
+.admin-summary-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.admin-sum-num  { font-size: 2rem; font-weight: 700; color: var(--accent-color); line-height: 1; }
+.admin-sum-lbl  { font-size: 0.68rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.07em; }
+.admin-sum-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.08); flex-shrink: 0; }
+.admin-summary-medals { display: flex; gap: 1.25rem; flex-wrap: wrap; align-items: center; }
+.admin-sum-medal { font-size: 0.9rem; color: var(--text-primary); }
+
+/* Docente block */
+.docente-block { margin-bottom: 1.25rem; padding: 1.25rem 1.5rem; }
+.docente-header {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 1rem; flex-wrap: wrap;
+}
+.docente-icon   { font-size: 1.6rem; flex-shrink: 0; }
+.docente-name-block { flex: 1; }
+.docente-name-block h3 { margin: 0; font-size: 1rem; }
+.docente-id { font-size: 0.7rem; color: var(--text-secondary); opacity: 0.7; }
+.docente-stats { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; margin-left: auto; }
+.earned-count {
+  font-size: 0.8rem; font-weight: 600;
+  background: rgba(77,168,218,0.12); border: 1px solid rgba(77,168,218,0.25);
+  border-radius: 12px; padding: 3px 10px; color: var(--accent-color);
+}
+.earned-count.earned-zero {
+  background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);
+  color: var(--text-secondary);
+}
+.docente-medal-counts { display: flex; gap: 8px; font-size: 0.8rem; }
+
+/* Mini mission cards */
+.missions-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.mini-mission-card {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 10px 6px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.15s;
+}
+.mini-mission-card:hover { transform: translateY(-2px); }
+.mini-mission-card.earned {
+  background: rgba(77,168,218,0.07);
+  border-color: rgba(77,168,218,0.2);
+}
+.mini-mission-card.no-eval { opacity: 0.4; filter: grayscale(1); }
+.mini-mission-icon { font-size: 1rem; }
+.mini-medal  { font-size: 1.1rem; }
+.mini-name   { font-size: 0.62rem; color: var(--text-secondary); font-weight: 600; }
+.mini-pct    { font-size: 0.62rem; color: var(--accent-color); font-weight: 600; }
+.mini-pct-none { color: var(--text-secondary); opacity: 0.5; }
+
+/* Progress bar docente */
+.docente-progress-bar {
+  height: 6px; border-radius: 3px;
+  background: rgba(255,255,255,0.06);
+  position: relative; overflow: hidden;
+}
+.docente-progress-fill {
+  height: 100%; border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent-color), #63b3ed);
+  transition: width 0.4s ease;
+}
+.docente-progress-lbl {
+  display: block; font-size: 0.65rem; color: var(--text-secondary);
+  text-align: right; margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+  .missions-mini-grid { grid-template-columns: repeat(4, 1fr); }
+}

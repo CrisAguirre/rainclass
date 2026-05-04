@@ -1,152 +1,403 @@
 ﻿<!-- INICIO - Misión 1: Introducción -->
 <div *ngIf="labId === '1'" class="lab-content">
 
-  <!-- Hero Section -->
-  <div class="hero-section glass-panel">
-    <div class="hero-text">
-      <h2>Misión 1: Introducción a la RA</h2>
-      <p class="subtitle">Tu punto de partida hacia la Realidad Aumentada en el aula</p>
-      <p>
-        En esta primera misión conocerás los <strong>fundamentos conceptuales de la Realidad
-        Aumentada (RA)</strong>, comprenderás cómo se diferencia de otras tecnologías inmersivas
-        y descubrirás por qué está transformando la forma en que se aprende y se enseña en el
-        mundo. Este punto de partida te preparará para sacar el máximo provecho de las 6 misiones
-        que vienen a continuación.
-      </p>
+  <!-- ============================================================
+       HERO INMERSIVO — Partículas flotantes + título animado
+  ============================================================ -->
+  <div class="m1-hero glass-panel">
+    <!-- Partículas de fondo (CSS puro) -->
+    <div class="m1-particles" aria-hidden="true">
+      <span class="m1-p m1-p1">✦</span>
+      <span class="m1-p m1-p2">◈</span>
+      <span class="m1-p m1-p3">⬡</span>
+      <span class="m1-p m1-p4">✦</span>
+      <span class="m1-p m1-p5">◈</span>
+      <span class="m1-p m1-p6">⬡</span>
     </div>
-    <div class="hero-badge">🎯</div>
+
+    <div class="m1-hero-body">
+      <div class="m1-hero-left">
+        <div class="m1-mission-badge">
+          <span class="m1-badge-num">01</span>
+          <span class="m1-badge-label">MISIÓN</span>
+        </div>
+        <h2 class="m1-hero-title">Introducción a la<br><span class="m1-title-accent">Realidad Aumentada</span></h2>
+        <p class="m1-hero-sub">
+          Descubre la tecnología que fusiona el mundo físico con el digital<br>
+          y transforma para siempre la forma de enseñar y aprender.
+        </p>
+
+        <!-- Chips de objetivos -->
+        <div class="m1-chip-row">
+          <span class="m1-chip">🧭 ¿Qué es la RA?</span>
+          <span class="m1-chip">🔬 RA vs RV vs RM</span>
+          <span class="m1-chip">🏫 RA en el aula</span>
+          <span class="m1-chip">🗺️ Ruta de 7 misiones</span>
+          <span class="m1-chip">🏆 Trofeos &amp; Coleccionables</span>
+        </div>
+      </div>
+
+      <!-- AR Visor animado -->
+      <div class="m1-ar-visor" aria-hidden="true">
+        <div class="m1-visor-frame">
+          <div class="m1-visor-scan"></div>
+          <div class="m1-visor-corner tl"></div>
+          <div class="m1-visor-corner tr"></div>
+          <div class="m1-visor-corner bl"></div>
+          <div class="m1-visor-corner br"></div>
+          <div class="m1-visor-center">
+            <div class="m1-orbit">
+              <div class="m1-orbit-ring r1"></div>
+              <div class="m1-orbit-ring r2"></div>
+              <div class="m1-orbit-ring r3"></div>
+              <div class="m1-planet">🌍</div>
+            </div>
+          </div>
+          <div class="m1-visor-hud">
+            <span class="m1-hud-dot"></span> AR ACTIVO
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Sección: Qué es la RA -->
+  <!-- ============================================================
+       ¿QUÉ ES LA RA? — Definición visual + comparativa RA/RV/RM
+  ============================================================ -->
   <div class="section-title">
     <h3>¿Qué es la Realidad Aumentada?</h3>
     <div class="title-line"></div>
   </div>
 
-  <div class="info-grid">
-    <div class="glass-panel info-card">
-      <h3>Definición</h3>
-      <p>
-        La Realidad Aumentada es una tecnología que <strong>superpone contenido digital</strong>
-        —imágenes, modelos 3D, sonidos, vídeos o datos— sobre el mundo físico real, en tiempo real,
-        a través de la cámara de un dispositivo. A diferencia de la Realidad Virtual, el usuario
-        <em>sigue viendo su entorno real</em>, enriquecido con capas de información digital.
+  <!-- Definición destacada -->
+  <div class="m1-definition-card glass-panel">
+    <div class="m1-def-icon">📡</div>
+    <div class="m1-def-text">
+      <p class="m1-def-main">
+        La <strong>Realidad Aumentada</strong> superpone capas de contenido digital —imágenes,
+        modelos 3D, sonidos, datos en tiempo real— sobre el mundo físico que nos rodea,
+        a través de la cámara de un dispositivo. El usuario <em>nunca pierde de vista su entorno real</em>:
+        simplemente lo ve enriquecido con información digital exactamente posicionada.
       </p>
-    </div>
-
-    <div class="glass-panel info-card">
-      <h3>RA · RV · RM: ¿cuál es la diferencia?</h3>
-      <ul>
-        <li><strong>Realidad Aumentada (RA):</strong> añade capas digitales al mundo real. El usuario ve ambos mundos al tiempo.</li>
-        <li><strong>Realidad Virtual (RV):</strong> sumerge al usuario en un entorno 100% digital. Requiere cascos o visores.</li>
-        <li><strong>Realidad Mixta (RM):</strong> los objetos digitales interactúan con superficies físicas reales. Mayor precisión espacial.</li>
-      </ul>
-    </div>
-
-    <div class="glass-panel info-card">
-      <h3>¿Por qué usar RA en el aula?</h3>
-      <ul>
-        <li>🧠 Activa múltiples canales sensoriales, lo que potencia la retención y comprensión de conceptos.</li>
-        <li>🎮 Convierte el aprendizaje en una experiencia activa y motivadora para el estudiante.</li>
-        <li>👁️ Hace visibles conceptos abstractos: moléculas, astros, órganos, procesos geológicos.</li>
-        <li>💸 Las herramientas cubiertas en este curso son gratuitas o de bajo costo.</li>
-        <li>🌍 Elimina barreras geográficas: un volcán del Pacífico puede estar en tu mesa hoy.</li>
-      </ul>
-    </div>
-
-    <div class="glass-panel info-card">
-      <h3>¿Cómo funciona la RA? — 3 componentes esenciales</h3>
-      <ul>
-        <li><strong>Cámara:</strong> captura el mundo real en tiempo real (smartphone, tableta, webcam).</li>
-        <li><strong>Marcador o sensor:</strong> patrón visual, superficie plana o coordenadas GPS que anclan el contenido digital.</li>
-        <li><strong>Software de renderizado:</strong> calcula la posición exacta y superpone el objeto 3D con perspectiva correcta.</li>
-      </ul>
+      <p class="m1-def-examples">
+        <strong>Ejemplos cotidianos que ya conoces:</strong>
+        filtros de Instagram · Pokémon GO · IKEA Place · Google Translate con cámara · Snapchat Lens
+      </p>
     </div>
   </div>
 
-  <!-- Sección: Ruta de aprendizaje -->
+  <!-- Comparativa RA / RV / RM en tarjetas visuales -->
+  <div class="m1-spectrum-grid">
+    <div class="m1-spectrum-card glass-panel m1-card-ra">
+      <div class="m1-sc-icon">👁️</div>
+      <div class="m1-sc-badge">RA</div>
+      <h4>Realidad Aumentada</h4>
+      <p>El mundo real <strong>visible</strong> + capas digitales superpuestas. El dispositivo es una ventana que enriquece la realidad.</p>
+      <div class="m1-sc-bar">
+        <span class="m1-sc-bar-fill" style="width:40%"></span>
+        <span class="m1-sc-bar-label">Digital</span>
+      </div>
+      <div class="m1-sc-bar real">
+        <span class="m1-sc-bar-fill" style="width:100%"></span>
+        <span class="m1-sc-bar-label">Real</span>
+      </div>
+    </div>
+
+    <div class="m1-spectrum-card glass-panel m1-card-rm">
+      <div class="m1-sc-icon">🔀</div>
+      <div class="m1-sc-badge">RM</div>
+      <h4>Realidad Mixta</h4>
+      <p>Los objetos digitales <strong>interactúan</strong> con superficies físicas reales. Mayor precisión espacial. Requiere dispositivos especializados.</p>
+      <div class="m1-sc-bar">
+        <span class="m1-sc-bar-fill" style="width:65%"></span>
+        <span class="m1-sc-bar-label">Digital</span>
+      </div>
+      <div class="m1-sc-bar real">
+        <span class="m1-sc-bar-fill" style="width:65%"></span>
+        <span class="m1-sc-bar-label">Real</span>
+      </div>
+    </div>
+
+    <div class="m1-spectrum-card glass-panel m1-card-rv">
+      <div class="m1-sc-icon">🥽</div>
+      <div class="m1-sc-badge">RV</div>
+      <h4>Realidad Virtual</h4>
+      <p>Entorno 100% digital. El usuario está <strong>completamente inmerso</strong> en un mundo generado por computadora. Requiere casco o visor.</p>
+      <div class="m1-sc-bar">
+        <span class="m1-sc-bar-fill" style="width:100%"></span>
+        <span class="m1-sc-bar-label">Digital</span>
+      </div>
+      <div class="m1-sc-bar real">
+        <span class="m1-sc-bar-fill" style="width:0%"></span>
+        <span class="m1-sc-bar-label">Real</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ¿CÓMO FUNCIONA? — Pipeline visual paso a paso
+  ============================================================ -->
+  <div class="section-title">
+    <h3>¿Cómo funciona la RA? — El pipeline de 3 pasos</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="m1-pipeline glass-panel">
+    <div class="m1-pipe-step">
+      <div class="m1-pipe-icon">📷</div>
+      <div class="m1-pipe-num">01</div>
+      <h4>Captura</h4>
+      <p>La cámara del dispositivo captura el entorno físico en tiempo real, fotograma a fotograma.</p>
+    </div>
+    <div class="m1-pipe-arrow">→</div>
+    <div class="m1-pipe-step">
+      <div class="m1-pipe-icon">🧠</div>
+      <div class="m1-pipe-num">02</div>
+      <h4>Reconocimiento</h4>
+      <p>El software detecta marcadores visuales, superficies planas o espacio 3D y calcula posición exacta.</p>
+    </div>
+    <div class="m1-pipe-arrow">→</div>
+    <div class="m1-pipe-step">
+      <div class="m1-pipe-icon">🖥️</div>
+      <div class="m1-pipe-num">03</div>
+      <h4>Superposición</h4>
+      <p>El objeto digital se renderiza con perspectiva correcta sobre la imagen real, 60 veces por segundo.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ¿POR QUÉ RA EN EL AULA? — Stats + beneficios
+  ============================================================ -->
+  <div class="section-title">
+    <h3>La RA en la Educación: Evidencia y Beneficios</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="m1-stats-row">
+    <div class="glass-panel m1-stat-card">
+      <div class="m1-stat-num">75%</div>
+      <p>más retención de información frente al aprendizaje pasivo expositivo</p>
+    </div>
+    <div class="glass-panel m1-stat-card">
+      <div class="m1-stat-num">3×</div>
+      <p>mayor motivación reportada por estudiantes en clases con tecnologías inmersivas</p>
+    </div>
+    <div class="glass-panel m1-stat-card">
+      <div class="m1-stat-num">K–12</div>
+      <p>la RA es efectiva en todos los niveles educativos, desde primaria hasta universitario</p>
+    </div>
+    <div class="glass-panel m1-stat-card">
+      <div class="m1-stat-num">$0</div>
+      <p>costo de las herramientas base de este curso. Educación inmersiva accesible para todos</p>
+    </div>
+  </div>
+
+  <div class="m1-benefits-grid">
+    <div class="glass-panel m1-benefit">
+      <span class="m1-ben-icon">🧠</span>
+      <div>
+        <h4>Multisensorial</h4>
+        <p>Activa canales visuales, auditivos y cinestésicos simultáneamente, potenciando la retención a largo plazo.</p>
+      </div>
+    </div>
+    <div class="glass-panel m1-benefit">
+      <span class="m1-ben-icon">🎮</span>
+      <div>
+        <h4>Aprendizaje activo</h4>
+        <p>El estudiante manipula, explora y descubre en lugar de recibir información pasivamente.</p>
+      </div>
+    </div>
+    <div class="glass-panel m1-benefit">
+      <span class="m1-ben-icon">👁️</span>
+      <div>
+        <h4>Conceptos abstractos visibles</h4>
+        <p>Moléculas, órganos, astros, procesos geológicos o ecuaciones cobran vida en el espacio físico del aula.</p>
+      </div>
+    </div>
+    <div class="glass-panel m1-benefit">
+      <span class="m1-ben-icon">🌍</span>
+      <div>
+        <h4>Sin barreras geográficas</h4>
+        <p>Un volcán del Pacífico, la Torre Eiffel o el interior de una célula pueden estar sobre tu escritorio hoy.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       RUTA DE APRENDIZAJE — Mapa de 7 misiones
+  ============================================================ -->
   <div class="section-title">
     <h3>Tu Ruta de Aprendizaje en RainClass</h3>
     <div class="title-line"></div>
   </div>
 
-  <div class="glass-panel content-block" style="padding: 36px;">
-    <p style="margin-bottom: 20px; color: var(--text-secondary);">
-      Explorarás <strong>7 misiones progresivas</strong>. Cada una introduce una herramienta o
-      concepto diferente. Al completar la evaluación de cada misión, desbloqueas la siguiente.
+  <div class="glass-panel m1-roadmap-panel">
+    <p class="m1-roadmap-intro">
+      Explorarás <strong>7 misiones progresivas</strong>. Cada una introduce una herramienta o concepto diferente.
+      Al completar la evaluación de cada misión, desbloqueas la siguiente y acumulas <strong>XP y Trofeos</strong>.
     </p>
-    <div class="usage-grid" style="gap: 12px;">
-      <div class="glass-panel usage-card" style="padding: 18px;">
-        <div class="usage-number">01</div>
-        <h4>Introducción a la RA</h4>
-        <p>Fundamentos conceptuales, diferencias RA/RV/RM y ruta de aprendizaje. ← <em>Estás aquí</em></p>
+    <div class="m1-roadmap">
+      <div class="m1-rm-item m1-rm-active">
+        <div class="m1-rm-dot active"></div>
+        <div class="m1-rm-card glass-panel">
+          <span class="m1-rm-num">01</span>
+          <span class="m1-rm-icon">🎯</span>
+          <h4>Introducción a la RA</h4>
+          <p>Fundamentos, diferencias RA/RV/RM y ruta de aprendizaje. <em>← Estás aquí</em></p>
+        </div>
       </div>
-      <div class="glass-panel usage-card" style="padding: 18px;">
-        <div class="usage-number">02</div>
-        <h4>Merge Cube</h4>
-        <p>Sostén objetos 3D digitales en tu mano con un cubo físico de marcadores AR.</p>
+      <div class="m1-rm-connector"></div>
+      <div class="m1-rm-item">
+        <div class="m1-rm-dot"></div>
+        <div class="m1-rm-card glass-panel">
+          <span class="m1-rm-num">02</span>
+          <span class="m1-rm-icon">🧊</span>
+          <h4>Merge Cube</h4>
+          <p>Sostén objetos 3D digitales en tu mano con un cubo físico de marcadores AR.</p>
+        </div>
       </div>
-      <div class="glass-panel usage-card" style="padding: 18px;">
-        <div class="usage-number">03</div>
-        <h4>QuiverVision</h4>
-        <p>Da vida en 3D a páginas para colorear: una actividad manual que se vuelve digital.</p>
+      <div class="m1-rm-connector"></div>
+      <div class="m1-rm-item">
+        <div class="m1-rm-dot"></div>
+        <div class="m1-rm-card glass-panel">
+          <span class="m1-rm-num">03</span>
+          <span class="m1-rm-icon">🎨</span>
+          <h4>QuiverVision</h4>
+          <p>Da vida en 3D a páginas para colorear: actividad manual que se vuelve digital.</p>
+        </div>
       </div>
-      <div class="glass-panel usage-card" style="padding: 18px;">
-        <div class="usage-number">04</div>
-        <h4>Actionbound</h4>
-        <p>Recorridos gamificados, búsquedas del tesoro y aventuras de aprendizaje con geolocalización.</p>
+      <div class="m1-rm-connector"></div>
+      <div class="m1-rm-item">
+        <div class="m1-rm-dot"></div>
+        <div class="m1-rm-card glass-panel">
+          <span class="m1-rm-num">04</span>
+          <span class="m1-rm-icon">🗺️</span>
+          <h4>Actionbound</h4>
+          <p>Recorridos gamificados, búsquedas del tesoro y aventuras con geolocalización.</p>
+        </div>
       </div>
-      <div class="glass-panel usage-card" style="padding: 18px;">
-        <div class="usage-number">05</div>
-        <h4>Metaverso Meta</h4>
-        <p>Colabora y aprende en entornos virtuales inmersivos accesibles desde el navegador.</p>
+      <div class="m1-rm-connector"></div>
+      <div class="m1-rm-item">
+        <div class="m1-rm-dot"></div>
+        <div class="m1-rm-card glass-panel">
+          <span class="m1-rm-num">05</span>
+          <span class="m1-rm-icon">🌐</span>
+          <h4>Metaverso Meta</h4>
+          <p>Colabora y aprende en entornos virtuales inmersivos accesibles desde el navegador.</p>
+        </div>
       </div>
-      <div class="glass-panel usage-card" style="padding: 18px;">
-        <div class="usage-number">06</div>
-        <h4>Visualizador de Modelos 3D</h4>
-        <p>Crea y visualiza tus propios modelos 3D en RA desde cualquier asignatura.</p>
+      <div class="m1-rm-connector"></div>
+      <div class="m1-rm-item">
+        <div class="m1-rm-dot"></div>
+        <div class="m1-rm-card glass-panel">
+          <span class="m1-rm-num">06</span>
+          <span class="m1-rm-icon">🔬</span>
+          <h4>Visualizador de Modelos 3D</h4>
+          <p>Crea y visualiza tus propios modelos 3D en RA desde cualquier asignatura.</p>
+        </div>
       </div>
-      <div class="glass-panel usage-card" style="padding: 18px;">
-        <div class="usage-number">07</div>
-        <h4>Modelo 3D con Geoposición</h4>
-        <p>Proyecto final: ancla modelos 3D a marcadores físicos AR con posición y nivelación en tiempo real.</p>
+      <div class="m1-rm-connector"></div>
+      <div class="m1-rm-item">
+        <div class="m1-rm-dot final"></div>
+        <div class="m1-rm-card glass-panel m1-rm-final">
+          <span class="m1-rm-num">07</span>
+          <span class="m1-rm-icon">📍</span>
+          <h4>Modelo 3D con Geoposición</h4>
+          <p>Proyecto final: ancla modelos 3D a marcadores físicos AR con posición en tiempo real.</p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Sección: Aplicaciones educativas de la RA -->
+  <!-- ============================================================
+       TROFEOS Y COLECCIONABLES — Sistema de recompensas
+  ============================================================ -->
   <div class="section-title">
-    <h3>La RA en la Educación: Evidencia y Contexto</h3>
+    <h3>🏆 Trofeos &amp; Coleccionables — Tu Sistema de Recompensas</h3>
     <div class="title-line"></div>
   </div>
 
-  <div class="features-row">
-    <div class="glass-panel feature-item">
-      <div class="feature-stat">75%</div>
-      <p>más retención de información frente al aprendizaje pasivo expositivo</p>
+  <div class="m1-rewards-hero glass-panel">
+    <div class="m1-rh-left">
+      <p class="m1-rh-intro">
+        RainClass convierte tu proceso de aprendizaje en una <strong>aventura de colección</strong>.
+        Cada evaluación superada te entrega un <strong>Trofeo</strong> según tu desempeño,
+        y cada misión completada desbloquea <strong>Coleccionables</strong> únicos que forman
+        tu galería personal de logros.
+      </p>
     </div>
-    <div class="glass-panel feature-item">
-      <div class="feature-stat">3×</div>
-      <p>mayor motivación reportada por estudiantes en clases con tecnologías inmersivas</p>
-    </div>
-    <div class="glass-panel feature-item">
-      <div class="feature-stat">K–12</div>
-      <p>la RA es efectiva en todos los niveles educativos, desde primaria hasta universitario</p>
-    </div>
-    <div class="glass-panel feature-item">
-      <div class="feature-stat">$0</div>
-      <p>costo de las herramientas base de este curso. Educación inmersiva accesible para todos</p>
+    <div class="m1-rh-right">
+      <div class="m1-rh-medals">
+        <div class="m1-rh-medal platinum">
+          <span class="m1-rh-emoji">💎</span>
+          <span class="m1-rh-name">Platino</span>
+          <span class="m1-rh-pct">100%</span>
+        </div>
+        <div class="m1-rh-medal gold">
+          <span class="m1-rh-emoji">🥇</span>
+          <span class="m1-rh-name">Oro</span>
+          <span class="m1-rh-pct">≥ 90%</span>
+        </div>
+        <div class="m1-rh-medal silver">
+          <span class="m1-rh-emoji">🥈</span>
+          <span class="m1-rh-name">Plata</span>
+          <span class="m1-rh-pct">≥ 80%</span>
+        </div>
+        <div class="m1-rh-medal bronze">
+          <span class="m1-rh-emoji">🥉</span>
+          <span class="m1-rh-name">Bronce</span>
+          <span class="m1-rh-pct">≥ 70%</span>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="glass-panel tip-panel">
-    <h3>💡 Antes de continuar</h3>
-    <p>
-      Asegúrate de tener un <strong>dispositivo con cámara</strong> (teléfono, tablet o PC con webcam)
-      y conexión a internet estable. Cuando estés listo, avanza a la pestaña
-      <strong>Desarrollo</strong> para profundizar en los conceptos, o ve directamente a
-      <strong>Evaluación</strong> si ya conoces el tema.
-    </p>
+  <div class="m1-rewards-detail">
+    <div class="glass-panel m1-reward-box">
+      <div class="m1-rb-header">
+        <span class="m1-rb-icon">🏆</span>
+        <h4>Trofeos por Misión</h4>
+      </div>
+      <p>
+        Al aprobar la evaluación de cada misión obtienes un trofeo según tu puntaje: 
+        <strong>Bronce</strong> (70–79%), <strong>Plata</strong> (80–89%), <strong>Oro</strong> (90–99%) 
+        o el codiciado <strong>Platino</strong> (100% perfecto).
+      </p>
+      <p>Puedes reintentar la evaluación para mejorar tu trofeo cuando quieras. 
+        <strong>Solo se guarda tu mejor resultado</strong>.</p>
+      <div class="m1-tip-inline">💡 Ve a la sección <strong>Trofeos</strong> del menú para ver tu colección completa en todo momento.</div>
+    </div>
+
+    <div class="glass-panel m1-reward-box">
+      <div class="m1-rb-header">
+        <span class="m1-rb-icon">🃏</span>
+        <h4>Coleccionables Digitales</h4>
+      </div>
+      <p>
+        Cada misión tiene asociados <strong>coleccionables desbloqueables</strong>: insignias,
+        tarjetas temáticas y objetos AR únicos. Se desbloquean al completar actividades específicas
+        dentro de la misión.
+      </p>
+      <p>Tu galería de coleccionables es <strong>única y personal</strong>. 
+        Forma tu colección completa explorando a fondo cada misión.</p>
+      <div class="m1-tip-inline">💡 Consulta la sección <strong>Coleccionables</strong> del menú para ver qué ya tienes y qué te falta.</div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CALL TO ACTION — Próximo paso
+  ============================================================ -->
+  <div class="m1-cta glass-panel">
+    <div class="m1-cta-icon">🚀</div>
+    <div class="m1-cta-text">
+      <h3>¿Listo para profundizar?</h3>
+      <p>
+        Asegúrate de tener un <strong>dispositivo con cámara</strong> (teléfono, tablet o PC con webcam)
+        y conexión a internet estable. Luego avanza a la pestaña <strong>Desarrollo</strong>
+        para explorar los conceptos con más detalle y ejemplos prácticos,
+        o ve directamente a <strong>Evaluación</strong> si ya dominas el tema.
+      </p>
+    </div>
   </div>
 
 </div>

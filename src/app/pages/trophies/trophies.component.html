@@ -127,16 +127,54 @@
 
   <!-- ===== VISTA ADMIN ===== -->
   <div *ngIf="!loading && isAdmin">
-    <div *ngIf="docenteRows.length === 0" class="empty-state">
-      <p>No hay docentes con evaluaciones registradas todavía.</p>
+
+    <!-- Resumen global admin -->
+    <div class="glass-panel admin-summary-banner">
+      <div class="admin-summary-item">
+        <span class="admin-sum-num">{{ adminTotalDocentes }}</span>
+        <span class="admin-sum-lbl">Docentes registrados</span>
+      </div>
+      <div class="admin-sum-divider"></div>
+      <div class="admin-summary-item">
+        <span class="admin-sum-num">{{ adminTotalTrophies }}</span>
+        <span class="admin-sum-lbl">Trofeos otorgados</span>
+      </div>
+      <div class="admin-sum-divider"></div>
+      <div class="admin-summary-medals">
+        <span class="admin-sum-medal">💎 {{ adminCountMedal('platinum') }}</span>
+        <span class="admin-sum-medal">🥇 {{ adminCountMedal('gold') }}</span>
+        <span class="admin-sum-medal">🥈 {{ adminCountMedal('silver') }}</span>
+        <span class="admin-sum-medal">🥉 {{ adminCountMedal('bronze') }}</span>
+      </div>
     </div>
 
+    <!-- Mensaje si no hay docentes en absoluto -->
+    <div *ngIf="docenteRows.length === 0" class="empty-state">
+      <p>🏫 No hay docentes registrados en el sistema todavía.</p>
+    </div>
+
+    <!-- Bloque por docente — siempre visible, con o sin trofeos -->
     <div *ngFor="let d of docenteRows" class="glass-panel docente-block">
       <div class="docente-header">
         <span class="docente-icon">👤</span>
-        <h3>{{ d.displayName }}</h3>
-        <span class="earned-count">{{ d.totalEarned }} trofeos</span>
+        <div class="docente-name-block">
+          <h3>{{ d.displayName }}</h3>
+          <span class="docente-id">{{ d.userId }}</span>
+        </div>
+        <div class="docente-stats">
+          <span class="earned-count" [class.earned-zero]="d.totalEarned === 0">
+            {{ d.totalEarned === 0 ? 'Sin trofeos aún' : d.totalEarned + ' trofeos' }}
+          </span>
+          <div class="docente-medal-counts" *ngIf="d.totalEarned > 0">
+            <span *ngIf="countMedalForDocente(d, 'platinum') > 0">💎 {{ countMedalForDocente(d, 'platinum') }}</span>
+            <span *ngIf="countMedalForDocente(d, 'gold') > 0">🥇 {{ countMedalForDocente(d, 'gold') }}</span>
+            <span *ngIf="countMedalForDocente(d, 'silver') > 0">🥈 {{ countMedalForDocente(d, 'silver') }}</span>
+            <span *ngIf="countMedalForDocente(d, 'bronze') > 0">🥉 {{ countMedalForDocente(d, 'bronze') }}</span>
+          </div>
+        </div>
       </div>
+
+      <!-- Misiones detalladas -->
       <div class="missions-mini-grid">
         <div *ngFor="let m of d.medals"
              class="mini-mission-card"
@@ -147,7 +185,14 @@
           <span class="mini-medal">{{ m.hasEval ? medalEmoji(m.medal) : '➖' }}</span>
           <span class="mini-name">M{{ m.missionId }}</span>
           <span *ngIf="m.hasEval && m.percentage !== null" class="mini-pct">{{ m.percentage }}%</span>
+          <span *ngIf="m.hasEval && m.percentage === null" class="mini-pct mini-pct-none">—</span>
         </div>
+      </div>
+
+      <!-- Progress bar docente -->
+      <div class="docente-progress-bar" *ngIf="d.totalEarned > 0">
+        <div class="docente-progress-fill" [style.width]="(d.totalEarned / totalMissionsWithEval * 100) + '%'"></div>
+        <span class="docente-progress-lbl">{{ d.totalEarned }}/{{ totalMissionsWithEval }} misiones con trofeo</span>
       </div>
     </div>
   </div>
