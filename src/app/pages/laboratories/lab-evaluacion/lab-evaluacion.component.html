@@ -1,10 +1,10 @@
 <!-- EVALUACIÓN - Laboratorio -->
-<div *ngIf="['2', '3', '4', '5', '7'].includes(labId || '')" class="lab-content">
+<div *ngIf="['1', '2', '3', '4', '5', '7'].includes(labId || '')" class="lab-content">
 
   <!-- Quiz Header -->
   <div class="section-title" *ngIf="!submitted">
-    <h3>Evaluación: {{ labId === '2' ? 'Merge Cube' : (labId === '3' ? 'QuiverVision' : (labId === '4' ? 'Actionbound' : (labId === '5' ? 'El Metaverso Meta' : 'Modelo con Geoposición'))) }}</h3>
-    <p class="section-subtitle">Responde las 20 preguntas para evaluar tu apropiación sobre esta tecnología.</p>
+    <h3>Evaluación: {{ labId === '1' ? 'Introducción a la RA' : (labId === '2' ? 'Merge Cube' : (labId === '3' ? 'QuiverVision' : (labId === '4' ? 'Actionbound' : (labId === '5' ? 'El Metaverso Meta' : 'Modelo con Geoposición')))) }}</h3>
+    <p class="section-subtitle">{{ labId === '1' ? 'Responde las 10 preguntas para evaluar tu comprensión sobre los fundamentos de la Realidad Aumentada.' : 'Responde las 20 preguntas para evaluar tu apropiación sobre esta tecnología.' }}</p>
     <div class="title-line"></div>
   </div>
 
@@ -102,13 +102,10 @@
 
 </div>
 
-<!-- Placeholder para lab 1 y labs sin evaluación -->
-<div *ngIf="!['2', '3', '4', '5', '7'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
+<!-- Placeholder para labs sin evaluación -->
+<div *ngIf="!['1', '2', '3', '4', '5', '7'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Esta misión no tiene evaluación</h3>
-  <p style="color: var(--text-secondary); margin-top: 15px;" *ngIf="labId === '1'">
-    La misión de <strong>Introducción</strong> no requiere evaluación formal. Continúa con la <strong>Misión 2 – Merge Cube</strong> para avanzar en tu ruta de aprendizaje.
-  </p>
-  <p style="color: var(--text-secondary); margin-top: 15px;" *ngIf="labId !== '1'">
+  <p style="color: var(--text-secondary); margin-top: 15px;">
     Evaluación en desarrollo para este laboratorio.
   </p>
 </div>

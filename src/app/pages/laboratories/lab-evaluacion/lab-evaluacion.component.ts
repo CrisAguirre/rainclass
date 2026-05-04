@@ -23,6 +23,119 @@ export class LabEvaluacionComponent implements OnInit {
   score = 0;
   totalQuestions = 0;
 
+  introduccionQuestions: Question[] = [
+    {
+      id: 1,
+      text: '¿Cuál es la definición más precisa de Realidad Aumentada (RA)?',
+      options: [
+        'Una tecnología que sumerge completamente al usuario en un entorno 100% digital, bloqueando el mundo real.',
+        'Una tecnología que superpone contenido digital (imágenes, modelos 3D, sonidos) sobre el mundo físico en tiempo real, a través de la cámara de un dispositivo.',
+        'Un videojuego que usa sensores de movimiento para controlar personajes en una pantalla.',
+        'Una aplicación de edición de fotografías que añade filtros sobre las imágenes guardadas.'
+      ],
+      correct: 1
+    },
+    {
+      id: 2,
+      text: '¿Cuál es la diferencia clave entre Realidad Aumentada (RA) y Realidad Virtual (RV)?',
+      options: [
+        'La RA requiere gafas especiales y la RV no necesita ningún dispositivo adicional.',
+        'La RA solo funciona en interiores, mientras que la RV funciona en cualquier lugar.',
+        'En la RA el usuario sigue viendo su entorno real enriquecido con capas digitales; en la RV el usuario se sumerge completamente en un entorno digital.',
+        'La RA es más costosa que la RV porque necesita cámaras de mayor resolución.'
+      ],
+      correct: 2
+    },
+    {
+      id: 3,
+      text: '¿Cuáles son los tres elementos técnicos fundamentales que hacen posible el funcionamiento de la Realidad Aumentada?',
+      options: [
+        'Teclado, ratón y pantalla de alta resolución.',
+        'Cámara/sensor, procesamiento por software y pantalla/visor.',
+        'Auriculares, micrófono y conexión a internet de fibra óptica.',
+        'GPS, batería de larga duración y almacenamiento en la nube.'
+      ],
+      correct: 1
+    },
+    {
+      id: 4,
+      text: 'Según la misión introductoria, ¿cuánto puede aumentar la retención de información cuando se aprende con Realidad Aumentada frente al aprendizaje pasivo?',
+      options: [
+        'Hasta un 20%.',
+        'Hasta un 50%.',
+        'Hasta un 75%.',
+        'Hasta un 95%.'
+      ],
+      correct: 2
+    },
+    {
+      id: 5,
+      text: '¿Cuál de los siguientes ejemplos cotidianos es una aplicación real de Realidad Aumentada?',
+      options: [
+        'Ver una película en plataformas de streaming como Netflix.',
+        'Usar filtros de Instagram, jugar Pokémon GO o usar Google Translate con cámara.',
+        'Hacer una videollamada por Zoom con compañeros de trabajo.',
+        'Escuchar música a través de auriculares inalámbricos Bluetooth.'
+      ],
+      correct: 1
+    },
+    {
+      id: 6,
+      text: '¿Qué caracteriza a la Realidad Mixta (RM) y la diferencia de la RA y la RV?',
+      options: [
+        'La RM solo funciona en dispositivos Apple y no es compatible con Android.',
+        'La RM es simplemente otro nombre para la Realidad Virtual con mejor resolución gráfica.',
+        'En la RM los objetos digitales interactúan con el mundo físico en tiempo real, a diferencia de la RA donde son solo capas superpuestas.',
+        'La RM requiere siempre una habitación completamente oscura para funcionar correctamente.'
+      ],
+      correct: 2
+    },
+    {
+      id: 7,
+      text: '¿Cuál de las siguientes NO es una ventaja pedagógica de usar Realidad Aumentada en el aula según la misión introductoria?',
+      options: [
+        'Permite gamificar el proceso educativo y elevar la motivación del estudiante.',
+        'Permite visualizar conceptos abstractos de forma tridimensional e interactiva.',
+        'Elimina completamente la necesidad de que el docente prepare sus clases.',
+        'Elimina barreras geográficas y de recursos físicos.'
+      ],
+      correct: 2
+    },
+    {
+      id: 8,
+      text: 'En la ruta de aprendizaje de RainClass, ¿qué misión está dedicada a la creación de experiencias de RA propias usando tecnología web y códigos QR?',
+      options: [
+        'Misión 2 – Merge Cube.',
+        'Misión 4 – Actionbound.',
+        'Misión 6 – RA Propia: Generador 3D.',
+        'Misión 7 – Modelo con Geoposición.'
+      ],
+      correct: 2
+    },
+    {
+      id: 9,
+      text: '¿Qué diferencia fundamentalmente a la Misión 7 (Modelo con Geoposición) de la Misión 6 (RA Propia)?',
+      options: [
+        'La Misión 7 usa realidad virtual en lugar de realidad aumentada.',
+        'En la Misión 7 el modelo 3D se ancla espacialmente a un marcador físico manteniendo posición, rotación e inclinación en tiempo real (6DoF), mientras que en la Misión 6 el QR solo activa la visualización.',
+        'La Misión 7 requiere gafas de Realidad Virtual y la Misión 6 solo necesita un smartphone.',
+        'En la Misión 7 los modelos son en 2D y en la Misión 6 son en 3D.'
+      ],
+      correct: 1
+    },
+    {
+      id: 10,
+      text: '¿Qué requisito mínimo se necesita para comenzar a experimentar con Realidad Aumentada según la misión introductoria?',
+      options: [
+        'Un ordenador de escritorio con tarjeta gráfica de última generación y gafas VR de 500 dólares.',
+        'Un dispositivo con cámara (teléfono, tablet o PC con webcam), conexión a internet estable y disposición para experimentar.',
+        'Una sala de informática equipada con 30 computadores y un servidor propio del colegio.',
+        'Conocimientos avanzados de programación en Python y diseño 3D en Blender.'
+      ],
+      correct: 1
+    }
+  ];
+
   mergeCubeQuestions: Question[] = [
     {
       id: 1,
@@ -1158,6 +1271,7 @@ export class LabEvaluacionComponent implements OnInit {
   }
 
   getQuestions(): Question[] {
+    if (this.labId === '1') return this.introduccionQuestions;
     if (this.labId === '2') return this.mergeCubeQuestions;
     if (this.labId === '3') return this.quiverQuestions;
     if (this.labId === '4') return this.actionboundQuestions;
