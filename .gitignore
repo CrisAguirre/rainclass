@@ -47,5 +47,6 @@ Thumbs.db
 .env.*.local
 
 # Angular environment files with sensitive data
-src/environments/environment.ts
-src/environments/environment.prod.ts
+# (Removed to allow Vercel to build the project)
+# src/environments/environment.ts
+# src/environments/environment.prod.ts
