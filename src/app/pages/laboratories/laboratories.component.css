@@ -54,7 +54,7 @@
 
 .lab-card:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(77, 168, 218, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 229, 255, 0.3);
   border-color: var(--accent-color);
 }
 
@@ -76,7 +76,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(77, 168, 218, 0.2);
+  background: rgba(0, 229, 255, 0.2);
   border: 2px solid var(--accent-color);
   display: flex;
   align-items: center;
@@ -85,7 +85,7 @@
   font-weight: 700;
   color: var(--accent-color);
   margin-bottom: 20px;
-  box-shadow: 0 0 15px rgba(77, 168, 218, 0.3);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
 }
 
 .card-content h3 {

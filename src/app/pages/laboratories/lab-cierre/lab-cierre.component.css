@@ -28,7 +28,7 @@
   background: var(--accent-color);
   margin: 0 auto;
   border-radius: 2px;
-  box-shadow: 0 0 10px rgba(77, 168, 218, 0.5);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
 }
 
 /* Content Block */
@@ -83,7 +83,7 @@
 .strategy-card:hover {
   transform: translateY(-8px);
   border-color: var(--accent-color);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(77, 168, 218, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 229, 255, 0.2);
 }
 
 .strategy-icon {
@@ -129,7 +129,7 @@
   min-width: 45px;
   height: 45px;
   border-radius: 50%;
-  background: rgba(77, 168, 218, 0.15);
+  background: rgba(0, 229, 255, 0.15);
   border: 2px solid var(--accent-color);
   display: flex;
   align-items: center;
@@ -137,7 +137,7 @@
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--accent-color);
-  box-shadow: 0 0 10px rgba(77, 168, 218, 0.2);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
 }
 
 .conclusion-text h4 {
@@ -336,7 +336,7 @@
 .conclusion-textarea:focus {
   outline: none;
   border-color: var(--accent-color);
-  box-shadow: 0 0 15px rgba(77, 168, 218, 0.2);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
 }
 
 .conclusion-textarea::placeholder {

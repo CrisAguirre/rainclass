@@ -70,7 +70,7 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #4da8da, #7fd4f7);
+  background: linear-gradient(90deg, #00e5ff, #7fd4f7);
   border-radius: 8px;
   transition: width 0.8s cubic-bezier(0.22,1,0.36,1);
   display: flex;
@@ -94,7 +94,7 @@
   opacity: 0.3;
   transition: all 0.3s;
 }
-.checkpoint.done    { opacity: 1; filter: drop-shadow(0 0 4px #4da8da); }
+.checkpoint.done    { opacity: 1; filter: drop-shadow(0 0 4px #00e5ff); }
 .checkpoint.active  { opacity: 0.85; }
 
 /* XP block */

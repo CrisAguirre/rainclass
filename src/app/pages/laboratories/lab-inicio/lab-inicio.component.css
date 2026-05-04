@@ -21,7 +21,7 @@
 .hero-text h2 {
   font-size: 2rem;
   color: var(--accent-color);
-  text-shadow: 0 0 15px rgba(77, 168, 218, 0.3);
+  text-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
 }
 
 .hero-text .subtitle {
@@ -73,9 +73,9 @@
   position: absolute;
   width: 160px;
   height: 160px;
-  background: rgba(77, 168, 218, 0.15);
-  border: 2px solid rgba(77, 168, 218, 0.6);
-  box-shadow: inset 0 0 30px rgba(77, 168, 218, 0.4);
+  background: rgba(0, 229, 255, 0.15);
+  border: 2px solid rgba(0, 229, 255, 0.6);
+  box-shadow: inset 0 0 30px rgba(0, 229, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +83,7 @@
   font-weight: bold;
   color: var(--accent-color);
   backdrop-filter: blur(8px);
-  text-shadow: 0 0 10px rgba(77, 168, 218, 0.8);
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
 }
 
 .front  { transform: translateZ(80px); }
@@ -118,7 +118,7 @@
   background: var(--accent-color);
   margin: 0 auto;
   border-radius: 2px;
-  box-shadow: 0 0 10px rgba(77, 168, 218, 0.5);
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
 }
 
 /* How it Works */
@@ -145,7 +145,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(77, 168, 218, 0.15);
+  background: rgba(0, 229, 255, 0.15);
   border: 2px solid var(--accent-color);
   display: flex;
   align-items: center;
@@ -154,7 +154,7 @@
   font-weight: 700;
   color: var(--accent-color);
   margin: 0 auto 15px;
-  box-shadow: 0 0 12px rgba(77, 168, 218, 0.3);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.3);
 }
 
 .step h4 {
@@ -209,7 +209,7 @@
 
 .app-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(77, 168, 218, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 229, 255, 0.2);
   border-color: var(--accent-color);
 }
 
@@ -253,7 +253,7 @@
   font-weight: 700;
   color: var(--accent-color);
   margin-bottom: 10px;
-  text-shadow: 0 0 15px rgba(77, 168, 218, 0.4);
+  text-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
 }
 
 .feature-item p {
@@ -495,7 +495,7 @@
   margin-bottom: 16px;
 }
 .m1-title-accent {
-  background: linear-gradient(135deg, #4da8da 0%, #63b3ed 50%, #b2f5ea 100%);
+  background: linear-gradient(135deg, #00e5ff 0%, #63b3ed 50%, #b2f5ea 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
