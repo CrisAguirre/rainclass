@@ -1,49 +1,155 @@
 <div class="trophies-container animate-fade-in">
   <div class="page-header">
-    <h2>🏆 Trofeos</h2>
-    <p *ngIf="!isAdmin">Logros obtenidos al completar misiones y evaluaciones.</p>
-    <p *ngIf="isAdmin">Trofeos vigentes de todos los docentes de la plataforma.</p>
+    <h2>🏆 Trofeos por Misión</h2>
+    <p *ngIf="!isAdmin">Tus medallas obtenidas en cada evaluación. ¡Alcanza el 100% para el Platino!</p>
+    <p *ngIf="isAdmin">Medallas obtenidas por todos los docentes en cada misión.</p>
   </div>
 
   <div *ngIf="loading" class="loading-state">
     <div class="spinner"></div><p>Cargando trofeos...</p>
   </div>
 
-  <!-- DOCENTE VIEW -->
+  <!-- ===== VISTA DOCENTE ===== -->
   <div *ngIf="!loading && !isAdmin">
-    <div class="glass-panel summary-banner">
-      <span class="big-number">{{ earnedCount }}</span>
-      <span class="summary-label">/ {{ myTrophies.length }} trofeos obtenidos</span>
-    </div>
-    <div class="trophies-grid">
-      <div *ngFor="let t of myTrophies" class="glass-panel trophy-card" [class.earned]="t.earned" [class.locked]="!t.earned">
-        <div class="trophy-icon">{{ t.icon }}</div>
-        <h4>{{ t.name }}</h4>
-        <p>{{ t.description }}</p>
-        <span class="trophy-status" *ngIf="!t.earned">🔒 Sin obtener</span>
-        <span class="trophy-status earned-badge" *ngIf="t.earned">✅ Obtenido</span>
-      </div>
-    </div>
-  </div>
 
-  <!-- ADMIN VIEW -->
-  <div *ngIf="!loading && isAdmin">
-    <div *ngIf="docenteList.length === 0" class="empty-state">
-      <p>No hay docentes con evaluaciones registradas todavía.</p>
-    </div>
-    <div *ngFor="let d of docenteList" class="glass-panel docente-block">
-      <div class="docente-header">
-        <span class="docente-icon">👤</span>
-        <h3>{{ d.displayName }}</h3>
-        <span class="earned-count">{{ d.earned }} trofeos</span>
+    <!-- Resumen global -->
+    <div class="glass-panel summary-banner">
+      <div class="summary-medals">
+        <div class="medal-count">
+          <span class="medal-big">💎</span>
+          <span class="medal-num">{{ countMedal('platinum') }}</span>
+          <span class="medal-lbl">Platino</span>
+        </div>
+        <div class="medal-count">
+          <span class="medal-big">🥇</span>
+          <span class="medal-num">{{ countMedal('gold') }}</span>
+          <span class="medal-lbl">Oro</span>
+        </div>
+        <div class="medal-count">
+          <span class="medal-big">🥈</span>
+          <span class="medal-num">{{ countMedal('silver') }}</span>
+          <span class="medal-lbl">Plata</span>
+        </div>
+        <div class="medal-count">
+          <span class="medal-big">🥉</span>
+          <span class="medal-num">{{ countMedal('bronze') }}</span>
+          <span class="medal-lbl">Bronce</span>
+        </div>
       </div>
-      <div class="trophies-row">
-        <div *ngFor="let t of d.trophies" class="mini-trophy" [class.earned]="t.earned" [title]="t.name + ': ' + t.description">
-          <span class="mini-icon">{{ t.icon }}</span>
-          <span class="mini-name">{{ t.name }}</span>
-          <span *ngIf="!t.earned" class="mini-lock">🔒</span>
+      <div class="summary-divider"></div>
+      <div class="summary-total">
+        <span class="big-number">{{ myEarned }}</span>
+        <span class="summary-label">/ {{ myTotal }} trofeos obtenidos</span>
+      </div>
+    </div>
+
+    <!-- Leyenda de medallas -->
+    <div class="glass-panel legend-panel">
+      <h4>Criterios de obtención</h4>
+      <div class="legend-row">
+        <div class="legend-item">
+          <span class="legend-icon">💎</span>
+          <div>
+            <strong>Platino</strong>
+            <span>Puntaje perfecto (100%)</span>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span class="legend-icon">🥇</span>
+          <div>
+            <strong>Oro</strong>
+            <span>90% o más</span>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span class="legend-icon">🥈</span>
+          <div>
+            <strong>Plata</strong>
+            <span>80% o más</span>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span class="legend-icon">🥉</span>
+          <div>
+            <strong>Bronce</strong>
+            <span>70% o más</span>
+          </div>
+        </div>
+        <div class="legend-item">
+          <span class="legend-icon">⬜</span>
+          <div>
+            <strong>Sin obtener</strong>
+            <span>Menos de 70% o sin intentar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid de trofeos por misión -->
+    <div class="missions-trophy-grid">
+      <div *ngFor="let m of myMedals"
+           class="glass-panel mission-trophy-card"
+           [class.earned]="m.medal !== 'none'"
+           [class.no-eval]="!m.hasEval"
+           [attr.data-medal]="m.medal">
+
+        <!-- Glow ring -->
+        <div class="medal-ring" [class]="'ring-' + m.medal">
+          <span class="medal-emoji-large">{{ medalEmoji(m.medal) }}</span>
+        </div>
+
+        <!-- Mission info -->
+        <div class="mission-info">
+          <span class="mission-number">Misión {{ m.missionId }}</span>
+          <span class="mission-icon-sm">{{ m.missionIcon }}</span>
+          <h4 class="mission-name">{{ m.missionName }}</h4>
+        </div>
+
+        <!-- Score badge -->
+        <div *ngIf="m.hasEval && m.percentage !== null" class="score-badge" [class]="'badge-' + m.medal">
+          <span class="score-pct">{{ m.percentage }}%</span>
+          <span class="score-label">{{ medalLabel(m.medal) }}</span>
+        </div>
+
+        <!-- Not attempted -->
+        <div *ngIf="m.hasEval && m.percentage === null" class="score-badge badge-none">
+          <span class="score-pct">—</span>
+          <span class="score-label">Sin intentar</span>
+        </div>
+
+        <!-- No eval badge -->
+        <div *ngIf="!m.hasEval" class="score-badge badge-noeval">
+          <span class="score-label">Sin evaluación</span>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- ===== VISTA ADMIN ===== -->
+  <div *ngIf="!loading && isAdmin">
+    <div *ngIf="docenteRows.length === 0" class="empty-state">
+      <p>No hay docentes con evaluaciones registradas todavía.</p>
+    </div>
+
+    <div *ngFor="let d of docenteRows" class="glass-panel docente-block">
+      <div class="docente-header">
+        <span class="docente-icon">👤</span>
+        <h3>{{ d.displayName }}</h3>
+        <span class="earned-count">{{ d.totalEarned }} trofeos</span>
+      </div>
+      <div class="missions-mini-grid">
+        <div *ngFor="let m of d.medals"
+             class="mini-mission-card"
+             [class.earned]="m.medal !== 'none'"
+             [class.no-eval]="!m.hasEval"
+             [title]="m.missionName + ': ' + medalLabel(m.medal) + (m.percentage !== null ? ' (' + m.percentage + '%)' : '')">
+          <span class="mini-mission-icon">{{ m.missionIcon }}</span>
+          <span class="mini-medal">{{ m.hasEval ? medalEmoji(m.medal) : '➖' }}</span>
+          <span class="mini-name">M{{ m.missionId }}</span>
+          <span *ngIf="m.hasEval && m.percentage !== null" class="mini-pct">{{ m.percentage }}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </div>

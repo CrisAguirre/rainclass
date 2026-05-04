@@ -3,22 +3,55 @@ import { AuthService } from '../../services/auth.service';
 import { EvaluationService } from '../../services/evaluation.service';
 import { ProgressService } from '../../services/progress.service';
 
-interface Trophy {
-  id: string;
-  name: string;
-  description: string;
-  icon: string;
-  earned: boolean;
-  earnedAt?: string;
-  category: 'mision' | 'evaluacion' | 'progreso';
+export type MedalType = 'platinum' | 'gold' | 'silver' | 'bronze' | 'none';
+
+export interface MissionMedal {
+  missionId: number;
+  missionName: string;
+  missionIcon: string;
+  medal: MedalType;
+  percentage: number | null;   // best score achieved, null = not attempted
+  hasEval: boolean;            // missions 1–5 and 7 have evals; 6 does not
 }
 
-interface DocenteTrophies {
+interface DocenteRow {
   userId: string;
-  username: string;
   displayName: string;
-  trophies: Trophy[];
-  earned: number;
+  medals: MissionMedal[];
+  totalEarned: number;
+}
+
+const MISSIONS: { id: number; name: string; icon: string; hasEval: boolean }[] = [
+  { id: 1, name: 'Introducción',            icon: '🎯', hasEval: true  },
+  { id: 2, name: 'Merge Cube',              icon: '🧊', hasEval: true  },
+  { id: 3, name: 'QuiverVision',            icon: '🎨', hasEval: true  },
+  { id: 4, name: 'Actionbound',             icon: '🗺️', hasEval: true  },
+  { id: 5, name: 'Metaverso Meta',          icon: '🌐', hasEval: true  },
+  { id: 6, name: 'Visualizador Modelos 3D', icon: '🔬', hasEval: false },
+  { id: 7, name: 'Modelo 3D con Geoposición', icon: '📍', hasEval: true },
+];
+
+function medalFromPercentage(pct: number | null): MedalType {
+  if (pct === null) return 'none';
+  if (pct === 100) return 'platinum';
+  if (pct >= 90)   return 'gold';
+  if (pct >= 80)   return 'silver';
+  if (pct >= 70)   return 'bronze';
+  return 'none';
+}
+
+function buildMedals(bestScores: Map<number, number>): MissionMedal[] {
+  return MISSIONS.map(m => {
+    const pct = m.hasEval ? (bestScores.get(m.id) ?? null) : null;
+    return {
+      missionId: m.id,
+      missionName: m.name,
+      missionIcon: m.icon,
+      medal: m.hasEval ? medalFromPercentage(pct) : 'none',
+      percentage: pct,
+      hasEval: m.hasEval,
+    };
+  });
 }
 
 @Component({
@@ -28,9 +61,13 @@ interface DocenteTrophies {
 })
 export class TrophiesComponent implements OnInit {
   isAdmin = false;
-  myTrophies: Trophy[] = [];
-  docenteList: DocenteTrophies[] = [];
   loading = true;
+
+  // Docente view
+  myMedals: MissionMedal[] = [];
+
+  // Admin view
+  docenteRows: DocenteRow[] = [];
 
   constructor(
     private authService: AuthService,
@@ -40,37 +77,23 @@ export class TrophiesComponent implements OnInit {
 
   ngOnInit(): void {
     this.isAdmin = this.authService.isAdmin();
-    if (this.isAdmin) {
-      this.loadAdminView();
-    } else {
-      this.loadDocenteView();
-    }
-  }
-
-  private buildTrophies(completedMissions: number[], passedEvals: number[]): Trophy[] {
-    return [
-      { id: 't1', name: 'Primera Misión', description: 'Completaste tu primera misión', icon: '🏅', earned: completedMissions.length >= 1, category: 'mision' },
-      { id: 't2', name: 'Explorador AR', description: 'Completaste 3 misiones', icon: '🥈', earned: completedMissions.length >= 3, category: 'mision' },
-      { id: 't3', name: 'Maestro AR', description: 'Completaste todas las misiones', icon: '🥇', earned: completedMissions.length >= 7, category: 'mision' },
-      { id: 't4', name: 'Primera Evaluación', description: 'Aprobaste tu primera evaluación', icon: '📋', earned: passedEvals.length >= 1, category: 'evaluacion' },
-      { id: 't5', name: 'Evaluador Experto', description: 'Aprobaste 3 evaluaciones', icon: '🎓', earned: passedEvals.length >= 3, category: 'evaluacion' },
-      { id: 't6', name: 'Docente Digital', description: 'Aprobaste todas las evaluaciones', icon: '🏆', earned: passedEvals.length >= 5, category: 'evaluacion' },
-    ];
+    this.isAdmin ? this.loadAdminView() : this.loadDocenteView();
   }
 
   private loadDocenteView(): void {
     const user = this.authService.getCurrentUser()!;
-    const progress = this.progressService.snapshot;
-    const completedMissions = progress.labs.filter(l => l.status === 'completed').map(l => l.id);
-
     this.evalService.getResultsByUser(user.userId).subscribe({
       next: (results) => {
-        const passedEvals = results.filter(r => r.percentage >= 70).map(r => r.labId);
-        this.myTrophies = this.buildTrophies(completedMissions, passedEvals);
+        const best = new Map<number, number>();
+        results.forEach(r => {
+          const prev = best.get(r.labId) ?? 0;
+          if (r.percentage > prev) best.set(r.labId, r.percentage);
+        });
+        this.myMedals = buildMedals(best);
         this.loading = false;
       },
       error: () => {
-        this.myTrophies = this.buildTrophies(completedMissions, []);
+        this.myMedals = buildMedals(new Map());
         this.loading = false;
       }
     });
@@ -79,24 +102,51 @@ export class TrophiesComponent implements OnInit {
   private loadAdminView(): void {
     this.evalService.getAllResults().subscribe({
       next: (results) => {
-        const userMap = new Map<string, { username: string; passedEvals: number[] }>();
+        const userBest = new Map<string, { name: string; scores: Map<number, number> }>();
         results.forEach(r => {
-          if (!userMap.has(r.userId)) userMap.set(r.userId, { username: r.username, passedEvals: [] });
-          if (r.percentage >= 70) userMap.get(r.userId)!.passedEvals.push(r.labId);
+          if (!userBest.has(r.userId))
+            userBest.set(r.userId, { name: r.username, scores: new Map() });
+          const scores = userBest.get(r.userId)!.scores;
+          const prev = scores.get(r.labId) ?? 0;
+          if (r.percentage > prev) scores.set(r.labId, r.percentage);
         });
-
-        this.docenteList = Array.from(userMap.entries()).map(([userId, data]) => ({
-          userId,
-          username: data.username,
-          displayName: data.username,
-          trophies: this.buildTrophies([], data.passedEvals),
-          earned: this.buildTrophies([], data.passedEvals).filter(t => t.earned).length
-        }));
+        this.docenteRows = Array.from(userBest.entries()).map(([uid, d]) => {
+          const medals = buildMedals(d.scores);
+          return {
+            userId: uid,
+            displayName: d.name,
+            medals,
+            totalEarned: medals.filter(m => m.medal !== 'none').length
+          };
+        });
         this.loading = false;
       },
       error: () => { this.loading = false; }
     });
   }
 
-  get earnedCount(): number { return this.myTrophies.filter(t => t.earned).length; }
+  medalEmoji(type: MedalType): string {
+    const map: Record<MedalType, string> = {
+      platinum: '💎', gold: '🥇', silver: '🥈', bronze: '🥉', none: '⬜'
+    };
+    return map[type];
+  }
+
+  medalLabel(type: MedalType): string {
+    const map: Record<MedalType, string> = {
+      platinum: 'Platino', gold: 'Oro', silver: 'Plata', bronze: 'Bronce', none: 'Sin obtener'
+    };
+    return map[type];
+  }
+
+  medalColor(type: MedalType): string {
+    const map: Record<MedalType, string> = {
+      platinum: '#b2f5ea', gold: '#fbd38d', silver: '#e2e8f0', bronze: '#f6ad55', none: 'transparent'
+    };
+    return map[type];
+  }
+
+  get myEarned(): number { return this.myMedals.filter(m => m.medal !== 'none').length; }
+  get myTotal(): number  { return this.myMedals.filter(m => m.hasEval).length; }
+  countMedal(type: MedalType): number { return this.myMedals.filter(m => m.medal === type).length; }
 }

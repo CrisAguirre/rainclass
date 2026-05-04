@@ -17,8 +17,8 @@ export class LaboratoriesComponent implements OnInit, OnDestroy {
     { id: 3, title: 'QuiverVision',             icon: '🎨', description: 'Dale vida a páginas para colorear con realidad aumentada interactiva.',                              status: 'locked' as const },
     { id: 4, title: 'Actionbound',              icon: '🗺️', description: 'Recorridos, búsquedas del tesoro y aventuras de aprendizaje gamificadas.',                         status: 'locked' as const },
     { id: 5, title: 'Metaverso Meta',           icon: '🌐', description: 'Conéctate, colabora y aprende en entornos virtuales inmersivos.',                                   status: 'locked' as const },
-    { id: 6, title: 'RA Propia – Generador 3D', icon: '🔬', description: 'Escanea patrones QR y genera modelos 3D interactivos por asignatura.',                             status: 'locked' as const },
-    { id: 7, title: 'Modelo con Geoposición',   icon: '📍', description: 'Ancla modelos 3D a marcadores AR físicos con posición y nivelación en tiempo real.',               status: 'locked' as const },
+    { id: 6, title: 'Visualizador de Modelos 3D', icon: '🔬', description: 'Visualiza modelos 3D propios en realidad aumentada desde cualquier asignatura.',                             status: 'locked' as const },
+    { id: 7, title: 'Modelo 3D con Geoposición',   icon: '📍', description: 'Ancla modelos 3D a marcadores AR físicos con posición y nivelación en tiempo real.',               status: 'locked' as const },
   ] as { id: number; title: string; icon: string; description: string; status: string }[];
 
   private sub!: Subscription;

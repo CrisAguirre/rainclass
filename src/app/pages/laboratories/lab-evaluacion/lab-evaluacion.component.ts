@@ -139,221 +139,221 @@ export class LabEvaluacionComponent implements OnInit {
   mergeCubeQuestions: Question[] = [
     {
       id: 1,
-      text: '¿Qué es el Merge Cube?',
+      text: '¿Qué son los marcadores fiduciales en el Merge Cube?',
       options: [
-        'Un videojuego de consola para aprender ciencias',
-        'Un dispositivo físico de realidad aumentada que permite sostener objetos 3D digitales',
-        'Una aplicación de realidad virtual que requiere gafas especiales',
-        'Un cubo de Rubik con sensores electrónicos'
+        'Sensores electrónicos integrados en el cubo que emiten señales Bluetooth',
+        'Patrones geométricos impresos en cada cara que la cámara detecta para calcular posición y orientación',
+        'Chips NFC que transmiten datos al dispositivo móvil',
+        'Códigos QR que redirigen a páginas web con contenido 3D'
       ],
       correct: 1
     },
     {
       id: 2,
-      text: '¿Qué tecnología utiliza el Merge Cube para funcionar?',
+      text: '¿Cuál es la tecnología principal que permite al Merge Cube superponer objetos 3D sobre el cubo físico?',
       options: [
-        'Bluetooth y sensores de movimiento',
-        'NFC y chips integrados',
-        'Visión por computadora y marcadores de realidad aumentada',
-        'GPS y realidad virtual'
+        'GPS y triangulación de señales de radio',
+        'Realidad Virtual con cascos especializados',
+        'Visión por computadora y seguimiento espacial en tiempo real',
+        'Bluetooth 5.0 y sensores de acelerómetro'
       ],
       correct: 2
     },
     {
       id: 3,
-      text: '¿Qué función cumplen los patrones impresos en las caras del Merge Cube?',
+      text: '¿Qué ocurre técnicamente cuando la cámara detecta un patrón del Merge Cube?',
       options: [
-        'Son decorativos y no tienen función técnica',
-        'Actúan como marcadores que la cámara reconoce para superponer objetos 3D',
-        'Emiten señales infrarrojas al dispositivo',
-        'Almacenan datos en formato QR'
+        'Descarga el modelo 3D desde internet en ese momento',
+        'Calcula la distancia, ángulo y rotación del cubo y coloca el objeto 3D con perspectiva correcta',
+        'Activa el sensor de movimiento del dispositivo para medir la gravedad',
+        'Escaneaa el código de barras invisible del cubo para identificar el modelo'
       ],
       correct: 1
     },
     {
       id: 4,
-      text: '¿Cuál de las siguientes NO es una aplicación oficial del ecosistema Merge?',
+      text: '¿Cuál de las siguientes afirmaciones sobre el Merge Cube y la conectividad es correcta?',
       options: [
-        'Merge Explorer',
-        'Object Viewer',
-        'HoloGlobe',
-        'Merge Reality Pro'
-      ],
-      correct: 3
-    },
-    {
-      id: 5,
-      text: '¿Qué tipo de aprendizaje promueve el Merge Cube?',
-      options: [
-        'Aprendizaje exclusivamente visual',
-        'Aprendizaje multisensorial (visual, auditivo, cinestésico y táctil)',
-        'Aprendizaje memorístico tradicional',
-        'Aprendizaje pasivo basado en observación'
-      ],
-      correct: 1
-    },
-    {
-      id: 6,
-      text: '¿Con cuáles dispositivos es compatible el Merge Cube?',
-      options: [
-        'Solo con iPhones de última generación',
-        'Exclusivamente con tabletas Android',
-        'iOS, Android, Chromebook y Windows',
-        'Solo con gafas de realidad virtual'
+        'Requiere 4G o Wi-Fi constante para renderizar los modelos 3D',
+        'Solo funciona con conexión a internet en tiempo real vía streaming',
+        'Una vez descargados los modelos, puede funcionar sin conexión a internet',
+        'Necesita conexión permanente para calcular el tracking del cubo'
       ],
       correct: 2
     },
     {
-      id: 7,
-      text: '¿Cuántos objetos digitales 3D aproximadamente ofrece la plataforma Merge Explorer?',
+      id: 5,
+      text: '¿Qué aplicación del ecosistema Merge EDU permite cargar modelos 3D diseñados por los propios estudiantes?',
       options: [
-        'Alrededor de 50',
-        'Alrededor de 200',
-        'Más de 1000',
-        'Menos de 10'
+        'Merge Explorer',
+        'HoloGlobe',
+        'Object Viewer',
+        'Merge Reality Pro'
+      ],
+      correct: 2
+    },
+    {
+      id: 6,
+      text: '¿Qué tipo de datos puede visualizar un estudiante con la aplicación HoloGlobe?',
+      options: [
+        'Solo mapas políticos con fronteras de países',
+        'Temperatura global, densidad de población, corrientes oceánicas y actividad sísmica en tiempo real',
+        'Únicamente imágenes satelitales estáticas del planeta',
+        'Videos de viajes espaciales grabados por la NASA'
+      ],
+      correct: 1
+    },
+    {
+      id: 7,
+      text: 'Un docente quiere que sus estudiantes vean el modelo 3D que diseñaron en Tinkercad materializado sobre el Merge Cube. ¿Qué aplicación debe usar?',
+      options: [
+        'Merge Explorer',
+        'HoloGlobe',
+        'Object Viewer',
+        'Tinkercad AR Viewer'
       ],
       correct: 2
     },
     {
       id: 8,
-      text: '¿Cómo puede un docente implementar el Merge Cube sin presupuesto?',
+      text: '¿Cuál es la forma de obtener el cubo sin ningún costo económico?',
       options: [
-        'No es posible, el cubo es imprescindible comprarlo',
-        'Imprimiendo la plantilla gratuita en papel y armando el cubo',
-        'Usando una copia pirata del software',
-        'Dibujando los patrones a mano'
+        'Solicitar una donación a Merge EDU por correo electrónico',
+        'Imprimir la plantilla gratuita disponible en mergeedu.com/cube y armarlo con tijeras y pegamento',
+        'Dibujar los patrones a mano en cualquier cubo de papel',
+        'Conseguir que otro docente done su cubo físico'
       ],
       correct: 1
     },
     {
       id: 9,
-      text: '¿Qué permite hacer la aplicación Object Viewer?',
+      text: 'En una clase de biología, el docente usa el Merge Cube para explorar la célula. ¿Qué rol debería asumir durante la exploración?',
       options: [
-        'Tomar fotografías profesionales',
-        'Cargar y visualizar modelos 3D propios sobre el Merge Cube',
-        'Editar videos en realidad aumentada',
-        'Crear presentaciones tipo PowerPoint'
+        'Dictar todas las partes de la célula mientras los estudiantes repiten',
+        'Guía socrático: hacer preguntas orientadoras como "¿Qué función cumple esa estructura?" sin dar respuestas directas',
+        'Permanecer en su escritorio mientras los estudiantes trabajan solos',
+        'Evaluar con nota durante la exploración sin retroalimentación'
       ],
       correct: 1
     },
     {
       id: 10,
-      text: '¿Cuál es una ventaja pedagógica clave del aprendizaje multisensorial con Merge Cube?',
+      text: '¿Por qué el aprendizaje multisensorial con el Merge Cube favorece mayor retención que la instrucción expositiva tradicional?',
       options: [
-        'Reduce el tiempo de clase a la mitad',
-        'Elimina la necesidad de explicaciones del docente',
-        'Mejora la retención y comprensión de conceptos abstractos',
-        'Permite que los estudiantes no necesiten estudiar'
-      ],
-      correct: 2
-    },
-    {
-      id: 11,
-      text: '¿Qué estrategia pedagógica se puede implementar con el Merge Cube usando "aula invertida"?',
-      options: [
-        'El docente muestra videos mientras los alumnos duermen',
-        'Los estudiantes exploran modelos 3D en casa y discuten en clase',
-        'Se elimina toda la parte teórica de la asignatura',
-        'El cubo reemplaza los libros de texto completamente'
+        'Porque la pantalla emite luz azul que activa la memoria de largo plazo',
+        'Porque al ver, tocar, mover y escuchar simultáneamente se activan múltiples redes neuronales al mismo tiempo',
+        'Porque las aplicaciones tienen colores que estimulan la concentración',
+        'Porque los modelos 3D son más bonitos que los dibujos de los libros de texto'
       ],
       correct: 1
     },
     {
-      id: 12,
-      text: '¿Qué permite visualizar la aplicación HoloGlobe?',
+      id: 11,
+      text: '¿Cómo se implementa la estrategia de "aula invertida" con el Merge Cube?',
       options: [
-        'Modelos de automóviles en 3D',
-        'Datos globales en tiempo real sobre un globo terráqueo holográfico',
-        'Juegos de mesa en realidad virtual',
-        'Películas en formato 3D'
+        'El estudiante lleva el cubo a casa, explora el modelo 3D con una guía y llega al aula con preguntas para profundizar en clase',
+        'El docente graba un video con el cubo y los estudiantes lo ven en casa sin hacer nada más',
+        'Se lleva el aula al hogar instalando carpas para simular el salón de clase',
+        'Los estudiantes enseñan a sus padres a usar el cubo en lugar de asistir a clase'
+      ],
+      correct: 0
+    },
+    {
+      id: 12,
+      text: '¿Qué ventaja pedagógica tiene hacer preguntas detonadoras ANTES de encender el Merge Cube?',
+      options: [
+        'Ninguna; es mejor ver el objeto 3D primero para no generar confusión',
+        'Activa los conocimientos previos del estudiante y genera motivación intrínseca antes de la exploración',
+        'Reduce el tiempo de clase y permite avanzar más rápido en el currículo',
+        'Es un requisito técnico para que la aplicación funcione correctamente'
       ],
       correct: 1
     },
     {
       id: 13,
-      text: '¿En qué área STEM se puede usar el Merge Cube para explorar el sistema solar?',
+      text: '¿Cómo beneficia específicamente el Merge Cube a estudiantes con dificultades para la abstracción?',
       options: [
-        'Tecnología de redes',
-        'Astronomía y ciencias del espacio',
-        'Programación avanzada',
-        'Diseño gráfico editorial'
-      ],
-      correct: 1
-    },
-    {
-      id: 14,
-      text: '¿Cómo beneficia el Merge Cube a estudiantes con necesidades educativas especiales?',
-      options: [
-        'No tiene beneficios para esta población',
-        'Proporciona estímulos multisensoriales que facilitan la comprensión',
-        'Reemplaza al docente de apoyo',
-        'Solo es útil para estudiantes avanzados'
-      ],
-      correct: 1
-    },
-    {
-      id: 15,
-      text: '¿Qué rol asume el docente al integrar el Merge Cube en su práctica?',
-      options: [
-        'Se vuelve innecesario en el proceso',
-        'Solo supervisa que los dispositivos funcionen',
-        'Evoluciona de transmisor de información a diseñador de experiencias de aprendizaje',
-        'Se limita a leer instrucciones del manual del cubo'
+        'Les simplifica los conceptos reduciéndolos a definiciones más cortas',
+        'Les permite omitir las partes más complejas del currículo',
+        'Proporciona una representación 3D concreta que funciona como andamiaje cognitivo para conceptos abstractos',
+        'Les entrega automáticamente las respuestas correctas sin necesidad de reflexionar'
       ],
       correct: 2
     },
     {
-      id: 16,
-      text: '¿Cuál herramienta de diseño 3D se puede usar para que los estudiantes creen modelos que luego visualicen en el Merge Cube?',
+      id: 14,
+      text: '¿Qué es un proyecto interdisciplinario con el Merge Cube y cuál es un ejemplo válido?',
       options: [
-        'Microsoft Word',
-        'Tinkercad o Paint 3D',
-        'Excel con gráficos 3D',
-        'Adobe Photoshop'
+        'Un proyecto donde solo se usa la tecnología sin contenido curricular',
+        'Usar el cubo exclusivamente en la clase de tecnología para practicar software',
+        'Articular varias asignaturas con el cubo como objeto ancla: por ejemplo, un volcán conecta ciencias, geografía, historia y lengua',
+        'Reemplazar todas las clases del día por exploración libre con el cubo'
+      ],
+      correct: 2
+    },
+    {
+      id: 15,
+      text: 'Completa la afirmación: "El Merge Cube no reemplaza al docente, sino que..."',
+      options: [
+        'lo hace innecesario porque los estudiantes aprenden solos con la tecnología',
+        'amplifica su capacidad como diseñador de experiencias de aprendizaje',
+        'reduce su carga laboral porque los estudiantes no hacen preguntas',
+        'automatiza la evaluación y elimina la necesidad de calificar manualmente'
       ],
       correct: 1
     },
     {
-      id: 17,
-      text: '¿Qué tipo de evaluación se puede realizar naturalmente con el Merge Cube?',
+      id: 16,
+      text: '¿Cuál de los siguientes formatos de archivo acepta Object Viewer para modelos 3D creados por estudiantes?',
       options: [
-        'Evaluación sumativa con examen escrito únicamente',
-        'Evaluación formativa a través de la observación y descripción de modelos 3D',
-        'Evaluación estandarizada de opción múltiple',
-        'No es posible evaluar con esta herramienta'
+        '.pdf, .docx y .pptx',
+        '.mp4, .avi y .mov',
+        '.obj, .fbx y .glb',
+        '.jpg, .png y .svg'
+      ],
+      correct: 2
+    },
+    {
+      id: 17,
+      text: '¿Qué evidencia de aprendizaje puede recolectar el docente durante una sesión con el Merge Cube?',
+      options: [
+        'Solo el puntaje de un examen escrito al final de la unidad',
+        'Capturas de pantalla anotadas, notas de observación durante la exploración y descripciones orales evaluadas en tiempo real',
+        'Ninguna; el Merge Cube no permite evaluación de ningún tipo',
+        'Únicamente el tiempo que el estudiante tardó en identificar todas las partes del modelo'
       ],
       correct: 1
     },
     {
       id: 18,
-      text: '¿Por qué se dice que el Merge Cube hace los conceptos abstractos "tangibles"?',
+      text: 'Un docente quiere gamificar su clase de geografía con el Merge Cube y HoloGlobe. ¿Cuál sería un reto adecuado?',
       options: [
-        'Porque imprime objetos reales en 3D',
-        'Porque permite sostener y manipular representaciones digitales 3D con las manos',
-        'Porque convierte texto en audio',
-        'Porque proyecta hologramas sin necesidad de dispositivo'
+        'Que los estudiantes memoricen todos los nombres de los países del mundo',
+        '"¿Qué equipo identifica primero los 5 países con mayor densidad de población y los ubica en el globo?"',
+        'Que los estudiantes compitan por quién termina el examen escrito más rápido',
+        'Que los estudiantes vean el globo en silencio durante 20 minutos'
       ],
       correct: 1
     },
     {
       id: 19,
-      text: '¿Qué ventaja tiene el Merge Cube sobre otras tecnologías de RA más costosas?',
+      text: '¿Cuál es la diferencia clave entre el Merge Cube y la Realidad Virtual en contextos educativos?',
       options: [
-        'Tiene mejor resolución gráfica',
-        'Funciona sin electricidad ni internet',
-        'Es accesible, económico y funciona con dispositivos que ya se tienen',
-        'No requiere ningún tipo de software'
+        'El Merge Cube es más costoso y requiere infraestructura especializada',
+        'La RV es más accesible porque no necesita ningún dispositivo adicional',
+        'El Merge Cube mantiene al estudiante conectado con su entorno físico real; la RV lo aísla completamente en un entorno digital',
+        'No hay diferencia significativa entre las dos tecnologías en educación'
       ],
       correct: 2
     },
     {
       id: 20,
-      text: '¿Cómo puede un proyecto interdisciplinario integrar el Merge Cube?',
+      text: '¿Cuál es la transformación más profunda que el Merge Cube produce en el rol del docente?',
       options: [
-        'Solo se puede usar en la clase de tecnología',
-        'Explorando un volcán (ciencias), su ubicación (geografía) y escribiendo un relato (lengua)',
-        'Únicamente para clases de matemáticas',
-        'No es posible hacer proyectos interdisciplinarios con RA'
+        'El docente se convierte en técnico de soporte para resolver problemas con los dispositivos',
+        'El docente pasa de ser transmisor de información a arquitecto de experiencias de aprendizaje donde el estudiante construye su propio conocimiento',
+        'El docente deja de necesitar preparar clases porque la app tiene todo el contenido',
+        'El docente se vuelve asistente del estudiante que lidera la clase de forma autónoma'
       ],
       correct: 1
     }
@@ -1307,7 +1307,7 @@ export class LabEvaluacionComponent implements OnInit {
     }
 
     // Send results to backend
-    const labNames: { [key: string]: string } = { '1': 'Introducción', '2': 'Merge Cube', '3': 'QuiverVision', '4': 'Actionbound', '5': 'Metaverso Meta', '6': 'RA Propia – Generador 3D', '7': 'Modelo con Geoposición' };
+    const labNames: { [key: string]: string } = { '1': 'Introducción', '2': 'Merge Cube', '3': 'QuiverVision', '4': 'Actionbound', '5': 'Metaverso Meta', '6': 'Visualizador de Modelos 3D', '7': 'Modelo 3D con Geoposición' };
     this.evalService.saveResult({
       userId: userId,
       username: username,

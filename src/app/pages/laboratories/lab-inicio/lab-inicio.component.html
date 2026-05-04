@@ -1,89 +1,175 @@
 ﻿<!-- INICIO - Misión 1: Introducción -->
 <div *ngIf="labId === '1'" class="lab-content">
+
+  <!-- Hero Section -->
   <div class="hero-section glass-panel">
     <div class="hero-text">
-      <h2>Bienvenido a RainClass Edu</h2>
-      <p class="subtitle">Introducción a la Realidad Aumentada en Educación</p>
+      <h2>Misión 1: Introducción a la RA</h2>
+      <p class="subtitle">Tu punto de partida hacia la Realidad Aumentada en el aula</p>
       <p>
-        En esta primera misión conocerás los fundamentos conceptuales de la <strong>Realidad Aumentada (RA)</strong>,
-        su evolución tecnológica y su potencial transformador en el aula. Este punto de partida te preparará
-        para sacar el máximo provecho de las misiones que vienen a continuación.
+        En esta primera misión conocerás los <strong>fundamentos conceptuales de la Realidad
+        Aumentada (RA)</strong>, comprenderás cómo se diferencia de otras tecnologías inmersivas
+        y descubrirás por qué está transformando la forma en que se aprende y se enseña en el
+        mundo. Este punto de partida te preparará para sacar el máximo provecho de las 6 misiones
+        que vienen a continuación.
       </p>
     </div>
     <div class="hero-badge">🎯</div>
   </div>
 
+  <!-- Sección: Qué es la RA -->
+  <div class="section-title">
+    <h3>¿Qué es la Realidad Aumentada?</h3>
+    <div class="title-line"></div>
+  </div>
+
   <div class="info-grid">
     <div class="glass-panel info-card">
-      <h3>¿Qué es la Realidad Aumentada?</h3>
+      <h3>Definición</h3>
       <p>
-        La Realidad Aumentada es una tecnología que <strong>superpone contenido digital</strong> (imágenes, modelos 3D,
-        sonidos, vídeos) sobre el mundo físico real, en tiempo real, a través de la cámara de un dispositivo.
-        A diferencia de la Realidad Virtual, el usuario sigue viendo su entorno real enriquecido con capas digitales.
+        La Realidad Aumentada es una tecnología que <strong>superpone contenido digital</strong>
+        —imágenes, modelos 3D, sonidos, vídeos o datos— sobre el mundo físico real, en tiempo real,
+        a través de la cámara de un dispositivo. A diferencia de la Realidad Virtual, el usuario
+        <em>sigue viendo su entorno real</em>, enriquecido con capas de información digital.
       </p>
     </div>
 
     <div class="glass-panel info-card">
-      <h3>RA vs RV vs RM</h3>
+      <h3>RA · RV · RM: ¿cuál es la diferencia?</h3>
       <ul>
-        <li><strong>Realidad Aumentada (RA):</strong> Añade elementos digitales al mundo real.</li>
-        <li><strong>Realidad Virtual (RV):</strong> Sumerge completamente al usuario en un entorno digital.</li>
-        <li><strong>Realidad Mixta (RM):</strong> Los objetos digitales interactúan con el mundo físico en tiempo real.</li>
+        <li><strong>Realidad Aumentada (RA):</strong> añade capas digitales al mundo real. El usuario ve ambos mundos al tiempo.</li>
+        <li><strong>Realidad Virtual (RV):</strong> sumerge al usuario en un entorno 100% digital. Requiere cascos o visores.</li>
+        <li><strong>Realidad Mixta (RM):</strong> los objetos digitales interactúan con superficies físicas reales. Mayor precisión espacial.</li>
       </ul>
     </div>
 
     <div class="glass-panel info-card">
       <h3>¿Por qué usar RA en el aula?</h3>
       <ul>
-        <li>🧠 Aumenta la retención de información hasta un 75% frente al aprendizaje pasivo.</li>
-        <li>🎮 Gamifica el proceso educativo y eleva la motivación del estudiante.</li>
-        <li>👁️ Permite visualizar conceptos abstractos de forma tridimensional e interactiva.</li>
-        <li>🌍 Elimina barreras geográficas y de recursos físicos.</li>
+        <li>🧠 Activa múltiples canales sensoriales, lo que potencia la retención y comprensión de conceptos.</li>
+        <li>🎮 Convierte el aprendizaje en una experiencia activa y motivadora para el estudiante.</li>
+        <li>👁️ Hace visibles conceptos abstractos: moléculas, astros, órganos, procesos geológicos.</li>
+        <li>💸 Las herramientas cubiertas en este curso son gratuitas o de bajo costo.</li>
+        <li>🌍 Elimina barreras geográficas: un volcán del Pacífico puede estar en tu mesa hoy.</li>
       </ul>
     </div>
 
     <div class="glass-panel info-card">
-      <h3>Ruta de Aprendizaje RainClass</h3>
-      <p>A lo largo de esta plataforma explorarás 7 misiones progresivas:</p>
-      <ol>
-        <li><strong>Misión 1 –</strong> Introducción ← <em>Estás aquí</em></li>
-        <li><strong>Misión 2 –</strong> Merge Cube</li>
-        <li><strong>Misión 3 –</strong> QuiverVision</li>
-        <li><strong>Misión 4 –</strong> Actionbound</li>
-        <li><strong>Misión 5 –</strong> Metaverso Meta</li>
-        <li><strong>Misión 6 –</strong> RA Propia – Generador 3D</li>
-        <li><strong>Misión 7 –</strong> Modelo con Geoposición (Proyecto Final)</li>
-      </ol>
+      <h3>¿Cómo funciona la RA? — 3 componentes esenciales</h3>
+      <ul>
+        <li><strong>Cámara:</strong> captura el mundo real en tiempo real (smartphone, tableta, webcam).</li>
+        <li><strong>Marcador o sensor:</strong> patrón visual, superficie plana o coordenadas GPS que anclan el contenido digital.</li>
+        <li><strong>Software de renderizado:</strong> calcula la posición exacta y superpone el objeto 3D con perspectiva correcta.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Sección: Ruta de aprendizaje -->
+  <div class="section-title">
+    <h3>Tu Ruta de Aprendizaje en RainClass</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="glass-panel content-block" style="padding: 36px;">
+    <p style="margin-bottom: 20px; color: var(--text-secondary);">
+      Explorarás <strong>7 misiones progresivas</strong>. Cada una introduce una herramienta o
+      concepto diferente. Al completar la evaluación de cada misión, desbloqueas la siguiente.
+    </p>
+    <div class="usage-grid" style="gap: 12px;">
+      <div class="glass-panel usage-card" style="padding: 18px;">
+        <div class="usage-number">01</div>
+        <h4>Introducción a la RA</h4>
+        <p>Fundamentos conceptuales, diferencias RA/RV/RM y ruta de aprendizaje. ← <em>Estás aquí</em></p>
+      </div>
+      <div class="glass-panel usage-card" style="padding: 18px;">
+        <div class="usage-number">02</div>
+        <h4>Merge Cube</h4>
+        <p>Sostén objetos 3D digitales en tu mano con un cubo físico de marcadores AR.</p>
+      </div>
+      <div class="glass-panel usage-card" style="padding: 18px;">
+        <div class="usage-number">03</div>
+        <h4>QuiverVision</h4>
+        <p>Da vida en 3D a páginas para colorear: una actividad manual que se vuelve digital.</p>
+      </div>
+      <div class="glass-panel usage-card" style="padding: 18px;">
+        <div class="usage-number">04</div>
+        <h4>Actionbound</h4>
+        <p>Recorridos gamificados, búsquedas del tesoro y aventuras de aprendizaje con geolocalización.</p>
+      </div>
+      <div class="glass-panel usage-card" style="padding: 18px;">
+        <div class="usage-number">05</div>
+        <h4>Metaverso Meta</h4>
+        <p>Colabora y aprende en entornos virtuales inmersivos accesibles desde el navegador.</p>
+      </div>
+      <div class="glass-panel usage-card" style="padding: 18px;">
+        <div class="usage-number">06</div>
+        <h4>Visualizador de Modelos 3D</h4>
+        <p>Crea y visualiza tus propios modelos 3D en RA desde cualquier asignatura.</p>
+      </div>
+      <div class="glass-panel usage-card" style="padding: 18px;">
+        <div class="usage-number">07</div>
+        <h4>Modelo 3D con Geoposición</h4>
+        <p>Proyecto final: ancla modelos 3D a marcadores físicos AR con posición y nivelación en tiempo real.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección: Aplicaciones educativas de la RA -->
+  <div class="section-title">
+    <h3>La RA en la Educación: Evidencia y Contexto</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="features-row">
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">75%</div>
+      <p>más retención de información frente al aprendizaje pasivo expositivo</p>
+    </div>
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">3×</div>
+      <p>mayor motivación reportada por estudiantes en clases con tecnologías inmersivas</p>
+    </div>
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">K–12</div>
+      <p>la RA es efectiva en todos los niveles educativos, desde primaria hasta universitario</p>
+    </div>
+    <div class="glass-panel feature-item">
+      <div class="feature-stat">$0</div>
+      <p>costo de las herramientas base de este curso. Educación inmersiva accesible para todos</p>
     </div>
   </div>
 
   <div class="glass-panel tip-panel">
-    <h3>💡 Antes de comenzar</h3>
+    <h3>💡 Antes de continuar</h3>
     <p>
-      Asegúrate de tener un <strong>dispositivo con cámara</strong> (teléfono, tablet o PC con webcam),
-      conexión a internet estable y disposición para experimentar. ¡La RA se aprende explorando!
+      Asegúrate de tener un <strong>dispositivo con cámara</strong> (teléfono, tablet o PC con webcam)
+      y conexión a internet estable. Cuando estés listo, avanza a la pestaña
+      <strong>Desarrollo</strong> para profundizar en los conceptos, o ve directamente a
+      <strong>Evaluación</strong> si ya conoces el tema.
     </p>
   </div>
-</div>
 
+</div>
 <!-- INICIO - Misión 2: Merge Cube (antiguo Lab 1) -->
 <div *ngIf="labId === '2'" class="lab-content">
-  
+
   <!-- Hero Section -->
   <div class="hero-section glass-panel">
     <div class="hero-text">
-      <h2>¿Qué es el Merge Cube?</h2>
-      <p class="subtitle">La Realidad Aumentada en la palma de tu mano</p>
+      <h2>Misión 2: Merge Cube</h2>
+      <p class="subtitle">Sostén el universo en la palma de tu mano</p>
       <p>
-        El <strong>Merge Cube</strong> es un dispositivo físico de realidad aumentada revolucionario que permite 
-        a los usuarios sostener y manipular objetos digitales 3D en sus manos. Es un cubo de gomaespuma suave 
-        con patrones geométricos únicos en cada una de sus seis caras, que actúan como marcadores de RA reconocidos 
-        por la cámara de un dispositivo móvil (teléfono o tableta).
+        El <strong>Merge Cube</strong> es un cubo físico de realidad aumentada que convierte un
+        dispositivo móvil corriente en una ventana hacia objetos digitales 3D interactivos. Al
+        sostenerlo frente a la cámara, el cubo parece desaparecer y en su lugar aparece —flotando
+        sobre tus manos— un planeta, una célula, una molécula o cualquier modelo que la aplicación
+        active. No se necesita hardware costoso: un smartphone, una tableta o incluso el cubo impreso
+        en papel son suficientes para comenzar.
       </p>
       <p>
-        Desarrollado por <strong>Merge EDU</strong>, esta herramienta ha sido adoptada por millones de educadores 
-        y estudiantes en todo el mundo, transformando la forma en que se enseñan conceptos abstractos de ciencias, 
-        tecnología, ingeniería y matemáticas (STEM).
+        En esta misión conocerás <strong>qué es, cómo funciona y por qué el Merge Cube se ha
+        convertido en una de las herramientas de realidad aumentada más adoptadas en la educación
+        STEM</strong> a nivel mundial.
       </p>
     </div>
     <div class="hero-image">
@@ -98,9 +184,55 @@
     </div>
   </div>
 
-  <!-- How it Works -->
+  <!-- Conceptos clave -->
   <div class="section-title">
-    <h3>¿Cómo Funciona?</h3>
+    <h3>Conceptos Clave</h3>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="info-grid">
+    <div class="glass-panel info-card">
+      <h3>¿Qué es el Merge Cube?</h3>
+      <p>
+        Es un cubo de gomaespuma de ~7 cm de lado con <strong>patrones geométricos únicos</strong>
+        impresos en cada cara. Esos patrones actúan como <em>marcadores de RA</em>: la cámara del
+        dispositivo los detecta, calcula posición y orientación del cubo en tiempo real, y superpone
+        un objeto 3D interactivo exactamente donde está el cubo físico.
+      </p>
+    </div>
+
+    <div class="glass-panel info-card">
+      <h3>Tecnología detrás del cubo</h3>
+      <ul>
+        <li><strong>Visión por computadora:</strong> algoritmos que identifican y rastrean los patrones del cubo en cada fotograma de video.</li>
+        <li><strong>Seguimiento espacial (tracking):</strong> calcula distancia, ángulo y rotación para anclar el modelo 3D con precisión.</li>
+        <li><strong>Renderizado en tiempo real:</strong> el objeto digital se actualiza ~60 veces por segundo, creando la ilusión de un holograma sólido.</li>
+      </ul>
+    </div>
+
+    <div class="glass-panel info-card">
+      <h3>Merge Cube vs. otras tecnologías inmersivas</h3>
+      <ul>
+        <li>🟢 <strong>RA con Merge Cube:</strong> el usuario ve su entorno real + el objeto 3D sobrepuesto. Interacción táctil y física con el cubo.</li>
+        <li>🔵 <strong>Realidad Virtual (RV):</strong> entorno completamente digital, el usuario se aísla del mundo real. Requiere cascos.</li>
+        <li>🟡 <strong>Realidad Mixta (RM):</strong> los objetos digitales interactúan con superficies físicas reales. Hardware más especializado.</li>
+      </ul>
+    </div>
+
+    <div class="glass-panel info-card">
+      <h3>¿Por qué es relevante en educación?</h3>
+      <ul>
+        <li>🧠 Activar la manipulación física <em>y</em> la visualización digital simultáneamente potencia la retención y comprensión.</li>
+        <li>🎮 La novedad tecnológica eleva la motivación intrínseca del estudiante.</li>
+        <li>👁️ Hace tangible lo invisible: átomos, células, astros, capas geológicas.</li>
+        <li>💸 Costo casi nulo: la plantilla del cubo es gratuita y descargable; solo se necesita impresora y tijeras.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Cómo funciona paso a paso -->
+  <div class="section-title">
+    <h3>¿Cómo Funciona? — Paso a Paso</h3>
     <div class="title-line"></div>
   </div>
 
@@ -108,26 +240,26 @@
     <div class="steps-container">
       <div class="step">
         <div class="step-number">1</div>
-        <h4>Obtén el Cubo</h4>
-        <p>Adquiere un Merge Cube físico o imprime la plantilla gratuita en papel. El cubo tiene patrones especiales que la cámara reconoce.</p>
+        <h4>Obtén o imprime el cubo</h4>
+        <p>Adquiere el Merge Cube físico (gomaespuma) o descarga la <strong>plantilla gratuita</strong> en <a href="https://mergeedu.com/cube" target="_blank">mergeedu.com/cube</a>, imprímela y arma el cubo con tijeras y pegamento.</p>
       </div>
       <div class="step-arrow">→</div>
       <div class="step">
         <div class="step-number">2</div>
-        <h4>Descarga la App</h4>
-        <p>Instala aplicaciones compatibles como <strong>Merge Explorer</strong>, <strong>Object Viewer</strong> o <strong>HoloGlobe</strong> en tu dispositivo iOS, Android o Chromebook.</p>
+        <h4>Descarga una app compatible</h4>
+        <p>Instala <strong>Merge Explorer</strong>, <strong>Object Viewer</strong> o <strong>HoloGlobe</strong> desde la App Store, Google Play o la tienda de Chromebook. Todas son gratuitas en su versión básica.</p>
       </div>
       <div class="step-arrow">→</div>
       <div class="step">
         <div class="step-number">3</div>
-        <h4>Apunta la Cámara</h4>
-        <p>Abre la aplicación y enfoca el cubo con la cámara. El software reconoce los patrones y proyecta objetos 3D sobre el cubo en tiempo real.</p>
+        <h4>Enfoca el cubo con la cámara</h4>
+        <p>Abre la app y apunta la cámara al cubo. El sistema reconoce los patrones y proyecta el objeto 3D sobre el cubo en la pantalla en tiempo real.</p>
       </div>
       <div class="step-arrow">→</div>
       <div class="step">
         <div class="step-number">4</div>
-        <h4>¡Explora en 3D!</h4>
-        <p>Gira, acerca e inspecciona el objeto digital desde cualquier ángulo moviendo el cubo en tu mano. ¡La interacción es totalmente natural!</p>
+        <h4>Explora e interactúa</h4>
+        <p>Gira, inclina y acerca el cubo físico. El modelo 3D se mueve de forma sincronizada. Toca la pantalla para activar capas de información, animaciones o datos adicionales.</p>
       </div>
     </div>
     <div class="howto-image">
@@ -135,71 +267,66 @@
     </div>
   </div>
 
-  <!-- Applications -->
+  <!-- Aplicaciones educativas -->
   <div class="section-title">
-    <h3>Aplicaciones Educativas</h3>
+    <h3>Aplicaciones Educativas por Área</h3>
     <div class="title-line"></div>
   </div>
 
   <div class="apps-grid">
     <div class="glass-panel app-card">
       <div class="app-icon">🪐</div>
-      <h4>Sistema Solar</h4>
-      <p>Sostén planetas, lunas y cuerpos celestes en tu mano. Explora el universo desde cualquier ángulo y comprende las escalas astronómicas.</p>
+      <h4>Astronomía y Ciencias del Espacio</h4>
+      <p>Sostén planetas, lunas, cometas y nebulosas en tu mano. Comprende escalas, órbitas y composición de los cuerpos celestes de forma vivencial.</p>
     </div>
     <div class="glass-panel app-card">
       <div class="app-icon">🧬</div>
-      <h4>Biología y Ciencias</h4>
-      <p>Examina estructuras celulares, disecciona una rana virtual, explora órganos del cuerpo humano y comprende ecosistemas completos.</p>
+      <h4>Biología y Ciencias Naturales</h4>
+      <p>Examina células, disecciona organismos virtualmente, explora órganos del cuerpo humano y comprende procesos biológicos complejos en 3D.</p>
     </div>
     <div class="glass-panel app-card">
       <div class="app-icon">⚗️</div>
-      <h4>Química Molecular</h4>
-      <p>Visualiza y manipula moléculas de ADN, estructuras moleculares complejas y reacciones químicas en tres dimensiones.</p>
+      <h4>Química</h4>
+      <p>Visualiza y rota moléculas de ADN, enlaces covalentes e iónicos, y estructuras cristalinas que son imposibles de apreciar en un libro plano.</p>
     </div>
     <div class="glass-panel app-card">
       <div class="app-icon">🌋</div>
-      <h4>Geología</h4>
-      <p>Investiga el núcleo de la Tierra, estudia fósiles y artefactos antiguos, y comprende procesos geológicos de forma interactiva.</p>
+      <h4>Geología y Geografía</h4>
+      <p>Examina el interior de la Tierra por capas, estudia fósiles en detalle y comprende procesos tectónicos que ocurren a escala de millones de años.</p>
     </div>
     <div class="glass-panel app-card">
       <div class="app-icon">🎨</div>
-      <h4>Creación 3D</h4>
-      <p>Los estudiantes pueden diseñar objetos en herramientas como Tinkercad o Paint 3D y verlos materializados sobre el cubo.</p>
+      <h4>Creación y Diseño 3D</h4>
+      <p>Los estudiantes diseñan objetos en <strong>Tinkercad</strong> o <strong>Paint 3D</strong> y los ven materializados sobre el cubo, cerrando el ciclo diseño–visualización.</p>
     </div>
     <div class="glass-panel app-card">
       <div class="app-icon">🌍</div>
-      <h4>HoloGlobe</h4>
-      <p>Visualiza datos globales en tiempo real sobre un globo terráqueo holográfico: clima, población, geografía y más.</p>
+      <h4>Ciencias Sociales</h4>
+      <p><strong>HoloGlobe</strong> convierte el cubo en un globo terráqueo holográfico interactivo: clima, demografía, relieve, placas tectónicas y más datos en tiempo real.</p>
     </div>
   </div>
 
-  <!-- Key Features -->
-  <div class="section-title">
-    <h3>Características Clave</h3>
-    <div class="title-line"></div>
-  </div>
-
+  <!-- Estadísticas -->
   <div class="features-row">
     <div class="glass-panel feature-item">
       <div class="feature-stat">1000+</div>
-      <p>Objetos digitales 3D disponibles</p>
+      <p>Objetos digitales 3D disponibles en Merge Explorer</p>
     </div>
     <div class="glass-panel feature-item">
       <div class="feature-stat">100+</div>
-      <p>Simulaciones interactivas</p>
+      <p>Simulaciones interactivas con capas de información</p>
     </div>
     <div class="glass-panel feature-item">
       <div class="feature-stat">4</div>
-      <p>Sentidos involucrados (visual, auditivo, cinestésico, táctil)</p>
+      <p>Canales sensoriales activados: visual, auditivo, cinestésico y táctil</p>
     </div>
     <div class="glass-panel feature-item">
-      <div class="feature-stat">∞</div>
-      <p>Posibilidades educativas</p>
+      <div class="feature-stat">$0</div>
+      <p>Costo del cubo imprimible. Solo necesitas papel, tijeras y pegamento.</p>
     </div>
   </div>
 
-  <!-- Device Compatibility -->
+  <!-- Compatibilidad -->
   <div class="section-title">
     <h3>Compatibilidad de Dispositivos</h3>
     <div class="title-line"></div>
@@ -207,12 +334,12 @@
 
   <div class="glass-panel compatibility-section">
     <p style="text-align: center; margin-bottom: 20px;">
-      El Merge Cube funciona con los dispositivos que ya tienes. No necesitas hardware costoso.
+      El Merge Cube funciona con los dispositivos que ya tienes en el aula. No se necesita hardware especializado.
     </p>
     <div class="devices-row">
       <div class="device">
         <div class="device-icon">📱</div>
-        <span>iOS</span>
+        <span>iOS (iPhone / iPad)</span>
       </div>
       <div class="device">
         <div class="device-icon">📱</div>
@@ -224,13 +351,22 @@
       </div>
       <div class="device">
         <div class="device-icon">🖥️</div>
-        <span>Windows</span>
+        <span>Windows (webcam)</span>
       </div>
     </div>
   </div>
 
-</div>
+  <div class="glass-panel tip-panel">
+    <h3>💡 Antes de continuar</h3>
+    <p>
+      Si aún no tienes el cubo, descarga la plantilla gratuita en
+      <a href="https://mergeedu.com/cube" target="_blank">mergeedu.com/cube</a>,
+      imprímela en papel grueso (preferiblemente cartulina 120 g) y arma el cubo antes de la siguiente sección.
+      Tendrás listo tu primer marcador de RA en menos de 5 minutos.
+    </p>
+  </div>
 
+</div>
 <!-- INICIO - Laboratorio 2: QuiverVision -->
 <div *ngIf="labId === '3'" class="lab-content">
 

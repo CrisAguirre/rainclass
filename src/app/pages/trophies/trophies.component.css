@@ -1,32 +1,142 @@
+/* ==================== CONTAINER ==================== */
 .trophies-container { padding: 0; }
 .loading-state { display:flex; flex-direction:column; align-items:center; padding:3rem; color:var(--text-secondary); }
 .spinner { width:40px;height:40px;border:3px solid rgba(255,255,255,0.1);border-top-color:var(--accent-blue);border-radius:50%;animation:spin 0.8s linear infinite; }
 @keyframes spin { to { transform:rotate(360deg); } }
-
-.summary-banner { display:flex;align-items:center;gap:1rem;padding:1.5rem 2rem;margin-bottom:1.5rem; }
-.big-number { font-size:3rem;font-weight:700;color:var(--accent-blue); }
-.summary-label { font-size:1.2rem;color:var(--text-secondary); }
-
-.trophies-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1.2rem; }
-.trophy-card { padding:1.5rem;text-align:center;transition:transform 0.2s; }
-.trophy-card.locked { opacity:0.45;filter:grayscale(1); }
-.trophy-card.earned { border:1px solid rgba(99,179,237,0.4); }
-.trophy-card:hover { transform:translateY(-3px); }
-.trophy-icon { font-size:2.5rem;margin-bottom:0.5rem; }
-.trophy-card h4 { margin:0 0 0.3rem;font-size:0.95rem; }
-.trophy-card p { font-size:0.8rem;color:var(--text-secondary);margin:0 0 0.8rem; }
-.trophy-status { font-size:0.78rem; }
-.earned-badge { color:#68d391; }
-
-.docente-block { padding:1.5rem;margin-bottom:1rem; }
-.docente-header { display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem; }
-.docente-header h3 { margin:0;flex:1; }
-.docente-icon { font-size:1.5rem; }
-.earned-count { background:rgba(99,179,237,0.15);padding:0.25rem 0.75rem;border-radius:20px;font-size:0.85rem;color:var(--accent-blue); }
-.trophies-row { display:flex;flex-wrap:wrap;gap:0.75rem; }
-.mini-trophy { display:flex;flex-direction:column;align-items:center;width:80px;padding:0.5rem;border-radius:8px;background:rgba(255,255,255,0.03);text-align:center; }
-.mini-trophy.locked { opacity:0.4;filter:grayscale(1); }
-.mini-icon { font-size:1.5rem; }
-.mini-name { font-size:0.65rem;color:var(--text-secondary);margin-top:0.2rem; }
-.mini-lock { font-size:0.7rem;margin-top:0.1rem; }
 .empty-state { text-align:center;padding:3rem;color:var(--text-secondary); }
+
+/* ==================== SUMMARY BANNER ==================== */
+.summary-banner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.summary-medals { display:flex; gap:1.75rem; flex-wrap:wrap; }
+.medal-count { display:flex; flex-direction:column; align-items:center; gap:2px; }
+.medal-big { font-size:2rem; }
+.medal-num { font-size:1.4rem; font-weight:700; color:var(--text-primary); }
+.medal-lbl { font-size:0.7rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.05em; }
+.summary-divider { width:1px; height:60px; background:rgba(255,255,255,0.08); flex-shrink:0; }
+.summary-total { display:flex; align-items:baseline; gap:0.5rem; }
+.big-number { font-size:3rem; font-weight:700; color:var(--accent-blue); line-height:1; }
+.summary-label { font-size:1.1rem; color:var(--text-secondary); }
+
+/* ==================== LEGEND ==================== */
+.legend-panel {
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 1.75rem;
+}
+.legend-panel h4 { margin:0 0 0.9rem; font-size:0.9rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.06em; }
+.legend-row { display:flex; gap:1.5rem; flex-wrap:wrap; }
+.legend-item { display:flex; align-items:center; gap:0.6rem; }
+.legend-icon { font-size:1.4rem; }
+.legend-item div { display:flex; flex-direction:column; }
+.legend-item strong { font-size:0.85rem; color:var(--text-primary); }
+.legend-item span { font-size:0.75rem; color:var(--text-secondary); }
+
+/* ==================== MISSION TROPHY GRID ==================== */
+.missions-trophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+  gap: 1.25rem;
+}
+
+.mission-trophy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.75rem 1.25rem 1.25rem;
+  gap: 0.75rem;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.mission-trophy-card:hover { transform: translateY(-4px); }
+
+/* Earned glow */
+.mission-trophy-card.earned { box-shadow: 0 0 0 1px rgba(99,179,237,0.2), 0 8px 24px rgba(0,0,0,0.3); }
+.mission-trophy-card[data-medal="platinum"] { box-shadow: 0 0 0 1px rgba(178,245,234,0.35), 0 8px 28px rgba(178,245,234,0.12); }
+.mission-trophy-card[data-medal="gold"]     { box-shadow: 0 0 0 1px rgba(251,211,141,0.35), 0 8px 28px rgba(251,211,141,0.12); }
+.mission-trophy-card[data-medal="silver"]   { box-shadow: 0 0 0 1px rgba(226,232,240,0.35), 0 8px 28px rgba(226,232,240,0.10); }
+.mission-trophy-card[data-medal="bronze"]   { box-shadow: 0 0 0 1px rgba(246,173,85,0.35), 0 8px 28px rgba(246,173,85,0.10); }
+
+/* Not earned = translucent */
+.mission-trophy-card[data-medal="none"]:not(.no-eval) {
+  opacity: 0.42;
+  filter: grayscale(0.6);
+}
+.mission-trophy-card.no-eval { opacity: 0.5; filter: grayscale(1); }
+
+/* Medal ring */
+.medal-ring {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem;
+  background: rgba(255,255,255,0.04);
+  border: 2px solid rgba(255,255,255,0.07);
+  transition: border-color 0.3s;
+}
+.ring-platinum { border-color: rgba(178,245,234,0.5); background: rgba(178,245,234,0.08); }
+.ring-gold     { border-color: rgba(251,211,141,0.5); background: rgba(251,211,141,0.08); }
+.ring-silver   { border-color: rgba(226,232,240,0.4); background: rgba(226,232,240,0.06); }
+.ring-bronze   { border-color: rgba(246,173,85,0.5);  background: rgba(246,173,85,0.08);  }
+.ring-none     { border-color: rgba(255,255,255,0.06); }
+
+.medal-emoji-large { font-size: 2.2rem; line-height: 1; }
+
+/* Mission info */
+.mission-info { display:flex; flex-direction:column; align-items:center; gap:2px; width:100%; }
+.mission-number { font-size:0.7rem; color:var(--text-secondary); text-transform:uppercase; letter-spacing:0.08em; }
+.mission-icon-sm { font-size:1.1rem; margin:2px 0; }
+.mission-name { margin:0; font-size:0.88rem; font-weight:600; color:var(--text-primary); line-height:1.3; }
+
+/* Score badge */
+.score-badge {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  width: 100%;
+}
+.score-pct { font-size: 1.05rem; font-weight: 700; color: var(--text-primary); }
+.score-label { font-size: 0.72rem; color: var(--text-secondary); margin-top: 1px; }
+
+.badge-platinum { background: rgba(178,245,234,0.12); }
+.badge-platinum .score-pct { color: #b2f5ea; }
+.badge-gold     { background: rgba(251,211,141,0.12); }
+.badge-gold .score-pct     { color: #fbd38d; }
+.badge-silver   { background: rgba(226,232,240,0.10); }
+.badge-silver .score-pct   { color: #e2e8f0; }
+.badge-bronze   { background: rgba(246,173,85,0.12); }
+.badge-bronze .score-pct   { color: #f6ad55; }
+.badge-none     { background: rgba(255,255,255,0.03); }
+.badge-noeval   { background: rgba(255,255,255,0.03); }
+.badge-noeval .score-label { font-style: italic; }
+
+/* ==================== ADMIN VIEW ==================== */
+.docente-block { padding: 1.5rem; margin-bottom: 1rem; }
+.docente-header { display:flex; align-items:center; gap:0.75rem; margin-bottom:1.1rem; }
+.docente-header h3 { margin:0; flex:1; }
+.docente-icon { font-size:1.5rem; }
+.earned-count { background:rgba(99,179,237,0.15); padding:0.25rem 0.75rem; border-radius:20px; font-size:0.85rem; color:var(--accent-blue); }
+
+.missions-mini-grid { display:flex; flex-wrap:wrap; gap:0.75rem; }
+.mini-mission-card {
+  display: flex; flex-direction: column; align-items: center;
+  width: 72px; padding: 0.6rem 0.4rem;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  text-align: center; gap: 2px;
+  transition: opacity 0.2s;
+}
+.mini-mission-card:not(.earned):not(.no-eval) { opacity: 0.38; filter: grayscale(0.7); }
+.mini-mission-card.no-eval { opacity: 0.35; filter: grayscale(1); }
+.mini-mission-icon { font-size: 1.1rem; }
+.mini-medal { font-size: 1.25rem; }
+.mini-name { font-size: 0.65rem; color: var(--text-secondary); font-weight: 600; }
+.mini-pct { font-size: 0.62rem; color: var(--accent-blue); }
