@@ -29,7 +29,8 @@ export class LaboratoriesComponent implements OnInit, OnDestroy {
     this.sub = this.progressService.progress$.subscribe(p => {
       this.labs = this.labs.map(lab => {
         const prog = p.labs.find(l => l.id === lab.id);
-        return prog ? { ...lab, status: prog.status } : lab;
+        const isAdmin = this.authService.isAdmin();
+        return prog ? { ...lab, status: isAdmin ? 'available' : prog.status } : { ...lab, status: isAdmin ? 'available' : lab.status };
       });
     });
   }
@@ -37,13 +38,13 @@ export class LaboratoriesComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void { this.sub?.unsubscribe(); }
 
   enter(lab: any): void {
-    if (lab.status === 'locked') return;
+    if (lab.status === 'locked' && !this.authService.isAdmin()) return;
     const user = this.authService.getCurrentUser();
     this.progressService.startLab(lab.id, user?.userId, user?.displayName);
     this.router.navigate(['/laboratories', lab.id, 'inicio']);
   }
 
-  isLocked(lab: any): boolean { return lab.status === 'locked'; }
+  isLocked(lab: any): boolean { return !this.authService.isAdmin() && lab.status === 'locked'; }
 
   btnLabel(status: string): string {
     const m: Record<string,string> = { available: '🚀 Comenzar misión', 'in-progress': '⚡ Continuar', completed: '🔁 Repetir', locked: '🔒 Bloqueada' };

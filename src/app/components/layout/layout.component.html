@@ -2,13 +2,13 @@
   <!-- Navigation Header -->
   <nav class="glass-panel main-nav">
     <div class="nav-brand">
-      <h2>RainClass</h2>
+      <h2 class="platform-logo" style="margin:0; font-weight: 800; font-size: 1.5rem;"><span style="color: #ffffff;">RA</span><span style="color: var(--accent-color, #4da8da);">In</span><span style="color: #f6ad55;">Class</span></h2>
       <span class="badge">Edu</span>
     </div>
     
     <div class="nav-links">
       <a routerLink="/home" routerLinkActive="active" class="nav-link">Inicio</a>
-      <a routerLink="/sessions" routerLinkActive="active" class="nav-link">Mi Progreso</a>
+      <a *ngIf="!isAdmin" routerLink="/sessions" routerLinkActive="active" class="nav-link">Mi Progreso</a>
       <a routerLink="/laboratories" routerLinkActive="active" class="nav-link">Misiones</a>
       <a *ngIf="isAdmin" routerLink="/users" routerLinkActive="active" class="nav-link">Usuarios</a>
       <a routerLink="/results" routerLinkActive="active" class="nav-link">

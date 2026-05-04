@@ -1,9 +1,26 @@
 <div class="page-header">
   <h2>Gestión de Usuarios</h2>
-  <p>Administra los estudiantes y profesores de la plataforma.</p>
+  <p>Docentes registrados en la plataforma RaInClass.</p>
 </div>
 
-<div class="glass-panel" style="padding: 40px; text-align: center;">
-  <h3>Lista de Usuarios</h3>
-  <p style="color: var(--text-secondary); margin-top: 15px;">Módulo en construcción.</p>
+<div class="glass-panel users-panel" style="padding: 30px;">
+  <div *ngIf="docentes.length === 0" class="empty-state">
+    <p>No hay docentes registrados activos.</p>
+  </div>
+
+  <div class="users-grid" *ngIf="docentes.length > 0">
+    <div *ngFor="let d of docentes" class="user-card glass-panel">
+      <div class="user-avatar">
+        👤
+      </div>
+      <div class="user-details">
+        <h3>{{ d.displayName }}</h3>
+        <p class="user-username">Usuario: <strong>{{ d.username }}</strong></p>
+        <span class="status-badge active-status">{{ d.status }}</span>
+      </div>
+      <div class="user-actions">
+        <span class="user-id-text">ID: {{ d.userId }}</span>
+      </div>
+    </div>
+  </div>
 </div>

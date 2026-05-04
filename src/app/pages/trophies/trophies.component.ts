@@ -28,7 +28,7 @@ const MISSIONS: { id: number; name: string; icon: string; hasEval: boolean }[] =
   { id: 3, name: 'QuiverVision',              icon: '🎨', hasEval: true  },
   { id: 4, name: 'Actionbound',               icon: '🗺️', hasEval: true  },
   { id: 5, name: 'Metaverso Meta',            icon: '🌐', hasEval: true  },
-  { id: 6, name: 'Visualizador Modelos 3D',   icon: '🔬', hasEval: false },
+  { id: 6, name: 'Visualizador Modelos 3D',   icon: '🔬', hasEval: true },
   { id: 7, name: 'Modelo 3D con Geoposición', icon: '📍', hasEval: true  },
 ];
 
@@ -153,19 +153,19 @@ export class TrophiesComponent implements OnInit {
     const map: Record<MedalType, string> = { platinum:'#b2f5ea', gold:'#fbd38d', silver:'#e2e8f0', bronze:'#f6ad55', none:'transparent' };
     return map[type];
   }
-  countMedalForDocente(d: DocenteRow, type: MedalType): number {
+  countMedalForDocente(d: DocenteRow, type: string): number {
     return d.medals.filter(m => m.medal === type).length;
   }
 
   // Docente summary
   get myEarned(): number { return this.myMedals.filter(m => m.medal !== 'none').length; }
   get myTotal():  number { return this.myMedals.filter(m => m.hasEval).length; }
-  countMedal(type: MedalType): number { return this.myMedals.filter(m => m.medal === type).length; }
+  countMedal(type: string): number { return this.myMedals.filter(m => m.medal === type).length; }
 
   // Admin summary
   get adminTotalDocentes(): number { return this.docenteRows.length; }
   get adminTotalTrophies(): number { return this.docenteRows.reduce((s, d) => s + d.totalEarned, 0); }
-  adminCountMedal(type: MedalType): number {
+  adminCountMedal(type: string): number {
     return this.docenteRows.reduce((s, d) => s + this.countMedalForDocente(d, type), 0);
   }
 }
