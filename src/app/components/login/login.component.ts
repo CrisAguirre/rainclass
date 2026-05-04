@@ -26,7 +26,7 @@ export class LoginComponent {
       this.error = '';
       // Cargar progreso desde el backend al iniciar sesión
       this.progressService.loadFromBackend(user.userId).subscribe(() => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/intro']);
       });
     } else {
       this.error = 'Credenciales incorrectas. Intente nuevamente.';

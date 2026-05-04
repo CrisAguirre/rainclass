@@ -14,9 +14,11 @@ import { LabCierreComponent } from './pages/laboratories/lab-cierre/lab-cierre.c
 import { LabEvaluacionComponent } from './pages/laboratories/lab-evaluacion/lab-evaluacion.component';
 import { TrophiesComponent } from './pages/trophies/trophies.component';
 import { CollectiblesComponent } from './pages/collectibles/collectibles.component';
+import { IntroComponent } from './components/intro/intro.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'intro', component: IntroComponent },
   {
     path: '',
     component: LayoutComponent,

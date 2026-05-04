@@ -1,0 +1,10 @@
+<div class="intro-container" [class.fade-out]="isFadingOut">
+  <video 
+    #introVideo 
+    class="intro-video" 
+    src="assets/intro.mp4" 
+    playsinline 
+    controls>
+  </video>
+  <button class="skip-btn glass-button" (click)="finishIntro()">Saltar</button>
+</div>
