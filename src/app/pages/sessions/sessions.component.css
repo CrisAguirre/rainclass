@@ -150,13 +150,13 @@
 .mission-row:last-child  { border-radius: 0 0 12px 12px !important; }
 
 /* Colores dinámicos para las filas de misiones */
-.mission-row:nth-child(7n+1) { background: linear-gradient(90deg, rgba(0, 229, 255, 0.25), rgba(255, 255, 255, 0.02)); }
-.mission-row:nth-child(7n+2) { background: linear-gradient(90deg, rgba(217, 70, 239, 0.25), rgba(255, 255, 255, 0.02)); }
-.mission-row:nth-child(7n+3) { background: linear-gradient(90deg, rgba(250, 140, 22, 0.25), rgba(255, 255, 255, 0.02)); }
-.mission-row:nth-child(7n+4) { background: linear-gradient(90deg, rgba(16, 185, 129, 0.25), rgba(255, 255, 255, 0.02)); }
-.mission-row:nth-child(7n+5) { background: linear-gradient(90deg, rgba(239, 68, 68, 0.25), rgba(255, 255, 255, 0.02)); }
-.mission-row:nth-child(7n+6) { background: linear-gradient(90deg, rgba(234, 179, 8, 0.25), rgba(255, 255, 255, 0.02)); }
-.mission-row:nth-child(7n+0) { background: linear-gradient(90deg, rgba(139, 92, 246, 0.25), rgba(255, 255, 255, 0.02)); }
+.mission-row:nth-child(7n+1) { background: linear-gradient(90deg, rgba(0, 229, 255, 0.5), rgba(255, 255, 255, 0.15)); }
+.mission-row:nth-child(7n+2) { background: linear-gradient(90deg, rgba(217, 70, 239, 0.5), rgba(255, 255, 255, 0.15)); }
+.mission-row:nth-child(7n+3) { background: linear-gradient(90deg, rgba(250, 140, 22, 0.5), rgba(255, 255, 255, 0.15)); }
+.mission-row:nth-child(7n+4) { background: linear-gradient(90deg, rgba(16, 185, 129, 0.5), rgba(255, 255, 255, 0.15)); }
+.mission-row:nth-child(7n+5) { background: linear-gradient(90deg, rgba(239, 68, 68, 0.5), rgba(255, 255, 255, 0.15)); }
+.mission-row:nth-child(7n+6) { background: linear-gradient(90deg, rgba(234, 179, 8, 0.5), rgba(255, 255, 255, 0.15)); }
+.mission-row:nth-child(7n+0) { background: linear-gradient(90deg, rgba(139, 92, 246, 0.5), rgba(255, 255, 255, 0.15)); }
 
 .mission-row.status-locked    { opacity: 0.5; }
 .mission-row.status-available { border-left: 3px solid var(--accent-color) !important; }

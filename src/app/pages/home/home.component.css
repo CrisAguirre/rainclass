@@ -176,13 +176,13 @@
 }
 
 /* Colores personalizados para cada ficha de misión (Efecto Aero Neon Multicolor más claro) */
-.labs-summary-grid .lab-summary-card:nth-child(1) { background: linear-gradient(135deg, rgba(0, 229, 255, 0.35), rgba(255, 255, 255, 0.05)); } /* Cyan */
-.labs-summary-grid .lab-summary-card:nth-child(2) { background: linear-gradient(135deg, rgba(217, 70, 239, 0.35), rgba(255, 255, 255, 0.05)); } /* Fuchsia */
-.labs-summary-grid .lab-summary-card:nth-child(3) { background: linear-gradient(135deg, rgba(250, 140, 22, 0.35), rgba(255, 255, 255, 0.05)); } /* Naranja */
-.labs-summary-grid .lab-summary-card:nth-child(4) { background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(255, 255, 255, 0.05)); } /* Verde Esmeralda */
-.labs-summary-grid .lab-summary-card:nth-child(5) { background: linear-gradient(135deg, rgba(239, 68, 68, 0.35), rgba(255, 255, 255, 0.05)); } /* Rojo Neón */
-.labs-summary-grid .lab-summary-card:nth-child(6) { background: linear-gradient(135deg, rgba(234, 179, 8, 0.35), rgba(255, 255, 255, 0.05)); } /* Amarillo Dorado */
-.labs-summary-grid .lab-summary-card:nth-child(7) { background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), rgba(255, 255, 255, 0.05)); } /* Violeta Profundo */
+.labs-summary-grid .lab-summary-card:nth-child(1) { background: linear-gradient(135deg, rgba(0, 229, 255, 0.5), rgba(255, 255, 255, 0.15)); } /* Cyan */
+.labs-summary-grid .lab-summary-card:nth-child(2) { background: linear-gradient(135deg, rgba(217, 70, 239, 0.5), rgba(255, 255, 255, 0.15)); } /* Fuchsia */
+.labs-summary-grid .lab-summary-card:nth-child(3) { background: linear-gradient(135deg, rgba(250, 140, 22, 0.5), rgba(255, 255, 255, 0.15)); } /* Naranja */
+.labs-summary-grid .lab-summary-card:nth-child(4) { background: linear-gradient(135deg, rgba(16, 185, 129, 0.5), rgba(255, 255, 255, 0.15)); } /* Verde Esmeralda */
+.labs-summary-grid .lab-summary-card:nth-child(5) { background: linear-gradient(135deg, rgba(239, 68, 68, 0.5), rgba(255, 255, 255, 0.15)); } /* Rojo Neón */
+.labs-summary-grid .lab-summary-card:nth-child(6) { background: linear-gradient(135deg, rgba(234, 179, 8, 0.5), rgba(255, 255, 255, 0.15)); } /* Amarillo Dorado */
+.labs-summary-grid .lab-summary-card:nth-child(7) { background: linear-gradient(135deg, rgba(139, 92, 246, 0.5), rgba(255, 255, 255, 0.15)); } /* Violeta Profundo */
 
 /* Glow único al hacer hover en cada tarjeta */
 .labs-summary-grid .lab-summary-card:nth-child(1):hover { box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 229, 255, 0.5); border-color: rgba(0, 229, 255, 0.8); }

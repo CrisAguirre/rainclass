@@ -63,13 +63,13 @@
 }
 
 /* Colores personalizados (Efecto Aero Neon) */
-.labs-grid .lab-card:nth-child(1) { background: linear-gradient(135deg, rgba(0, 229, 255, 0.35), rgba(255, 255, 255, 0.05)); }
-.labs-grid .lab-card:nth-child(2) { background: linear-gradient(135deg, rgba(217, 70, 239, 0.35), rgba(255, 255, 255, 0.05)); }
-.labs-grid .lab-card:nth-child(3) { background: linear-gradient(135deg, rgba(250, 140, 22, 0.35), rgba(255, 255, 255, 0.05)); }
-.labs-grid .lab-card:nth-child(4) { background: linear-gradient(135deg, rgba(16, 185, 129, 0.35), rgba(255, 255, 255, 0.05)); }
-.labs-grid .lab-card:nth-child(5) { background: linear-gradient(135deg, rgba(239, 68, 68, 0.35), rgba(255, 255, 255, 0.05)); }
-.labs-grid .lab-card:nth-child(6) { background: linear-gradient(135deg, rgba(234, 179, 8, 0.35), rgba(255, 255, 255, 0.05)); }
-.labs-grid .lab-card:nth-child(7) { background: linear-gradient(135deg, rgba(139, 92, 246, 0.35), rgba(255, 255, 255, 0.05)); }
+.labs-grid .lab-card:nth-child(1) { background: linear-gradient(135deg, rgba(0, 229, 255, 0.5), rgba(255, 255, 255, 0.15)); }
+.labs-grid .lab-card:nth-child(2) { background: linear-gradient(135deg, rgba(217, 70, 239, 0.5), rgba(255, 255, 255, 0.15)); }
+.labs-grid .lab-card:nth-child(3) { background: linear-gradient(135deg, rgba(250, 140, 22, 0.5), rgba(255, 255, 255, 0.15)); }
+.labs-grid .lab-card:nth-child(4) { background: linear-gradient(135deg, rgba(16, 185, 129, 0.5), rgba(255, 255, 255, 0.15)); }
+.labs-grid .lab-card:nth-child(5) { background: linear-gradient(135deg, rgba(239, 68, 68, 0.5), rgba(255, 255, 255, 0.15)); }
+.labs-grid .lab-card:nth-child(6) { background: linear-gradient(135deg, rgba(234, 179, 8, 0.5), rgba(255, 255, 255, 0.15)); }
+.labs-grid .lab-card:nth-child(7) { background: linear-gradient(135deg, rgba(139, 92, 246, 0.5), rgba(255, 255, 255, 0.15)); }
 
 .labs-grid .lab-card:nth-child(1):hover { box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 229, 255, 0.5); border-color: rgba(0, 229, 255, 0.8); }
 .labs-grid .lab-card:nth-child(2):hover { box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(217, 70, 239, 0.5); border-color: rgba(217, 70, 239, 0.8); }
