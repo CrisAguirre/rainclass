@@ -40,3 +40,12 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Angular environment files with sensitive data
+src/environments/environment.ts
+src/environments/environment.prod.ts

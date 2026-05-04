@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProgressService } from '../../services/progress.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-laboratories',
@@ -22,7 +23,7 @@ export class LaboratoriesComponent implements OnInit, OnDestroy {
 
   private sub!: Subscription;
 
-  constructor(private progressService: ProgressService, private router: Router) {}
+  constructor(private progressService: ProgressService, private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.sub = this.progressService.progress$.subscribe(p => {
@@ -37,7 +38,8 @@ export class LaboratoriesComponent implements OnInit, OnDestroy {
 
   enter(lab: any): void {
     if (lab.status === 'locked') return;
-    this.progressService.startLab(lab.id);
+    const user = this.authService.getCurrentUser();
+    this.progressService.startLab(lab.id, user?.userId, user?.displayName);
     this.router.navigate(['/laboratories', lab.id, 'inicio']);
   }
 

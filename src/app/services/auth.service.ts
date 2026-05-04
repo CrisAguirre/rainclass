@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 export interface AppUser {
   username: string;
@@ -8,22 +9,8 @@ export interface AppUser {
   displayName: string;
 }
 
-const USERS = [
-  {
-    username: 'adminrainclass',
-    password: 'r@inClass2620',
-    role: 'admin' as const,
-    displayName: 'Administrador',
-    userId: 'admin_001'
-  },
-  {
-    username: 'Docente',
-    password: 'RAInClA$$2026',
-    role: 'docente' as const,
-    displayName: 'Docente',
-    userId: 'docente_001'
-  }
-];
+// Las credenciales se leen desde environment.ts (nunca hardcodeadas en el código fuente)
+const USERS = environment.users;
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {

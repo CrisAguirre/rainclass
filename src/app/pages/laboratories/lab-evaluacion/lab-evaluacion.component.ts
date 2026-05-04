@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EvaluationService } from '../../../services/evaluation.service';
+import { ProgressService } from '../../../services/progress.service';
+import { AuthService } from '../../../services/auth.service';
 
 interface Question {
   id: number;
@@ -1136,7 +1138,12 @@ export class LabEvaluacionComponent implements OnInit {
     }
   ];
 
-  constructor(private route: ActivatedRoute, private evalService: EvaluationService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private evalService: EvaluationService,
+    private progressService: ProgressService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.route.parent?.paramMap.subscribe(params => {
@@ -1175,15 +1182,21 @@ export class LabEvaluacionComponent implements OnInit {
     });
     this.submitted = true;
 
-    // Get user from localStorage
-    let userStr = localStorage.getItem('currentUser');
-    let user = userStr ? JSON.parse(userStr) : { userId: 'anon', username: 'Docente Anónimo' };
+    // Get user from AuthService
+    const user = this.authService.getCurrentUser();
+    const userId = user?.userId ?? 'anon';
+    const username = user?.displayName ?? user?.username ?? 'Docente Anónimo';
+
+    // Marcar lab como completado en backend + localStorage
+    if (this.labId) {
+      this.progressService.completeLab(parseInt(this.labId), userId, username);
+    }
 
     // Send results to backend
     const labNames: { [key: string]: string } = { '1': 'Introducción', '2': 'Merge Cube', '3': 'QuiverVision', '4': 'Actionbound', '5': 'Metaverso Meta', '6': 'RA Propia – Generador 3D', '7': 'Modelo con Geoposición' };
     this.evalService.saveResult({
-      userId: user.userId,
-      username: user.username,
+      userId: userId,
+      username: username,
       labId: parseInt(this.labId || '0'),
       labName: labNames[this.labId || '1'] || 'Desconocido',
       score: this.score,

@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProgressService, UserProgress } from '../../services/progress.service';
+import { AuthService } from '../../services/auth.service';
 
 interface MissionCard {
   id: number;
@@ -10,7 +11,7 @@ interface MissionCard {
   icon: string;
   xp: number;
   status: 'locked' | 'available' | 'in-progress' | 'completed';
-  completedAt?: string;
+  completedAt?: string | null;
 }
 
 @Component({
@@ -38,7 +39,7 @@ export class SessionsComponent implements OnInit, OnDestroy {
 
   private sub!: Subscription;
 
-  constructor(private progressService: ProgressService, private router: Router) {}
+  constructor(private progressService: ProgressService, private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.sub = this.progressService.progress$.subscribe(p => {
@@ -58,7 +59,8 @@ export class SessionsComponent implements OnInit, OnDestroy {
 
   goToMission(id: number): void {
     if (!this.progressService.isAvailable(id)) return;
-    this.progressService.startLab(id);
+    const user = this.authService.getCurrentUser();
+    this.progressService.startLab(id, user?.userId, user?.displayName);
     this.router.navigate(['/laboratories', id, 'inicio']);
   }
 
@@ -85,7 +87,8 @@ export class SessionsComponent implements OnInit, OnDestroy {
 
   resetProgress(): void {
     if (confirm('¿Reiniciar todo el progreso? Esta acción no se puede deshacer.')) {
-      this.progressService.resetProgress();
+      const user = this.authService.getCurrentUser();
+      this.progressService.resetProgress(user?.userId);
     }
   }
 }

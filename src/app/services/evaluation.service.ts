@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 export interface EvaluationResult {
   userId: string;
@@ -29,7 +30,7 @@ export interface ConclusionResult {
   providedIn: 'root'
 })
 export class EvaluationService {
-  private BASE_URL = 'https://rainclassbkn-production.up.railway.app/api';
+  private BASE_URL = environment.apiUrl;
 
   private apiUrl = `${this.BASE_URL}/evaluations`;
   private conclusionsUrl = `${this.BASE_URL}/conclusions`;

@@ -102,10 +102,13 @@
 
 </div>
 
-<!-- Generic placeholder for other labs -->
+<!-- Placeholder para lab 1 y labs sin evaluación -->
 <div *ngIf="!['2', '3', '4', '5', '7'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
-  <h3>Fase de Evaluación</h3>
-  <p style="color: var(--text-secondary); margin-top: 15px;">
+  <h3>Esta misión no tiene evaluación</h3>
+  <p style="color: var(--text-secondary); margin-top: 15px;" *ngIf="labId === '1'">
+    La misión de <strong>Introducción</strong> no requiere evaluación formal. Continúa con la <strong>Misión 2 – Merge Cube</strong> para avanzar en tu ruta de aprendizaje.
+  </p>
+  <p style="color: var(--text-secondary); margin-top: 15px;" *ngIf="labId !== '1'">
     Evaluación en desarrollo para este laboratorio.
   </p>
 </div>

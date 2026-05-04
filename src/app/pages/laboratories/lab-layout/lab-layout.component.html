@@ -23,7 +23,7 @@
       <a [routerLink]="['/laboratories', labId, 'cierre']" routerLinkActive="active-tab" class="tab-link">
         {{ labId === '6' ? 'Conclusiones' : 'Cierre' }}
       </a>
-      <a *ngIf="labId !== '6'" [routerLink]="['/laboratories', labId, 'evaluacion']" routerLinkActive="active-tab" class="tab-link">
+      <a *ngIf="labId !== '6' && labId !== '1'" [routerLink]="['/laboratories', labId, 'evaluacion']" routerLinkActive="active-tab" class="tab-link">
         Evaluación
       </a>
     </div>
