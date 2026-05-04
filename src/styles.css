@@ -47,6 +47,18 @@ body {
   border-radius: 16px;
   position: relative;
   overflow: hidden;
+  animation: aeroPulse 4s infinite ease-in-out;
+}
+
+@keyframes aeroPulse {
+  0%, 100% {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 229, 255, 0.15), inset 0 0 5px rgba(0, 229, 255, 0.05);
+    border-color: rgba(0, 229, 255, 0.35);
+  }
+  50% {
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 229, 255, 0.7), inset 0 0 15px rgba(0, 229, 255, 0.4);
+    border-color: rgba(0, 229, 255, 0.9);
+  }
 }
 
 /* Optional specular highlight to simulate glass edge reflection */
