@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Observable, tap, catchError, of } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 export interface AppUser {
@@ -9,22 +11,22 @@ export interface AppUser {
   displayName: string;
 }
 
-// Las credenciales se leen desde environment.ts (nunca hardcodeadas en el código fuente)
-const USERS = environment.users;
-
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
-  login(username: string, password: string): AppUser | null {
-    const found = USERS.find(u => u.username === username && u.password === password);
-    if (found) {
-      const user: AppUser = { username: found.username, role: found.role, userId: found.userId, displayName: found.displayName };
-      localStorage.setItem('currentUser', JSON.stringify(user));
-      return user;
-    }
-    return null;
+  login(username: string, password: string): Observable<AppUser | null> {
+    return this.http.post<AppUser>(`${environment.apiUrl}/auth/login`, { username, password }).pipe(
+      tap(user => {
+        if (user) {
+          localStorage.setItem('currentUser', JSON.stringify(user));
+        }
+      }),
+      catchError(() => {
+        return of(null);
+      })
+    );
   }
 
   logout(): void {

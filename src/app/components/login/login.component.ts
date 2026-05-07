@@ -21,15 +21,18 @@ export class LoginComponent {
 
   onLogin(event: Event) {
     event.preventDefault();
-    const user = this.authService.login(this.username, this.password);
-    if (user) {
-      this.error = '';
-      // Cargar progreso desde el backend al iniciar sesión
-      this.progressService.loadFromBackend(user.userId).subscribe(() => {
-        this.router.navigate(['/intro']);
-      });
-    } else {
-      this.error = 'Credenciales incorrectas. Intente nuevamente.';
-    }
+    const cleanUsername = this.username.trim();
+    const cleanPassword = this.password.trim();
+    this.authService.login(cleanUsername, cleanPassword).subscribe(user => {
+      if (user) {
+        this.error = '';
+        // Cargar progreso desde el backend al iniciar sesión
+        this.progressService.loadFromBackend(user.userId).subscribe(() => {
+          this.router.navigate(['/intro']);
+        });
+      } else {
+        this.error = 'Credenciales incorrectas. Intente nuevamente.';
+      }
+    });
   }
 }
