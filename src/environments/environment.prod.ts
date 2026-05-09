@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://rainclassbkn-production.up.railway.app/api',
+  apiUrl: 'https://rainclassbkn.onrender.com/api',
   // En producción las credenciales deben gestionarse desde el backend.
   // Este array es un fallback; se recomienda migrar a autenticación por API.
   users: [

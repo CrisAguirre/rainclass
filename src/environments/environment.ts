@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://rainclassbkn-production.up.railway.app/api',
+  apiUrl: 'https://rainclassbkn.onrender.com/api',
   // Las credenciales de usuarios se definen aquí en desarrollo.
   // En producción, reemplaza estos valores por variables de entorno del servidor
   // o utiliza un sistema de autenticación centralizado (ej. Firebase Auth, Auth0).
