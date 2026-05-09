@@ -71,14 +71,14 @@ export class ProgressService {
     }
   }
 
-  completeLab(labId: number, userId?: string, username?: string): void {
+  completeLab(labId: number, userId?: string, username?: string, percentage?: number): void {
     const p = this.cloneProgress();
     const lab = p.labs.find(l => l.id === labId);
     if (!lab || lab.status === 'completed') return;
 
     lab.status = 'completed';
     lab.completedAt = new Date().toISOString();
-    lab.xpEarned = XP_PER_LAB;
+    lab.xpEarned = percentage != null ? Math.round((percentage / 100) * XP_PER_LAB) : XP_PER_LAB;
 
     const next = p.labs.find(l => l.id === labId + 1);
     if (next && next.status === 'locked') next.status = 'available';
@@ -91,7 +91,7 @@ export class ProgressService {
     this._progress$.next(p);
 
     if (userId) {
-      this.http.patch(`${API_URL}/${userId}/complete/${labId}`, { username })
+      this.http.patch(`${API_URL}/${userId}/complete/${labId}`, { username, percentage })
         .pipe(catchError(() => of(null)))
         .subscribe(remote => {
           if (remote) {

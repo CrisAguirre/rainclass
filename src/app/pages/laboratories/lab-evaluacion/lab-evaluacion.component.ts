@@ -1193,7 +1193,8 @@ export class LabEvaluacionComponent implements OnInit {
 
     // Marcar lab como completado en backend + localStorage
     if (this.labId) {
-      this.progressService.completeLab(parseInt(this.labId), userId, username);
+      const pct = Math.round((this.score / this.totalQuestions) * 100);
+      this.progressService.completeLab(parseInt(this.labId), userId, username, pct);
     }
 
     // Send results to backend
