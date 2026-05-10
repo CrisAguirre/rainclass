@@ -252,221 +252,111 @@ export class LabEvaluacionComponent implements OnInit {
   quiverQuestions: Question[] = [
     {
       id: 1,
-      text: '¿Qué es QuiverVision?',
+      text: 'Un docente quiere que sus estudiantes experimenten la Realidad Aumentada sin necesidad de cascos ni equipos costosos. ¿Qué hace especial a QuiverVision como herramienta pedagógica?',
       options: [
-        'Una herramienta de Realidad Virtual para dibujar en el aire',
-        'Una plataforma de Realidad Aumentada que da vida en 3D a dibujos coloreados en papel',
-        'Un software para imprimir libros en 3D',
-        'Una marca de crayones inteligentes'
+        'Es un software de Realidad Virtual que requiere gafas especializadas de $500 USD',
+        'Es una plataforma de RA que transforma dibujos coloreados en papel en modelos 3D animados e interactivos, conservando los colores originales del estudiante',
+        'Es una marca de crayones inteligentes que proyectan hologramas en el aire',
+        'Es una impresora 3D que reproduce los dibujos de los estudiantes en plástico'
       ],
       correct: 1
     },
     {
       id: 2,
-      text: '¿Cuál es el primer paso para utilizar QuiverVision en el aula?',
+      text: 'Durante una clase de Ciencias Naturales, un estudiante colorea un volcán en la plantilla de Quiver usando tonos rojos intensos para la lava y verdes oscuros para la vegetación. ¿Qué ocurre cuando se escanea el dibujo con la app?',
       options: [
-        'Comprar un Merge Cube',
-        'Pintar la pantalla de la tablet',
-        'Descargar e imprimir las plantillas desde el portal de Quiver',
-        'Escuchar un audio explicativo'
+        'El volcán aparece en 3D con colores estándar predefinidos por la aplicación, ignorando lo que pintó el estudiante',
+        'El dibujo se borra de la hoja y se convierte en una foto 2D en la pantalla',
+        'Aparece un volcán 3D animado que conserva exactamente los rojos de la lava y verdes de la vegetación que el estudiante eligió, con erupción interactiva',
+        'Solo se muestra un código QR de verificación sin modelo 3D'
       ],
       correct: 2
     },
     {
       id: 3,
-      text: '¿Qué sucede cuando se escanea un dibujo coloreado con la app de Quiver?',
+      text: 'La profesora Marta planifica una sesión con QuiverVision para niños de segundo grado. ¿Cuál es la secuencia correcta de pasos para implementar la actividad?',
       options: [
-        'El dibujo se borra de la hoja',
-        'Aparece un modelo genérico en 3D',
-        'Aparece un modelo 3D que conserva los mismos colores y texturas usados por el estudiante',
-        'El dibujo se convierte en una foto 2D'
+        'Primero escanear, luego imprimir y finalmente colorear',
+        'Descargar la app → comprar un Merge Cube → conectar gafas VR → proyectar en pared',
+        'Descargar e imprimir plantillas desde el portal Quiver → los estudiantes colorean libremente → escanear con la app de Quiver → el dibujo cobra vida en 3D',
+        'Conectar la tablet a internet vía cable → instalar Java → abrir el navegador → activar plugin'
       ],
       correct: 2
     },
     {
       id: 4,
-      text: '¿Qué habilidad principal se fomenta durante la etapa de coloreado manual en QuiverVision?',
+      text: 'Un investigador educativo observa que los niños que usan QuiverVision muestran mayor desarrollo en ciertas habilidades. ¿Qué competencias se fortalecen específicamente durante la fase de coloreado manual ANTES de la experiencia AR?',
       options: [
-        'Programación avanzada',
-        'Motricidad fina y expresión artística',
-        'Matemáticas abstractas',
-        'Lectura rápida'
+        'Programación en bloques y pensamiento computacional algorítmico',
+        'Motricidad fina, expresión artística, atención al detalle y toma de decisiones estéticas sobre color y textura',
+        'Lectura rápida y comprensión de textos académicos complejos',
+        'Resolución de ecuaciones de segundo grado y geometría analítica'
       ],
       correct: 1
     },
     {
       id: 5,
-      text: '¿Qué ventaja tiene QuiverVision sobre la Realidad Virtual en educación infantil?',
+      text: 'Al comparar QuiverVision con la Realidad Virtual pura, ¿cuál es la ventaja más significativa de Quiver para la educación infantil y primaria?',
       options: [
-        'Es más costosa',
-        'Aísla completamente al estudiante del entorno real',
-        'Combina una actividad manual tradicional (colorear) con la innovación digital',
-        'Requiere computadoras de alto rendimiento'
+        'Quiver es más costosa pero ofrece mejor calidad gráfica que cualquier casco VR',
+        'Quiver aísla completamente al niño del entorno real para máxima concentración',
+        'Quiver fusiona una actividad manual tradicional (colorear con lápices reales) con la innovación digital, creando un puente entre lo analógico y lo tecnológico',
+        'Quiver requiere computadoras de alto rendimiento pero la experiencia es superior'
       ],
       correct: 2
     },
     {
       id: 6,
-      text: '¿Cómo contribuye Quiver a la autoestima del estudiante?',
+      text: 'Una psicóloga escolar nota que los estudiantes con baja autoestima mejoran su confianza al usar QuiverVision. ¿Cuál es el mecanismo psicológico que explica este fenómeno?',
       options: [
-        'Dándole recompensas virtuales por jugar rápido',
-        'Al ver que su propia creación, con sus colores únicos, cobra vida y es la protagonista',
-        'Calificando su dibujo con notas del 1 al 10',
-        'Comparando su dibujo con el de sus compañeros'
+        'La app les da recompensas monetarias virtuales por jugar rápido',
+        'Al ver que SU PROPIA creación —con sus colores únicos e irrepetibles— cobra vida y se convierte en la protagonista de la experiencia, el niño experimenta agencia y orgullo creativo',
+        'La aplicación califica cada dibujo con notas del 1 al 10 y los mejores reciben premios',
+        'La app compara automáticamente los dibujos entre compañeros y premia al "mejor artista"'
       ],
       correct: 1
     },
     {
       id: 7,
-      text: '¿En qué área se puede utilizar la plantilla de un volcán de QuiverVision?',
+      text: 'El docente Carlos quiere usar QuiverVision para enseñar educación emocional a sus alumnos de cuarto grado. ¿Qué estrategia pedagógica sería más efectiva?',
       options: [
-        'Música',
-        'Ciencias Naturales o Geografía',
-        'Matemáticas',
-        'Educación Física'
+        'Obligar a todos a colorear usando exclusivamente color gris para no generar distracciones',
+        'Pedir que cada estudiante elija colores que representen su estado de ánimo actual, coloree la plantilla, y luego, al ver la animación 3D, reflexione con el grupo sobre las emociones expresadas',
+        'Organizar una competencia cronometrada para ver quién termina de colorear primero',
+        'Esconder las tablets como castigo si algún estudiante se porta mal durante la actividad'
       ],
       correct: 1
     },
     {
       id: 8,
-      text: '¿Qué portal específico ofrece Quiver para planes de estudio y educadores?',
+      text: 'Quiver utiliza una tecnología específica para detectar las plantillas impresas. Si un estudiante colorea fuera de las líneas, ¿qué ocurre con el modelo 3D resultante?',
       options: [
-        'Quiver Entertainment',
-        'Quiver Education',
-        'Quiver Pro 3D',
-        'Quiver Teachers Only'
+        'La aplicación se bloquea y muestra un error porque no puede reconocer la plantilla',
+        'El modelo 3D refleja fielmente esos trazos fuera de línea, mostrando la creación tal como el niño la hizo, gracias al reconocimiento de imágenes patentado que mapea las texturas reales',
+        'El dibujo se auto-corrige digitalmente y el modelo 3D aparece con líneas perfectas',
+        'El modelo pierde todo el color y se renderiza en blanco porque el sistema no tolera imprecisiones'
       ],
       correct: 1
     },
     {
       id: 9,
-      text: '¿Cuál de las siguientes acciones NO es posible en la app de Quiver?',
+      text: 'Un docente de Matemáticas y Geometría descubre que puede usar QuiverVision para enseñar cuerpos geométricos. ¿Qué permite específicamente visualizar la app en esta área?',
       options: [
-        'Interactuar tocando elementos en la pantalla',
-        'Hacer que personajes animados realicen acciones',
-        'Modificar el código fuente de la aplicación en tiempo real',
-        'Escuchar audios informativos o cuestionarios en la app'
+        'Ecuaciones algebraicas complejas resueltas paso a paso con inteligencia artificial',
+        'La transición de redes planas 2D a poliedros sólidos 3D que el estudiante puede rotar e inspeccionar desde todos los ángulos, comprendiendo caras, aristas y vértices',
+        'La tabla de multiplicar cantada con ritmos musicales generados automáticamente',
+        'Estadísticas avanzadas del rendimiento académico de toda la clase'
       ],
-      correct: 2
+      correct: 1
     },
     {
       id: 10,
-      text: '¿Cómo se pueden integrar las lenguas y la literatura con QuiverVision?',
+      text: 'Al concluir una capacitación docente sobre QuiverVision, ¿cuál es la reflexión pedagógica más profunda que debería llevarse cada educador?',
       options: [
-        'Haciendo que la app escriba ensayos automáticamente',
-        'Usando los personajes 3D como inspiración para crear relatos o practicar narración oral',
-        'Coloreando el abecedario sin usar tecnología',
-        'QuiverVision no se puede usar para literatura'
-      ],
-      correct: 1
-    },
-    {
-      id: 11,
-      text: '¿Qué tecnología utiliza Quiver para detectar las páginas impresas?',
-      options: [
-        'Geolocalización GPS',
-        'Reconocimiento de imágenes patentado',
-        'Lectura de chips RFID',
-        'Sensores de temperatura'
-      ],
-      correct: 1
-    },
-    {
-      id: 12,
-      text: '¿Qué es el "efecto Wow" en el contexto de QuiverVision?',
-      options: [
-        'El sonido que hace la app al iniciar',
-        'El asombro inmediato que capta la atención del alumno al ver su dibujo cobrar vida',
-        'Un botón especial para ganar puntos',
-        'Un filtro de cámara para hacer las fotos más brillantes'
-      ],
-      correct: 1
-    },
-    {
-      id: 13,
-      text: '¿Cuál es el rol del docente durante una actividad con QuiverVision?',
-      options: [
-        'Solo observar cómo los niños colorean',
-        'Aprovechar el asombro inicial para guiar a los estudiantes hacia la indagación y el objetivo curricular',
-        'Colorear por los estudiantes',
-        'Apagar los dispositivos para no distraer'
-      ],
-      correct: 1
-    },
-    {
-      id: 14,
-      text: 'En Matemáticas y Geometría, ¿qué permite visualizar QuiverVision?',
-      options: [
-        'Ecuaciones algebraicas complejas resueltas',
-        'La transición de redes planas 2D a poliedros sólidos 3D que se pueden rotar',
-        'La tabla de multiplicar cantada',
-        'Estadísticas avanzadas de la clase'
-      ],
-      correct: 1
-    },
-    {
-      id: 15,
-      text: '¿Es necesario que el colegio adquiera hardware costoso específico (como cascos VR) para usar Quiver?',
-      options: [
-        'Sí, requiere cascos de $500 USD por estudiante',
-        'No, basta con hojas impresas, lápices de colores y dispositivos móviles o tablets estándar',
-        'Sí, se necesitan proyectores holográficos',
-        'No, funciona en calculadoras'
-      ],
-      correct: 1
-    },
-    {
-      id: 16,
-      text: '¿Qué color de escaneo indica en la app de Quiver que ha detectado correctamente la plantilla entera?',
-      options: [
-        'Rojo a naranja',
-        'Gris a blanco',
-        'Azul a verde',
-        'Negro a amarillo'
-      ],
-      correct: 2
-    },
-    {
-      id: 17,
-      text: 'Para trabajar educación emocional con Quiver, ¿qué estrategia es efectiva?',
-      options: [
-        'Obligar a todos a pintar de color gris',
-        'Pedir que usen colores que expresen su estado de ánimo y reflexionar sobre la animación resultante',
-        'Jugar carreras para ver quién termina primero',
-        'Esconder la tablet si se portan mal'
-      ],
-      correct: 1
-    },
-    {
-      id: 18,
-      text: '¿Qué pasa si el estudiante colorea fuera de las líneas en la plantilla de Quiver?',
-      options: [
-        'La aplicación se bloquea',
-        'El modelo 3D refleja esos trazos fuera de línea, mostrando fielmente la creación del niño',
-        'El dibujo se auto-corrige y queda perfecto',
-        'El modelo pierde todo el color y se vuelve blanco'
-      ],
-      correct: 1
-    },
-    {
-      id: 19,
-      text: 'Además de la cámara, ¿qué otro recurso multimedia suele integrarse en las animaciones de Quiver?',
-      options: [
-        'Solo imágenes sin sonido',
-        'Efectos de sonido, información en audio y minijuegos',
-        'Chat en vivo con el profesor',
-        'Videollamadas con otros colegios'
-      ],
-      correct: 1
-    },
-    {
-      id: 20,
-      text: '¿Cuál es una conclusión pedagógica clave del Laboratorio de QuiverVision?',
-      options: [
-        'La tecnología debe eliminar el uso de papel en las escuelas',
-        'La RA es demasiado compleja para niños pequeños',
-        'Se puede crear un vínculo perfecto y significativo entre actividades analógicas manuales y la tecnología inmersiva',
-        'Colorear es una pérdida de tiempo en la era digital'
+        'La tecnología debe eliminar por completo el uso de papel y lápices en las escuelas modernas',
+        'La Realidad Aumentada es demasiado compleja para niños menores de 12 años',
+        'QuiverVision demuestra que se puede crear un vínculo perfecto y significativo entre actividades analógicas manuales y la tecnología inmersiva, donde la creatividad del estudiante es el eje central',
+        'Colorear es una pérdida de tiempo en la era digital y debería reemplazarse por simulaciones 100% virtuales'
       ],
       correct: 2
     }
@@ -475,221 +365,111 @@ export class LabEvaluacionComponent implements OnInit {
   actionboundQuestions: Question[] = [
     {
       id: 1,
-      text: '¿Qué es Actionbound?',
+      text: 'La docente Lucía quiere sacar a sus alumnos del aula para una actividad innovadora de Historia. Descubre Actionbound. ¿Qué es exactamente esta plataforma y por qué podría transformar su clase?',
       options: [
-        'Un software para hacer hojas de cálculo',
-        'Una plataforma para crear búsquedas del tesoro y rallies digitales en el mundo real',
-        'Un videojuego de disparos',
-        'Una aplicación para dibujar'
+        'Un software para hacer hojas de cálculo con datos históricos en la nube',
+        'Una plataforma que permite crear "Bounds" (búsquedas del tesoro, rallies y aventuras gamificadas digitales) combinando el mundo físico real con elementos como GPS, códigos QR, cuestionarios y misiones multimedia',
+        'Un videojuego de disparos ambientado en la Segunda Guerra Mundial',
+        'Una aplicación de dibujo colaborativo que requiere conexión por cable'
       ],
       correct: 1
     },
     {
       id: 2,
-      text: '¿Cuáles son los dos componentes principales de Actionbound?',
+      text: 'Para crear un Bound, el docente necesita dos elementos. ¿Cuáles son los componentes principales del ecosistema Actionbound y cuál es la función de cada uno?',
       options: [
-        'Cámara y micrófono',
-        'El Bound Creator (web) y la App Actionbound (móvil)',
-        'Teclado y ratón',
-        'Gafas VR y mandos'
+        'Unas gafas VR para el diseño y un proyector holográfico para la ejecución',
+        'El "Bound Creator" (plataforma web donde el docente diseña la ruta con preguntas, GPS y contenido) y la "App Actionbound" (aplicación móvil que los estudiantes usan para recorrer el Bound)',
+        'Un teclado especial de programación y un dron de vigilancia para los estudiantes',
+        'Un microscopio digital para capturar imágenes y un casco de realidad mixta para verlas'
       ],
       correct: 1
     },
     {
       id: 3,
-      text: '¿Qué tecnología principal usa Actionbound para guiar a los estudiantes físicamente?',
+      text: 'El profesor Daniel diseña un Bound sobre sitios patrimoniales del centro de la ciudad. Los estudiantes deben llegar físicamente a cada punto. ¿Qué tecnología principal usa Actionbound para guiarlos por el espacio real?',
       options: [
-        'Cables conectados a un servidor',
-        'Coordenadas GPS y brújula del dispositivo',
-        'Impresión 3D',
-        'Proyectores holográficos'
+        'Cables de red conectados a un servidor central del colegio',
+        'Coordenadas GPS y la brújula del dispositivo móvil, que les indican dirección y distancia a cada punto',
+        'Un sistema de megáfonos inalámbricos que les grita las instrucciones',
+        'Proyectores holográficos instalados previamente en cada esquina de la ciudad'
       ],
       correct: 1
     },
     {
       id: 4,
-      text: '¿Qué es un "Bound"?',
+      text: 'En un Bound de Ciencias, al llegar a la huerta escolar, los estudiantes deben tomar una foto de una planta, grabar un audio explicando su ciclo de vida y responder un quiz. ¿Qué tipo de aprendizaje está fomentando esta actividad?',
       options: [
-        'Un límite de tiempo en la clase',
-        'El nombre que reciben las rutas, rallies o búsquedas creadas en la plataforma',
-        'Un libro de texto digital',
-        'Un error de programación'
+        'Aprendizaje memorístico y pasivo basado exclusivamente en la repetición de definiciones',
+        'Aprendizaje basado en proyectos y aprendizaje cinestésico (en movimiento), donde el estudiante investiga, crea evidencia multimedia y resuelve retos en el lugar real',
+        'Aprendizaje en aislamiento total donde cada estudiante trabaja sin comunicarse con nadie',
+        'Aprendizaje únicamente auditivo mediante podcasts grabados por el docente'
       ],
       correct: 1
     },
     {
       id: 5,
-      text: '¿Cómo ingresan los estudiantes a un Bound creado por el docente?',
+      text: 'La coordinadora académica quiere evaluar los resultados después de una actividad con Actionbound. ¿Qué herramienta de análisis ofrece la plataforma al docente?',
       options: [
-        'Escribiendo 10 páginas de código',
-        'Llamando por teléfono al soporte técnico',
-        'Escaneando un código QR único con la app Actionbound',
-        'Comprando un ticket físico'
+        'Solo puede calificar observando directamente a cada equipo durante toda la actividad',
+        'Genera informes analíticos detallados post-actividad: respuestas de cada equipo, tiempos empleados, fotos y audios subidos, puntuaciones por sección, todo accesible desde la web',
+        'Envía automáticamente las notas al Ministerio de Educación sin intervención del docente',
+        'No ofrece ningún tipo de analítica; el docente debe corregir todo manualmente en papel'
       ],
-      correct: 2
+      correct: 1
     },
     {
       id: 6,
-      text: '¿Qué tipo de aprendizaje promueve principalmente Actionbound?',
+      text: 'Un grupo de 4° grado juega un Bound en equipo. ¿Qué habilidades blandas se desarrollan cuando los estudiantes deben tomar decisiones juntos, repartirse tareas y navegar hacia los puntos?',
       options: [
-        'Aprendizaje memorístico y pasivo',
-        'Aprendizaje basado en proyectos y aprendizaje cinestésico (en movimiento)',
-        'Aprendizaje exclusivo en aislamiento',
-        'Aprendizaje únicamente auditivo'
+        'Egoísmo individualista y competitividad destructiva entre compañeros',
+        'Colaboración, delegación de tareas, comunicación efectiva, toma de decisiones conjuntas y liderazgo compartido',
+        'Aislamiento social y dependencia total de la tecnología sin interacción humana',
+        'Únicamente resistencia física y velocidad de carrera'
       ],
       correct: 1
     },
     {
       id: 7,
-      text: 'En un Bound, ¿qué función cumple el elemento "Información"?',
+      text: 'El docente esconde códigos QR por toda la escuela como parte de un rally de bienvenida para nuevos estudiantes ("Onboarding Escolar"). ¿Cómo integra los QR físicos dentro del Bound?',
       options: [
-        'Elimina a un jugador',
-        'Muestra textos, imágenes, videos o audios para contextualizar un lugar',
-        'Resta puntos al equipo',
-        'Cierra la aplicación'
+        'No se pueden usar QR dentro de Actionbound porque son tecnologías incompatibles',
+        'Los QR solo sirven para descargar la aplicación, no para contenido educativo',
+        'El docente los esconde estratégicamente en el entorno y configura el Bound para que los alumnos deban escanear cada código para desbloquear la siguiente etapa, información o misión',
+        'Los QR se usan exclusivamente para cobrar el pago de la licencia del software'
       ],
-      correct: 1
+      correct: 2
     },
     {
       id: 8,
-      text: '¿Qué requiere hacer un alumno en una "Misión" de Actionbound?',
+      text: 'Un profesor de Educación Física nota que sus estudiantes pasan demasiado tiempo sentados. ¿De qué forma Actionbound combate el sedentarismo en la vida escolar?',
       options: [
-        'Solo leer un texto largo',
-        'Resolver un desafío creativo, como tomar una foto o grabar un audio',
-        'Dormir 10 minutos',
-        'Esconder su celular'
+        'Actionbound fomenta el sedentarismo porque los estudiantes solo miran pantallas sentados',
+        'Solo aumenta los problemas visuales por uso prolongado de dispositivos móviles',
+        'Al requerir desplazamiento físico real hacia puntos GPS, promueve activamente el movimiento, la exploración del entorno y combate el sedentarismo digital',
+        'No tiene absolutamente ningún impacto en la salud física de los participantes'
       ],
-      correct: 1
+      correct: 2
     },
     {
       id: 9,
-      text: '¿Cómo se pueden incluir los Códigos QR físicos dentro de un Bound?',
+      text: 'La innovación pedagógica más potente de Actionbound es invertir los roles: pedir a los propios estudiantes que CREEN un Bound. ¿Cuál es el valor educativo de esta estrategia?',
       options: [
-        'No se pueden usar QR en Actionbound',
-        'Solo sirven para descargar la app',
-        'El docente los esconde en el entorno y los alumnos deben escanearlos para poder avanzar',
-        'Se usan para pagar la licencia'
+        'Es simplemente una excusa para que el profesor no tenga que trabajar en la planificación',
+        'Activa habilidades cognitivas de orden superior: síntesis de contenido, estructuración lógica de secuencias, diseño de experiencia de usuario y empatía con el participante',
+        'Es una forma de castigo para los estudiantes que no terminaron sus tareas',
+        'Solo sirve para que gasten la batería de sus dispositivos y se distraigan'
       ],
-      correct: 2
+      correct: 1
     },
     {
       id: 10,
-      text: '¿Qué beneficio ofrece Actionbound para la evaluación docente?',
+      text: 'Al cerrar la capacitación sobre Actionbound, ¿cuál es la transformación más profunda que esta herramienta representa para la educación?',
       options: [
-        'Califica automáticamente el comportamiento en el recreo',
-        'Genera informes analíticos detallados post-actividad (respuestas, tiempo, fotos) en la web',
-        'Reemplaza al Ministerio de Educación',
-        'Ninguno, el docente debe corregir todo a mano'
-      ],
-      correct: 1
-    },
-    {
-      id: 11,
-      text: '¿Cómo se puede usar Actionbound en la materia de Historia?',
-      options: [
-        'Jugando ajedrez',
-        'Creando un rally en sitios patrimoniales de la ciudad, desbloqueando datos in situ',
-        'Leyendo un PDF estático en el aula',
-        'No tiene aplicaciones en Historia'
-      ],
-      correct: 1
-    },
-    {
-      id: 12,
-      text: '¿Qué es el "Onboarding Escolar" propuesto como ejemplo de uso?',
-      options: [
-        'Enseñar a usar una patineta',
-        'Un rally de bienvenida para nuevos alumnos explorando las instalaciones del colegio',
-        'Una clase de inglés avanzado',
-        'Un sistema de castigos'
-      ],
-      correct: 1
-    },
-    {
-      id: 13,
-      text: '¿Qué impacto tiene Actionbound en la salud física de los estudiantes?',
-      options: [
-        'Fomenta el sedentarismo',
-        'Aumenta los problemas visuales exclusivamente',
-        'Promueve el movimiento y combate el sedentarismo al requerir desplazamiento físico',
-        'No tiene ningún impacto'
-      ],
-      correct: 2
-    },
-    {
-      id: 14,
-      text: '¿Qué habilidad blanda se desarrolla fuertemente al jugar Bounds en grupo?',
-      options: [
-        'Egoísmo',
-        'Competitividad destructiva',
-        'Colaboración, delegación de tareas y toma de decisiones conjuntas',
-        'Aislamiento social'
-      ],
-      correct: 2
-    },
-    {
-      id: 15,
-      text: '¿Cuál es el valor pedagógico de pedir a los propios estudiantes que CREEN un Bound?',
-      options: [
-        'Es para que el profesor no trabaje',
-        'Fomenta habilidades superiores: síntesis, estructuración lógica y empatía con el usuario',
-        'Es un castigo',
-        'Para que gasten la batería de sus dispositivos'
-      ],
-      correct: 1
-    },
-    {
-      id: 16,
-      text: 'En un Bound, si una pregunta tiene respuesta exacta, ¿qué sucede si los estudiantes se equivocan?',
-      options: [
-        'Pierden sus dispositivos',
-        'Dependiendo de la configuración, pueden perder puntos o recibir penalizaciones de tiempo',
-        'Ganan más puntos',
-        'El juego se borra'
-      ],
-      correct: 1
-    },
-    {
-      id: 17,
-      text: '¿Por qué se dice que Actionbound contextualiza el aprendizaje?',
-      options: [
-        'Porque usa mucho texto',
-        'Porque vincula los conceptos teóricos directamente con lugares físicos reales específicos',
-        'Porque requiere conexión a internet',
-        'Porque se traduce a varios idiomas'
-      ],
-      correct: 1
-    },
-    {
-      id: 18,
-      text: '¿Qué es un "Torneo" dentro del contexto de un Bound?',
-      options: [
-        'Peleas físicas entre equipos',
-        'Un modo donde los equipos compiten simultáneamente para completar retos y ganar puntos',
-        'Un juego de cartas',
-        'Una carrera de 100 metros planos'
-      ],
-      correct: 1
-    },
-    {
-      id: 19,
-      text: '¿Actionbound requiere saber programar código complejo para crear una ruta?',
-      options: [
-        'Sí, se necesita saber C++ y Python',
-        'No, el Bound Creator usa una interfaz intuitiva de arrastrar y soltar',
-        'Sí, requiere conocimientos de hacking',
-        'Solo si se usa en bachillerato'
-      ],
-      correct: 1
-    },
-    {
-      id: 20,
-      text: '¿Cuál es una conclusión central del Laboratorio Actionbound?',
-      options: [
-        'El uso de pantallas siempre significa quedarse sentado',
-        'La escuela ya no termina en las cuatro paredes del aula; el mundo real es el tablero de juego',
-        'Solo sirve para clases de Educación Física',
-        'Los docentes no deben usar GPS por privacidad'
+        'El uso de pantallas y dispositivos móviles siempre significa quedarse sentado en un escritorio',
+        'La escuela ya no termina en las cuatro paredes del aula: con Actionbound el mundo real se convierte en el tablero de juego, contextualizando el aprendizaje en los lugares donde la teoría cobra vida',
+        'Actionbound solo es útil para las clases de Educación Física y no tiene aplicación en otras materias',
+        'Los docentes no deberían usar GPS por cuestiones de privacidad y la tecnología debería prohibirse'
       ],
       correct: 1
     }
@@ -698,221 +478,111 @@ export class LabEvaluacionComponent implements OnInit {
   metaversoQuestions: Question[] = [
     {
       id: 1,
-      text: '¿Qué es el Metaverso en un contexto educativo?',
+      text: 'El rector de un colegio escucha por primera vez el término "Metaverso educativo" y quiere entender de qué se trata. ¿Cuál es la definición más precisa en un contexto de enseñanza?',
       options: [
-        'Un libro de texto digital en PDF',
-        'La evolución del internet hacia espacios virtuales tridimensionales y compartidos',
-        'Una red social exclusiva para profesores',
-        'Un sistema de calificaciones automático'
+        'Un libro de texto digital en formato PDF que se lee en una tablet',
+        'La evolución del internet hacia espacios virtuales tridimensionales y compartidos donde estudiantes y docentes —representados por avatares— pueden interactuar, colaborar y aprender como si estuvieran juntos físicamente',
+        'Una red social exclusiva para profesores donde comparten memes educativos',
+        'Un sistema automatizado de calificaciones que reemplaza al docente'
       ],
       correct: 1
     },
     {
       id: 2,
-      text: '¿Qué dispositivo de hardware es el más representativo para acceder al Metaverso impulsado por Meta?',
+      text: 'Un estudiante se pone las gafas Meta Quest y reporta que "siente que realmente está en el fondo del océano". ¿Cómo se denomina este fenómeno neurológico que distingue a la VR de cualquier otra tecnología educativa?',
       options: [
-        'Un proyector de diapositivas',
-        'Meta Quest (visores de Realidad Virtual/Mixta)',
-        'Un ratón inalámbrico',
-        'Una calculadora científica'
+        'Efecto placebo tecnológico sin base científica',
+        '"Sentido de Presencia": la reacción genuina del cerebro ante la experiencia virtual como si estuviera ocurriendo realmente, activando las mismas respuestas emocionales y cognitivas',
+        'Hipnosis digital inducida por las pantallas de alta resolución',
+        'Un simple efecto visual que desaparece al quitarse las gafas'
       ],
       correct: 1
     },
     {
       id: 3,
-      text: '¿Qué significa el "Sentido de Presencia" en la Realidad Virtual?',
+      text: 'En el Metaverso, cada participante necesita una identidad digital. ¿Cómo se representa un estudiante dentro de estos espacios virtuales y qué capacidades tiene esa representación?',
       options: [
-        'Estar físicamente en la escuela',
-        'La reacción del cerebro a la experiencia virtual como si estuviera ocurriendo realmente',
-        'Llamar lista en clase',
-        'Encender la cámara web'
+        'A través de un código de barras numérico sin forma visual',
+        'Mediante un "Avatar" personalizable que replica en tiempo real sus movimientos de cabeza, manos y expresiones faciales, permitiendo comunicación no verbal natural',
+        'Como un texto plano que muestra su nombre en la pantalla sin ninguna forma humana',
+        'No tienen representación visual; solo se escucha su voz como en una llamada telefónica'
       ],
       correct: 1
     },
     {
       id: 4,
-      text: '¿Cómo se representa un estudiante dentro del Metaverso?',
+      text: 'La profesora Ana quiere hacer una clase colaborativa donde sus estudiantes manipulen modelos 3D en una pizarra infinita. ¿Qué plataforma de Meta permite exactamente esto?',
       options: [
-        'A través de un código de barras',
-        'Mediante un "Avatar" que replica sus movimientos y expresiones',
-        'Como un texto en pantalla',
-        'No tienen representación visual'
+        'Facebook Marketplace — un espacio de comercio electrónico',
+        'Horizon Workrooms — un espacio virtual colaborativo donde clases y equipos se reúnen mediante avatares, comparten pantallas, dibujan en pizarras y manipulan objetos 3D',
+        'WhatsApp Business — un servicio de mensajería comercial',
+        'Instagram Reels — una plataforma de videos cortos verticales'
       ],
       correct: 1
     },
     {
       id: 5,
-      text: '¿Qué es Horizon Workrooms?',
+      text: 'Un neurólogo escolar recomienda la VR para estudiantes con TDAH (déficit de atención e hiperactividad). ¿Cuál es el mecanismo que hace efectiva esta tecnología para estos estudiantes?',
       options: [
-        'Un programa para hacer hojas de cálculo',
-        'Un espacio virtual colaborativo donde equipos o clases pueden reunirse mediante avatares',
-        'Un juego de carreras de autos',
-        'Un motor de búsqueda de internet'
+        'Les permite jugar videojuegos de acción en clase para canalizar su energía',
+        'Al bloquear los estímulos visuales y sonoros del mundo físico, la VR reduce radicalmente las distracciones externas, creando un entorno de concentración pura',
+        'Hace que el profesor hable más fuerte a través de los altavoces del visor',
+        'No tiene ninguna ventaja; de hecho la VR empeora los síntomas del TDAH'
       ],
       correct: 1
     },
     {
       id: 6,
-      text: '¿Qué tecnología permite ver el aula física mezclada con hologramas virtuales?',
+      text: 'El coordinador TIC propone sesiones de VR en el aula. ¿Cuál es la estrategia pedagógica correcta llamada "Micro-Inmersión" y por qué se recomienda?',
       options: [
-        'Realidad Mixta (Passthrough)',
-        'Cine 4D',
-        'Televisión por cable',
-        'Bluetooth'
+        'Sumergir físicamente el visor en agua para probar su resistencia antes de usarlo',
+        'Sesiones cortas de 10-15 minutos enfocadas en un solo objetivo pedagógico, seguidas de un debate y reflexión en el mundo real, para evitar fatiga visual y maximizar el impacto',
+        'Dejar a los estudiantes usando el visor durante 5 horas continuas para máxima inmersión',
+        'Usar gafas de tamaño reducido que permiten leer textos tradicionales'
       ],
-      correct: 0
+      correct: 1
     },
     {
       id: 7,
-      text: '¿Qué ventaja tiene la VR para estudiantes con problemas de atención o hiperactividad?',
+      text: 'En una clase de Anatomía, los estudiantes "entran" virtualmente al torrente sanguíneo y "caminan" entre glóbulos rojos. ¿Qué hace posible este tipo de experiencia educativa imposible en el mundo real?',
       options: [
-        'Les permite jugar videojuegos en clase',
-        'Al bloquear los estímulos visuales del mundo físico, reduce radicalmente las distracciones',
-        'Hace que el profesor hable más fuerte',
-        'Ninguna ventaja'
+        'Solo están viendo una presentación de PowerPoint proyectada en la pared',
+        'La VR permite simular entornos a cualquier escala: los estudiantes pueden meterse virtualmente dentro de órganos, diseccionar estructuras a escala real y observar procesos biológicos en primera persona',
+        'Están escuchando una conferencia de un médico por teléfono mientras ven diapositivas',
+        'Están dibujando en la pizarra tradicional con tizas de colores'
       ],
       correct: 1
     },
     {
       id: 8,
-      text: '¿Qué es una "Micro-Inmersión" en la estrategia pedagógica de la VR?',
+      text: 'Un colegio rural colombiano quiere que sus estudiantes "visiten" el Museo del Louvre en París. ¿A qué concepto del Metaverso educativo se refiere esta posibilidad?',
       options: [
-        'Sumergir el visor en agua',
-        'Sesiones cortas (10-15 min) enfocadas en un objetivo específico, seguidas de un debate en el mundo real',
-        'Jugar 5 horas seguidas sin parar',
-        'Usar gafas pequeñas'
+        'A organizar una votación digital sobre qué museo visitar y financiar el viaje',
+        '"Democratización de Experiencias": viajes, visitas y simulaciones que serían imposibles o prohibitivamente costosos se vuelven accesibles para cualquier escuela conectada al Metaverso',
+        'A que toda la tecnología educativa es completamente gratuita sin ningún costo',
+        'A jugar un videojuego de trivia sobre museos europeos'
       ],
       correct: 1
     },
     {
       id: 9,
-      text: 'En el Metaverso, ¿qué función cumple el "Audio Espacial"?',
+      text: 'Los visores Meta Quest permiten interactuar sin mandos físicos. ¿Qué tecnología hace posible manipular objetos virtuales de forma natural usando las manos desnudas?',
       options: [
-        'Escuchar música muy alto',
-        'Permite percibir de qué dirección y distancia provienen las voces, imitando la realidad',
-        'Traducir idiomas automáticamente',
-        'Grabar la clase'
+        'Teclados inalámbricos Bluetooth adaptados especialmente para VR',
+        'Hand Tracking (seguimiento de manos): las cámaras del visor detectan y rastrean los movimientos de los dedos y las manos en tiempo real, permitiendo interacción natural',
+        'Comandos de voz donde el usuario grita las instrucciones al dispositivo',
+        'Sensores de parpadeo que interpretan el movimiento de los ojos como clics'
       ],
       correct: 1
     },
     {
       id: 10,
-      text: '¿Qué se conoce como el "Modelo de Piloto y Copiloto"?',
+      text: 'Al implementar el Metaverso en la escuela, la rectora pregunta: "¿Qué riesgos éticos debemos considerar?" ¿Cuál es la respuesta más completa?',
       options: [
-        'Una clase sobre aviación',
-        'Una estrategia donde un estudiante usa el visor (piloto) y otro lo guía mirando la pantalla (copiloto)',
-        'Un juego de conducción',
-        'El profesor controla a todos los estudiantes'
-      ],
-      correct: 1
-    },
-    {
-      id: 11,
-      text: '¿Cómo puede utilizarse el Metaverso en Anatomía?',
-      options: [
-        'Viendo fotos en un libro de texto',
-        'Metidos virtualmente dentro de un torrente sanguíneo o diseccionando órganos a escala real',
-        'Escuchando una charla de un médico',
-        'Dibujando en la pizarra'
-      ],
-      correct: 1
-    },
-    {
-      id: 12,
-      text: '¿Qué es un "Aula Espejo Internacional"?',
-      options: [
-        'Poner espejos reales en el salón',
-        'Conectar estudiantes de diferentes países en una misma sala virtual para colaboración global',
-        'Grabar la clase y enviarla por correo',
-        'Usar gafas de sol en clase'
-      ],
-      correct: 1
-    },
-    {
-      id: 13,
-      text: '¿Por qué se considera a la VR "la máquina de empatía definitiva"?',
-      options: [
-        'Porque es muy barata',
-        'Porque permite experimentar el mundo desde la perspectiva en primera persona de otra persona o época',
-        'Porque te hace llorar siempre',
-        'Porque lee la mente'
-      ],
-      correct: 1
-    },
-    {
-      id: 14,
-      text: '¿Qué son los "Simuladores de Riesgo" en VR?',
-      options: [
-        'Juegos de azar',
-        'Apps para entrenar procedimientos peligrosos (ej. químicos o primeros auxilios) sin consecuencias reales',
-        'Antivirus para computadoras',
-        'Simuladores de bolsa de valores'
-      ],
-      correct: 1
-    },
-    {
-      id: 15,
-      text: '¿Cómo ayuda el Metaverso al aprendizaje de Idiomas?',
-      options: [
-        'Traduciendo el pensamiento',
-        'Practicando en escenarios virtuales (ej. un restaurante en Londres) donde el avatar reduce el miedo escénico',
-        'Imprimiendo diccionarios 3D',
-        'Leyendo subtítulos en el aire'
-      ],
-      correct: 1
-    },
-    {
-      id: 16,
-      text: '¿Es recomendable impartir una clase tradicional entera de 45 minutos dentro de la Realidad Virtual?',
-      options: [
-        'Sí, es lo más recomendado',
-        'No, puede causar fatiga visual y desconexión física. Se recomiendan sesiones más cortas.',
-        'Sí, hasta 3 horas seguidas',
-        'Depende de la conexión WiFi'
-      ],
-      correct: 1
-    },
-    {
-      id: 17,
-      text: '¿A qué se refiere la "Democratización de Experiencias" en el Metaverso?',
-      options: [
-        'A votar por el mejor juego',
-        'A que viajes imposibles o costosos (ir a la Luna o al Louvre) se vuelven accesibles para escuelas conectadas',
-        'A que la tecnología es gratis para todos',
-        'A jugar a la política'
-      ],
-      correct: 1
-    },
-    {
-      id: 18,
-      text: 'En el Metaverso, ¿cómo se interactúa de forma más natural sin mandos físicos?',
-      options: [
-        'A través de teclados especiales',
-        'A través del seguimiento de manos (Hand Tracking) que captan las cámaras del visor',
-        'Hablando fuerte',
-        'Pestañeando'
-      ],
-      correct: 1
-    },
-    {
-      id: 19,
-      text: '¿Qué es "Bodyswaps" según la información del laboratorio?',
-      options: [
-        'Una app de ejercicios físicos',
-        'Una aplicación para practicar entrevistas o resolución de conflictos y desarrollar habilidades blandas',
-        'Una tienda de ropa virtual',
-        'Un juego de acción'
-      ],
-      correct: 1
-    },
-    {
-      id: 20,
-      text: '¿Qué consideración ética es crítica al usar el Metaverso en la escuela?',
-      options: [
-        'Prohibir que los avatares usen sombreros',
-        'Establecer normas claras de comportamiento, proteger datos biométricos y controlar tiempos de exposición',
-        'Solo permitir jugar fuera del horario escolar',
-        'Evitar enseñar materias de ciencias'
+        'El único riesgo es que los avatares usen sombreros inapropiados en el espacio virtual',
+        'Se deben establecer normas claras de comportamiento en entornos virtuales, proteger los datos biométricos que capturan los sensores, controlar los tiempos de exposición para evitar fatiga, y garantizar que la VR complemente (nunca reemplace) la interacción humana presencial',
+        'Solo es necesario permitir el uso de VR fuera del horario escolar sin supervisión',
+        'No existen riesgos éticos porque la tecnología es completamente segura por defecto'
       ],
       correct: 1
     }
