@@ -1,10 +1,10 @@
-<!-- EVALUACIÓN - Laboratorio -->
+<!-- EVALUACIÃN - Laboratorio -->
 <div *ngIf="['1', '2', '3', '4', '5', '7'].includes(labId || '')" class="lab-content">
 
   <!-- Quiz Header -->
   <div class="section-title" *ngIf="!submitted">
-    <h3>Evaluación: {{ labId === '1' ? 'Introducción a la RA' : (labId === '2' ? 'Merge Cube' : (labId === '3' ? 'QuiverVision' : (labId === '4' ? 'Actionbound' : (labId === '5' ? 'El Metaverso Meta' : 'Modelo con Geoposición')))) }}</h3>
-    <p class="section-subtitle">{{ labId === '1' ? 'Responde las 10 preguntas para evaluar tu comprensión sobre los fundamentos de la Realidad Aumentada.' : 'Responde las 20 preguntas para evaluar tu apropiación sobre esta tecnología.' }}</p>
+    <h3>EvaluaciÃ³n: {{ labId === '1' ? 'IntroducciÃ³n a la RA' : (labId === '2' ? 'Merge Cube' : (labId === '3' ? 'QuiverVision' : (labId === '4' ? 'Actionbound' : (labId === '5' ? 'El Metaverso Meta' : 'Modelo con GeoposiciÃ³n')))) }}</h3>
+    <p class="section-subtitle">{{ labId === '1' ? 'Responde las 10 preguntas para evaluar tu comprensiÃ³n sobre los fundamentos de la Realidad Aumentada.' : 'Responde las 20 preguntas para evaluar tu apropiaciÃ³n sobre esta tecnologÃ­a.' }}</p>
     <div class="title-line"></div>
   </div>
 
@@ -47,7 +47,7 @@
       class="glass-button submit-btn" 
       [disabled]="!canSubmit()" 
       (click)="submitEvaluation()">
-      Enviar Evaluación
+      Enviar EvaluaciÃ³n
     </button>
     <p *ngIf="!canSubmit()" class="submit-hint">Debes responder todas las preguntas antes de enviar.</p>
   </div>
@@ -55,7 +55,7 @@
   <!-- Results -->
   <div *ngIf="submitted" class="results-container">
     <div class="section-title">
-      <h3>Resultados de la Evaluación</h3>
+      <h3>Resultados de la EvaluaciÃ³n</h3>
       <div class="title-line"></div>
     </div>
 
@@ -66,22 +66,22 @@
       </div>
       <div class="results-detail">
         <h4>{{ score }} de {{ totalQuestions }} respuestas correctas</h4>
-        <p *ngIf="getPercentage() >= 90">¡Excelente! Demuestras un dominio sobresaliente del tema.</p>
-        <p *ngIf="getPercentage() >= 70 && getPercentage() < 90">¡Muy bien! Tu apropiación del tema es sólida.</p>
-        <p *ngIf="getPercentage() >= 50 && getPercentage() < 70">Buen esfuerzo. Revisa los contenidos para mejorar tu comprensión.</p>
-        <p *ngIf="getPercentage() < 50">Te recomendamos repasar las pestañas de Inicio, Desarrollo y Cierre antes de reintentar.</p>
+        <p *ngIf="getPercentage() >= 90">Â¡Excelente! Demuestras un dominio sobresaliente del tema.</p>
+        <p *ngIf="getPercentage() >= 70 && getPercentage() < 90">Â¡Muy bien! Tu apropiaciÃ³n del tema es sÃ³lida.</p>
+        <p *ngIf="getPercentage() >= 50 && getPercentage() < 70">Buen esfuerzo. Revisa los contenidos para mejorar tu comprensiÃ³n.</p>
+        <p *ngIf="getPercentage() < 50">Te recomendamos repasar las pestaÃ±as de Inicio, Desarrollo y Cierre antes de reintentar.</p>
       </div>
     </div>
 
     <!-- Answer Review -->
     <div class="review-section">
-      <h4 class="review-title">Revisión de Respuestas</h4>
+      <h4 class="review-title">RevisiÃ³n de Respuestas</h4>
       <div *ngFor="let question of getQuestions()" class="glass-panel review-card" 
            [class.correct]="answers[question.id] === question.correct"
            [class.incorrect]="answers[question.id] !== question.correct">
         <div class="review-header">
-          <span class="review-icon" *ngIf="answers[question.id] === question.correct">✓</span>
-          <span class="review-icon wrong" *ngIf="answers[question.id] !== question.correct">✗</span>
+          <span class="review-icon" *ngIf="answers[question.id] === question.correct">â</span>
+          <span class="review-icon wrong" *ngIf="answers[question.id] !== question.correct">â</span>
           <p>{{ question.text }}</p>
         </div>
         <div class="review-answer">
@@ -96,16 +96,16 @@
     </div>
 
     <div class="retry-section">
-      <button class="glass-button retry-btn" (click)="retryEvaluation()">Reintentar Evaluación</button>
+      <button class="glass-button retry-btn" (click)="retryEvaluation()">Reintentar EvaluaciÃ³n</button>
     </div>
   </div>
 
 </div>
 
-<!-- Placeholder para labs sin evaluación -->
+<!-- Placeholder para labs sin evaluaciÃ³n -->
 <div *ngIf="!['1', '2', '3', '4', '5', '7'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
-  <h3>Esta misión no tiene evaluación</h3>
+  <h3>Esta misiÃ³n no tiene evaluaciÃ³n</h3>
   <p style="color: var(--text-secondary); margin-top: 15px;">
-    Evaluación en desarrollo para este laboratorio.
+    EvaluaciÃ³n en desarrollo para este laboratorio.
   </p>
 </div>
