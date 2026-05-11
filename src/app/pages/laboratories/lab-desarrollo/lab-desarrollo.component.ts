@@ -42,7 +42,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Lenguaje',
       subject: 'Lenguaje',
       icon: '📖',
-      modelPath: '/assets/models/lenguaje_model.glb',
+      modelPath: '/assets/models/timeworx-world-4045.glb',
       color: '#ef4444',
       description: 'Modelo 3D para la asignatura de Lenguaje. Explora el mundo de las palabras y la gramática.',
       markerId: 0
@@ -51,7 +51,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Matemáticas',
       subject: 'Matemáticas',
       icon: '📐',
-      modelPath: '/assets/models/matematicas_model.glb',
+      modelPath: '/assets/models/nactivi-animación-4232.glb',
       color: '#3b82f6',
       description: 'Modelo 3D para Matemáticas. Figuras geométricas, números y lógica espacial.',
       markerId: 1
@@ -60,7 +60,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Ciencias Naturales',
       subject: 'Ciencias Naturales',
       icon: '🫀',
-      modelPath: '/assets/models/ciencias_model.glb',
+      modelPath: '/assets/models/pixellabs-glb-3347.glb',
       color: '#22c55e',
       description: 'Modelo 3D de Ciencias Naturales. Biología, ecosistemas y anatomía.',
       markerId: 2
@@ -69,7 +69,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Sociales',
       subject: 'Sociales',
       icon: '🌍',
-      modelPath: '/assets/models/sociales_model.glb',
+      modelPath: '/assets/models/pixellabs-skull-potion-3558.glb',
       color: '#f59e0b',
       description: 'Modelo 3D para Sociales. Geografía, historia y civilizaciones.',
       markerId: 3
@@ -78,7 +78,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Inglés',
       subject: 'Inglés',
       icon: '🗣️',
-      modelPath: '/assets/models/ingles_model.glb',
+      modelPath: '/assets/models/pixellabs-robot-3332.glb',
       color: '#8b5cf6',
       description: 'Modelo 3D interactivo para aprender y practicar vocabulario en Inglés.',
       markerId: 4
@@ -87,7 +87,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Comprensión de lectura',
       subject: 'Comprensión de lectura',
       icon: '📚',
-      modelPath: '/assets/models/comprension_model.glb',
+      modelPath: '/assets/models/pixellabs-potion-3620.glb',
       color: '#ec4899',
       description: 'Modelo 3D para ejercitar y evaluar la comprensión lectora.',
       markerId: 5
@@ -212,6 +212,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       if (!this.arScriptsLoaded) {
         await this.loadScript('https://aframe.io/releases/1.4.0/aframe.min.js');
         await this.loadScript('https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js');
+        await this.loadScript('https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js');
         this.arScriptsLoaded = true;
       }
 
@@ -552,75 +553,14 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
         markerTag = `<a-marker type="barcode" value="${model.markerId}" id="marker-${model.markerId}">`;
       }
 
-      if (model.markerId === 1) {
-        // ── CUERPO HUMANO TRANSLÚCIDO (marcador kanji / centro) ──────────────
-        sceneContent += `
-          ${markerTag}
-            <a-entity id="ar-model-${model.markerId}" position="0 0 0" rotation="-90 0 0" scale="0.9 0.9 0.9">
-              <a-entity animation="property: position; to: 0 0.1 0; dir: alternate; dur: 2500; loop: true; easing: easeInOutSine">
-
-                <!-- Plano con textura dinámica del sistema circulatorio -->
-                <a-entity circulatory-body
-                  geometry="primitive: plane; width: 1; height: 2"
-                  position="0 0 0.01"
-                  material="transparent: true; opacity: 1; side: double; depthWrite: false">
-                </a-entity>
-
-                <!-- Aura corporal -->
-                <a-plane width="1.08" height="2.08" position="0 0 -0.01"
-                  material="color: #88ccff; opacity: 0.06; transparent: true; side: double; depthWrite: false">
-                </a-plane>
-
-                <!-- Pulso de luz del corazón -->
-                <a-sphere position="-0.06 0.26 0.04" radius="0.07" color="#D4537E" opacity="0.5"
-                  animation="property: scale; from: 1 1 1; to: 1.4 1.4 1.4; dir: alternate; dur: 650; loop: true; easing: easeInOutSine">
-                </a-sphere>
-
-                <!-- Halo respiratorio de los pulmones -->
-                <a-sphere position="-0.16 0.30 0.03" radius="0.09" color="#97C459" opacity="0.18"
-                  animation="property: scale; from: 1 1 1; to: 1.18 1.18 1.18; dir: alternate; dur: 2400; loop: true; easing: easeInOutSine">
-                </a-sphere>
-                <a-sphere position="0.10 0.30 0.03" radius="0.09" color="#97C459" opacity="0.18"
-                  animation="property: scale; from: 1.1 1.1 1.1; to: 1 1 1; dir: alternate; dur: 2400; loop: true; easing: easeInOutSine">
-                </a-sphere>
-
-                <!-- Partículas orbitales de energía -->
-                <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 9000; easing: linear">
-                  <a-sphere position="0.60 0.30 0"  radius="0.03" color="#E24B4A" opacity="0.9"
-                    animation="property: position; from: 0.60 0.30 0; to: 0.60 0.80 0; dir: alternate; dur: 1700; loop: true; easing: easeInOutSine">
-                  </a-sphere>
-                  <a-sphere position="-0.60 0.50 0" radius="0.03" color="#378ADD" opacity="0.9"
-                    animation="property: position; from: -0.60 0.50 0; to: -0.60 0.10 0; dir: alternate; dur: 2100; loop: true; easing: easeInOutSine">
-                  </a-sphere>
-                  <a-sphere position="0.60 -0.30 0" radius="0.025" color="#97C459" opacity="0.9"
-                    animation="property: position; from: 0.60 -0.30 0; to: 0.60 -0.70 0; dir: alternate; dur: 1500; loop: true; easing: easeInOutSine">
-                  </a-sphere>
-                  <a-sphere position="-0.60 -0.50 0" radius="0.025" color="#EF9F27" opacity="0.9"
-                    animation="property: position; from: -0.60 -0.50 0; to: -0.60 -0.10 0; dir: alternate; dur: 1900; loop: true; easing: easeInOutSine">
-                  </a-sphere>
-                </a-entity>
-
-              </a-entity>
-            </a-entity>
-          </a-marker>
-        `;
-      } else {
-        // ── Modelos genéricos para los otros marcadores ──────────────────────
-        sceneContent += `
-          ${markerTag}
-            <a-entity id="ar-model-${model.markerId}" position="0 0 0" rotation="-90 0 0" scale="0.8 0.8 0.8">
-              <a-entity animation="property: position; to: 0 0.2 0; dir: alternate; dur: 2000; loop: true">
-                <a-sphere position="0 1.8 0" radius="0.3" color="${model.color}" opacity="0.9"></a-sphere>
-                <a-cylinder position="0 1.0 0" radius="0.3" height="1.0" color="${model.color}" opacity="0.8"></a-cylinder>
-                <a-cylinder position="-0.4 1.2 0" radius="0.1" height="0.8" rotation="0 0 30" color="${model.color}" opacity="0.9"></a-cylinder>
-                <a-cylinder position="0.4 1.2 0" radius="0.1" height="0.8" rotation="0 0 -30" color="${model.color}" opacity="0.9"></a-cylinder>
-                <a-cylinder position="-0.15 0.4 0" radius="0.1" height="0.8" color="${model.color}" opacity="0.9"></a-cylinder>
-                <a-cylinder position="0.15 0.4 0" radius="0.1" height="0.8" color="${model.color}" opacity="0.9"></a-cylinder>
-              </a-entity>
-            </a-entity>
-          </a-marker>
-        `;
-      }
+      // ── Cargar el modelo .glb correspondiente ──────────────────────
+      sceneContent += `
+        ${markerTag}
+          <a-entity id="ar-model-${model.markerId}" position="0 0 0" rotation="-90 0 0" scale="0.8 0.8 0.8">
+            <a-entity gltf-model="url(${model.modelPath})" animation-mixer></a-entity>
+          </a-entity>
+        </a-marker>
+      `;
     });
 
     sceneContent += `<a-entity camera></a-entity>`;
