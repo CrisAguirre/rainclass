@@ -591,111 +591,111 @@ export class LabEvaluacionComponent implements OnInit {
   visualizadorQuestions: Question[] = [
     {
       id: 1,
-      text: '¿Qué diferencia fundamental tiene la RA basada en marcadores respecto a la lectura simple de QR?',
+      text: '¿Cuántas temáticas principales abarca el Visor de Modelos 3D en la Misión 6?',
       options: [
-        'Requéere internet más rápido',
-        'El modelo 3D se ancla espacialmente al marcador manteniendo posición y rotación en tiempo real',
-        'Solo funciona con gafas VR',
-        'Genera modelos más coloridos'
-      ],
-      correct: 1
-    },
-    {
-      id: 2,
-      text: '¿Qué son los "6 grados de libertad" (6DoF) en el contexto de la RA?',
-      options: [
-        'Seis tipos de marcadores diferentes',
-        'Seis colores posibles para el modelo 3D',
-        '3 ejes de traslación (X,Y,Z) + 3 ejes de rotación (pitch, yaw, roll)',
-        'Seis niveles de dificultad'
+        'Tres temáticas',
+        'Cuatro temáticas',
+        'Seis temáticas (Lenguaje, Matemáticas, Ciencias Naturales, Sociales, Inglés y Comprensión)',
+        'Diez temáticas'
       ],
       correct: 2
     },
     {
-      id: 3,
-      text: '¿Qué biblioteca JavaScript de código abierto se puede usar para crear experiencias WebAR con marcadores?',
+      id: 2,
+      text: '¿Para qué sirve el código QR en esta misión?',
       options: [
-        'jQuery 3D',
-        'AR.js',
-        'Bootstrap AR',
-        'React Native VR'
+        'Para descargar un archivo PDF',
+        'Para activar la visualización del modelo 3D interactivo correspondiente a cada temática',
+        'Para conectarse al WiFi del colegio',
+        'Para compartir resultados en redes sociales'
+      ],
+      correct: 1
+    },
+    {
+      id: 3,
+      text: 'Si un estudiante escanea el QR de "Ciencias Naturales", ¿qué tipo de modelo visualizará?',
+      options: [
+        'Un sólido geométrico o ecuación',
+        'Un modelo interactivo relacionado con biología y anatomía',
+        'Un mapa político interactivo',
+        'Un libro de vocabulario en inglés'
       ],
       correct: 1
     },
     {
       id: 4,
-      text: '¿Qué es una "matriz de transformación" en la RA basada en marcadores?',
+      text: '¿Qué ventaja pedagógica ofrece visualizar figuras matemáticas en 3D?',
       options: [
-        'Una hoja de cálculo con datos del estudiante',
-        'Un filtro de color para la cámara',
-        'Una matriz 4x4 qué contiene la posición, rotación y escala del marcador en el espacio 3D',
-        'Un código QR especial'
+        'Mejora la caligrafía de los números',
+        'Permite comprender mejor la lógica espacial y las propiedades de las figuras',
+        'Reduce el tiempo de la clase',
+        'No ofrece ninguna ventaja real'
       ],
-      correct: 2
+      correct: 1
     },
     {
       id: 5,
-      text: '¿Qué es un "marcador fiducial"?',
+      text: '¿Qué elemento visual se destaca en la animación inicial de introducción a la Misión 6?',
       options: [
-        'Un dispositivo electrÃúnico con sensores',
-        'Un patrón visual de alto contraste qué los algoritmás de visión por computadora reconocen fácilmente',
-        'Una marca de agua invisible',
-        'Un código de barras comercial'
+        'Un cubo flotante',
+        'Un iris de ojo humano interactivo y brillante',
+        'Un holograma de una persona',
+        'Un marcador QR rotando'
       ],
       correct: 1
     },
     {
       id: 6,
-      text: '¿Qué framework declarativo se integra con AR.js para construir escenas 3D usando HTML?',
+      text: '¿Qué identificador interno utiliza el modelo de Comprensión de Lectura para ser reconocido?',
       options: [
-        'Angular Material',
-        'A-Frame',
-        'Three.js puro',
-        'WebGL directo'
+        'RAINCLASS_MATH_3D',
+        'RAINCLASS_SOCIALES_3D',
+        'RAINCLASS_COMPRENSION_3D',
+        'RAINCLASS_INGLES_3D'
+      ],
+      correct: 2
+    },
+    {
+      id: 7,
+      text: 'El área de Ciencias Sociales en este visor 3D se enfoca en:',
+      options: [
+        'La enseñanza de verbos irregulares',
+        'Geografía y civilizaciones',
+        'Anatomía del corazón',
+        'Análisis sintáctico de oraciones'
       ],
       correct: 1
     },
     {
-      id: 7,
-      text: '¿Qué requésito del navegador es necesario para acceder a la cámara en una experiencia WebAR?',
-      options: [
-        'Solo funciona en Google Chrome',
-        'Requéere una extensión especial',
-        'El sitio debe servirse por HTTPS',
-        'Necesita Java instalado'
-      ],
-      correct: 2
-    },
-    {
       id: 8,
-      text: '¿Qué proceso realiza el sistema de RA 60 veces por segundo?',
+      text: 'En el visor de Inglés, el modelo 3D tiene como objetivo principal:',
       options: [
-        'Envía datos al servidor',
-        'Toma una foto del usuario',
-        'Estima la pose (posición + orientación) del marcador en el espacio',
-        'Descarga un nuevo modelo 3D'
+        'Traducir textos completos automáticamente',
+        'Practicar vocabulario de forma interactiva',
+        'Corregir la pronunciación',
+        'Enseñar historia británica'
       ],
-      correct: 2
+      correct: 1
     },
     {
       id: 9,
-      text: '¿Cuál es una ventaja educativa clave del anclaje AR respecto a un visor 3D convencional?',
+      text: '¿Qué requerimiento técnico se necesita para escanear los QR de esta misión?',
       options: [
-        'Los gráficos son más bonitos',
-        'El modelo vive en el espacio físico del estudiante, creando una experiencia cognitiva más profunda',
-        'Se pueden ver más modelos a la vez',
-        'No requéere ningún dispositivo'
+        'Gafas de Realidad Virtual avanzadas',
+        'Un dispositivo móvil o computadora con cámara web',
+        'Un Merge Cube físico',
+        'Una impresora 3D'
       ],
       correct: 1
     },
     {
       id: 10,
-      text: '¿Qué sucede con el modelo 3D cuando el usuario inclina el marcador físico?',
+      text: 'Al observar un modelo interactivo del "mundo de las palabras", ¿qué asignatura estamos abordando?',
       options: [
-        'El modelo desaparece',
-        'El modelo se inclina proporcionalmente, manteniendo la correspondencia espacial',
-        'El modelo se agranda',
-        'Nada, el modelo permanece estático'
+        'Matemáticas',
+        'Lenguaje',
+        'Ciencias Naturales',
+        'Inglés'
       ],
       correct: 1
     }
