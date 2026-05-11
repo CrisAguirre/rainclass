@@ -37,7 +37,10 @@
         {{ error }}
       </div>
 
-      <button type="submit" class="glass-button login-btn">Ingresar al Sistema</button>
+      <button type="submit" class="glass-button login-btn" [disabled]="isLoading">
+        <span *ngIf="!isLoading">Ingresar al Sistema</span>
+        <span *ngIf="isLoading">⏳ Conectando al servidor...</span>
+      </button>
     </form>
   </div>
 </div>

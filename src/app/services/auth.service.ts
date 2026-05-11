@@ -43,5 +43,11 @@ export class AuthService {
 
   isAdmin(): boolean { return this.getCurrentUser()?.role === 'admin'; }
   isDocente(): boolean { return this.getCurrentUser()?.role === 'docente'; }
+  
+  pingServer(): void {
+    // Petición temprana para despertar el servidor gratuito (Render)
+    this.http.get(`${environment.apiUrl}`).pipe(catchError(() => of(null))).subscribe();
+  }
+
   isLoggedIn(): boolean { return !!this.getCurrentUser(); }
 }
