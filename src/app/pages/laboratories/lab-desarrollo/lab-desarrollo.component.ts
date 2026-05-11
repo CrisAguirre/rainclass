@@ -42,7 +42,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Lenguaje',
       subject: 'Lenguaje',
       icon: '📖',
-      modelPath: '/assets/models/timeworx-world-4045.glb',
+      modelPath: '/assets/models/pixellabs-skull-potion-3558.glb',
       color: '#ef4444',
       description: 'Modelo 3D para la asignatura de Lenguaje. Explora el mundo de las palabras y la gramática.',
       markerId: 0
@@ -51,7 +51,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Matemáticas',
       subject: 'Matemáticas',
       icon: '📐',
-      modelPath: '/assets/models/nactivi-animación-4232.glb',
+      modelPath: '/assets/models/pixellabs-glb-3347.glb',
       color: '#3b82f6',
       description: 'Modelo 3D para Matemáticas. Figuras geométricas, números y lógica espacial.',
       markerId: 1
@@ -60,7 +60,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Ciencias Naturales',
       subject: 'Ciencias Naturales',
       icon: '🫀',
-      modelPath: '/assets/models/pixellabs-glb-3347.glb',
+      modelPath: '/assets/models/nactivi-animación-4232.glb',
       color: '#22c55e',
       description: 'Modelo 3D de Ciencias Naturales. Biología, ecosistemas y anatomía.',
       markerId: 2
@@ -69,7 +69,7 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       name: 'Sociales',
       subject: 'Sociales',
       icon: '🌍',
-      modelPath: '/assets/models/pixellabs-skull-potion-3558.glb',
+      modelPath: '/assets/models/timeworx-world-4045.glb',
       color: '#f59e0b',
       description: 'Modelo 3D para Sociales. Geografía, historia y civilizaciones.',
       markerId: 3
