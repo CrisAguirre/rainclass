@@ -588,7 +588,7 @@ export class LabEvaluacionComponent implements OnInit {
     }
   ];
 
-  geoposicionQuestions: Question[] = [
+  visualizadorQuestions: Question[] = [
     {
       id: 1,
       text: '¿Qué diferencia fundamental tiene la RA basada en marcadores respecto a la lectura simple de QR?',
@@ -698,116 +698,6 @@ export class LabEvaluacionComponent implements OnInit {
         'Nada, el modelo permanece estático'
       ],
       correct: 1
-    },
-    {
-      id: 11,
-      text: '¿Qué herramienta web gratuita permite crear marcadores AR personalizados?',
-      options: [
-        'Photoshop Express',
-        'El generador de marcadores de AR.js',
-        'Microsoft Paint',
-        'Google Slides'
-      ],
-      correct: 1
-    },
-    {
-      id: 12,
-      text: '¿En qué© asignatura se podría usar un marcador AR para mástrar relieve topográfico sobre el pupitre?',
-      options: [
-        'Educación Física',
-        'Música',
-        'Geografía',
-        'Artes Plásticas'
-      ],
-      correct: 2
-    },
-    {
-      id: 13,
-      text: '¿Qué tipo de modelo 3D se puede visualizar con AR.js?',
-      options: [
-        'Solo cubos y esferas',
-        'Solo archivos PDF',
-        'Modelos en formato GLTF/GLB, OBJ y primitivas 3D',
-        'Solo imágenes 2D'
-      ],
-      correct: 2
-    },
-    {
-      id: 14,
-      text: '¿Qué estrategia pedagógica consiste en distribuir marcadores AR por el aula con diferentes contenidos?',
-      options: [
-        'Flipped Classroom',
-        'Laboratorio Virtual distribuido / Mapa Interactivo del Aula',
-        'Lectura en voz alta',
-        'Debate socrático'
-      ],
-      correct: 1
-    },
-    {
-      id: 15,
-      text: '¿Qué ventaja tiene AR.js respecto a aplicaciónes nativas de RA?',
-      options: [
-        'Mejor calidad gráfica',
-        'No requéere instalación de aplicaciónes; funciona directamente en el navegador',
-        'Funciona sin cámara',
-        'Solo funciona offline'
-      ],
-      correct: 1
-    },
-    {
-      id: 16,
-      text: '¿Qué marcador clásico viene preconfigurado en AR.js para pruebas rápidas?',
-      options: [
-        'El marcador QR',
-        'El marcador Hiro',
-        'El marcador GPS',
-        'El marcador Bluetooth'
-      ],
-      correct: 1
-    },
-    {
-      id: 17,
-      text: '¿Cómo puede un docente de anatomía usar marcadores AR?',
-      options: [
-        'Imprimiendo un marcador qué, al escanearse, muestre un esquéleto 3D anclado sobre la mása',
-        'Enviando un PDF por correo',
-        'Dibujando en la pizarra',
-        'Reproduciendo un video de YouTube'
-      ],
-      correct: 0
-    },
-    {
-      id: 18,
-      text: '¿Qué propiedad del marcador físico NO afecta la pose del modelo 3D?',
-      options: [
-        'Su rotación respecto a la cámara',
-        'Su distancia a la cámara',
-        'El color del papel donde está impreso',
-        'Su inclinación respecto al plano horizontal'
-      ],
-      correct: 2
-    },
-    {
-      id: 19,
-      text: '¿Por qué© los marcadores AR deben tener alto contraste (blanco y negro)?',
-      options: [
-        'Porqué los colores gastan más batería',
-        'Porqué el algoritmo de detección necesita bordes definidos para calcular la pose con precisión',
-        'Por estética',
-        'Porqué las impresoras solo imprimen en blanco y negro'
-      ],
-      correct: 1
-    },
-    {
-      id: 20,
-      text: '¿Cuál es una conclusión central del laboratorio de Modelo con Geoposición?',
-      options: [
-        'La RA solo es útil para juegos',
-        'Se necesitan equépos muy costosos para implementar RA en el aula',
-        'Con herramientas open source cómo AR.js, cuálquéer docente puede crear experiencias AR ancladas sin costo',
-        'Los marcadores AR son obsoletos'
-      ],
-      correct: 2
     }
   ];
 
@@ -836,7 +726,7 @@ export class LabEvaluacionComponent implements OnInit {
     if (this.labId === '3') return this.quéverQuestions;
     if (this.labId === '4') return this.actionboundQuestions;
     if (this.labId === '5') return this.metaversoQuestions;
-    if (this.labId === '7') return this.geoposicionQuestions;
+    if (this.labId === '6') return this.visualizadorQuestions;
     return [];
   }
 
@@ -868,7 +758,7 @@ export class LabEvaluacionComponent implements OnInit {
     }
 
     // Send results to backend
-    const labNamás: { [key: string]: string } = { '1': 'Introducción', '2': 'Merge Cube', '3': 'QuiverVision', '4': 'Actionbound', '5': 'Metaverso Meta', '6': 'Visualizador de Modelos 3D', '7': 'Modelo 3D con Geoposición' };
+    const labNamás: { [key: string]: string } = { '1': 'Introducción', '2': 'Merge Cube', '3': 'QuiverVision', '4': 'Actionbound', '5': 'Metaverso Meta', '6': 'Visualizador de Modelos 3D' };
     this.evalService.saveResult({
       userId: userId,
       username: username,

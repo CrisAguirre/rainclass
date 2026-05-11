@@ -37,40 +37,70 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
   private arSceneElement: HTMLElement | null = null;
 
   // Shared model map (used by both Lab 5 and Lab 6)
-  models: ModelInfo[] = [
+    models: ModelInfo[] = [
     {
-      name: 'Tetraedro Geométrico',
-      subject: 'Matemáticas',
-      icon: '📐',
-      modelPath: '/assets/models/math_model.glb',
-      color: '#3b82f6',
-      description: 'Sólido geométrico regular de 4 caras triangulares equiláteras. Fundamental en geometría espacial y topología.',
+      name: 'Lenguaje',
+      subject: 'Lenguaje',
+      icon: '📖',
+      modelPath: '/assets/models/lenguaje_model.glb',
+      color: '#ef4444',
+      description: 'Modelo 3D para la asignatura de Lenguaje. Explora el mundo de las palabras y la gramática.',
       markerId: 0
     },
     {
-      name: 'Sistema Circulatorio',
-      subject: 'Ciencias Naturales',
-      icon: '🫀',
-      modelPath: '/assets/models/science_model.glb',
-      color: '#22c55e',
-      description: 'Cuerpo humano translúcido con sistema circulatorio animado en tiempo real. Observa el flujo de sangre oxigenada (rojo) y desoxigenada (azul) a través de órganos pulsantes.',
+      name: 'Matemáticas',
+      subject: 'Matemáticas',
+      icon: '📐',
+      modelPath: '/assets/models/matematicas_model.glb',
+      color: '#3b82f6',
+      description: 'Modelo 3D para Matemáticas. Figuras geométricas, números y lógica espacial.',
       markerId: 1
     },
     {
-      name: 'Libro Literario',
-      subject: 'Literatura',
-      icon: '📖',
-      modelPath: '/assets/models/literature_model.glb',
-      color: '#ef4444',
-      description: 'Representación 3D de un libro abierto. Símbolo del conocimiento narrativo y la imaginación creativa.',
+      name: 'Ciencias Naturales',
+      subject: 'Ciencias Naturales',
+      icon: '🫀',
+      modelPath: '/assets/models/ciencias_model.glb',
+      color: '#22c55e',
+      description: 'Modelo 3D de Ciencias Naturales. Biología, ecosistemas y anatomía.',
       markerId: 2
+    },
+    {
+      name: 'Sociales',
+      subject: 'Sociales',
+      icon: '🌍',
+      modelPath: '/assets/models/sociales_model.glb',
+      color: '#f59e0b',
+      description: 'Modelo 3D para Sociales. Geografía, historia y civilizaciones.',
+      markerId: 3
+    },
+    {
+      name: 'Inglés',
+      subject: 'Inglés',
+      icon: '🗣️',
+      modelPath: '/assets/models/ingles_model.glb',
+      color: '#8b5cf6',
+      description: 'Modelo 3D interactivo para aprender y practicar vocabulario en Inglés.',
+      markerId: 4
+    },
+    {
+      name: 'Comprensión de lectura',
+      subject: 'Comprensión de lectura',
+      icon: '📚',
+      modelPath: '/assets/models/comprension_model.glb',
+      color: '#ec4899',
+      description: 'Modelo 3D para ejercitar y evaluar la comprensión lectora.',
+      markerId: 5
     }
   ];
 
   private modelMap: { [key: string]: ModelInfo } = {
-    'RAINCLASS_MATH_3D': this.models[0],
-    'RAINCLASS_CIRCULATORY_3D': this.models[1],
-    'RAINCLASS_LITERATURE_3D': this.models[2]
+    'RAINCLASS_LENGUAJE_3D': this.models[0],
+    'RAINCLASS_MATEMATICAS_3D': this.models[1],
+    'RAINCLASS_CIENCIAS_3D': this.models[2],
+    'RAINCLASS_SOCIALES_3D': this.models[3],
+    'RAINCLASS_INGLES_3D': this.models[4],
+    'RAINCLASS_COMPRENSION_3D': this.models[5]
   };
 
   constructor(private route: ActivatedRoute, private ngZone: NgZone) {}

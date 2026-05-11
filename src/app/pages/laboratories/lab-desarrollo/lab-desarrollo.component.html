@@ -830,7 +830,7 @@
       </div>
 
       <div *ngIf="scannerActive && scannerReady" class="scanner-instructions">
-        <p>📡 Cámara activa. Apunta hacia uno de los 3 códigos QR...</p>
+        <p>📡 Cámara activa. Apunta hacia uno de los 6 códigos QR...</p>
         <button class="glass-button stop-scan-btn" (click)="stopScanner()">Detener Cámara</button>
       </div>
     </div>
@@ -898,11 +898,11 @@
   <div class="glass-panel scan-progress" style="margin-top: 20px;">
     <h4>Progreso de Escaneo</h4>
     <div class="progress-track" style="margin-top: 10px;">
-      <div class="progress-fill" [style.width.%]="(scanHistory.length / 3) * 100"></div>
+      <div class="progress-fill" [style.width.%]="(scanHistory.length / 6) * 100"></div>
     </div>
     <p style="margin-top: 10px; color: var(--text-secondary);">
-      {{ scanHistory.length }} de 3 modelos escaneados
-      <span *ngIf="scanHistory.length === 3" style="color: #22c55e;"> — ¡Completado! 🎉</span>
+      {{ scanHistory.length }} de 6 modelos escaneados
+      <span *ngIf="scanHistory.length === 6" style="color: #22c55e;"> — ¡Completado! 🎉</span>
     </p>
   </div>
 
@@ -1072,11 +1072,11 @@
   <div class="glass-panel scan-progress" style="margin-top: 20px;">
     <h4>Progreso de Detección AR</h4>
     <div class="progress-track" style="margin-top: 10px;">
-      <div class="progress-fill" [style.width.%]="(scanHistory.length / 3) * 100"></div>
+      <div class="progress-fill" [style.width.%]="(scanHistory.length / 6) * 100"></div>
     </div>
     <p style="margin-top: 10px; color: var(--text-secondary);">
       {{ scanHistory.length }} de 3 modelos detectados
-      <span *ngIf="scanHistory.length === 3" style="color: #22c55e;"> — ¡Completado! 🎉</span>
+      <span *ngIf="scanHistory.length === 6" style="color: #22c55e;"> — ¡Completado! 🎉</span>
     </p>
   </div>
 
