@@ -59,7 +59,7 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 4,
-      text: 'Según la másión introductoria, ¿cuánto puede aumentar la retención de información cuando se aprende con Realidad Aumentada frente al aprendizaje pasivo?',
+      text: 'Según la misión introductoria, ¿cuánto puede aumentar la retención de información cuando se aprende con Realidad Aumentada frente al aprendizaje pasivo?',
       options: [
         'Hasta un 20%.',
         'Hasta un 50%.',
@@ -103,7 +103,7 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 8,
-      text: 'En la ruta de aprendizaje de RaInClass, ¿qué© másión está dedicada a la creación de experiencias de RA propias usando tecnología web y códigos QR?',
+      text: 'En la ruta de aprendizaje de RaInClass, ¿qué misión está dedicada a la creación de experiencias de RA propias usando tecnología web y códigos QR?',
       options: [
         'Misión 2 â Merge Cube.',
         'Misión 4 â Actionbound.',
@@ -706,7 +706,7 @@ export class LabEvaluacionComponent implements OnInit {
     private evalService: EvaluationService,
     private progressService: ProgressService,
     private authService: AuthService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.parent?.paramMap.subscribe(params => {
