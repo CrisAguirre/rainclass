@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { AuthService } from '../../services/auth.service';
 import { EvaluationService } from '../../services/evaluation.service';
 import { ProgressService } from '../../services/progress.service';
@@ -25,11 +26,14 @@ interface DocenteCollectibles {
   templateUrl: './collectibles.component.html',
   styleUrls: ['./collectibles.component.css']
 })
-export class CollectiblesComponent implements OnInit {
+export class CollectiblesComponent implements OnInit, OnDestroy {
   isAdmin = false;
   myCollectibles: Collectible[] = [];
   docenteList: DocenteCollectibles[] = [];
   loading = true;
+
+  // FIX #4: Suscripción al BehaviorSubject de progreso para actualizaciones reactivas
+  private progressSub!: Subscription;
 
   constructor(
     private authService: AuthService,
@@ -43,33 +47,55 @@ export class CollectiblesComponent implements OnInit {
       this.loadAdminView();
     } else {
       this.loadDocenteView();
+      // FIX #4: Suscribirse al progreso para actualizar coleccionables en tiempo real
+      // cuando el estado del progreso cambie (p.ej. después de completar una evaluación)
+      this.progressSub = this.progressService.progress$.subscribe(() => {
+        this.loadDocenteView();
+      });
     }
+  }
+
+  ngOnDestroy(): void {
+    this.progressSub?.unsubscribe();
   }
 
   private buildCollectibles(completedIds: number[], scores: { labId: number; percentage: number }[]): Collectible[] {
     return [
-      { id: 'c1', name: 'Cubo Mágico', icon: '🧊', description: 'Completa la misión Merge Cube', rarity: 'comun', earned: completedIds.includes(2) },
-      { id: 'c2', name: 'Pincel Digital', icon: '🖌️', description: 'Completa la misión QuiverVision', rarity: 'comun', earned: completedIds.includes(3) },
-      { id: 'c3', name: 'Mapa del Tesoro', icon: '🗺️', description: 'Completa la misión Actionbound', rarity: 'raro', earned: completedIds.includes(4) },
-      { id: 'c4', name: 'Visor VR', icon: '🥽', description: 'Completa la misión Metaverso Meta', rarity: 'raro', earned: completedIds.includes(5) },
-      { id: 'c5', name: 'Generador RA', icon: '🔬', description: 'Completa la misión RA Propia', rarity: 'epico', earned: completedIds.includes(6) },
-      { id: 'c6', name: 'Ancla Geoespacial', icon: '📍', description: 'Completa la misión Geoposición', rarity: 'epico', earned: completedIds.includes(7) },
-      { id: 'c7', name: 'Mente Brillante', icon: '💡', description: 'Obtén 100% en cualquier evaluación', rarity: 'legendario', earned: scores.some(s => s.percentage === 100) },
-      { id: 'c8', name: 'Coleccionista', icon: '🌟', description: 'Obtén todos los coleccionables anteriores', rarity: 'legendario', earned: completedIds.length >= 6 && scores.some(s => s.percentage === 100) },
+      { id: 'c1', name: 'Cubo Mágico',       icon: '🧊', description: 'Completa la misión Merge Cube',        rarity: 'comun',      earned: completedIds.includes(2) },
+      { id: 'c2', name: 'Pincel Digital',     icon: '🖌️', description: 'Completa la misión QuiverVision',     rarity: 'comun',      earned: completedIds.includes(3) },
+      { id: 'c3', name: 'Mapa del Tesoro',    icon: '🗺️', description: 'Completa la misión Actionbound',      rarity: 'raro',       earned: completedIds.includes(4) },
+      { id: 'c4', name: 'Visor VR',           icon: '🥽', description: 'Completa la misión Metaverso Meta',   rarity: 'raro',       earned: completedIds.includes(5) },
+      { id: 'c5', name: 'Generador RA',       icon: '🔬', description: 'Completa la misión RA Propia',        rarity: 'epico',      earned: completedIds.includes(6) },
+      { id: 'c6', name: 'Ancla Geoespacial',  icon: '📍', description: 'Completa la misión Geoposición',      rarity: 'epico',      earned: completedIds.includes(7) },
+      { id: 'c7', name: 'Mente Brillante',    icon: '💡', description: 'Obtén 100% en cualquier evaluación',  rarity: 'legendario', earned: scores.some(s => s.percentage === 100) },
+      { id: 'c8', name: 'Coleccionista',      icon: '🌟', description: 'Obtén todos los coleccionables anteriores', rarity: 'legendario',
+        earned: completedIds.length >= 6 && scores.some(s => s.percentage === 100) },
     ];
   }
 
+  /**
+   * FIX #4: La vista del docente ahora infiere las misiones completadas
+   * DESDE LOS RESULTADOS DE EVALUACIÓN en lugar de desde progress.snapshot.
+   * Esto garantiza que los coleccionables reflejen el estado real aunque
+   * el progreso en memoria no esté sincronizado con el backend.
+   * Es consistente con la lógica de la vista admin y la de trofeos.
+   */
   private loadDocenteView(): void {
     const user = this.authService.getCurrentUser()!;
-    const progress = this.progressService.snapshot;
-    const completedIds = progress.labs.filter(l => l.status === 'completed').map(l => l.id);
 
     this.evalService.getResultsByUser(user.userId).subscribe({
       next: (results) => {
-        this.myCollectibles = this.buildCollectibles(completedIds, results);
+        // Inferir misiones completadas desde los resultados de evaluación
+        // (igual que hace la vista admin), en lugar de leer progress.snapshot
+        const completedIds = [...new Set(results.map(r => r.labId))];
+        const scores = results.map(r => ({ labId: r.labId, percentage: r.percentage }));
+        this.myCollectibles = this.buildCollectibles(completedIds, scores);
         this.loading = false;
       },
       error: () => {
+        // Fallback: intentar con el snapshot de progreso si la API falla
+        const progress = this.progressService.snapshot;
+        const completedIds = progress.labs.filter(l => l.status === 'completed').map(l => l.id);
         this.myCollectibles = this.buildCollectibles(completedIds, []);
         this.loading = false;
       }
@@ -84,7 +110,7 @@ export class CollectiblesComponent implements OnInit {
     this.evalService.getAllResults().subscribe({
       next: (results) => {
         const userMap = new Map<string, { username: string; scores: { labId: number; percentage: number }[] }>();
-        
+
         registered.forEach((d: any) => userMap.set(d.userId, { username: d.displayName, scores: [] }));
 
         results.forEach(r => {
@@ -93,7 +119,6 @@ export class CollectiblesComponent implements OnInit {
         });
 
         this.docenteList = Array.from(userMap.entries()).map(([userId, data]) => {
-          // Infer completed missions from evaluations
           const completedIds = data.scores.map(s => s.labId);
           const cols = this.buildCollectibles(completedIds, data.scores);
           return { userId, username: data.username, collectibles: cols, earned: cols.filter(c => c.earned).length };
@@ -104,7 +129,7 @@ export class CollectiblesComponent implements OnInit {
         this.docenteList = registered.map((d: any) => ({
           userId: d.userId, username: d.displayName, collectibles: this.buildCollectibles([], []), earned: 0
         }));
-        this.loading = false; 
+        this.loading = false;
       }
     });
   }
