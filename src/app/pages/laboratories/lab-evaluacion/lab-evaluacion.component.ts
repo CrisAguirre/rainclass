@@ -105,10 +105,10 @@ export class LabEvaluacionComponent implements OnInit {
       id: 8,
       text: 'En la ruta de aprendizaje de RaInClass, ¿qué misión está dedicada a la creación de experiencias de RA propias usando tecnología web y códigos QR?',
       options: [
-        'Misión 2 â Merge Cube.',
-        'Misión 4 â Actionbound.',
-        'Misión 6 â RA Propia: Generador 3D.',
-        'Misión 7 â Modelo con Geoposición.'
+        'Misión 2 Cubo Merge.',
+        'Misión 4 Actionbound.',
+        'Misión 6 Visualizador 3D.',
+        'Misión 7 Modelo con Geoposición.'
       ],
       correct: 2
     },
@@ -310,7 +310,7 @@ export class LabEvaluacionComponent implements OnInit {
       text: 'Una psicóloga escolar nota qué los estudiantes con baja autoestima mejoran su confianza al usar QuiverVision. ¿Cuál es el mecanismo psicológico qué explica este fenómeno?',
       options: [
         'La app les da recompensas monetarias virtuales por jugar rápido',
-        'Al ver qué SU PROPIA creación âcon sus colores Ãúnicos e irrepetiblesâ cobra vida y se convierte en la protagonista de la experiencia, el niño experimenta agencia y orgullo creativo',
+        'Al ver qué SU PROPIA creación con sus colores únicos e irrepetibles cobra vida y se convierte en la protagonista de la experiencia, el niño experimenta agencia y orgullo creativo',
         'La aplicación califica cada dibujo con notas del 1 al 10 y los mejores reciben premios',
         'La app compara automáticamente los dibujos entre compañeros y premia al "mejor artista"'
       ],
@@ -513,10 +513,10 @@ export class LabEvaluacionComponent implements OnInit {
       id: 4,
       text: 'La profesora Ana quéere hacer una clase colaborativa donde sus estudiantes manipulen modelos 3D en una pizarra infinita. ¿Qué plataforma de Meta permite exactamente esto?',
       options: [
-        'Facebook Marketplace â un espacio de comercio electrÃúnico',
-        'Horizon Workrooms â un espacio virtual colaborativo donde clases y equépos se reúnen mediante avatares, comparten pantallas, dibujan en pizarras y manipulan objetos 3D',
-        'WhatsApp Business â un servicio de mensajería comercial',
-        'Instagram Reels â una plataforma de videos cortos verticales'
+        'Facebook Marketplace, un espacio de comercio electrÃúnico',
+        'Horizon Workrooms, un espacio virtual colaborativo donde clases y equépos se reúnen mediante avatares, comparten pantallas, dibujan en pizarras y manipulan objetos 3D',
+        'WhatsApp Business, un servicio de mensajería comercial',
+        'Instagram Reels, una plataforma de videos cortos verticales'
       ],
       correct: 1
     },
