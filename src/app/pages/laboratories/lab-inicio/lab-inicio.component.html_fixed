@@ -2,24 +2,24 @@
 <div *ngIf="labId === '1'" class="lab-content">
 
   <!-- ============================================================
-       HERO INMERSIVO — Partículas flotantes + título animado
+       HERO INMERSIVO â Partículas flotantes + título animado
   ============================================================ -->
   <div class="m1-hero glass-panel">
     <!-- Partículas de fondo (CSS puro) -->
     <div class="m1-particles" aria-hidden="true">
-      <span class="m1-p m1-p1">✧</span>
-      <span class="m1-p m1-p2">◈</span>
-      <span class="m1-p m1-p3">⬡</span>
-      <span class="m1-p m1-p4">✧</span>
-      <span class="m1-p m1-p5">◈</span>
-      <span class="m1-p m1-p6">⬡</span>
+      <span class="m1-p m1-p1">â¦</span>
+      <span class="m1-p m1-p2">â</span>
+      <span class="m1-p m1-p3">â¬¡</span>
+      <span class="m1-p m1-p4">â¦</span>
+      <span class="m1-p m1-p5">â</span>
+      <span class="m1-p m1-p6">â¬¡</span>
     </div>
 
     <div class="m1-hero-body">
       <div class="m1-hero-left">
-        <div class="m1-mision-badge">
+        <div class="m1-mássion-badge">
           <span class="m1-badge-num">01</span>
-          <span class="m1-badge-label">MISIÓN</span>
+          <span class="m1-badge-label">MISIÃN</span>
         </div>
         <h2 class="m1-hero-title">Introducción a la<br><span class="m1-title-accent">Realidad Aumentada</span></h2>
         <p class="m1-hero-sub">
@@ -29,11 +29,11 @@
 
         <!-- Chips de objetivos -->
         <div class="m1-chip-row">
-          <span class="m1-chip">🧩 ¿Qué es la RA?</span>
-          <span class="m1-chip">🔬 RA vs RV vs RM</span>
-          <span class="m1-chip">🏫 RA en el aula</span>
-          <span class="m1-chip">🗺️ Ruta de 7 misiones</span>
-          <span class="m1-chip">🏆 Trofeos &amp; Coleccionables</span>
+          <span class="m1-chip">ð§­ ¿Qué es la RA?</span>
+          <span class="m1-chip">ð¬ RA vs RV vs RM</span>
+          <span class="m1-chip">ð« RA en el aula</span>
+          <span class="m1-chip">ðºï¸ Ruta de 7 misiones</span>
+          <span class="m1-chip">ð Trofeos &amp; Coleccionables</span>
         </div>
       </div>
 
@@ -50,7 +50,7 @@
               <div class="m1-orbit-ring r1"></div>
               <div class="m1-orbit-ring r2"></div>
               <div class="m1-orbit-ring r3"></div>
-              <div class="m1-planet">🌍</div>
+              <div class="m1-planet">ð</div>
             </div>
           </div>
           <div class="m1-visor-hud">
@@ -62,7 +62,7 @@
   </div>
 
   <!-- ============================================================
-       ¿QUÉ ES LA RA? — Definición visual + comparativa RA/RV/RM
+       ¿QUÃ ES LA RA? â Definición visual + comparativa RA/RV/RM
   ============================================================ -->
   <div class="section-title">
     <h3>¿Qué es la Realidad Aumentada?</h3>
@@ -71,17 +71,17 @@
 
   <!-- Definición destacada -->
   <div class="m1-definition-card glass-panel">
-    <div class="m1-def-icon">📡</div>
+    <div class="m1-def-icon">ð¡</div>
     <div class="m1-def-text">
       <p class="m1-def-main">
-        La <strong>Realidad Aumentada</strong> superpone capas de contenido digital —imágenes,
-        modelos 3D, sonidos, datos en tiempo real— sobre el mundo físico que nos rodea,
+        La <strong>Realidad Aumentada</strong> superpone capas de contenido digital âimágenes,
+        modelos 3D, sonidos, datos en tiempo realâ sobre el mundo físico que nos rodea,
         a través de la cámara de un dispositivo. El usuario <em>nunca pierde de vista su entorno real</em>:
-        simplemente lo ve enriquecido con información digital exactamente posicionada.
+        simplemente lo ve enriquécido con información digital exactamente posicionada.
       </p>
       <p class="m1-def-examples">
         <strong>Ejemplos cotidianos que ya conoces:</strong>
-        filtros de Instagram · Pokémon GO · IKEA Place · Google Translate con cámara · Snapchat Lens
+        filtros de Instagram Â· Pokémon GO Â· IKEA Place Â· Google Translate con cámara Â· Snapchat Lens
       </p>
     </div>
   </div>
@@ -89,11 +89,11 @@
   <!-- Comparativa RA / RV / RM en tarjetas visuales -->
   <div class="m1-spectrum-grid">
     <div class="m1-spectrum-card glass-panel m1-card-ra">
-      <div class="m1-sc-icon">👁️</div>
+      <div class="m1-sc-icon">ðï¸</div>
       <div class="m1-sc-badge">RA</div>
       <h4>Realidad Aumentada</h4>
-      <p>El mundo real <strong>visible</strong> + capas digitales superpuestas. El dispositivo es una ventana que
-        enriquece la realidad.</p>
+      <p>El mundo real <strong>visible</strong> + capas digitales superpuestas. El dispositivo es una ventana qué
+        enriquéce la realidad.</p>
       <div class="m1-sc-bar">
         <span class="m1-sc-bar-fill" style="width:40%"></span>
         <span class="m1-sc-bar-label">Digital</span>
@@ -105,11 +105,11 @@
     </div>
 
     <div class="m1-spectrum-card glass-panel m1-card-rm">
-      <div class="m1-sc-icon">🔄</div>
+      <div class="m1-sc-icon">ð</div>
       <div class="m1-sc-badge">RM</div>
       <h4>Realidad Mixta</h4>
       <p>Los objetos digitales <strong>interactúan</strong> con superficies físicas reales. Mayor precisión espacial.
-        Requiere dispositivos especializados.</p>
+        Requéere dispositivos especializados.</p>
       <div class="m1-sc-bar">
         <span class="m1-sc-bar-fill" style="width:65%"></span>
         <span class="m1-sc-bar-label">Digital</span>
@@ -121,11 +121,11 @@
     </div>
 
     <div class="m1-spectrum-card glass-panel m1-card-rv">
-      <div class="m1-sc-icon">🥽</div>
+      <div class="m1-sc-icon">ð¥½</div>
       <div class="m1-sc-badge">RV</div>
       <h4>Realidad Virtual</h4>
       <p>Entorno 100% digital. El usuario está <strong>completamente inmerso</strong> en un mundo generado por
-        computadora. Requiere casco o visor.</p>
+        computadora. Requéere casco o visor.</p>
       <div class="m1-sc-bar">
         <span class="m1-sc-bar-fill" style="width:100%"></span>
         <span class="m1-sc-bar-label">Digital</span>
@@ -138,30 +138,30 @@
   </div>
 
   <!-- ============================================================
-       ¿CÓMO FUNCIONA? — Pipeline visual paso a paso
+       ¿CÃMO FUNCIONA? â Pipeline visual paso a paso
   ============================================================ -->
   <div class="section-title">
-    <h3>¿Cómo funciona la RA? — El pipeline de 3 pasos</h3>
+    <h3>¿Cómo funciona la RA? â El pipeline de 3 pasos</h3>
     <div class="title-line"></div>
   </div>
 
   <div class="m1-pipeline glass-panel">
     <div class="m1-pipe-step">
-      <div class="m1-pipe-icon">📷</div>
+      <div class="m1-pipe-icon">ð·</div>
       <div class="m1-pipe-num">01</div>
       <h4>Captura</h4>
       <p>La cámara del dispositivo captura el entorno físico en tiempo real, fotograma a fotograma.</p>
     </div>
-    <div class="m1-pipe-arrow">→</div>
+    <div class="m1-pipe-arrow">â</div>
     <div class="m1-pipe-step">
-      <div class="m1-pipe-icon">🧠</div>
+      <div class="m1-pipe-icon">ð§ </div>
       <div class="m1-pipe-num">02</div>
       <h4>Reconocimiento</h4>
       <p>El software detecta marcadores visuales, superficies planas o espacio 3D y calcula posición exacta.</p>
     </div>
-    <div class="m1-pipe-arrow">→</div>
+    <div class="m1-pipe-arrow">â</div>
     <div class="m1-pipe-step">
-      <div class="m1-pipe-icon">🖥️</div>
+      <div class="m1-pipe-icon">ð¥ï¸</div>
       <div class="m1-pipe-num">03</div>
       <h4>Superposición</h4>
       <p>El objeto digital se renderiza con perspectiva correcta sobre la imagen real, 60 veces por segundo.</p>
@@ -169,7 +169,7 @@
   </div>
 
   <!-- ============================================================
-       ¿POR QUÉ RA EN EL AULA? — Stats + beneficios
+       ¿POR QUÃ RA EN EL AULA? â Stats + beneficios
   ============================================================ -->
   <div class="section-title">
     <h3>La RA en la Educación: Evidencia y Beneficios</h3>
@@ -182,11 +182,11 @@
       <p>más retención de información frente al aprendizaje pasivo expositivo</p>
     </div>
     <div class="glass-panel m1-stat-card">
-      <div class="m1-stat-num">3×</div>
+      <div class="m1-stat-num">3Ã</div>
       <p>mayor motivación reportada por estudiantes en clases con tecnologías inmersivas</p>
     </div>
     <div class="glass-panel m1-stat-card">
-      <div class="m1-stat-num">K–12</div>
+      <div class="m1-stat-num">Kâ12</div>
       <p>la RA es efectiva en todos los niveles educativos, desde primaria hasta universitario</p>
     </div>
     <div class="glass-panel m1-stat-card">
@@ -197,7 +197,7 @@
 
   <div class="m1-benefits-grid">
     <div class="glass-panel m1-benefit">
-      <span class="m1-ben-icon">🧠</span>
+      <span class="m1-ben-icon">ð§ </span>
       <div>
         <h4>Multisensorial</h4>
         <p>Activa canales visuales, auditivos y cinestésicos simultáneamente, potenciando la retención a largo plazo.
@@ -205,21 +205,21 @@
       </div>
     </div>
     <div class="glass-panel m1-benefit">
-      <span class="m1-ben-icon">🎮</span>
+      <span class="m1-ben-icon">ð®</span>
       <div>
         <h4>Aprendizaje activo</h4>
         <p>El estudiante manipula, explora y descubre en lugar de recibir información pasivamente.</p>
       </div>
     </div>
     <div class="glass-panel m1-benefit">
-      <span class="m1-ben-icon">👁️</span>
+      <span class="m1-ben-icon">ðï¸</span>
       <div>
         <h4>Conceptos abstractos visibles</h4>
         <p>Moléculas, órganos, astros, procesos geológicos o ecuaciones cobran vida en el espacio físico del aula.</p>
       </div>
     </div>
     <div class="glass-panel m1-benefit">
-      <span class="m1-ben-icon">🌍</span>
+      <span class="m1-ben-icon">ð</span>
       <div>
         <h4>Sin barreras geográficas</h4>
         <p>Un volcán del Pacífico, la Torre Eiffel o el interior de una célula pueden estar sobre tu escritorio hoy.</p>
@@ -228,7 +228,7 @@
   </div>
 
   <!-- ============================================================
-       RUTA DE APRENDIZAJE — Mapa de 7 misiones
+       RUTA DE APRENDIZAJE â Mapa de 7 misiones
   ============================================================ -->
   <div class="section-title">
     <h3>Tu Ruta de Aprendizaje en RaInClass</h3>
@@ -238,16 +238,16 @@
   <div class="glass-panel m1-roadmap-panel">
     <p class="m1-roadmap-intro">
       Explorarás <strong>7 misiones progresivas</strong>. Cada una introduce una herramienta o concepto diferente.
-      Al completar la evaluación de cada misión, desbloqueas la siguiente y acumulas <strong>XP y Trofeos</strong>.
+      Al completar la evaluación de cada misión, desbloquéas la siguiente y acumulas <strong>XP y Trofeos</strong>.
     </p>
     <div class="m1-roadmap">
       <div class="m1-rm-item m1-rm-active">
         <div class="m1-rm-dot active"></div>
         <div class="m1-rm-card glass-panel">
           <span class="m1-rm-num">01</span>
-          <span class="m1-rm-icon">🎯</span>
+          <span class="m1-rm-icon">ð¯</span>
           <h4>Introducción a la RA</h4>
-          <p>Fundamentos, diferencias RA/RV/RM y ruta de aprendizaje. <em>← Estás aquí</em></p>
+          <p>Fundamentos, diferencias RA/RV/RM y ruta de aprendizaje. <em>â Estás aquí</em></p>
         </div>
       </div>
       <div class="m1-rm-connector"></div>
@@ -255,7 +255,7 @@
         <div class="m1-rm-dot"></div>
         <div class="m1-rm-card glass-panel">
           <span class="m1-rm-num">02</span>
-          <span class="m1-rm-icon">🧊</span>
+          <span class="m1-rm-icon">ð§</span>
           <h4>Merge Cube</h4>
           <p>Sostén objetos 3D digitales en tu mano con un cubo físico de marcadores AR.</p>
         </div>
@@ -265,7 +265,7 @@
         <div class="m1-rm-dot"></div>
         <div class="m1-rm-card glass-panel">
           <span class="m1-rm-num">03</span>
-          <span class="m1-rm-icon">🎨</span>
+          <span class="m1-rm-icon">ð¨</span>
           <h4>QuiverVision</h4>
           <p>Da vida en 3D a páginas para colorear: actividad manual que se vuelve digital.</p>
         </div>
@@ -275,7 +275,7 @@
         <div class="m1-rm-dot"></div>
         <div class="m1-rm-card glass-panel">
           <span class="m1-rm-num">04</span>
-          <span class="m1-rm-icon">🗺️</span>
+          <span class="m1-rm-icon">ðºï¸</span>
           <h4>Actionbound</h4>
           <p>Recorridos gamificados, búsquedas del tesoro y aventuras con geolocalización.</p>
         </div>
@@ -285,7 +285,7 @@
         <div class="m1-rm-dot"></div>
         <div class="m1-rm-card glass-panel">
           <span class="m1-rm-num">05</span>
-          <span class="m1-rm-icon">🌍</span>
+          <span class="m1-rm-icon">ð</span>
           <h4>Metaverso Meta</h4>
           <p>Colabora y aprende en entornos virtuales inmersivos accesibles desde el navegador.</p>
         </div>
@@ -295,7 +295,7 @@
         <div class="m1-rm-dot"></div>
         <div class="m1-rm-card glass-panel">
           <span class="m1-rm-num">06</span>
-          <span class="m1-rm-icon">🔬</span>
+          <span class="m1-rm-icon">ð¬</span>
           <h4>Visualizador de Modelos 3D</h4>
           <p>Crea y visualiza tus propios modelos 3D en RA desde cualquier asignatura.</p>
         </div>
@@ -304,10 +304,10 @@
   </div>
 
   <!-- ============================================================
-       TROFEOS Y COLECCIONABLES — Sistema de recompensas
+       TROFEOS Y COLECCIONABLES â Sistema de recompensas
   ============================================================ -->
   <div class="section-title">
-    <h3>🏆 Trofeos &amp; Coleccionables — Tu Sistema de Recompensas</h3>
+    <h3>ð Trofeos &amp; Coleccionables â Tu Sistema de Recompensas</h3>
     <div class="title-line"></div>
   </div>
 
@@ -316,31 +316,31 @@
       <p class="m1-rh-intro">
         RaInClass convierte tu proceso de aprendizaje en una <strong>aventura de colección</strong>.
         Cada evaluación superada te entrega un <strong>Trofeo</strong> según tu desempeño,
-        y cada misión completada desbloqueas <strong>Coleccionables</strong> únicos que forman
+        y cada misión completada desbloquéa <strong>Coleccionables</strong> únicos que forman
         tu galería personal de logros.
       </p>
     </div>
     <div class="m1-rh-right">
       <div class="m1-rh-medals">
         <div class="m1-rh-medal platinum">
-          <span class="m1-rh-emoji">💎</span>
+          <span class="m1-rh-emoji">ð</span>
           <span class="m1-rh-name">Platino</span>
           <span class="m1-rh-pct">100%</span>
         </div>
         <div class="m1-rh-medal gold">
-          <span class="m1-rh-emoji">🥇</span>
+          <span class="m1-rh-emoji">ð¥</span>
           <span class="m1-rh-name">Oro</span>
-          <span class="m1-rh-pct">≥ 90%</span>
+          <span class="m1-rh-pct">â¥ 90%</span>
         </div>
         <div class="m1-rh-medal silver">
-          <span class="m1-rh-emoji">🥈</span>
+          <span class="m1-rh-emoji">ð¥</span>
           <span class="m1-rh-name">Plata</span>
-          <span class="m1-rh-pct">≥ 80%</span>
+          <span class="m1-rh-pct">â¥ 80%</span>
         </div>
         <div class="m1-rh-medal bronze">
-          <span class="m1-rh-emoji">🥉</span>
+          <span class="m1-rh-emoji">ð¥</span>
           <span class="m1-rh-name">Bronce</span>
-          <span class="m1-rh-pct">≥ 70%</span>
+          <span class="m1-rh-pct">â¥ 70%</span>
         </div>
       </div>
     </div>
@@ -349,43 +349,43 @@
   <div class="m1-rewards-detail">
     <div class="glass-panel m1-reward-box">
       <div class="m1-rb-header">
-        <span class="m1-rb-icon">🏆</span>
+        <span class="m1-rb-icon">ð</span>
         <h4>Trofeos por Misión</h4>
       </div>
       <p>
         Al aprobar la evaluación de cada misión obtienes un trofeo según tu puntaje:
-        <strong>Bronce</strong> (70–79%), <strong>Plata</strong> (80–89%), <strong>Oro</strong> (90–99%)
+        <strong>Bronce</strong> (70â79%), <strong>Plata</strong> (80â89%), <strong>Oro</strong> (90â99%)
         o el codiciado <strong>Platino</strong> (100% perfecto).
       </p>
-      <p>Puedes reintentar la evaluación para mejorar tu trofeo cuando quieras.
+      <p>Puedes reintentar la evaluación para mejorar tu trofeo cuando quéeras.
         <strong>Solo se guarda tu mejor resultado</strong>.
       </p>
-      <div class="m1-tip-inline">💡 Ve a la sección <strong>Trofeos</strong> del menú para ver tu colección completa
+      <div class="m1-tip-inline">ð¡ Ve a la sección <strong>Trofeos</strong> del menú para ver tu colección completa
         en todo momento.</div>
     </div>
 
     <div class="glass-panel m1-reward-box">
       <div class="m1-rb-header">
-        <span class="m1-rb-icon">🎴</span>
+        <span class="m1-rb-icon">ð</span>
         <h4>Coleccionables Digitales</h4>
       </div>
       <p>
-        Cada misión tiene asociados <strong>coleccionables desbloqueables</strong>: insignias,
+        Cada misión tiene asociados <strong>coleccionables desbloquéables</strong>: insignias,
         tarjetas temáticas y objetos AR únicos. Se desbloquean al completar actividades específicas
         dentro de la misión.
       </p>
       <p>Tu galería de coleccionables es <strong>única y personal</strong>.
         Forma tu colección completa explorando a fondo cada misión.</p>
-      <div class="m1-tip-inline">💡 Consulta la sección <strong>Coleccionables</strong> del menú para ver que ya
+      <div class="m1-tip-inline">ð¡ Consulta la sección <strong>Coleccionables</strong> del menú para ver que ya
         tienes y que te falta.</div>
     </div>
   </div>
 
   <!-- ============================================================
-       CALL TO ACTION — Próximo paso
+       CALL TO ACTION â Próximo paso
   ============================================================ -->
   <div class="m1-cta glass-panel">
-    <div class="m1-cta-icon">🚀</div>
+    <div class="m1-cta-icon">ð</div>
     <div class="m1-cta-text">
       <h3>¿Listo para profundizar?</h3>
       <p>
@@ -398,7 +398,6 @@
   </div>
 
 </div>
-
 <!-- INICIO - Misión 2: Merge Cube (antiguo Lab 1) -->
 <div *ngIf="labId === '2'" class="lab-content">
 
@@ -410,13 +409,13 @@
       <p>
         El <strong>Merge Cube</strong> es un cubo físico de realidad aumentada que convierte un
         dispositivo móvil corriente en una ventana hacia objetos digitales 3D interactivos. Al
-        sostenerlo frente a la cámara, el cubo parece desaparecer y en su lugar aparece —flotando
-        sobre tus manos— un planeta, una célula, una molécula o cualquier modelo que la aplicación
+        sostenerlo frente a la cámara, el cubo parece desaparecer y en su lugar aparece âflotando
+        sobre tus manosâ un planeta, una célula, una molécula o cualquier modelo que la aplicación
         active. No se necesita hardware costoso: un smartphone, una tableta o incluso el cubo impreso
         en papel son suficientes para comenzar.
       </p>
       <p>
-        En esta misión conocerás <strong>qué es, cómo funciona y por qué el Merge Cube se ha
+        En esta misión conocerás <strong>que es, cómo funciona y por que el Merge Cube se ha
           convertido en una de las herramientas de realidad aumentada más adoptadas en la educación
           STEM</strong> a nivel mundial.
       </p>
@@ -456,7 +455,7 @@
       <h3>¿Qué es el Merge Cube?</h3>
       <p>
         Es un cubo de gomaespuma de ~7 cm de lado con <strong>patrones geométricos únicos</strong>
-        impresos en cada cara. Esos patrones actúan como <em>marcadores de RA</em>: la cámara del
+        impresos en cada cara. Esos patrones actúan cómo <em>marcadores de RA</em>: la cámara del
         dispositivo los detecta, calcula posición y orientación del cubo en tiempo real, y superpone
         un objeto 3D interactivo exactamente donde está el cubo físico.
       </p>
@@ -465,7 +464,7 @@
     <div class="glass-panel info-card">
       <h3>Tecnología detrás del cubo</h3>
       <ul>
-        <li><strong>Visión por computadora:</strong> algoritmos que identifican y rastrean los patrones del cubo en cada
+        <li><strong>Visión por computadora:</strong> algoritmás que identifican y rastrean los patrones del cubo en cada
           fotograma de video.</li>
         <li><strong>Seguimiento espacial (tracking):</strong> calcula distancia, ángulo y rotación para anclar el modelo
           3D con precisión.</li>
@@ -477,23 +476,23 @@
     <div class="glass-panel info-card">
       <h3>Merge Cube vs. otras tecnologías inmersivas</h3>
       <ul>
-        <li>🟢 <strong>RA con Merge Cube:</strong> el usuario ve su entorno real + el objeto 3D sobrepuesto.
+        <li>ð¢ <strong>RA con Merge Cube:</strong> el usuario ve su entorno real + el objeto 3D sobrepuesto.
           Interacción táctil y física con el cubo.</li>
-        <li>🔵 <strong>Realidad Virtual (RV):</strong> entorno completamente digital, el usuario se aísla del mundo
-          real. Requiere cascos.</li>
-        <li>🟡 <strong>Realidad Mixta (RM):</strong> los objetos digitales interactúan con superficies físicas reales.
+        <li>ðµ <strong>Realidad Virtual (RV):</strong> entorno completamente digital, el usuario se aísla del mundo
+          real. Requéere cascos.</li>
+        <li>ð¡ <strong>Realidad Mixta (RM):</strong> los objetos digitales interactúan con superficies físicas reales.
           Hardware más especializado.</li>
       </ul>
     </div>
 
     <div class="glass-panel info-card">
-      <h3>¿Por qué es relevante en educación?</h3>
+      <h3>¿Por que es relevante en educación?</h3>
       <ul>
-        <li>🧠 Activar la manipulación física <em>y</em> la visualización digital simultáneamente potencia la
+        <li>ð§  Activar la manipulación física <em>y</em> la visualización digital simultáneamente potencia la
           retención y comprensión.</li>
-        <li>🎮 La novedad tecnológica eleva la motivación intrínseca del estudiante.</li>
-        <li>👁️ Hace tangible lo invisible: átomos, células, astros, capas geológicas.</li>
-        <li>💰 Costo casi nulo: la plantilla del cubo es gratuita y descargable; solo se necesita impresora y tijeras.
+        <li>ð® La novedad tecnológica eleva la motivación intrínseca del estudiante.</li>
+        <li>ðï¸ Hace tangible lo invisible: átomás, células, astros, capas geológicas.</li>
+        <li>ð¸ Costo casi nulo: la plantilla del cubo es gratuita y descargable; solo se necesita impresora y tijeras.
         </li>
       </ul>
     </div>
@@ -501,7 +500,7 @@
 
   <!-- Cómo funciona paso a paso -->
   <div class="section-title">
-    <h3>¿Cómo Funciona? — Paso a Paso</h3>
+    <h3>¿Cómo Funciona? â Paso a Paso</h3>
     <div class="title-line"></div>
   </div>
 
@@ -510,30 +509,30 @@
       <div class="step">
         <div class="step-number">1</div>
         <h4>Obtén o imprime el cubo</h4>
-        <p>Adquiere el Merge Cube físico (gomaespuma) o descarga la <strong>plantilla gratuita</strong> en <a
+        <p>Adquéere el Merge Cube físico (gomaespuma) o descarga la <strong>plantilla gratuita</strong> en <a
             href="https://mergeedu.com/cube" target="_blank">mergeedu.com/cube</a>, imprímela y arma el cubo con tijeras
           y pegamento.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">2</div>
         <h4>Descarga una app compatible</h4>
         <p>Instala <strong>Merge Explorer</strong>, <strong>Object Viewer</strong> o <strong>HoloGlobe</strong> desde la
           App Store, Google Play o la tienda de Chromebook. Todas son gratuitas en su versión básica.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">3</div>
         <h4>Enfoca el cubo con la cámara</h4>
         <p>Abre la app y apunta la cámara al cubo. El sistema reconoce los patrones y proyecta el objeto 3D sobre el
           cubo en la pantalla en tiempo real.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">4</div>
         <h4>Explora e interactúa</h4>
         <p>Gira, inclina y acerca el cubo físico. El modelo 3D se mueve de forma sincronizada. Toca la pantalla para
-          activar capas de información, animaciones o datos adicionales.</p>
+          activar capas de información, animaciónes o datos adicionales.</p>
       </div>
     </div>
     <div class="howto-image">
@@ -543,45 +542,45 @@
 
   <!-- Aplicaciones educativas -->
   <div class="section-title">
-    <h3>Aplicaciones Educativas por Área</h3>
+    <h3>Aplicaciones Educativas por Ãrea</h3>
     <div class="title-line"></div>
   </div>
 
   <div class="apps-grid">
     <div class="glass-panel app-card">
-      <div class="app-icon">🪐</div>
+      <div class="app-icon">ðª</div>
       <h4>Astronomía y Ciencias del Espacio</h4>
       <p>Sostén planetas, lunas, cometas y nebulosas en tu mano. Comprende escalas, órbitas y composición de los cuerpos
         celestes de forma vivencial.</p>
     </div>
     <div class="glass-panel app-card">
-      <div class="app-icon">🧬</div>
+      <div class="app-icon">ð§¬</div>
       <h4>Biología y Ciencias Naturales</h4>
-      <p>Examina células, disecciona organismos virtualmente, explora órganos del cuerpo humano y comprende procesos
+      <p>Examina células, disecciona organismás virtualmente, explora órganos del cuerpo humano y comprende procesos
         biológicos complejos en 3D.</p>
     </div>
     <div class="glass-panel app-card">
-      <div class="app-icon">🧪</div>
+      <div class="app-icon">âï¸</div>
       <h4>Química</h4>
-      <p>Visualiza y rota moléculas de ADN, enlaces covalentes e iónicos, y estructuras cristalinas que son imposibles
+      <p>Visualiza y rota moléculas de ADN, enlaces covalentes e iúnicos, y estructuras cristalinas que son imposibles
         de apreciar en un libro plano.</p>
     </div>
     <div class="glass-panel app-card">
-      <div class="app-icon">🌋</div>
+      <div class="app-icon">ð</div>
       <h4>Geología y Geografía</h4>
-      <p>Examina el interior de la Tierra por capas, estudia fósiles en detalle y comprende procesos tectónicos que
+      <p>Examina el interior de la Tierra por capas, estudia fósiles en detalle y comprende procesos tectúnicos qué
         ocurren a escala de millones de años.</p>
     </div>
     <div class="glass-panel app-card">
-      <div class="app-icon">🎨</div>
+      <div class="app-icon">ð¨</div>
       <h4>Creación y Diseño 3D</h4>
       <p>Los estudiantes diseñan objetos en <strong>Tinkercad</strong> o <strong>Paint 3D</strong> y los ven
-        materializados sobre el cubo, cerrando el ciclo diseño—visualización.</p>
+        materializados sobre el cubo, cerrando el ciclo diseñoâvisualización.</p>
     </div>
     <div class="glass-panel app-card">
-      <div class="app-icon">🌍</div>
+      <div class="app-icon">ð</div>
       <h4>Ciencias Sociales</h4>
-      <p><strong>HoloGlobe</strong> convierte el cubo en un globo terráqueo holográfico interactivo: clima, demografía,
+      <p><strong>HoloGlobe</strong> convierte el cubo en un globo terráquéo holográfico interactivo: clima, demografía,
         relieve, placas tectónicas y más datos en tiempo real.</p>
     </div>
   </div>
@@ -618,26 +617,26 @@
     </p>
     <div class="devices-row">
       <div class="device">
-        <div class="device-icon">📱</div>
+        <div class="device-icon">ð±</div>
         <span>iOS (iPhone / iPad)</span>
       </div>
       <div class="device">
-        <div class="device-icon">📱</div>
+        <div class="device-icon">ð±</div>
         <span>Android</span>
       </div>
       <div class="device">
-        <div class="device-icon">💻</div>
+        <div class="device-icon">ð»</div>
         <span>Chromebook</span>
       </div>
       <div class="device">
-        <div class="device-icon">🖥️</div>
+        <div class="device-icon">ð¥ï¸</div>
         <span>Windows (webcam)</span>
       </div>
     </div>
   </div>
 
   <div class="glass-panel tip-panel">
-    <h3>💡 Antes de continuar</h3>
+    <h3>ð¡ Antes de continuar</h3>
     <p>
       Si aún no tienes el cubo, descarga la plantilla gratuita en
       <a href="https://mergeedu.com/cube" target="_blank">mergeedu.com/cube</a>,
@@ -662,22 +661,22 @@
         texturas y trazos que cada niño les dio. No hay dos experiencias iguales porque cada creación es única.
       </p>
       <p>
-        En esta misión descubrirás <strong>cómo funciona la tecnología detrás de Quiver, por qué es tan
-          efectiva pedagógicamente, y cómo integrarla en cualquier área del currículo</strong> —desde
-        Ciencias Naturales hasta Educación Emocional— sin necesidad de equipos costosos.
+        En esta misión descubrirás <strong>cómo funciona la tecnología detrás de Quiver, por que es tan
+          efectiva pedagógicamente, y cómo integrarla en cualquier área del currículo</strong> âdesde
+        Ciencias Naturales hasta Educación Emocionalâ sin necesidad de equipos costosos.
       </p>
     </div>
     <div class="hero-image">
-      <div class="quiver-anim">
+      <div class="quéver-anim">
         <div class="qv-paper">
           <div class="qv-splat qv-s1"></div>
           <div class="qv-splat qv-s2"></div>
           <div class="qv-splat qv-s3"></div>
           <div class="qv-splat qv-s4"></div>
           <div class="qv-brush"></div>
-          <div class="qv-sparkle qv-sp1">✧</div>
-          <div class="qv-sparkle qv-sp2">✧</div>
-          <div class="qv-sparkle qv-sp3">✧</div>
+          <div class="qv-sparkle qv-sp1">â¦</div>
+          <div class="qv-sparkle qv-sp2">â¦</div>
+          <div class="qv-sparkle qv-sp3">â¦</div>
         </div>
       </div>
     </div>
@@ -704,7 +703,7 @@
     <div class="glass-panel info-card">
       <h3>Tecnología detrás de la magia</h3>
       <ul>
-        <li><strong>Reconocimiento de imágenes patentado:</strong> algoritmos que identifican la plantilla específica y
+        <li><strong>Reconocimiento de imágenes patentado:</strong> algoritmás que identifican la plantilla específica y
           extraen la textura coloreada por el estudiante.</li>
         <li><strong>Mapeo de texturas:</strong> los colores del dibujo se proyectan sobre la superficie del modelo 3D,
           creando una correspondencia perfecta entre papel y digital.</li>
@@ -716,10 +715,10 @@
     </div>
 
     <div class="glass-panel info-card">
-      <h3>El "Efecto Wow" — La puerta de entrada al aprendizaje</h3>
+      <h3>El "Efecto Wow" â La puerta de entrada al aprendizaje</h3>
       <p>
         El momento en que un niño ve <em>su propio dibujo</em> cobrar vida genera un <strong>asombro
-          inmediato</strong> que es pedagógicamente valioso. Este "Efecto Wow" no es un fin en sí mismo:
+          inmediato</strong> que es pedagógicamente valioso. Este "Efecto Wow" no es un fin en sí másmo:
         es la <em>puerta de entrada</em> que captura la atención del estudiante y crea la disposición
         emocional perfecta para guiar hacia un objetivo curricular. El docente aprovecha ese instante
         para transformar la curiosidad en indagación.
@@ -727,15 +726,15 @@
     </div>
 
     <div class="glass-panel info-card">
-      <h3>¿Por qué es relevante en educación?</h3>
+      <h3>¿Por que es relevante en educación?</h3>
       <ul>
-        <li>🎨 Fusiona una <strong>actividad manual tradicional</strong> (colorear) con innovación digital, sin
+        <li>ð¨ Fusiona una <strong>actividad manual tradicional</strong> (colorear) con innovación digital, sin
           eliminar lo analógico.</li>
-        <li>🧠 Activa <strong>motricidad fina, expresión artística y toma de decisiones estéticas</strong> durante la
+        <li>ð§  Activa <strong>motricidad fina, expresión artística y toma de decisiones estéticas</strong> durante la
           fase de coloreado.</li>
-        <li>💪 Fortalece la <strong>autoestima</strong>: el niño ve que SU creación, con SUS colores únicos, es la
+        <li>ðª Fortalece la <strong>autoestima</strong>: el niño ve que SU creación, con SUS colores únicos, es la
           protagonista.</li>
-        <li>💰 Costo mínimo: hojas impresas, lápices de colores y un dispositivo móvil. Sin cascos ni hardware
+        <li>ð¸ Costo mínimo: hojas impresas, lápices de colores y un dispositivo móvil. Sin cascos ni hardware
           especializado.</li>
       </ul>
     </div>
@@ -743,7 +742,7 @@
 
   <!-- Cómo funciona paso a paso -->
   <div class="section-title">
-    <h3>¿Cómo Funciona? — Paso a Paso</h3>
+    <h3>¿Cómo Funciona? â Paso a Paso</h3>
     <div class="title-line"></div>
   </div>
 
@@ -752,80 +751,80 @@
       <div class="step">
         <div class="step-number">1</div>
         <h4>Imprimir plantillas</h4>
-        <p>El docente descarga las plantillas desde el portal <strong>Quiver Education</strong> (quivervision.com) e
+        <p>El docente descarga las plantillas desde el portal <strong>Quiver Education</strong> (quévervision.com) e
           imprime las que correspondan al tema curricular.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">2</div>
         <h4>Colorear libremente</h4>
         <p>Los estudiantes colorean usando lápices, crayones o marcadores. <strong>No hay colores correctos o
             incorrectos</strong>: la creatividad es el motor.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">3</div>
         <h4>Escanear con la app</h4>
-        <p>Se abre la app de Quiver, se enfoca la plantilla coloreada. Indicador <strong>azul→verde</strong> confirma
+        <p>Se abre la app de Quiver, se enfoca la plantilla coloreada. Indicador <strong>azulâverde</strong> confirma
           que la plantilla fue detectada correctamente.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">4</div>
         <h4>¡Tu dibujo cobra vida!</h4>
-        <p>El modelo 3D emerge con <strong>los mismos colores del estudiante</strong>. Se puede rotar, interactuar,
+        <p>El modelo 3D emerge con <strong>los mismas colores del estudiante</strong>. Se puede rotar, interactuar,
           escuchar audios y activar minijuegos educativos.</p>
       </div>
     </div>
     <div class="howto-image">
-      <img src="assets/images/labs/quiver_howto.png" alt="Proceso de uso de QuiverVision">
+      <img src="assets/images/labs/quéver_howto.png" alt="Proceso de uso de QuiverVision">
     </div>
   </div>
 
-  <!-- Aplicaciones Educativas por Área -->
+  <!-- Aplicaciones Educativas por Ãrea -->
   <div class="section-title">
-    <h3>Aplicaciones Educativas por Área Curricular</h3>
+    <h3>Aplicaciones Educativas por Ãrea Curricular</h3>
     <div class="title-line"></div>
   </div>
 
   <div class="apps-grid">
     <div class="glass-panel app-card">
-      <div class="app-icon">🌋</div>
+      <div class="app-icon">ð</div>
       <h4>Ciencias Naturales y Geografía</h4>
-      <p>Volcanes que erupcionan, ecosistemas que se animan y animales que cobran vida. El estudiante visualiza
+      <p>Volcanes que erupcionan, ecosistemás que se animan y animales que cobran vida. El estudiante visualiza
         fenómenos naturales en 3D mientras comprende su dinámica.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">📏</div>
+      <div class="app-icon">ð</div>
       <h4>Matemáticas y Geometría</h4>
       <p>Las <strong>redes planas 2D se transforman en poliedros sólidos 3D</strong> que se pueden rotar, comprendiendo
         caras, aristas y vértices de forma vivencial.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">📚</div>
+      <div class="app-icon">ð</div>
       <h4>Lenguas y Literatura</h4>
-      <p>Los personajes 3D se convierten en <strong>inspiración para crear relatos</strong>, practicar narración oral o
+      <p>Los personajes 3D se convierten en <strong>inspiración para crear relatos</strong>, prácticar narración oral o
         inventar diálogos. La historia del niño tiene protagonista visible.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🎨</div>
+      <div class="app-icon">ð¨</div>
       <h4>Expresión Artística</h4>
       <p>Fomenta la creatividad, la motricidad fina y la atención al detalle. Cada trazo importa porque será visible en
         el modelo 3D final.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">💜</div>
+      <div class="app-icon">ð</div>
       <h4>Educación Emocional</h4>
       <p>Los estudiantes eligen colores que expresen su estado de ánimo. Al ver la animación 3D, <strong>reflexionan
           sobre las emociones expresadas</strong> en una actividad de autoconocimiento.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🌍</div>
+      <div class="app-icon">ð</div>
       <h4>Ciencias Sociales</h4>
       <p>Mapas, monumentos y escenas históricas que se visualizan en 3D, permitiendo al estudiante contextualizar
         eventos en el espacio y el tiempo.</p>
@@ -847,14 +846,14 @@
       <p>Costo por estudiante: hojas, lápices de colores y un dispositivo con cámara</p>
     </div>
     <div class="glass-panel feature-item">
-      <div class="feature-stat">K–12</div>
+      <div class="feature-stat">Kâ12</div>
       <p>Efectiva en todos los niveles: desde preescolar hasta secundaria</p>
     </div>
   </div>
 
   <!-- Rol del Docente -->
   <div class="section-title">
-    <h3>El Rol del Docente: De Observador a Arquitecto</h3>
+    <h3>El Rol del Docente: De Observador a Arquétecto</h3>
     <div class="title-line"></div>
   </div>
 
@@ -868,26 +867,26 @@
     </p>
     <div class="devices-row">
       <div class="device">
-        <div class="device-icon">❓</div>
+        <div class="device-icon">â</div>
         <span>Preguntas detonadoras ANTES</span>
       </div>
       <div class="device">
-        <div class="device-icon">🎨</div>
+        <div class="device-icon">ð¨</div>
         <span>Coloreado libre y creativo</span>
       </div>
       <div class="device">
-        <div class="device-icon">✨</div>
+        <div class="device-icon">â¨</div>
         <span>Efecto Wow al escanear</span>
       </div>
       <div class="device">
-        <div class="device-icon">🔍</div>
-        <span>Reflexión guiada DESPUÉS</span>
+        <div class="device-icon">ð</div>
+        <span>Reflexión guiada DESPUÃS</span>
       </div>
     </div>
   </div>
 
   <div class="glass-panel tip-panel">
-    <h3>💡 Reflexión pedagógica clave</h3>
+    <h3>ð¡ Reflexión pedagógica clave</h3>
     <p>
       QuiverVision demuestra que se puede crear un <strong>vínculo perfecto entre actividades analógicas manuales
         y la tecnología inmersiva</strong>. No se trata de reemplazar el papel y los lápices por pantallas,
@@ -908,14 +907,14 @@
       <p class="subtitle">El mundo real es tu tablero de juego</p>
       <p>
         <strong>Actionbound</strong> es una plataforma innovadora que transforma cualquier espacio físico
-        —el colegio, el parque, el centro histórico de la ciudad— en un <em>tablero de aprendizaje gamificado</em>.
+        âel colegio, el parque, el centro histórico de la ciudadâ en un <em>tablero de aprendizaje gamificado</em>.
         Los docentes diseñan "Bounds" (búsquedas del tesoro, rallies interactivos o aventuras de exploración)
         que combinan <strong>GPS, códigos QR, cuestionarios, misiones multimedia y elementos de juego</strong>
         para sacar a los estudiantes del aula y conectar la teoría con los lugares donde cobra vida.
       </p>
       <p>
-        En esta misión descubrirás <strong>cómo crear tu primer Bound, qué elementos pedagógicos puedes
-          integrar y por qué el aprendizaje cinestésico en movimiento tiene un impacto profundo</strong>
+        En esta misión descubrirás <strong>cómo crear tu primer Bound, que elementos pedagógicos puedes
+          integrar y por que el aprendizaje cinestésico en movimiento tiene un impacto profundo</strong>
         en la retención y la motivación del estudiante.
       </p>
     </div>
@@ -931,7 +930,7 @@
             <span class="ab-cardinal ab-w">W</span>
             <div class="ab-needle"></div>
           </div>
-          <div class="ab-pin">📍</div>
+          <div class="ab-pin">ð</div>
           <div class="ab-pulse"></div>
         </div>
       </div>
@@ -959,7 +958,7 @@
       <h3>Los dos pilares del ecosistema</h3>
       <ul>
         <li><strong>Bound Creator (Web):</strong> plataforma en línea donde el docente diseña la ruta con una interfaz
-          intuitiva de arrastrar y soltar. No requiere saber programar.</li>
+          intuitiva de arrastrar y soltar. No requéere saber programar.</li>
         <li><strong>App Actionbound (Móvil):</strong> aplicación gratuita que los estudiantes descargan para escanear el
           QR del Bound y recorrerlo guiados por GPS y brújula.</li>
       </ul>
@@ -968,26 +967,26 @@
     <div class="glass-panel info-card">
       <h3>Elementos de un Bound</h3>
       <ul>
-        <li>📍 <strong>Puntos GPS:</strong> el estudiante debe llegar físicamente a coordenadas específicas.</li>
-        <li>📝 <strong>Cuestionarios:</strong> preguntas con puntuación que evalúan comprensión in situ.</li>
-        <li>📷 <strong>Misiones:</strong> retos creativos donde suben fotos, videos o audios como evidencia.</li>
-        <li>ℹ️ <strong>Información:</strong> textos, imágenes, videos o audios que contextualizan cada lugar.</li>
-        <li>🔳 <strong>Códigos QR:</strong> el docente los esconde en el entorno para que los alumnos los escaneen y
+        <li>ð <strong>Puntos GPS:</strong> el estudiante debe llegar físicamente a coordenadas específicas.</li>
+        <li>ð <strong>Cuestionarios:</strong> preguntas con puntuación que evalúan comprensión in situ.</li>
+        <li>ð¸ <strong>Misiónes:</strong> retos creativos donde suben fotos, videos o audios cómo evidencia.</li>
+        <li>â¹ï¸ <strong>Información:</strong> textos, imágenes, videos o audios que contextualizan cada lugar.</li>
+        <li>ð² <strong>Códigos QR:</strong> el docente los esconde en el entorno para que los alumnos los escaneen y
           avancen.</li>
-        <li>🏆 <strong>Torneos:</strong> modo competitivo donde equipos compiten simultáneamente por puntos.</li>
+        <li>ð <strong>Torneos:</strong> modo competitivo donde equipos compiten simultáneamente por puntos.</li>
       </ul>
     </div>
 
     <div class="glass-panel info-card">
-      <h3>¿Por qué es revolucionario en educación?</h3>
+      <h3>¿Por que es revolucionario en educación?</h3>
       <ul>
-        <li>🏃 <strong>Rompe el sedentarismo:</strong> el aprendizaje ocurre en movimiento, combatiendo la inactividad
+        <li>ð <strong>Rompe el sedentarismo:</strong> el aprendizaje ocurre en movimiento, combatiendo la inactividad
           del aula tradicional.</li>
-        <li>📍 <strong>Contextualiza la teoría:</strong> los conceptos se vinculan directamente con lugares físicos
+        <li>ð <strong>Contextualiza la teoría:</strong> los conceptos se vinculan directamente con lugares físicos
           reales.</li>
-        <li>🤝 <strong>Desarrolla habilidades blandas:</strong> colaboración, delegación de tareas, toma de decisiones
+        <li>ð¤ <strong>Desarrolla habilidades blandas:</strong> colaboración, delegación de tareas, toma de decisiones
           y liderazgo compartido.</li>
-        <li>📈 <strong>Evaluación automática:</strong> genera informes analíticos detallados post-actividad
+        <li>ð <strong>Evaluación automática:</strong> genera informes analíticos detallados post-actividad
           (respuestas, tiempos, fotos).</li>
       </ul>
     </div>
@@ -995,7 +994,7 @@
 
   <!-- Cómo funciona paso a paso -->
   <div class="section-title">
-    <h3>¿Cómo Funciona? — Paso a Paso</h3>
+    <h3>¿Cómo Funciona? â Paso a Paso</h3>
     <div class="title-line"></div>
   </div>
 
@@ -1007,25 +1006,25 @@
         <p>El docente crea la ruta en la plataforma web: marca puntos GPS, añade preguntas, misiones y contenido
           contextual con interfaz <strong>drag-and-drop</strong>.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">2</div>
         <h4>Generar código QR</h4>
         <p>Se genera un <strong>código QR único</strong> que los estudiantes escanean con la app Actionbound para
           descargar y comenzar el Bound.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">3</div>
         <h4>Explorar en equipo</h4>
         <p>Los equipos navegan por el espacio físico guiados por la <strong>brújula y el GPS</strong> del dispositivo,
           desbloqueando estaciones.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">4</div>
         <h4>Resolver y evidenciar</h4>
-        <p>En cada punto, resuelven preguntas, <strong>toman fotos, graban audios o videos</strong> como evidencia, y
+        <p>En cada punto, resuelven preguntas, <strong>toman fotos, graban audios o videos</strong> cómo evidencia, y
           ganan puntos para su equipo.</p>
       </div>
     </div>
@@ -1037,13 +1036,13 @@
 
   <!-- Aplicaciones Educativas -->
   <div class="section-title">
-    <h3>Aplicaciones Educativas por Área Curricular</h3>
+    <h3>Aplicaciones Educativas por Ãrea Curricular</h3>
     <div class="title-line"></div>
   </div>
 
   <div class="apps-grid">
     <div class="glass-panel app-card">
-      <div class="app-icon">🏛️</div>
+      <div class="app-icon">ðï¸</div>
       <h4>Historia y Patrimonio</h4>
       <p>Crea un rally por sitios patrimoniales de la ciudad donde los estudiantes desbloquean datos históricos
         <strong>in situ</strong>, conectando la teoría con el lugar real.
@@ -1051,36 +1050,36 @@
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🌿</div>
+      <div class="app-icon">ð¿</div>
       <h4>Ciencias Naturales</h4>
-      <p>Recorridos por la huerta escolar, parques o reservas donde los estudiantes documentan especies, toman muestras
+      <p>Recorridos por la huerta escolar, parqués o reservas donde los estudiantes documentan especies, toman muestras
         fotográficas y responden cuestionarios ecológicos.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🏃</div>
+      <div class="app-icon">ð</div>
       <h4>Educación Física</h4>
       <p>Circuitos que combinan actividad física con retos intelectuales. <strong>Promueve el movimiento</strong> y
         combate el sedentarismo del aula.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🎓</div>
+      <div class="app-icon">ð</div>
       <h4>Onboarding Escolar</h4>
       <p>Rally de bienvenida para nuevos alumnos: <strong>exploran las instalaciones del colegio</strong> mientras
         conocen profesores, oficinas y espacios en una aventura gamificada.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">📍</div>
+      <div class="app-icon">ð</div>
       <h4>Matemáticas Aplicadas</h4>
-      <p>Recorridos donde los estudiantes miden distancias, calculan áreas y resuelven problemas geométricos
-        <strong>usando el entorno real como material didáctico</strong>.
+      <p>Recorridos donde los estudiantes miden distancias, calculan áreas y resuelven problemás geométricos
+        <strong>usando el entorno real cómo material didáctico</strong>.
       </p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🤝</div>
+      <div class="app-icon">ð¤</div>
       <h4>Habilidades Sociales</h4>
       <p>Los Bounds en equipo fomentan la colaboración, la delegación de tareas, la comunicación efectiva y la
         <strong>toma de decisiones conjuntas bajo presión de tiempo</strong>.
@@ -1100,17 +1099,17 @@
     </div>
     <div class="glass-panel feature-item">
       <div class="feature-stat">Media</div>
-      <p>Fotos, audio y video como respuestas y evidencia</p>
+      <p>Fotos, audio y video cómo respuestas y evidencia</p>
     </div>
     <div class="glass-panel feature-item">
       <div class="feature-stat">Analytics</div>
-      <p>Informes detallados post-actividad para evaluación docente</p>
+      <p>Informás detallados post-actividad para evaluación docente</p>
     </div>
   </div>
 
-  <!-- Innovación: Estudiantes como creadores -->
+  <!-- Innovación: Estudiantes cómo creadores -->
   <div class="section-title">
-    <h3>La Innovación Más Potente: Estudiantes como Creadores</h3>
+    <h3>La Innovación Más Potente: Estudiantes cómo Creadores</h3>
     <div class="title-line"></div>
   </div>
 
@@ -1124,26 +1123,26 @@
     </p>
     <div class="devices-row">
       <div class="device">
-        <div class="device-icon">🧠</div>
+        <div class="device-icon">ð§ </div>
         <span>Síntesis de contenido</span>
       </div>
       <div class="device">
-        <div class="device-icon">📋</div>
+        <div class="device-icon">ð</div>
         <span>Estructuración lógica</span>
       </div>
       <div class="device">
-        <div class="device-icon">🎨</div>
+        <div class="device-icon">ð¨</div>
         <span>Diseño de experiencia</span>
       </div>
       <div class="device">
-        <div class="device-icon">💜</div>
+        <div class="device-icon">ð</div>
         <span>Empatía con el usuario</span>
       </div>
     </div>
   </div>
 
   <div class="glass-panel tip-panel">
-    <h3>💡 Reflexión pedagógica clave</h3>
+    <h3>ð¡ Reflexión pedagógica clave</h3>
     <p>
       La escuela ya no termina en las cuatro paredes del aula. Con Actionbound, <strong>el mundo real
         se convierte en el tablero de juego</strong> donde la teoría cobra vida en los lugares donde realmente
@@ -1164,15 +1163,15 @@
       <p class="subtitle">La próxima frontera de la educación inmersiva</p>
       <p>
         El <strong>Metaverso</strong> impulsado por Meta representa la evolución del internet
-        hacia espacios virtuales tridimensionales y compartidos. A través de visores como las
+        hacia espacios virtuales tridimensionales y compartidos. A través de visores cómo las
         <strong>Meta Quest</strong>, docentes y estudiantes pueden "teletransportarse" a aulas virtuales,
         laboratorios de física cuántica, el interior de una célula humana o la antigua Roma,
         experimentando un <em>"Sentido de Presencia"</em> que ningún video o presentación puede replicar:
-        el cerebro reacciona como si la experiencia fuera real.
+        el cerebro reacciona cómo si la experiencia fuera real.
       </p>
       <p>
-        En esta misión explorarás <strong>qué es el Metaverso educativo, cómo funcionan los avatares,
-          qué estrategias pedagógicas maximizan su impacto (Micro-Inmersiones) y qué consideraciones
+        En esta misión explorarás <strong>que es el Metaverso educativo, cómo funcionan los avatares,
+          que estrategias pedagógicas maximizan su impacto (Micro-Inmersiones) y que consideraciones
           éticas debes tener en cuenta</strong> antes de implementarlo en tu institución.
       </p>
     </div>
@@ -1188,10 +1187,10 @@
           </div>
           <div class="mv-glow"></div>
         </div>
-        <div class="mv-particle mv-p1">◆</div>
-        <div class="mv-particle mv-p2">◆</div>
-        <div class="mv-particle mv-p3">◆</div>
-        <div class="mv-particle mv-p4">◆</div>
+        <div class="mv-particle mv-p1">â</div>
+        <div class="mv-particle mv-p2">â</div>
+        <div class="mv-particle mv-p3">â</div>
+        <div class="mv-particle mv-p4">â</div>
       </div>
     </div>
   </div>
@@ -1204,11 +1203,11 @@
 
   <div class="info-grid">
     <div class="glass-panel info-card">
-      <h3>El "Sentido de Presencia" — La diferencia clave</h3>
+      <h3>El "Sentido de Presencia" â La diferencia clave</h3>
       <p>
-        A diferencia de un video o una foto 360°, la Realidad Virtual genera un fenómeno neurológico
+        A diferencia de un video o una foto 360Â°, la Realidad Virtual genera un fenómeno neurológico
         llamado <strong>"Sentido de Presencia"</strong>: el cerebro reacciona genuinamente ante la
-        experiencia virtual como si estuviera ocurriendo realmente. Se activan las mismas respuestas
+        experiencia virtual cómo si estuviera ocurriendo realmente. Se activan las mismas respuestas
         emocionales y cognitivas que en la realidad. Esto hace que los aprendizajes en VR sean
         <em>significativamente más memorables</em> que los métodos pasivos.
       </p>
@@ -1221,20 +1220,20 @@
           en el espacio virtual.</li>
         <li><strong>Seguimiento corporal:</strong> el avatar replica en tiempo real los movimientos de cabeza, manos y
           expresiones faciales.</li>
-        <li><strong>Comunicación natural:</strong> permite lenguaje corporal, gestos con las manos y expresiones que
+        <li><strong>Comunicación natural:</strong> permite lenguaje corporal, gestos con las manos y expresiones qué
           hacen la comunicación más humana que una videollamada.</li>
-        <li><strong>Inclusión:</strong> el avatar reduce barreras sociales — el estudiante tímido puede participar con
+        <li><strong>Inclusión:</strong> el avatar reduce barreras sociales â el estudiante tímido puede participar con
           menor ansiedad social.</li>
       </ul>
     </div>
 
     <div class="glass-panel info-card">
-      <h3>Horizon Workrooms — El aula del futuro</h3>
+      <h3>Horizon Workrooms â El aula del futuro</h3>
       <p>
         <strong>Horizon Workrooms</strong> es el espacio virtual colaborativo de Meta donde clases y equipos
         se reúnen mediante avatares. Ofrece <strong>pizarras infinitas</strong> donde múltiples usuarios
         dibujan simultáneamente, <strong>compartición de pantalla</strong> del escritorio real al espacio
-        virtual, <strong>audio espacial</strong> que permite percibir de qué dirección proviene cada voz,
+        virtual, <strong>audio espacial</strong> que permite percibir de que dirección proviene cada voz,
         y la capacidad de <strong>sincronizar teclados físicos</strong> reales para escribir dentro del VR.
       </p>
     </div>
@@ -1242,13 +1241,13 @@
     <div class="glass-panel info-card">
       <h3>Realidad Mixta (Passthrough) y Hand Tracking</h3>
       <ul>
-        <li>🔄 <strong>Passthrough:</strong> tecnología que permite ver el aula física real mezclada con hologramas
+        <li>ð <strong>Passthrough:</strong> tecnología que permite ver el aula física real mezclada con hologramás
           virtuales. Lo mejor de ambos mundos.</li>
-        <li>🖐️ <strong>Hand Tracking:</strong> las cámaras del visor detectan los movimientos de las manos
+        <li>ðï¸ <strong>Hand Tracking:</strong> las cámaras del visor detectan los movimientos de las manos
           desnudas, eliminando la necesidad de controladores.</li>
-        <li>🔊 <strong>Audio Espacial:</strong> las voces provienen de la dirección donde está cada avatar, replicando
+        <li>ð <strong>Audio Espacial:</strong> las voces provienen de la dirección donde está cada avatar, replicando
           la acústica del mundo real.</li>
-        <li>🧩 <strong>Modelo Piloto/Copiloto:</strong> estrategia donde un estudiante usa el visor (piloto) y otro lo
+        <li>ð§© <strong>Modelo Piloto/Copiloto:</strong> estrategia donde un estudiante usa el visor (piloto) y otro lo
           guía mirando la pantalla compartida (copiloto).</li>
       </ul>
     </div>
@@ -1256,7 +1255,7 @@
 
   <!-- Cómo funciona paso a paso -->
   <div class="section-title">
-    <h3>¿Cómo Funciona? — Paso a Paso</h3>
+    <h3>¿Cómo Funciona? â Paso a Paso</h3>
     <div class="title-line"></div>
   </div>
 
@@ -1268,21 +1267,21 @@
         <p>El usuario se pone el visor de VR/RM que rastrea <strong>movimientos de cabeza, manos y posición</strong> en
           el espacio con 6 grados de libertad.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">2</div>
         <h4>Crear Avatar</h4>
         <p>El estudiante diseña su identidad digital que <strong>replica su lenguaje corporal y expresiones</strong> en
           tiempo real.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">3</div>
         <h4>Elegir entorno</h4>
         <p>Ingresan a <strong>Horizon Workrooms, Titans of Space, Bodyswaps</strong> u otras apps educativas según el
           objetivo de la clase.</p>
       </div>
-      <div class="step-arrow">→</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">4</div>
         <h4>Interactuar y aprender</h4>
@@ -1298,51 +1297,51 @@
 
   <!-- Aplicaciones Educativas -->
   <div class="section-title">
-    <h3>Aplicaciones Educativas por Área Curricular</h3>
+    <h3>Aplicaciones Educativas por Ãrea Curricular</h3>
     <div class="title-line"></div>
   </div>
 
   <div class="apps-grid">
     <div class="glass-panel app-card">
-      <div class="app-icon">🫁</div>
+      <div class="app-icon">ð«</div>
       <h4>Anatomía y Biología</h4>
       <p>Los estudiantes pueden <strong>meterse dentro de un torrente sanguíneo</strong>, caminar entre glóbulos rojos o
         diseccionar órganos a escala real.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🌎</div>
+      <div class="app-icon">ð</div>
       <h4>Aulas Espejo Internacionales</h4>
-      <p>Conecta estudiantes de <strong>diferentes países en una misma sala virtual</strong> para colaboración global,
+      <p>Conecta estudiantes de <strong>diferentes países en una másma sala virtual</strong> para colaboración global,
         eliminando barreras geográficas.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🧪</div>
+      <div class="app-icon">âï¸</div>
       <h4>Simuladores de Riesgo</h4>
       <p>Entrena procedimientos peligrosos (reacciones químicas, primeros auxilios) <strong>sin consecuencias
           reales</strong>. Aprender del error sin riesgo.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">💜</div>
-      <h4>Empatía y Ética</h4>
+      <div class="app-icon">ð</div>
+      <h4>Empatía y Ãtica</h4>
       <p>La VR es <strong>"la máquina de empatía definitiva"</strong>: permite experimentar el mundo desde la
         perspectiva de otra persona, cultura o época histórica.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🗣️</div>
-      <h4>Idiomas y Comunicación</h4>
+      <div class="app-icon">ð£ï¸</div>
+      <h4>Idiomás y Comunicación</h4>
       <p>Practicar en escenarios virtuales (un restaurante en Londres, un mercado en Tokio) donde el avatar
-        <strong>reduce el miedo escénico</strong>.
+        <strong>reduce el miedo escúnico</strong>.
       </p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🧠</div>
+      <div class="app-icon">ð§ </div>
       <h4>Inclusión y TDAH</h4>
-      <p>Al bloquear estímulos del mundo exterior, la VR <strong>reduce radicalmente las distracciones</strong> para
+      <p>Al bloquéar estímulos del mundo exterior, la VR <strong>reduce radicalmente las distracciones</strong> para
         estudiantes con déficit de atención.</p>
     </div>
   </div>
@@ -1376,35 +1375,35 @@
   <div class="glass-panel compatibility-section">
     <p style="text-align: center; margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8;">
       No se recomienda impartir una clase completa de 45 minutos dentro de VR. La estrategia más efectiva
-      son las <strong>"Micro-Inmersiones"</strong>: sesiones cortas de <strong>10–15 minutos</strong>
+      son las <strong>"Micro-Inmersiones"</strong>: sesiones cortas de <strong>10â15 minutos</strong>
       enfocadas en un solo objetivo pedagógico, seguidas de un <strong>debate y reflexión en el mundo real</strong>.
       Esto evita la fatiga visual, maximiza el impacto emocional y permite que el "Sentido de Presencia"
       amplifique la comprensión del tema.
     </p>
     <div class="devices-row">
       <div class="device">
-        <div class="device-icon">🎯</div>
+        <div class="device-icon">ð¯</div>
         <span>Objetivo pedagógico claro</span>
       </div>
       <div class="device">
-        <div class="device-icon">🥽</div>
+        <div class="device-icon">ð¥½</div>
         <span>Micro-Inmersión 10-15 min</span>
       </div>
       <div class="device">
-        <div class="device-icon">💬</div>
+        <div class="device-icon">ð¬</div>
         <span>Debate en mundo real</span>
       </div>
       <div class="device">
-        <div class="device-icon">📝</div>
+        <div class="device-icon">ð</div>
         <span>Reflexión y escritura</span>
       </div>
     </div>
   </div>
 
   <div class="glass-panel tip-panel">
-    <h3>💡 Consideraciones éticas y prácticas</h3>
+    <h3>ð¡ Consideraciones éticas y prácticas</h3>
     <p>
-      Al implementar el Metaverso en la escuela, es imprescindible <strong>establecer normas claras
+      Al implementar el Metaverso en la escuela, es imprescindible <strong>establecer normás claras
         de comportamiento</strong> en entornos virtuales, <strong>proteger los datos biométricos</strong>
       que capturan los sensores del visor, <strong>controlar tiempos de exposición</strong> para evitar fatiga,
       y garantizar que la VR <em>complemente pero nunca reemplace</em> la interacción humana presencial.
@@ -1529,19 +1528,19 @@
         <h4>Imprime o muestra</h4>
         <p>Imprime los QR de arriba o tenlos en otra pantalla para poder apuntar tu cámara hacia ellos.</p>
       </div>
-      <div class="step-arrow">➔</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">2</div>
         <h4>Ve al Generador</h4>
         <p>Navega a la pestaña "Generador 3D" de este laboratorio para activar tu cámara web/móvil.</p>
       </div>
-      <div class="step-arrow">➔</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">3</div>
         <h4>Escanea el QR</h4>
         <p>Apunta la cámara al código QR. El sistema lo reconocerá automáticamente y mostrará el modelo.</p>
       </div>
-      <div class="step-arrow">➔</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">4</div>
         <h4>Interactúa</h4>
@@ -1561,7 +1560,7 @@
       <h2>Modelo con Geoposición</h2>
       <div class="subtitle">Anclaje 3D a Marcadores AR con Posicionamiento Espacial</div>
       <p>
-        En este laboratorio avanzado exploraremos cómo la <strong>Realidad Aumentada basada en marcadores (Marker-based
+        En este laboratorio avanzado exploraremás cómo la <strong>Realidad Aumentada basada en marcadores (Marker-based
           AR)</strong>
         permite anclar modelos 3D a patrones físicos impresos, manteniendo la posición exacta en sus ejes X, Y, Z
         y la nivelación relativa al marcador en tiempo real. A diferencia de la lectura simple de QR del Laboratorio 5,
@@ -1591,24 +1590,24 @@
       <div class="step">
         <div class="step-number">1</div>
         <h4>Marcador Físico</h4>
-        <p>Se imprime un patrón AR especial (como un marcador Hiro o un patrón personalizado) que la cámara reconoce
-          como punto de anclaje.</p>
+        <p>Se imprime un patrón AR especial (cómo un marcador Hiro o un patrón personalizado) que la cámara reconoce
+          cómo punto de anclaje.</p>
       </div>
-      <div class="step-arrow">➔</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">2</div>
         <h4>Visión por Computadora</h4>
         <p>La cámara del dispositivo detecta el patrón y calcula su posición, rotación e inclinación mediante una matriz
           de transformación 3D.</p>
       </div>
-      <div class="step-arrow">➔</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">3</div>
         <h4>Anclaje Espacial</h4>
         <p>El modelo 3D se "ancla" matemáticamente al marcador: si giras el patrón, el modelo rota. Si lo inclinas, el
           modelo se inclina.</p>
       </div>
-      <div class="step-arrow">➔</div>
+      <div class="step-arrow">â</div>
       <div class="step">
         <div class="step-number">4</div>
         <h4>Interacción</h4>
@@ -1620,27 +1619,27 @@
 
   <!-- Technical Concepts -->
   <div class="section-title">
-    <h3>Conceptos Técnicos Clave</h3>
+    <h3>Conceptos Téúnicos Clave</h3>
     <div class="title-line"></div>
   </div>
 
   <div class="apps-grid">
     <div class="glass-panel app-card">
-      <div class="app-icon">📐</div>
+      <div class="app-icon">ð</div>
       <h4>Matriz de Transformación</h4>
       <p>El sistema calcula una matriz 4x4 que contiene la posición (X,Y,Z), rotación (pitch, yaw, roll) y escala del
         marcador en el espacio 3D.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">📡</div>
+      <div class="app-icon">ð¡</div>
       <h4>Tracking en Tiempo Real</h4>
-      <p>Algoritmos de visión por computadora procesan cada frame de video para actualizar la pose del marcador a 30-60
+      <p>Algoritmás de visión por computadora procesan cada frame de video para actualizar la pose del marcador a 30-60
         fps.</p>
     </div>
 
     <div class="glass-panel app-card">
-      <div class="app-icon">🎯</div>
+      <div class="app-icon">ð¯</div>
       <h4>6 Grados de Libertad (6DoF)</h4>
       <p>El modelo puede moverse en 3 ejes de traslación y 3 ejes de rotación, replicando exactamente la orientación del
         marcador físico.</p>
