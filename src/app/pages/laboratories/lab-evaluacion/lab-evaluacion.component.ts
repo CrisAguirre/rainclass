@@ -277,9 +277,9 @@ export class LabEvaluacionComponent implements OnInit {
       text: 'La profesora Marta planifica una sesión con QuiverVision para niños de segundo grado. ¿Cuál es la secuencia correcta de pasos para implementar la actividad?',
       options: [
         'Primero escanear, luego imprimir y finalmente colorear',
-        'Descargar la app â comprar un Merge Cube â conectar gafas VR â proyectar en pared',
-        'Descargar e imprimir plantillas desde el portal Quiver â los estudiantes colorean libremente â escanear con la app de Quiver â el dibujo cobra vida en 3D',
-        'Conectar la tablet a internet vía cable â instalar Java â abrir el navegador â activar plugin'
+        'Descargar la app, comprar un Merge Cube, conectar gafas VR, proyectar en pared',
+        'Descargar e imprimir plantillas desde el portal Quiver, los estudiantes colorean libremente, escanear con la app de Quiver, el dibujo cobra vida en 3D',
+        'Conectar la tablet a internet vía cable, instalar Java, abrir el navegador, activar plugin'
       ],
       correct: 2
     },
