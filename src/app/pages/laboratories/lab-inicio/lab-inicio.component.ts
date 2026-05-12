@@ -16,4 +16,8 @@ export class LabInicioComponent implements OnInit {
       this.labId = params.get('id');
     });
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

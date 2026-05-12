@@ -7,6 +7,9 @@
 .lab-header {
   padding: 0;
   overflow: hidden;
+  position: sticky;
+  top: 70px;
+  z-index: 90;
 }
 
 .header-content {
@@ -160,3 +163,32 @@
     font-size: 1rem;
   }
 }
+
+/* ===== CONTINUAR BOTÓN ===== */
+.next-section-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.next-section-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  padding: 12px 30px;
+  background: rgba(0, 229, 255, 0.1);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.next-section-btn:hover {
+  background: var(--accent-color);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+}
+

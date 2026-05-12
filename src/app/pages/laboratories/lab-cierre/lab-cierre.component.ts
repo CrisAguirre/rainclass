@@ -67,4 +67,8 @@ export class LabCierreComponent implements OnInit {
     this.conclusionSaved = false;
     this.conclusionError = null;
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }

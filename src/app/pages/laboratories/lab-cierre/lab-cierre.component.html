@@ -824,6 +824,17 @@
 
 </div>
 
+<!-- Botón Continuar -->
+<div class="next-section-container" *ngIf="['1', '2', '3', '4', '5', '6'].includes(labId || '')">
+  <button class="glass-button next-section-btn" [routerLink]="['/laboratories', labId, 'evaluacion']" (click)="scrollToTop()">
+    Continuar con la evaluación
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"></line>
+      <polyline points="12 5 19 12 12 19"></polyline>
+    </svg>
+  </button>
+</div>
+
 <!-- Generic placeholder for other labs -->
 <div *ngIf="!['1', '2', '3', '4', '5', '6'].includes(labId || '')" class="glass-panel" style="padding: 30px;">
   <h3>Fase de Cierre</h3>

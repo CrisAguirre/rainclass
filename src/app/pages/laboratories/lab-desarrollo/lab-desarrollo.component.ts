@@ -675,4 +675,8 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
       document.head.appendChild(script);
     });
   }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
