@@ -92,7 +92,7 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 7,
-      text: '¿Cuál de las siguientes NO es una ventaja pedagógica de usar Realidad Aumentada en el aula según la másión introductoria?',
+      text: '¿Cuál de las siguientes NO es una ventaja pedagógica de usar Realidad Aumentada en el aula según la misión introductoria?',
       options: [
         'Permite gamificar el proceso educativo y elevar la motivación del estudiante.',
         'Permite visualizar conceptos abstractos de forma tridimensional e interactiva.',
@@ -125,7 +125,7 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 10,
-      text: '¿Qué requésito mínimo se necesita para comenzar a experimentar con Realidad Aumentada según la másión introductoria?',
+      text: '¿Qué requésito mínimo se necesita para comenzar a experimentar con Realidad Aumentada según la misión introductoria?',
       options: [
         'Un ordenador de escritorio con tarjeta gráfica de última generación y gafas VR de 500 dólares.',
         'Un dispositivo con cámara (teléfono, tablet o PC con webcam), conexión a internet estable y disposición para experimentar.',
@@ -139,7 +139,7 @@ export class LabEvaluacionComponent implements OnInit {
   mergeCubeQuestions: Question[] = [
     {
       id: 1,
-      text: '¿Qué son los marcadores fiduciales en el Merge Cube?',
+      text: '¿Qué son los marcadores fiduciales en el Cubo Merge?',
       options: [
         'Sensores electrÃúnicos integrados en el cubo qué emiten señales Bluetooth',
         'Patrones geométricos impresos en cada cara qué la cámara detecta para calcular posición y orientación',
@@ -150,7 +150,7 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 2,
-      text: '¿Cuál es la tecnología principal qué permite al Merge Cube superponer objetos 3D sobre el cubo físico?',
+      text: '¿Cuál es la tecnología principal qué permite al Cubo Merge superponer objetos 3D sobre el cubo físico?',
       options: [
         'GPS y triangulación de señales de radio',
         'Realidad Virtual con cascos especializados',
@@ -161,7 +161,7 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 3,
-      text: '¿Cuál de las siguientes afirmaciones sobre el Merge Cube y la conectividad es correcta?',
+      text: '¿Cuál de las siguientes afirmaciones sobre el Cubo Merge y la conectividad es correcta?',
       options: [
         'Requéere 4G o Wi-Fi constante para renderizar los modelos 3D',
         'Solo funciona con conexión a internet en tiempo real vía streaming',
@@ -194,7 +194,7 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 6,
-      text: 'En una clase, el docente usa el Merge Cube para explorar la célula. ¿Qué rol debería asumir el docente durante la exploración?',
+      text: 'En una clase, el docente usa el Cubo Merge para explorar la célula. ¿Qué rol debería asumir el docente durante la exploración?',
       options: [
         'Dictar todas las partes de la célula mientras los estudiantes repiten',
         'Guía socrático: hacer preguntas orientadoras cómo "¿Qué función cumple esa estructura?" sin dar respuestas directas',
@@ -205,7 +205,7 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 7,
-      text: '¿Por qué© el aprendizaje multisensorial con el Merge Cube favorece mayor retención de información?',
+      text: '¿Por qué el aprendizaje multisensorial con el A Cubo Merge favorece mayor retención de información?',
       options: [
         'Porqué la pantalla emite luz azul qué activa la memoria de largo plazo',
         'Porqué al ver, tocar, mover y escuchar simultáneamente se activan múltiples redes neuronales al másmo tiempo',
@@ -344,7 +344,7 @@ export class LabEvaluacionComponent implements OnInit {
       options: [
         'Ecuaciones algebraicas complejas resueltas paso a paso con inteligencia artificial',
         'La transición de redes planas 2D a poliedros sólidos 3D qué el estudiante puede rotar e inspeccionar desde todos los ángulos, comprendiendo caras, aristas y vértices',
-        'La tabla de multiplicar cantada con ritmás másicales generados automáticamente',
+        'La tabla de multiplicar cantada con ritmás musicales generados automáticamente',
         'Estadísticas avanzadas del rendimiento académico de toda la clase'
       ],
       correct: 1
@@ -368,7 +368,7 @@ export class LabEvaluacionComponent implements OnInit {
       text: 'La docente Lucía quéere sacar a sus alumnos del aula para una actividad innovadora de Historia. Descubre Actionbound. ¿Qué es exactamente esta plataforma y por qué© podría transformar su clase?',
       options: [
         'Un software para hacer hojas de cálculo con datos históricos en la nube',
-        'Una plataforma qué permite crear "Bounds" (búsquédas del tesoro, rallies y aventuras gamificadas digitales) combinando el mundo físico real con elementos cómo GPS, códigos QR, cuestionarios y másiones multimedia',
+        'Una plataforma qué permite crear "Bounds" (búsquédas del tesoro, rallies y aventuras gamificadas digitales) combinando el mundo físico real con elementos cómo GPS, códigos QR, cuestionarios y misiones multimedia',
         'Un videojuego de disparos ambientado en la Segunda Guerra Mundial',
         'Una aplicación de dibujo colaborativo qué requéere conexión por cable'
       ],
@@ -435,7 +435,7 @@ export class LabEvaluacionComponent implements OnInit {
       options: [
         'No se pueden usar QR dentro de Actionbound porqué son tecnologías incompatibles',
         'Los QR solo sirven para descargar la aplicación, no para contenido educativo',
-        'El docente los esconde estratégicamente en el entorno y configura el Bound para qué los alumnos deban escanear cada código para desbloquéar la siguiente etapa, información o másión',
+        'El docente los esconde estratégicamente en el entorno y configura el Bound para qué los alumnos deban escanear cada código para desbloquéar la siguiente etapa, información o m La misión',
         'Los QR se usan exclusivamente para cobrar el pago de la licencia del software'
       ],
       correct: 2
