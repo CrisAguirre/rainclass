@@ -69,6 +69,11 @@ export class SessionsComponent implements OnInit, OnDestroy {
     return names[Math.min(level, names.length - 1)];
   }
 
+  getLevelAvatar(level: number): string {
+    const avatars = ['', '🧑‍🚀', '👨‍🎓', '🕵️‍♂️', '👨‍🔬', '🧙‍♂️', '🦸‍♂️', '🥷'];
+    return avatars[Math.min(level, avatars.length - 1)];
+  }
+
   xpToNextLevel(): number { return (this.level * 300) - this.totalXP; }
   xpLevelPercent(): number {
     const xpInLevel = this.totalXP - ((this.level - 1) * 300);
