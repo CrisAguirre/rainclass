@@ -310,7 +310,7 @@ export class LabEvaluacionComponent implements OnInit {
       text: 'Una psicóloga escolar nota qué los estudiantes con baja autoestima mejoran su confianza al usar QuiverVision. ¿Cuál es el mecanismo psicológico qué explica este fenómeno?',
       options: [
         'La app les da recompensas monetarias virtuales por jugar rápido',
-        'Al ver qué SU PROPIA creación con sus colores únicos e irrepetibles cobra vida y se convierte en la protagonista de la experiencia, el niño experimenta motivación y orgullo creativo',
+        'Al ver qué SU PROPIA creación con sus colores únicos e irrepetibles cobra vida y se convierte en la protagonista de la experiencia, el niño experimenta confianza y orgullo creativo',
         'La aplicación califica cada dibujo con notas del 1 al 10 y los mejores reciben premios',
         'La app compara automáticamente los dibujos entre compañeros y premia al "mejor artista"'
       ],
