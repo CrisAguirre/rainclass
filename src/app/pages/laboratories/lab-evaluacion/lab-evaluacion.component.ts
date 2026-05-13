@@ -482,7 +482,7 @@ export class LabEvaluacionComponent implements OnInit {
       text: 'El rector de un colegio escucha por primera vez el término "Metaverso educativo" y quiere entender de que se trata. ¿Cuál es la definición más precisa en un contexto de enseñanza?',
       options: [
         'Un libro de texto digital en formato PDF que se lee en una tablet',
-        'La evolución del internet hacia espacios virtuales tridimensionales y compartidos donde estudiantes y docentes ârepresentados por avataresâ pueden interactuar, colaborar y aprender cómo si estuvieran juntos físicamente',
+        'La evolución del internet hacia espacios virtuales tridimensionales y compartidos donde estudiantes y docentes representados por avatares que pueden interactuar, colaborar y aprender cómo si estuvieran juntos físicamente',
         'Una red social exclusiva para profesores donde comparten temas educativos',
         'Un sistema automatizado de calificaciones que reemplaza al docente'
       ],

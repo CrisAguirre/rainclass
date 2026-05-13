@@ -2,17 +2,17 @@
 <div *ngIf="labId === '1'" class="lab-content">
 
   <!-- ============================================================
-       HERO INMERSIVO â Partículas flotantes + título animado
+       HERO INMERSIVO  Partículas flotantes + título animado
   ============================================================ -->
   <div class="m1-hero glass-panel">
     <!-- Partículas de fondo (CSS puro) -->
     <div class="m1-particles" aria-hidden="true">
-      <span class="m1-p m1-p1">â¦</span>
-      <span class="m1-p m1-p2">â</span>
-      <span class="m1-p m1-p3">â¬¡</span>
-      <span class="m1-p m1-p4">â¦</span>
-      <span class="m1-p m1-p5">â</span>
-      <span class="m1-p m1-p6">â¬¡</span>
+      <span class="m1-p m1-p1">X</span>
+      <span class="m1-p m1-p2">Y</span>
+      <span class="m1-p m1-p3">Z</span>
+      <span class="m1-p m1-p4">A</span>
+      <span class="m1-p m1-p5">B</span>
+      <span class="m1-p m1-p6">C</span>
     </div>
 
     <div class="m1-hero-body">
@@ -29,11 +29,11 @@
 
         <!-- Chips de objetivos -->
         <div class="m1-chip-row">
-          <span class="m1-chip">ð§­ ¿Qué es la RA?</span>
-          <span class="m1-chip">ð¬ RA vs RV vs RM</span>
-          <span class="m1-chip">ð« RA en el aula</span>
-          <span class="m1-chip">ðºï¸ Ruta de 7 misiones</span>
-          <span class="m1-chip">ð Trofeos &amp; Coleccionables</span>
+          <span class="m1-chip">­ ¿Qué es la RA?</span>
+          <span class="m1-chip"> RA vs RV vs RM</span>
+          <span class="m1-chip"> RA en el aula</span>
+          <span class="m1-chip"> Ruta de 7 misiones</span>
+          <span class="m1-chip"> Trofeos &amp; Coleccionables</span>
         </div>
       </div>
 
@@ -50,7 +50,7 @@
               <div class="m1-orbit-ring r1"></div>
               <div class="m1-orbit-ring r2"></div>
               <div class="m1-orbit-ring r3"></div>
-              <div class="m1-planet">ð</div>
+              <div class="m1-planet"> De </div>
             </div>
           </div>
           <div class="m1-visor-hud">
@@ -62,7 +62,7 @@
   </div>
 
   <!-- ============================================================
-       ¿QUÃ ES LA RA? â Definición visual + comparativa RA/RV/RM
+       ¿QUÃ ES LA RA?  Definición visual + comparativa RA/RV/RM
   ============================================================ -->
   <div class="section-title">
     <h3>¿Qué es la Realidad Aumentada?</h3>
@@ -74,14 +74,14 @@
     <div class="m1-def-icon">ð¡</div>
     <div class="m1-def-text">
       <p class="m1-def-main">
-        La <strong>Realidad Aumentada</strong> superpone capas de contenido digital âimágenes,
-        modelos 3D, sonidos, datos en tiempo realâ sobre el mundo físico que nos rodea,
+        La <strong>Realidad Aumentada</strong> superpone capas de contenido digital en imágenes,
+        modelos 3D, sonidos, datos en tiempo real sobre el mundo físico que nos rodea,
         a través de la cámara de un dispositivo. El usuario <em>nunca pierde de vista su entorno real</em>:
         simplemente lo ve enriquécido con información digital exactamente posicionada.
       </p>
       <p class="m1-def-examples">
         <strong>Ejemplos cotidianos que ya conoces:</strong>
-        filtros de Instagram Â· Pokémon GO Â· IKEA Place Â· Google Translate con cámara Â· Snapchat Lens
+        filtros de Instagram · Pokémon GO · IKEA Place · Google Translate con cámara · Snapchat Lens
       </p>
     </div>
   </div>
@@ -138,10 +138,10 @@
   </div>
 
   <!-- ============================================================
-       ¿CÃMO FUNCIONA? â Pipeline visual paso a paso
+       ¿CÃMO FUNCIONA?  Pipeline visual paso a paso
   ============================================================ -->
   <div class="section-title">
-    <h3>¿Cómo funciona la RA? â El pipeline de 3 pasos</h3>
+    <h3>¿Cómo funciona la RA?  El pipeline de 3 pasos</h3>
     <div class="title-line"></div>
   </div>
 
@@ -169,7 +169,7 @@
   </div>
 
   <!-- ============================================================
-       ¿POR QUÃ RA EN EL AULA? â Stats + beneficios
+       ¿POR QUÃ RA EN EL AULA?  Stats + beneficios
   ============================================================ -->
   <div class="section-title">
     <h3>La RA en la Educación: Evidencia y Beneficios</h3>
@@ -228,7 +228,7 @@
   </div>
 
   <!-- ============================================================
-       RUTA DE APRENDIZAJE â Mapa de 7 misiones
+       RUTA DE APRENDIZAJE  Mapa de 7 misiones
   ============================================================ -->
   <div class="section-title">
     <h3>Tu Ruta de Aprendizaje en RaInClass</h3>
@@ -304,10 +304,10 @@
   </div>
 
   <!-- ============================================================
-       TROFEOS Y COLECCIONABLES â Sistema de recompensas
+       TROFEOS Y COLECCIONABLES  Sistema de recompensas
   ============================================================ -->
   <div class="section-title">
-    <h3>ð Trofeos &amp; Coleccionables â Tu Sistema de Recompensas</h3>
+    <h3>ð Trofeos &amp; Coleccionables  Tu Sistema de Recompensas</h3>
     <div class="title-line"></div>
   </div>
 
@@ -382,7 +382,7 @@
   </div>
 
   <!-- ============================================================
-       CALL TO ACTION â Próximo paso
+       CALL TO ACTION  Próximo paso
   ============================================================ -->
   <div class="m1-cta glass-panel">
     <div class="m1-cta-icon">ð</div>
@@ -409,8 +409,8 @@
       <p>
         El <strong>Merge Cube</strong> es un cubo físico de realidad aumentada que convierte un
         dispositivo móvil corriente en una ventana hacia objetos digitales 3D interactivos. Al
-        sostenerlo frente a la cámara, el cubo parece desaparecer y en su lugar aparece âflotando
-        sobre tus manosâ un planeta, una célula, una molécula o cualquier modelo que la aplicación
+        sostenerlo frente a la cámara, el cubo parece desaparecer y en su lugar aparece flotando
+        sobre tus manos un planeta, una célula, una molécula o cualquier modelo que la aplicación
         active. No se necesita hardware costoso: un smartphone, una tableta o incluso el cubo impreso
         en papel son suficientes para comenzar.
       </p>
@@ -500,7 +500,7 @@
 
   <!-- Cómo funciona paso a paso -->
   <div class="section-title">
-    <h3>¿Cómo Funciona? â Paso a Paso</h3>
+    <h3>¿Cómo Funciona?  Paso a Paso</h3>
     <div class="title-line"></div>
   </div>
 
@@ -662,8 +662,8 @@
       </p>
       <p>
         En esta misión descubrirás <strong>cómo funciona la tecnología detrás de Quiver, por que es tan
-          efectiva pedagógicamente, y cómo integrarla en cualquier área del currículo</strong> âdesde
-        Ciencias Naturales hasta Educación Emocionalâ sin necesidad de equipos costosos.
+          efectiva pedagógicamente, y cómo integrarla en cualquier área del currículo</strong> desde
+        Ciencias Naturales hasta Educación Emocional sin necesidad de equipos costosos.
       </p>
     </div>
     <div class="hero-image">
@@ -715,7 +715,7 @@
     </div>
 
     <div class="glass-panel info-card">
-      <h3>El "Efecto Wow" â La puerta de entrada al aprendizaje</h3>
+      <h3>El "Efecto Wow"  La puerta de entrada al aprendizaje</h3>
       <p>
         El momento en que un niño ve <em>su propio dibujo</em> cobrar vida genera un <strong>asombro
           inmediato</strong> que es pedagógicamente valioso. Este "Efecto Wow" no es un fin en sí másmo:
@@ -742,7 +742,7 @@
 
   <!-- Cómo funciona paso a paso -->
   <div class="section-title">
-    <h3>¿Cómo Funciona? â Paso a Paso</h3>
+    <h3>¿Cómo Funciona?  Paso a Paso</h3>
     <div class="title-line"></div>
   </div>
 
@@ -907,7 +907,7 @@
       <p class="subtitle">El mundo real es tu tablero de juego</p>
       <p>
         <strong>Actionbound</strong> es una plataforma innovadora que transforma cualquier espacio físico
-        âel colegio, el parque, el centro histórico de la ciudadâ en un <em>tablero de aprendizaje gamificado</em>.
+        el colegio, el parque, el centro histórico de la ciudad en un <em>tablero de aprendizaje gamificado</em>.
         Los docentes diseñan "Bounds" (búsquedas del tesoro, rallies interactivos o aventuras de exploración)
         que combinan <strong>GPS, códigos QR, cuestionarios, misiones multimedia y elementos de juego</strong>
         para sacar a los estudiantes del aula y conectar la teoría con los lugares donde cobra vida.
@@ -994,7 +994,7 @@
 
   <!-- Cómo funciona paso a paso -->
   <div class="section-title">
-    <h3>¿Cómo Funciona? â Paso a Paso</h3>
+    <h3>¿Cómo Funciona? Paso a Paso</h3>
     <div class="title-line"></div>
   </div>
 
@@ -1203,7 +1203,7 @@
 
   <div class="info-grid">
     <div class="glass-panel info-card">
-      <h3>El "Sentido de Presencia" â La diferencia clave</h3>
+      <h3>El "Sentido de Presencia" La diferencia clave</h3>
       <p>
         A diferencia de un video o una foto 360Â°, la Realidad Virtual genera un fenómeno neurológico
         llamado <strong>"Sentido de Presencia"</strong>: el cerebro reacciona genuinamente ante la
@@ -1222,13 +1222,13 @@
           expresiones faciales.</li>
         <li><strong>Comunicación natural:</strong> permite lenguaje corporal, gestos con las manos y expresiones qué
           hacen la comunicación más humana que una videollamada.</li>
-        <li><strong>Inclusión:</strong> el avatar reduce barreras sociales â el estudiante tímido puede participar con
+        <li><strong>Inclusión:</strong> el avatar reduce barreras sociales el estudiante tímido puede participar con
           menor ansiedad social.</li>
       </ul>
     </div>
 
     <div class="glass-panel info-card">
-      <h3>Horizon Workrooms â El aula del futuro</h3>
+      <h3>Horizon Workrooms - El aula del futuro</h3>
       <p>
         <strong>Horizon Workrooms</strong> es el espacio virtual colaborativo de Meta donde clases y equipos
         se reúnen mediante avatares. Ofrece <strong>pizarras infinitas</strong> donde múltiples usuarios
@@ -1255,7 +1255,7 @@
 
   <!-- Cómo funciona paso a paso -->
   <div class="section-title">
-    <h3>¿Cómo Funciona? â Paso a Paso</h3>
+    <h3>¿Cómo Funciona? Paso a Paso</h3>
     <div class="title-line"></div>
   </div>
 
