@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { EvaluationService } from '../../../services/evaluation.service';
 import { ProgressService } from '../../../services/progress.service';
 import { AuthService } from '../../../services/auth.service';
+import { GamificationService } from '../../../services/gamification.service';
 
 interface Question {
   id: number;
@@ -701,11 +702,15 @@ export class LabEvaluacionComponent implements OnInit {
     }
   ];
 
+  // Contador de intentos para el trofeo "Persistente"
+  private attemptCount = 0;
+
   constructor(
-    private route: ActivatedRoute,
-    private evalService: EvaluationService,
+    private route:          ActivatedRoute,
+    private evalService:    EvaluationService,
     private progressService: ProgressService,
-    private authService: AuthService
+    private authService:    AuthService,
+    private gamification:   GamificationService,
   ) { }
 
   ngOnInit(): void {
@@ -740,37 +745,54 @@ export class LabEvaluacionComponent implements OnInit {
     this.totalQuestions = questions.length;
     this.score = 0;
     questions.forEach(q => {
-      if (this.answers[q.id] === q.correct) {
-        this.score++;
-      }
+      if (this.answers[q.id] === q.correct) this.score++;
     });
     this.submitted = true;
+    this.attemptCount++;
 
-    // Get user from AuthService
-    const user = this.authService.getCurrentUser();
-    const userId = user?.userId ?? 'anon';
+    const user     = this.authService.getCurrentUser();
+    const userId   = user?.userId   ?? 'anon';
     const username = user?.displayName ?? user?.username ?? 'Docente Anónimo';
+    const labNum   = parseInt(this.labId || '0');
+    const pct      = this.getPercentage();
 
-    // Marcar lab cómo completado en backend + localStorage
+    // ── 1. Marcar misión como completada (progreso + backend) ─────────────────
     if (this.labId) {
-      const pct = Math.round((this.score / this.totalQuestions) * 100);
-      this.progressService.completeLab(parseInt(this.labId), userId, username, pct);
+      this.progressService.completeLab(labNum, userId, username, pct);
     }
 
-    // Send results to backend
-    const labName: { [key: string]: string } = { '1': 'Introducción', '2': 'Merge Cube', '3': 'QuiverVision', '4': 'Actionbound', '5': 'Metaverso Meta', '6': 'Visualizador de Modelos 3D' };
+    // ── 2. Calcular cuántas misiones completadas hay ahora ────────────────────
+    //    (Se lee después de completeLab para incluir la actual)
+    const totalCompleted = this.progressService.snapshot.labs
+      .filter(l => l.status === 'completed').length;
+
+    // ── 3. Otorgar trofeos y coleccionables en tiempo real ────────────────────
+    //    GamificationService actualiza sus BehaviorSubjects de inmediato,
+    //    así Trofeos y Coleccionables se refrescan SIN recargar la página.
+    this.gamification.processEvaluationResult(labNum, pct, totalCompleted);
+    if (this.attemptCount > 1) {
+      this.gamification.processPersistence(this.attemptCount);
+    }
+
+    // ── 4. Guardar resultado de evaluación en backend ─────────────────────────
+    const labName: Record<string, string> = {
+      '1': 'Introducción', '2': 'Merge Cube', '3': 'QuiverVision',
+      '4': 'Actionbound',  '5': 'Metaverso Meta', '6': 'Visualizador de Modelos 3D',
+      '7': 'Modelo con Geoposición',
+    };
+
     this.evalService.saveResult({
-      userId: userId,
-      username: username,
-      labId: parseInt(this.labId || '0'),
-      labName: labName[this.labId || '1'] || 'Desconocido',
-      score: this.score,
+      userId,
+      username,
+      labId:          labNum,
+      labName:        labName[this.labId || '1'] || 'Desconocido',
+      score:          this.score,
       totalQuestions: this.totalQuestions,
-      percentage: this.getPercentage(),
-      answers: this.answers
+      percentage:     pct,
+      answers:        this.answers,
     }).subscribe({
-      next: (res) => console.log('Resultado guardado:', res),
-      error: (err) => console.error('Error al guardar resultado:', err)
+      next:  () => console.log(`[RaInClass] Evaluación misión ${labNum} guardada (${pct}%)`),
+      error: (err) => console.warn('[RaInClass] No se pudo guardar en backend:', err),
     });
   }
 
@@ -779,8 +801,8 @@ export class LabEvaluacionComponent implements OnInit {
   }
 
   retryEvaluation() {
-    this.answers = {};
+    this.answers   = {};
     this.submitted = false;
-    this.score = 0;
+    this.score     = 0;
   }
 }

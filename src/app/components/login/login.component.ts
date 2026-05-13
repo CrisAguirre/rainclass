@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { ProgressService } from '../../services/progress.service';
-import { EvaluationService } from '../../services/evaluation.service';
+import { GamificationService } from '../../services/gamification.service';
 import { catchError } from 'rxjs/operators';
 import { of } from 'rxjs';
 
@@ -18,10 +18,10 @@ export class LoginComponent implements OnInit {
   isLoading = false;
 
   constructor(
-    private authService: AuthService,
-    private progressService: ProgressService,
-    private evaluationService: EvaluationService,
-    private router: Router
+    private authService:       AuthService,
+    private progressService:   ProgressService,
+    private gamification:      GamificationService,
+    private router:            Router,
   ) {}
 
   ngOnInit(): void {
@@ -34,22 +34,24 @@ export class LoginComponent implements OnInit {
     this.isLoading = true;
     const cleanUsername = this.username.trim();
     const cleanPassword = this.password.trim();
+
     this.authService.login(cleanUsername, cleanPassword).subscribe(user => {
       if (user) {
         this.error = '';
-        
-        // Precarga del backend para administradores y docentes
-        if (user.role === 'docente' || user.role === 'admin') {
-          this.evaluationService.getAllResults().pipe(catchError(() => of(null))).subscribe();
-          this.evaluationService.getStats().pipe(catchError(() => of(null))).subscribe();
-          this.evaluationService.getAllTrophies().pipe(catchError(() => of(null))).subscribe();
-          this.evaluationService.getAllCollectibles().pipe(catchError(() => of(null))).subscribe();
-        }
 
-        // Cargar progreso desde el backend al iniciar sesión
+        // ── 1. Cargar progreso del backend y fusionar con local ─────────────
         this.progressService.loadFromBackend(user.userId).subscribe(() => {
+
+          // ── 2. Cargar trofeos y coleccionables del usuario en tiempo real ──
+          //    GamificationService los expone como BehaviorSubjects reactivos,
+          //    así cualquier componente suscrito (Trofeos, Coleccionables) se
+          //    actualiza automáticamente sin recargar la página.
+          this.gamification.loadAll(user.userId);
+
+          // ── 3. Navegar a intro ──────────────────────────────────────────────
           this.router.navigate(['/intro']);
         });
+
       } else {
         this.isLoading = false;
         this.error = 'Credenciales incorrectas o el servidor tardó demasiado. Intente nuevamente.';

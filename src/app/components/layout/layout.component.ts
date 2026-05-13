@@ -43,6 +43,10 @@ export class LayoutComponent implements OnInit {
   }
 
   logout() {
+    // Limpiar el estado en memoria antes de salir.
+    // Así el próximo usuario arranca limpio hasta que su progreso
+    // se cargue del backend al hacer login.
+    this.progressService.clearSession();
     this.authService.logout();
   }
 }
