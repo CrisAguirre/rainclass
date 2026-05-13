@@ -22,7 +22,7 @@ export interface UserProgress {
 // Antes: 'rainclass_progress' (global → cualquier usuario leía el mismo cache)
 // Ahora: 'rainclass_progress_<userId>' (aislado por usuario)
 const STORAGE_KEY_PREFIX = 'rainclass_progress_';
-const TOTAL_LABS         = 7;
+const TOTAL_LABS         = 6;
 const XP_PER_LAB         = 150;
 const API_URL            = `${environment.apiUrl}/progress`;
 

@@ -30,7 +30,6 @@ const MISSIONS: { id: number; name: string; icon: string; hasEval: boolean }[] =
   { id: 4, name: 'Actionbound',               icon: '🗺️', hasEval: true },
   { id: 5, name: 'Metaverso Meta',            icon: '🌐', hasEval: true },
   { id: 6, name: 'Visualizador Modelos 3D',   icon: '🔬', hasEval: true },
-  { id: 7, name: 'Modelo 3D con Geoposición', icon: '📍', hasEval: true },
 ];
 
 function medalFromPercentage(pct: number | null): MedalType {

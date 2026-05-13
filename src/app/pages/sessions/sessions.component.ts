@@ -28,7 +28,6 @@ export class SessionsComponent implements OnInit, OnDestroy {
     { id: 4, title: 'Actionbound',              icon: '🗺️', xp: 150, description: 'Recorridos, búsquedas del tesoro y aventuras de aprendizaje gamificadas.',              status: 'locked' },
     { id: 5, title: 'Metaverso Meta',           icon: '🌐', xp: 150, description: 'Conéctate, colabora y aprende en entornos virtuales inmersivos.',                        status: 'locked' },
     { id: 6, title: 'RA Propia – Generador 3D', icon: '🔬', xp: 150, description: 'Escanea patrones QR y genera modelos 3D interactivos por asignatura.',                  status: 'locked' },
-    { id: 7, title: 'Modelo con Geoposición',   icon: '📍', xp: 150, description: 'Ancla modelos 3D a marcadores AR físicos con posición y nivelación en tiempo real.',    status: 'locked' },
   ];
 
   userProgress!: UserProgress;

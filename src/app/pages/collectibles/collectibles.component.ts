@@ -71,7 +71,6 @@ export class CollectiblesComponent implements OnInit, OnDestroy {
       { id:'c3', name:'Mapa del Tesoro',   icon:'🗺️', description:'Completa la misión Actionbound',      rarity:'raro'      as const, labId: 4 },
       { id:'c4', name:'Visor VR',          icon:'🥽', description:'Completa la misión Metaverso Meta',   rarity:'raro'      as const, labId: 5 },
       { id:'c5', name:'Generador RA',      icon:'🔬', description:'Completa la misión RA Propia',        rarity:'epico'     as const, labId: 6 },
-      { id:'c6', name:'Ancla Geoespacial', icon:'📍', description:'Completa la misión Geoposición',      rarity:'epico'     as const, labId: 7 },
       { id:'c7', name:'Mente Brillante',   icon:'💡', description:'Obtén 100% en cualquier evaluación',  rarity:'legendario'as const, labId: -1 },
       { id:'c8', name:'Coleccionista',     icon:'🌟', description:'Obtén todos los coleccionables',      rarity:'legendario'as const, labId: -2 },
     ];
@@ -96,7 +95,7 @@ export class CollectiblesComponent implements OnInit, OnDestroy {
   }
 
   private idMap(labId: number): string {
-    const m: Record<number,string> = { 2:'merge', 3:'quiver', 4:'action', 5:'meta', 6:'ra', 7:'geo' };
+    const m: Record<number,string> = { 2:'merge', 3:'quiver', 4:'action', 5:'meta', 6:'ra' };
     return m[labId] ?? '';
   }
 

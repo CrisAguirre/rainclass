@@ -43,7 +43,6 @@ const TROPHY_CATALOG: Record<string, Omit<Trophy, 'earnedAt'>> = {
   puntaje_perfecto:{ trophyId:'puntaje_perfecto', name:'Puntuación Perfecta', icon:'💯', category:'evaluacion', description:'Obtuviste 100% en una evaluación.' },
   aprobado_90:     { trophyId:'aprobado_90',      name:'Sobresaliente',       icon:'⭐', category:'evaluacion', description:'Obtuviste 90% o más en una evaluación.' },
   explorador_ar:   { trophyId:'explorador_ar',    name:'Explorador AR',       icon:'🔭', category:'exploracion',description:'Usaste el Visualizador de Modelos 3D.' },
-  geoposicion:     { trophyId:'geoposicion',      name:'Maestro Geoespacial', icon:'📍', category:'avanzado',   description:'Completaste la misión de Geoposición.' },
   persistente:     { trophyId:'persistente',      name:'Persistente',         icon:'💪', category:'actitud',    description:'Repetiste una evaluación para mejorar tu puntaje.' },
 };
 
@@ -55,7 +54,6 @@ const COLLECTIBLE_CATALOG: Record<number, Omit<Collectible, 'earnedAt'>> = {
   4:  { collectibleId:'carta_action',   name:'Mapa del Tesoro',        icon:'🗺️', rarity:'raro',       description:'Herramienta de navegación de Actionbound.' },
   5:  { collectibleId:'carta_meta',     name:'Visor VR',               icon:'🥽', rarity:'raro',       description:'Visor del Metaverso Meta desbloqueado.' },
   6:  { collectibleId:'carta_ra',       name:'Generador RA',           icon:'🔬', rarity:'epico',      description:'Generador QR especial con acabado dorado.' },
-  7:  { collectibleId:'carta_geo',      name:'Ancla Geoespacial',      icon:'📍', rarity:'epico',      description:'Pin especial del módulo de Geoposición AR.' },
 };
 
 // ── Trofeo especial: coleccionista (todas las cartas) ──────────────────────────
@@ -124,7 +122,7 @@ export class GamificationService {
    * Punto de entrada principal.
    * Se llama desde lab-evaluacion.submitEvaluation() después de guardar el resultado.
    *
-   * @param labId       id numérico de la misión evaluada (1-7)
+   * @param labId       id numérico de la misión evaluada (1-6)
    * @param percentage  porcentaje obtenido en la evaluación (0-100)
    * @param totalCompleted  cuántas misiones están ya completadas (incluida esta)
    */
@@ -143,11 +141,10 @@ export class GamificationService {
     // ── 3. Trofeos por progreso ───────────────────────────────────
     if (totalCompleted >= 1) this._grantTrophy(user, TROPHY_CATALOG['primera_mision']);
     if (totalCompleted >= 4) this._grantTrophy(user, TROPHY_CATALOG['mitad_camino']);
-    if (totalCompleted >= 7) this._grantTrophy(user, TROPHY_CATALOG['maestro_rainclass']);
+    if (totalCompleted >= 6) this._grantTrophy(user, TROPHY_CATALOG['maestro_rainclass']);
 
     // ── 4. Trofeos por misión específica ──────────────────────────
     if (labId === 6) this._grantTrophy(user, TROPHY_CATALOG['explorador_ar']);
-    if (labId === 7) this._grantTrophy(user, TROPHY_CATALOG['geoposicion']);
 
     // ── 5. Trofeo coleccionista si tiene todos los coleccionables ──
     const allCollectibleIds = Object.values(COLLECTIBLE_CATALOG).map(c => c.collectibleId);
