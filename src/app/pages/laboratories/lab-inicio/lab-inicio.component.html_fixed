@@ -109,7 +109,7 @@
       <div class="m1-sc-badge">RM</div>
       <h4>Realidad Mixta</h4>
       <p>Los objetos digitales <strong>interactúan</strong> con superficies físicas reales. Mayor precisión espacial.
-        Requéere dispositivos especializados.</p>
+        Requiere dispositivos especializados.</p>
       <div class="m1-sc-bar">
         <span class="m1-sc-bar-fill" style="width:65%"></span>
         <span class="m1-sc-bar-label">Digital</span>
@@ -125,7 +125,7 @@
       <div class="m1-sc-badge">RV</div>
       <h4>Realidad Virtual</h4>
       <p>Entorno 100% digital. El usuario está <strong>completamente inmerso</strong> en un mundo generado por
-        computadora. Requéere casco o visor.</p>
+        computadora. Requiere casco o visor.</p>
       <div class="m1-sc-bar">
         <span class="m1-sc-bar-fill" style="width:100%"></span>
         <span class="m1-sc-bar-label">Digital</span>
@@ -357,7 +357,7 @@
         <strong>Bronce</strong> (70â79%), <strong>Plata</strong> (80â89%), <strong>Oro</strong> (90â99%)
         o el codiciado <strong>Platino</strong> (100% perfecto).
       </p>
-      <p>Puedes reintentar la evaluación para mejorar tu trofeo cuando quéeras.
+      <p>Puedes reintentar la evaluación para mejorar tu trofeo cuando quieras.
         <strong>Solo se guarda tu mejor resultado</strong>.
       </p>
       <div class="m1-tip-inline">ð¡ Ve a la sección <strong>Trofeos</strong> del menú para ver tu colección completa
@@ -479,7 +479,7 @@
         <li>ð¢ <strong>RA con Merge Cube:</strong> el usuario ve su entorno real + el objeto 3D sobrepuesto.
           Interacción táctil y física con el cubo.</li>
         <li>ðµ <strong>Realidad Virtual (RV):</strong> entorno completamente digital, el usuario se aísla del mundo
-          real. Requéere cascos.</li>
+          real. Requiere cascos.</li>
         <li>ð¡ <strong>Realidad Mixta (RM):</strong> los objetos digitales interactúan con superficies físicas reales.
           Hardware más especializado.</li>
       </ul>
@@ -509,7 +509,7 @@
       <div class="step">
         <div class="step-number">1</div>
         <h4>Obtén o imprime el cubo</h4>
-        <p>Adquéere el Merge Cube físico (gomaespuma) o descarga la <strong>plantilla gratuita</strong> en <a
+        <p>Adquiere el cubo merge físico (gomaespuma) o descarga la <strong>plantilla gratuita</strong> en <a
             href="https://mergeedu.com/cube" target="_blank">mergeedu.com/cube</a>, imprímela y arma el cubo con tijeras
           y pegamento.</p>
       </div>
@@ -667,7 +667,7 @@
       </p>
     </div>
     <div class="hero-image">
-      <div class="quéver-anim">
+      <div class="quiver-anim">
         <div class="qv-paper">
           <div class="qv-splat qv-s1"></div>
           <div class="qv-splat qv-s2"></div>
@@ -751,7 +751,7 @@
       <div class="step">
         <div class="step-number">1</div>
         <h4>Imprimir plantillas</h4>
-        <p>El docente descarga las plantillas desde el portal <strong>Quiver Education</strong> (quévervision.com) e
+        <p>El docente descarga las plantillas desde el portal <strong>Quiver Education</strong> (quivervision.com) e
           imprime las que correspondan al tema curricular.</p>
       </div>
       <div class="step-arrow">â</div>
@@ -777,7 +777,7 @@
       </div>
     </div>
     <div class="howto-image">
-      <img src="assets/images/labs/quéver_howto.png" alt="Proceso de uso de QuiverVision">
+      <img src="assets/images/labs/quiver_howto.png" alt="Proceso de uso de QuiverVision">
     </div>
   </div>
 
@@ -958,7 +958,7 @@
       <h3>Los dos pilares del ecosistema</h3>
       <ul>
         <li><strong>Bound Creator (Web):</strong> plataforma en línea donde el docente diseña la ruta con una interfaz
-          intuitiva de arrastrar y soltar. No requéere saber programar.</li>
+          intuitiva de arrastrar y soltar. No requiere saber programar.</li>
         <li><strong>App Actionbound (Móvil):</strong> aplicación gratuita que los estudiantes descargan para escanear el
           QR del Bound y recorrerlo guiados por GPS y brújula.</li>
       </ul>

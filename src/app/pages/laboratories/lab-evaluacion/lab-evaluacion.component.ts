@@ -29,10 +29,10 @@ export class LabEvaluacionComponent implements OnInit {
       id: 1,
       text: '¿Cuál es la definición más precisa de Realidad Aumentada (RA)?',
       options: [
-        'Una tecnología qué sumerge completamente al usuario en un entorno 100% digital, bloquéando el mundo real.',
-        'Una tecnología qué superpone contenido digital (imágenes, modelos 3D, sonidos) sobre el mundo físico en tiempo real, a través de la cámara de un dispositivo.',
-        'Un videojuego qué usa sensores de movimiento para controlar personajes en una pantalla.',
-        'Una aplicación de edición de fotografías qué añade filtros sobre las imágenes guardadas.'
+        'Una tecnología que sumerge completamente al usuario en un entorno 100% digital, bloqueando el mundo real.',
+        'Una tecnología que superpone contenido digital (imágenes, modelos 3D, sonidos) sobre el mundo físico en tiempo real, a través de la cámara de un dispositivo.',
+        'Un videojuego que usa sensores de movimiento para controlar personajes en una pantalla.',
+        'Una aplicación de edición de fotografías que añade filtros sobre las imágenes guardadas.'
       ],
       correct: 1
     },
@@ -40,16 +40,16 @@ export class LabEvaluacionComponent implements OnInit {
       id: 2,
       text: '¿Cuál es la diferencia clave entre Realidad Aumentada (RA) y Realidad Virtual (RV)?',
       options: [
-        'La RA requéere gafas especiales y la RV no necesita ningún dispositivo adicional.',
-        'La RA solo funciona en interiores, mientras qué la RV funciona en cuálquéer lugar.',
-        'En la RA el usuario sigue viendo su entorno real enriquécido con capas digitales; en la RV el usuario se sumerge completamente en un entorno digital.',
-        'La RA es más costosa qué la RV porqué necesita cámaras de mayor resolución.'
+        'La RA requiere gafas especiales y la RV no necesita ningún dispositivo adicional.',
+        'La RA solo funciona en interiores, mientras que la RV funciona en cuálquier lugar.',
+        'En la RA el usuario sigue viendo su entorno real enriquecido con capas digitales; en la RV el usuario se sumerge completamente en un entorno digital.',
+        'La RA es más costosa que la RV porque necesita cámaras de mayor resolución.'
       ],
       correct: 2
     },
     {
       id: 3,
-      text: '¿Cuáles son los tres elementos téúnicos fundamentales qué hacen posible el funcionamiento de la Realidad Aumentada?',
+      text: '¿Cuáles son los tres elementos únicos fundamentales que hacen posible el funcionamiento de la Realidad Aumentada?',
       options: [
         'Teclado, ratón y pantalla de alta resolución.',
         'Cámara/sensor, procesamiento por software y pantalla/visor.',
@@ -74,7 +74,7 @@ export class LabEvaluacionComponent implements OnInit {
       text: '¿Cuál de los siguientes ejemplos cotidianos es una aplicación real de Realidad Aumentada?',
       options: [
         'Ver una película en plataformás de streaming cómo Netflix.',
-        'Usar filtros de Instagram, jugar Pokémon GO o usar Google Translate con cámara.',
+        'Usar filtros de Instagram, jugar Pokemon GO o usar Google Translate con cámara.',
         'Hacer una videollamada por Zoom con compañeros de trabajo.',
         'Escuchar música a través de auriculares inalámbricos Bluetooth.'
       ],
@@ -87,7 +87,7 @@ export class LabEvaluacionComponent implements OnInit {
         'La RM solo funciona en dispositivos Apple y no es compatible con Android.',
         'La RM es simplemente otro nombre para la Realidad Virtual con mejor resolución gráfica.',
         'En la RM los objetos digitales interactúan con el mundo físico en tiempo real, a diferencia de la RA donde son solo capas superpuestas.',
-        'La RM requéere siempre una habitación completamente oscura para funcionar correctamente.'
+        'La RM requiere siempre una habitación completamente oscura para funcionar correctamente.'
       ],
       correct: 2
     },
@@ -97,7 +97,7 @@ export class LabEvaluacionComponent implements OnInit {
       options: [
         'Permite gamificar el proceso educativo y elevar la motivación del estudiante.',
         'Permite visualizar conceptos abstractos de forma tridimensional e interactiva.',
-        'Elimina completamente la necesidad de qué el docente prepare sus clases.',
+        'Elimina completamente la necesidad de que el docente prepare sus clases.',
         'Elimina barreras geográficas y de recursos físicos.'
       ],
       correct: 2
@@ -118,19 +118,19 @@ export class LabEvaluacionComponent implements OnInit {
       text: '¿Qué diferencia fundamentalmente a la Misión 7 (Modelo con Geoposición) de la Misión 6 (RA Propia)?',
       options: [
         'La Misión 7 usa realidad virtual en lugar de realidad aumentada.',
-        'En la Misión 7 el modelo 3D se ancla espacialmente a un marcador físico manteniendo posición, rotación e inclinación en tiempo real (6DoF), mientras qué en la Misión 6 el QR solo activa la visualización.',
-        'La Misión 7 requéere gafas de Realidad Virtual y la Misión 6 solo necesita un smartphone.',
+        'En la Misión 7 el modelo 3D se ancla espacialmente a un marcador físico manteniendo posición, rotación e inclinación en tiempo real (6DoF), mientras que en la Misión 6 el QR solo activa la visualización.',
+        'La Misión 7 requiere gafas de Realidad Virtual y la Misión 6 solo necesita un smartphone.',
         'En la Misión 7 los modelos son en 2D y en la Misión 6 son en 3D.'
       ],
       correct: 1
     },
     {
       id: 10,
-      text: '¿Qué requésito mínimo se necesita para comenzar a experimentar con Realidad Aumentada según la misión introductoria?',
+      text: '¿Qué requisito mínimo se necesita para comenzar a experimentar con Realidad Aumentada según la misión introductoria?',
       options: [
         'Un ordenador de escritorio con tarjeta gráfica de última generación y gafas VR de 500 dólares.',
         'Un dispositivo con cámara (teléfono, tablet o PC con webcam), conexión a internet estable y disposición para experimentar.',
-        'Una sala de informática equépada con 30 computadores y un servidor propio del colegio.',
+        'Una sala de informática equipada con 30 computadores y un servidor propio del colegio.',
         'Conocimientos avanzados de programación en Python y diseño 3D en Blender.'
       ],
       correct: 1
@@ -142,16 +142,16 @@ export class LabEvaluacionComponent implements OnInit {
       id: 1,
       text: '¿Qué son los marcadores fiduciales en el Cubo Merge?',
       options: [
-        'Sensores electrÃúnicos integrados en el cubo qué emiten señales Bluetooth',
-        'Patrones geométricos impresos en cada cara qué la cámara detecta para calcular posición y orientación',
-        'Chips NFC qué transmiten datos al dispositivo móvil',
-        'Códigos QR qué redirigen a páginas web con contenido 3D'
+        'Sensores electrónicos integrados en el cubo que emiten señales Bluetooth',
+        'Patrones geométricos impresos en cada cara que la cámara detecta para calcular posición y orientación',
+        'Chips NFC que transmiten datos al dispositivo móvil',
+        'Códigos QR que redirigen a páginas web con contenido 3D'
       ],
       correct: 1
     },
     {
       id: 2,
-      text: '¿Cuál es la tecnología principal qué permite al Cubo Merge superponer objetos 3D sobre el cubo físico?',
+      text: '¿Cuál es la tecnología principal que permite al Cubo Merge superponer objetos 3D sobre el cubo físico?',
       options: [
         'GPS y triangulación de señales de radio',
         'Realidad Virtual con cascos especializados',
@@ -164,7 +164,7 @@ export class LabEvaluacionComponent implements OnInit {
       id: 3,
       text: '¿Cuál de las siguientes afirmaciones sobre el Cubo Merge y la conectividad es correcta?',
       options: [
-        'Requéere 4G o Wi-Fi constante para renderizar los modelos 3D',
+        'Requiere 4G o Wi-Fi constante para renderizar los modelos 3D',
         'Solo funciona con conexión a internet en tiempo real vía streaming',
         'Una vez descargados los modelos, puede funcionar sin conexión a internet',
         'Necesita conexión permanente para calcular el tracking del cubo'
@@ -188,7 +188,7 @@ export class LabEvaluacionComponent implements OnInit {
       options: [
         'Solo mapas políticos con fronteras de países',
         'Temperatura global, densidad de población, corrientes oceánicas y actividad sísmica en tiempo real',
-        'Ãnicamente imágenes satelitales estáticas del planeta',
+        'Unicamente imágenes satelitales estáticas del planeta',
         'Videos de viajes espaciales grabados por la NASA'
       ],
       correct: 1
@@ -206,12 +206,12 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 7,
-      text: '¿Por qué el aprendizaje multisensorial con el A Cubo Merge favorece mayor retención de información?',
+      text: '¿Por qué el aprendizaje multisensorial con el Cubo Merge favorece mayor retención de información?',
       options: [
         'Porqué la pantalla emite luz azul qué activa la memoria de largo plazo',
         'Porqué al ver, tocar, mover y escuchar simultáneamente se activan múltiples redes neuronales al mismo tiempo',
-        'Porqué las aplicaciónes tienen colores qué estimulan la concentración',
-        'Porqué los modelos 3D son más bonitos qué los dibujos de los libros de texto'
+        'Porqué las aplicaciónes tienen colores que estimulan la concentración',
+        'Porqué los modelos 3D son más bonitos que los dibujos de los libros de texto'
       ],
       correct: 1
     },
@@ -222,7 +222,7 @@ export class LabEvaluacionComponent implements OnInit {
         'Ninguna; es mejor ver el objeto 3D primero para no generar confusión',
         'Activa los conocimientos previos del estudiante y genera curiosidad intrínseca antes de la exploración',
         'Reduce el tiempo de clase y permite avanzar más rápido en el currículo',
-        'Es un requésito téúnico para qué la aplicación funcione correctamente'
+        'Es un requisito téúnico para que la aplicación funcione correctamente'
       ],
       correct: 1
     },
@@ -232,33 +232,33 @@ export class LabEvaluacionComponent implements OnInit {
       options: [
         'Les simplifica los conceptos reduciéndolos a definiciones más cortas',
         'Les permite omitir las partes más complejas del currículo',
-        'Proporciona una representación 3D concreta qué funciona cómo andamiaje cognitivo para visualizar conceptos abstractos',
+        'Proporciona una representación 3D concreta que funciona cómo andamiaje cognitivo para visualizar conceptos abstractos',
         'Les entrega automáticamente las respuestas correctas sin necesidad de reflexionar'
       ],
       correct: 2
     },
     {
       id: 10,
-      text: '¿Cuál es la transformación más profunda qué el Merge Cube y herramientas similares producen en el rol del docente?',
+      text: '¿Cuál es la transformación más profunda que el Merge Cube y herramientas similares producen en el rol del docente?',
       options: [
         'El docente se convierte en téúnico de soporte para resolver problemas con los dispositivos',
-        'El docente pasa de ser un mero transmisor de información a un arquétecto de experiencias de aprendizaje',
-        'El docente deja de necesitar preparar clases porqué la app tiene todo el contenido',
-        'El docente se vuelve asistente del estudiante qué lidera la clase de forma completamente autónoma'
+        'El docente pasa de ser un mero transmisor de información a un arquitecto de experiencias de aprendizaje',
+        'El docente deja de necesitar preparar clases porque la app tiene todo el contenido',
+        'El docente se vuelve asistente del estudiante que lidera la clase de forma completamente autónoma'
       ],
       correct: 1
     }
   ];
 
-  quéverQuestions: Question[] = [
+  quiverQuestions: Question[] = [
     {
       id: 1,
-      text: 'Un docente quéere qué sus estudiantes experimenten la Realidad Aumentada sin necesidad de cascos ni equépos costosos. ¿Qué hace especial a QuiverVision cómo herramienta pedagógica?',
+      text: 'Un docente quiere que sus estudiantes experimenten la Realidad Aumentada sin necesidad de cascos ni equipos costosos. ¿Qué hace especial a QuiverVision cómo herramienta pedagógica?',
       options: [
-        'Es un software de Realidad Virtual qué requéere gafas especializadas de $500 USD',
-        'Es una plataforma de RA qué transforma dibujos coloreados en papel en modelos 3D animados e interactivos, conservando los colores originales del estudiante',
-        'Es una marca de crayones inteligentes qué proyectan hologramas en el aire',
-        'Es una impresora 3D qué reproduce los dibujos de los estudiantes en plástico'
+        'Es un software de Realidad Virtual que requiere gafas especializadas de $500 USD',
+        'Es una plataforma de RA que transforma dibujos coloreados en papel en modelos 3D animados e interactivos, conservando los colores originales del estudiante',
+        'Es una marca de crayones inteligentes que proyectan hologramas en el aire',
+        'Es una impresora 3D que reproduce los dibujos de los estudiantes en plástico'
       ],
       correct: 1
     },
@@ -266,9 +266,9 @@ export class LabEvaluacionComponent implements OnInit {
       id: 2,
       text: 'Durante una clase de Ciencias Naturales, un estudiante colorea un volcán en la plantilla de Quiver usando tonos rojos intensos para la lava y verdes oscuros para la vegetación. ¿Qué ocurre cuando se escanea el dibujo con la app?',
       options: [
-        'El volcán aparece en 3D con colores estándar predefinidos por la aplicación, ignorando lo qué pintó el estudiante',
+        'El volcán aparece en 3D con colores estándar predefinidos por la aplicación, ignorando lo que pintó el estudiante',
         'El dibujo se borra de la hoja y se convierte en una foto 2D en la pantalla',
-        'Aparece un volcán 3D animado qué conserva exactamente los rojos de la lava y verdes de la vegetación qué el estudiante eligió, con erupción interactiva',
+        'Aparece un volcán 3D animado que conserva exactamente los rojos de la lava y verdes de la vegetación que el estudiante eligió, con erupción interactiva',
         'Solo se muestra un código QR de verificación sin modelo 3D'
       ],
       correct: 2
@@ -286,9 +286,9 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 4,
-      text: 'Un investigador educativo observa qué los niños qué usan QuiverVision muestran mayor desarrollo en ciertas habilidades. ¿Qué competencias se fortalecen específicamente durante la fase de coloreado manual ANTES de la experiencia AR?',
+      text: 'Un investigador educativo observa que los niños que usan QuiverVision muestran mayor desarrollo en ciertas habilidades. ¿Qué competencias se fortalecen específicamente durante la fase de coloreado manual ANTES de la experiencia AR?',
       options: [
-        'Programación en bloqués y pensamiento computacional algorítmico',
+        'Programación en bloques y pensamiento computacional algorítmico',
         'Motricidad fina, expresión artística, atención al detalle y toma de decisiones estéticas sobre color y textura',
         'Lectura rápida y comprensión de textos académicos complejos',
         'Resolución de ecuaciones de segundo grado y geometría analítica'
@@ -299,19 +299,19 @@ export class LabEvaluacionComponent implements OnInit {
       id: 5,
       text: 'Al comparar QuiverVision con la Realidad Virtual pura, ¿cuál es la ventaja más significativa de Quiver para la educación infantil y primaria?',
       options: [
-        'Quiver es más costosa pero ofrece mejor calidad gráfica qué cuálquéer casco VR',
+        'Quiver es más costosa pero ofrece mejor calidad gráfica que cuálquier casco VR',
         'Quiver aísla completamente al niño del entorno real para máxima concentración',
         'Quiver fusiona una actividad manual tradicional (colorear con lápices reales) con la innovación digital, creando un puente entre lo analógico y lo tecnológico',
-        'Quiver requéere computadoras de alto rendimiento pero la experiencia es superior'
+        'Quiver requiere computadoras de alto rendimiento pero la experiencia es superior'
       ],
       correct: 2
     },
     {
       id: 6,
-      text: 'Una psicóloga escolar nota qué los estudiantes con baja autoestima mejoran su confianza al usar QuiverVision. ¿Cuál es el mecanismo psicológico qué explica este fenómeno?',
+      text: 'Una psicóloga escolar nota que los estudiantes con baja autoestima mejoran su confianza al usar QuiverVision. ¿Cuál es el mecanismo psicológico que explica este fenómeno?',
       options: [
         'La app les da recompensas monetarias virtuales por jugar rápido',
-        'Al ver qué SU PROPIA creación con sus colores únicos e irrepetibles cobra vida y se convierte en la protagonista de la experiencia, el niño experimenta confianza y orgullo creativo',
+        'Al ver que SU PROPIA creación con sus colores únicos e irrepetibles cobra vida y se convierte en la protagonista de la experiencia, el niño experimenta confianza y orgullo creativo',
         'La aplicación califica cada dibujo con notas del 1 al 10 y los mejores reciben premios',
         'La app compara automáticamente los dibujos entre compañeros y premia al "mejor artista"'
       ],
@@ -319,11 +319,11 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 7,
-      text: 'El docente Carlos quéere usar QuiverVision para enseñar educación emocional a sus alumnos de cuarto grado. ¿Qué estrategia pedagógica sería más efectiva?',
+      text: 'El docente Carlos quiere usar QuiverVision para enseñar educación emocional a sus alumnos de cuarto grado. ¿Qué estrategia pedagógica sería más efectiva?',
       options: [
         'Obligar a todos a colorear usando exclusivamente color gris para no generar distracciones',
-        'Pedir qué cada estudiante elija colores qué representen su estado de ánimo actual, coloree la plantilla, y luego, al ver la animación 3D, reflexione con el grupo sobre las emociones expresadas',
-        'Organizar una competencia cronometrada para ver quéén termina de colorear primero',
+        'Pedir que cada estudiante elija colores que representen su estado de ánimo actual, coloree la plantilla, y luego, al ver la animación 3D, reflexione con el grupo sobre las emociones expresadas',
+        'Organizar una competencia cronometrada para ver quién termina de colorear primero',
         'Esconder las tablets cómo castigo si algún estudiante se porta mal durante la actividad'
       ],
       correct: 1
@@ -332,19 +332,19 @@ export class LabEvaluacionComponent implements OnInit {
       id: 8,
       text: 'Quiver utiliza una tecnología específica para detectar las plantillas impresas. Si un estudiante colorea fuera de las líneas, ¿qué ocurre con el modelo 3D resultante?',
       options: [
-        'La aplicación se bloquéa y muestra un error porqué no puede reconocer la plantilla',
-        'El modelo 3D refleja fielmente esos trazos fuera de línea, mostrando la creación tal cómo el niño la hizo, gracias al reconocimiento de imágenes patentado qué mapea las texturas reales',
+        'La aplicación se bloquea y muestra un error porque no puede reconocer la plantilla',
+        'El modelo 3D refleja fielmente esos trazos fuera de línea, mostrando la creación tal cómo el niño la hizo, gracias al reconocimiento de imágenes patentado que mapea las texturas reales',
         'El dibujo se auto-corrige digitalmente y el modelo 3D aparece con líneas perfectas',
-        'El modelo pierde todo el color y se renderiza en blanco porqué el sistema no tolera imprecisiones'
+        'El modelo pierde todo el color y se renderiza en blanco porque el sistema no tolera imprecisiones'
       ],
       correct: 1
     },
     {
       id: 9,
-      text: 'Un docente de Matemáticas y Geometría descubre qué puede usar QuiverVision para enseñar cuerpos geométricos. ¿Qué permite específicamente visualizar la app en esta área?',
+      text: 'Un docente de Matemáticas y Geometría descubre que puede usar QuiverVision para enseñar cuerpos geométricos. ¿Qué permite específicamente visualizar la app en esta área?',
       options: [
         'Ecuaciones algebraicas complejas resueltas paso a paso con inteligencia artificial',
-        'La transición de redes planas 2D a poliedros sólidos 3D qué el estudiante puede rotar e inspeccionar desde todos los ángulos, comprendiendo caras, aristas y vértices',
+        'La transición de redes planas 2D a poliedros sólidos 3D que el estudiante puede rotar e inspeccionar desde todos los ángulos, comprendiendo caras, aristas y vértices',
         'La tabla de multiplicar cantada con ritmos musicales generados automáticamente',
         'Estadísticas avanzadas del rendimiento académico de toda la clase'
       ],
@@ -352,11 +352,11 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 10,
-      text: 'Al concluir una capacitación docente sobre QuiverVision, ¿cuál es la reflexión pedagógica más profunda qué debería llevarse cada educador?',
+      text: 'Al concluir una capacitación docente sobre QuiverVision, ¿cuál es la reflexión pedagógica más profunda que debería llevarse cada educador?',
       options: [
         'La tecnología debe eliminar por completo el uso de papel y lápices en las escuálas modernas',
         'La Realidad Aumentada es demasiado compleja para niños menores de 12 años',
-        'QuiverVision demuestra qué se puede crear un vínculo perfecto y significativo entre actividades analógicas manuales y la tecnología inmersiva, donde la creatividad del estudiante es el eje central',
+        'QuiverVision demuestra que se puede crear un vínculo perfecto y significativo entre actividades analógicas manuales y la tecnología inmersiva, donde la creatividad del estudiante es el eje central',
         'Colorear es una pérdida de tiempo en la era digital y debería reemplazarse por simulaciones 100% virtuales'
       ],
       correct: 2
@@ -366,12 +366,12 @@ export class LabEvaluacionComponent implements OnInit {
   actionboundQuestions: Question[] = [
     {
       id: 1,
-      text: 'La docente Lucía quéere sacar a sus alumnos del aula para una actividad innovadora de Historia. Descubre Actionbound. ¿Qué es exactamente esta plataforma y por qué podría transformar su clase?',
+      text: 'La docente Lucía quiere sacar a sus alumnos del aula para una actividad innovadora de Historia. Descubre Actionbound. ¿Qué es exactamente esta plataforma y por que podría transformar su clase?',
       options: [
         'Un software para hacer hojas de cálculo con datos históricos en la nube',
-        'Una plataforma qué permite crear "Bounds" (búsquédas del tesoro, rallies y aventuras gamificadas digitales) combinando el mundo físico real con elementos cómo GPS, códigos QR, cuestionarios y misiones multimedia',
+        'Una plataforma que permite crear "Bounds" (búsquedas del tesoro, rallies y aventuras gamificadas digitales) combinando el mundo físico real con elementos cómo GPS, códigos QR, cuestionarios y misiones multimedia',
         'Un videojuego de disparos ambientado en la Segunda Guerra Mundial',
-        'Una aplicación de dibujo colaborativo qué requéere conexión por cable'
+        'Una aplicación de dibujo colaborativo que requiere conexión por cable'
       ],
       correct: 1
     },
@@ -380,7 +380,7 @@ export class LabEvaluacionComponent implements OnInit {
       text: 'Para crear un Bound, el docente necesita dos elementos. ¿Cuáles son los componentes principales del ecosistema Actionbound y cuál es la función de cada uno?',
       options: [
         'Unas gafas VR para el diseño y un proyector holográfico para la ejecución',
-        'El "Bound Creator" (plataforma web donde el docente diseña la ruta con preguntas, GPS y contenido) y la "App Actionbound" (aplicación móvil qué los estudiantes usan para recorrer el Bound)',
+        'El "Bound Creator" (plataforma web donde el docente diseña la ruta con preguntas, GPS y contenido) y la "App Actionbound" (aplicación móvil que los estudiantes usan para recorrer el Bound)',
         'Un teclado especial de programación y un dron de vigilancia para los estudiantes',
         'Un microscopio digital para capturar imágenes y un casco de realidad mixta para verlas'
       ],
@@ -391,15 +391,15 @@ export class LabEvaluacionComponent implements OnInit {
       text: 'El profesor Daniel diseña un Bound sobre sitios patrimoniales del centro de la ciudad. Los estudiantes deben llegar físicamente a cada punto. ¿Qué tecnología principal usa Actionbound para guiarlos por el espacio real?',
       options: [
         'Cables de red conectados a un servidor central del colegio',
-        'Coordenadas GPS y la brújula del dispositivo móvil, qué les indican dirección y distancia a cada punto',
-        'Un sistema de megáfonos inalámbricos qué les grita las instrucciones',
-        'Proyectores holográficos instalados previamente en cada esquéna de la ciudad'
+        'Coordenadas GPS y la brújula del dispositivo móvil, que les indican dirección y distancia a cada punto',
+        'Un sistema de megáfonos inalámbricos que les grita las instrucciones',
+        'Proyectores holográficos instalados previamente en cada esquina de la ciudad'
       ],
       correct: 1
     },
     {
       id: 4,
-      text: 'En un Bound de Ciencias, al llegar a la huerta escolar, los estudiantes deben tomar una foto de una planta, grabar un audio explicando su ciclo de vida y responder un quéz. ¿Qué tipo de aprendizaje está fomentando esta actividad?',
+      text: 'En un Bound de Ciencias, al llegar a la huerta escolar, los estudiantes deben tomar una foto de una planta, grabar un audio explicando su ciclo de vida y responder un quiz. ¿Qué tipo de aprendizaje está fomentando esta actividad?',
       options: [
         'Aprendizaje memorístico y pasivo basado exclusivamente en la repetición de definiciones',
         'Aprendizaje basado en proyectos y aprendizaje cinestésico (en movimiento), donde el estudiante investiga, crea evidencia multimedia y resuelve retos en el lugar real',
@@ -410,10 +410,10 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 5,
-      text: 'La coordinadora académica quéere evaluar los resultados después de una actividad con Actionbound. ¿Qué herramienta de análisis ofrece la plataforma al docente?',
+      text: 'La coordinadora académica quiere evaluar los resultados después de una actividad con Actionbound. ¿Qué herramienta de análisis ofrece la plataforma al docente?',
       options: [
-        'Solo puede calificar observando directamente a cada equépo durante toda la actividad',
-        'Genera informes analíticos detallados post-actividad: respuestas de cada equépo, tiempos empleados, fotos y audios subidos, puntuaciones por sección, todo accesible desde la web',
+        'Solo puede calificar observando directamente a cada equipo durante toda la actividad',
+        'Genera informes analíticos detallados post-actividad: respuestas de cada equipo, tiempos empleados, fotos y audios subidos, puntuaciones por sección, todo accesible desde la web',
         'Envía automáticamente las notas al Ministerio de Educación sin intervención del docente',
         'No ofrece ningún tipo de analítica; el docente debe corregir todo manualmente en papel'
       ],
@@ -421,7 +421,7 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 6,
-      text: 'Un grupo de 4Â° grado juega un Bound en equépo. ¿Qué habilidades blandas se desarrollan cuando los estudiantes deben tomar decisiones juntos, repartirse tareas y navegar hacia los puntos?',
+      text: 'Un grupo de 4Â° grado juega un Bound en equipo. ¿Qué habilidades blandas se desarrollan cuando los estudiantes deben tomar decisiones juntos, repartirse tareas y navegar hacia los puntos?',
       options: [
         'Egoísmo individualista y competitividad destructiva entre compañeros',
         'Colaboración, delegación de tareas, comunicación efectiva, toma de decisiones conjuntas y liderazgo compartido',
@@ -434,40 +434,40 @@ export class LabEvaluacionComponent implements OnInit {
       id: 7,
       text: 'El docente esconde códigos QR por toda la escuála cómo parte de un rally de bienvenida para nuevos estudiantes ("Onboarding Escolar"). ¿Cómo integra los QR físicos dentro del Bound?',
       options: [
-        'No se pueden usar QR dentro de Actionbound porqué son tecnologías incompatibles',
+        'No se pueden usar QR dentro de Actionbound porque son tecnologías incompatibles',
         'Los QR solo sirven para descargar la aplicación, no para contenido educativo',
-        'El docente los esconde estratégicamente en el entorno y configura el Bound para qué los alumnos deban escanear cada código para desbloquéar la siguiente etapa, información o m La misión',
+        'El docente los esconde estratégicamente en el entorno y configura el Bound para que los alumnos deban escanear cada código para desbloquear la siguiente etapa, información o m La misión',
         'Los QR se usan exclusivamente para cobrar el pago de la licencia del software'
       ],
       correct: 2
     },
     {
       id: 8,
-      text: 'Un profesor de Educación Física nota qué sus estudiantes pasan demasiado tiempo sentados. ¿De qué forma Actionbound combate el sedentarismo en la vida escolar?',
+      text: 'Un profesor de Educación Física nota que sus estudiantes pasan demasiado tiempo sentados. ¿De que forma Actionbound combate el sedentarismo en la vida escolar?',
       options: [
-        'Actionbound fomenta el sedentarismo porqué los estudiantes solo miran pantallas sentados',
+        'Actionbound fomenta el sedentarismo porque los estudiantes solo miran pantallas sentados',
         'Solo aumenta los problemas visuales por uso prolongado de dispositivos móviles',
-        'Al requérir desplazamiento físico real hacia puntos GPS, promueve activamente el movimiento, la exploración del entorno y combate el sedentarismo digital',
+        'Al requerir desplazamiento físico real hacia puntos GPS, promueve activamente el movimiento, la exploración del entorno y combate el sedentarismo digital',
         'No tiene absolutamente ningún impacto en la salud física de los participantes'
       ],
       correct: 2
     },
     {
       id: 9,
-      text: 'La innovación pedagógica más potente de Actionbound es invertir los roles: pedir a los propios estudiantes qué CREEN un Bound. ¿Cuál es el valor educativo de esta estrategia?',
+      text: 'La innovación pedagógica más potente de Actionbound es invertir los roles: pedir a los propios estudiantes que CREEN un Bound. ¿Cuál es el valor educativo de esta estrategia?',
       options: [
-        'Es simplemente una excusa para qué el profesor no tenga qué trabajar en la planificación',
+        'Es simplemente una excusa para que el profesor no tenga que trabajar en la planificación',
         'Activa habilidades cognitivas de orden superior: síntesis de contenido, estructuración lógica de secuencias, diseño de experiencia de usuario y empatía con el participante',
-        'Es una forma de castigo para los estudiantes qué no terminaron sus tareas',
-        'Solo sirve para qué gasten la batería de sus dispositivos y se distraigan'
+        'Es una forma de castigo para los estudiantes que no terminaron sus tareas',
+        'Solo sirve para que gasten la batería de sus dispositivos y se distraigan'
       ],
       correct: 1
     },
     {
       id: 10,
-      text: 'Al cerrar la capacitación sobre Actionbound, ¿cuál es la transformación más profunda qué esta herramienta representa para la educación?',
+      text: 'Al cerrar la capacitación sobre Actionbound, ¿cuál es la transformación más profunda que esta herramienta representa para la educación?',
       options: [
-        'El uso de pantallas y dispositivos móviles siempre significa quédarse sentado en un escritorio',
+        'El uso de pantallas y dispositivos móviles siempre significa quedarse sentado en un escritorio',
         'La escuála ya no termina en las cuatro paredes del aula: con Actionbound el mundo real se convierte en el tablero de juego, contextualizando el aprendizaje en los lugares donde la teoría cobra vida',
         'Actionbound solo es útil para las clases de Educación Física y no tiene aplicación en otras materias',
         'Los docentes no deberían usar GPS por cuestiones de privacidad y la tecnología debería prohibirse'
@@ -479,43 +479,43 @@ export class LabEvaluacionComponent implements OnInit {
   metaversoQuestions: Question[] = [
     {
       id: 1,
-      text: 'El rector de un colegio escucha por primera vez el término "Metaverso educativo" y quéere entender de qué se trata. ¿Cuál es la definición más precisa en un contexto de enseñanza?',
+      text: 'El rector de un colegio escucha por primera vez el término "Metaverso educativo" y quiere entender de que se trata. ¿Cuál es la definición más precisa en un contexto de enseñanza?',
       options: [
-        'Un libro de texto digital en formato PDF qué se lee en una tablet',
+        'Un libro de texto digital en formato PDF que se lee en una tablet',
         'La evolución del internet hacia espacios virtuales tridimensionales y compartidos donde estudiantes y docentes ârepresentados por avataresâ pueden interactuar, colaborar y aprender cómo si estuvieran juntos físicamente',
         'Una red social exclusiva para profesores donde comparten temas educativos',
-        'Un sistema automatizado de calificaciones qué reemplaza al docente'
+        'Un sistema automatizado de calificaciones que reemplaza al docente'
       ],
       correct: 1
     },
     {
       id: 2,
-      text: 'Un estudiante se pone las gafas Meta Quest y reporta qué "siente qué realmente está en el fondo del océano". ¿Cómo se denomina este fenómeno neurológico qué distingue a la VR de cuálquéer otra tecnología educativa?',
+      text: 'Un estudiante se pone las gafas Meta Quest y reporta que "siente que realmente está en el fondo del océano". ¿Cómo se denomina este fenómeno neurológico que distingue a la VR de cuálquier otra tecnología educativa?',
       options: [
         'Efecto placebo tecnológico sin base científica',
         '"Sentido de Presencia": la reacción genuina del cerebro ante la experiencia virtual cómo si estuviera ocurriendo realmente, activando las respuestas emocionales y cognitivas',
         'Hipnosis digital inducida por las pantallas de alta resolución',
-        'Un simple efecto visual qué desaparece al quétarse las gafas'
+        'Un simple efecto visual que desaparece al quitarse las gafas'
       ],
       correct: 1
     },
     {
       id: 3,
-      text: 'En el Metaverso, cada participante necesita una identidad digital. ¿Cómo se representa un estudiante dentro de estos espacios virtuales y qué capacidades tiene esa representación?',
+      text: 'En el Metaverso, cada participante necesita una identidad digital. ¿Cómo se representa un estudiante dentro de estos espacios virtuales y que capacidades tiene esa representación?',
       options: [
         'A través de un código de barras numérico sin forma visual',
-        'Mediante un "Avatar" personalizable qué replica en tiempo real sus movimientos de cabeza, manos y expresiones faciales, permitiendo comunicación no verbal natural',
-        'Como un texto plano qué muestra su nombre en la pantalla sin ninguna forma humana',
+        'Mediante un "Avatar" personalizable que replica en tiempo real sus movimientos de cabeza, manos y expresiones faciales, permitiendo comunicación no verbal natural',
+        'Como un texto plano que muestra su nombre en la pantalla sin ninguna forma humana',
         'No tienen representación visual; solo se escucha su voz cómo en una llamada telefónica'
       ],
       correct: 1
     },
     {
       id: 4,
-      text: 'La profesora Ana quéere hacer una clase colaborativa donde sus estudiantes manipulen modelos 3D en una pizarra infinita. ¿Qué plataforma de Meta permite exactamente esto?',
+      text: 'La profesora Ana quiere hacer una clase colaborativa donde sus estudiantes manipulen modelos 3D en una pizarra infinita. ¿Qué plataforma de Meta permite exactamente esto?',
       options: [
         'Facebook Marketplace, un espacio de comercio electrÃúnico',
-        'Horizon Workrooms, un espacio virtual colaborativo donde clases y equépos se reúnen mediante avatares, comparten pantallas, dibujan en pizarras y manipulan objetos 3D',
+        'Horizon Workrooms, un espacio virtual colaborativo donde clases y equipos se reúnen mediante avatares, comparten pantallas, dibujan en pizarras y manipulan objetos 3D',
         'WhatsApp Business, un servicio de mensajería comercial',
         'Instagram Reels, una plataforma de videos cortos verticales'
       ],
@@ -523,11 +523,11 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 5,
-      text: 'Un neurólogo escolar recomienda la VR para estudiantes con TDAH (déficit de atención e hiperactividad). ¿Cuál es el mecanismo qué hace efectiva esta tecnología para estos estudiantes?',
+      text: 'Un neurólogo escolar recomienda la VR para estudiantes con TDAH (déficit de atención e hiperactividad). ¿Cuál es el mecanismo que hace efectiva esta tecnología para estos estudiantes?',
       options: [
         'Les permite jugar videojuegos de acción en clase para canalizar su energía',
-        'Al bloquéar los estímulos visuales y sonoros del mundo físico, la VR reduce radicalmente las distracciones externas, creando un entorno de concentración pura',
-        'Hace qué el profesor hable más fuerte a través de los altavoces del visor',
+        'Al bloquear los estímulos visuales y sonoros del mundo físico, la VR reduce radicalmente las distracciones externas, creando un entorno de concentración pura',
+        'Hace que el profesor hable más fuerte a través de los altavoces del visor',
         'No tiene ninguna ventaja; de hecho la VR empeora los síntomas del TDAH'
       ],
       correct: 1
@@ -539,7 +539,7 @@ export class LabEvaluacionComponent implements OnInit {
         'Sumergir físicamente el visor en agua para probar su resistencia antes de usarlo',
         'Sesiones cortas de 10-15 minutos enfocadas en un solo objetivo pedagógico, seguidas de un debate y reflexión en el mundo real, para evitar fatiga visual y maximizar el impacto',
         'Dejar a los estudiantes usando el visor durante 5 horas continuas para máxima inmersión',
-        'Usar gafas de tamaño reducido qué permiten leer textos tradicionales'
+        'Usar gafas de tamaño reducido que permiten leer textos tradicionales'
       ],
       correct: 1
     },
@@ -548,7 +548,7 @@ export class LabEvaluacionComponent implements OnInit {
       text: 'En una clase de Anatomía, los estudiantes "entran" virtualmente al torrente sanguíneo y "caminan" entre glóbulos rojos. ¿Qué hace posible este tipo de experiencia educativa imposible en el mundo real?',
       options: [
         'Solo están viendo una presentación de PowerPoint proyectada en la pared',
-        'La VR permite simular entornos a cuálquéer escala: los estudiantes pueden meterse virtualmente dentro de órganos, diseccionar estructuras a escala real y observar procesos biológicos en primera persona',
+        'La VR permite simular entornos a cualquier escala: los estudiantes pueden meterse virtualmente dentro de órganos, diseccionar estructuras a escala real y observar procesos biológicos en primera persona',
         'Están escuchando una conferencia de un médico por teléfono mientras ven diapositivas',
         'Están dibujando en la pizarra tradicional con tizas de colores'
       ],
@@ -556,11 +556,11 @@ export class LabEvaluacionComponent implements OnInit {
     },
     {
       id: 8,
-      text: 'Un colegio rural colombiano quéere qué sus estudiantes "visiten" el Museo del Louvre en París. ¿A qué concepto del Metaverso educativo se refiere esta posibilidad?',
+      text: 'Un colegio rural colombiano quiere que sus estudiantes "visiten" el Museo del Louvre en París. ¿A qué concepto del Metaverso educativo se refiere esta posibilidad?',
       options: [
-        'A organizar una votación digital sobre qué museo visitar y financiar el viaje',
-        '"Democratización de Experiencias": viajes, visitas y simulaciones qué serían imposibles o prohibitivamente costosos se vuelven accesibles para cuálquéer escuála conectada al Metaverso',
-        'A qué toda la tecnología educativa es completamente gratuita sin ningún costo',
+        'A organizar una votación digital sobre que museo visitar y financiar el viaje',
+        '"Democratización de Experiencias": viajes, visitas y simulaciones que serían imposibles o prohibitivamente costosos se vuelven accesibles para cuálquier escuála conectada al Metaverso',
+        'A que toda la tecnología educativa es completamente gratuita sin ningún costo',
         'A jugar un videojuego de trivia sobre museos europeos'
       ],
       correct: 1
@@ -572,7 +572,7 @@ export class LabEvaluacionComponent implements OnInit {
         'Teclados inalámbricos Bluetooth adaptados especialmente para VR',
         'Hand Tracking (seguimiento de manos): las cámaras del visor detectan y rastrean los movimientos de los dedos y las manos en tiempo real, permitiendo interacción natural',
         'Comandos de voz donde el usuario grita las instrucciones al dispositivo',
-        'Sensores de parpadeo qué interpretan el movimiento de los ojos cómo clics'
+        'Sensores de parpadeo que interpretan el movimiento de los ojos cómo clics'
       ],
       correct: 1
     },
@@ -580,10 +580,10 @@ export class LabEvaluacionComponent implements OnInit {
       id: 10,
       text: 'Al implementar el Metaverso en la escuála, la rectora pregunta: "¿Qué riesgos éticos debemos considerar?" ¿Cuál es la respuesta más completa?',
       options: [
-        'El Ãúnico riesgo es qué los avatares usen sombreros inapropiados en el espacio virtual',
-        'Se deben establecer normas claras de comportamiento en entornos virtuales, proteger los datos biométricos qué capturan los sensores, controlar los tiempos de exposición para evitar fatiga, y garantizar qué la VR complemente (nunca reemplace) la interacción humana presencial',
+        'El Ãúnico riesgo es que los avatares usen sombreros inapropiados en el espacio virtual',
+        'Se deben establecer normas claras de comportamiento en entornos virtuales, proteger los datos biométricos que capturan los sensores, controlar los tiempos de exposición para evitar fatiga, y garantizar que la VR complemente (nunca reemplace) la interacción humana presencial',
         'Solo es necesario permitir el uso de VR fuera del horario escolar sin supervisión',
-        'No existen riesgos éticos porqué la tecnología es completamente segura por defecto'
+        'No existen riesgos éticos porque la tecnología es completamente segura por defecto'
       ],
       correct: 1
     }
@@ -706,11 +706,11 @@ export class LabEvaluacionComponent implements OnInit {
   private attemptCount = 0;
 
   constructor(
-    private route:          ActivatedRoute,
-    private evalService:    EvaluationService,
+    private route: ActivatedRoute,
+    private evalService: EvaluationService,
     private progressService: ProgressService,
-    private authService:    AuthService,
-    private gamification:   GamificationService,
+    private authService: AuthService,
+    private gamification: GamificationService,
   ) { }
 
   ngOnInit(): void {
@@ -728,7 +728,7 @@ export class LabEvaluacionComponent implements OnInit {
   getQuestions(): Question[] {
     if (this.labId === '1') return this.introduccionQuestions;
     if (this.labId === '2') return this.mergeCubeQuestions;
-    if (this.labId === '3') return this.quéverQuestions;
+    if (this.labId === '3') return this.quiverQuestions;
     if (this.labId === '4') return this.actionboundQuestions;
     if (this.labId === '5') return this.metaversoQuestions;
     if (this.labId === '6') return this.visualizadorQuestions;
@@ -750,11 +750,11 @@ export class LabEvaluacionComponent implements OnInit {
     this.submitted = true;
     this.attemptCount++;
 
-    const user     = this.authService.getCurrentUser();
-    const userId   = user?.userId   ?? 'anon';
+    const user = this.authService.getCurrentUser();
+    const userId = user?.userId ?? 'anon';
     const username = user?.displayName ?? user?.username ?? 'Docente Anónimo';
-    const labNum   = parseInt(this.labId || '0');
-    const pct      = this.getPercentage();
+    const labNum = parseInt(this.labId || '0');
+    const pct = this.getPercentage();
 
     // ── 1. Marcar misión como completada (progreso + backend) ─────────────────
     if (this.labId) {
@@ -777,21 +777,21 @@ export class LabEvaluacionComponent implements OnInit {
     // ── 4. Guardar resultado de evaluación en backend ─────────────────────────
     const labName: Record<string, string> = {
       '1': 'Introducción', '2': 'Merge Cube', '3': 'QuiverVision',
-      '4': 'Actionbound',  '5': 'Metaverso Meta', '6': 'Visualizador de Modelos 3D',
+      '4': 'Actionbound', '5': 'Metaverso Meta', '6': 'Visualizador de Modelos 3D',
       '7': 'Modelo con Geoposición',
     };
 
     this.evalService.saveResult({
       userId,
       username,
-      labId:          labNum,
-      labName:        labName[this.labId || '1'] || 'Desconocido',
-      score:          this.score,
+      labId: labNum,
+      labName: labName[this.labId || '1'] || 'Desconocido',
+      score: this.score,
       totalQuestions: this.totalQuestions,
-      percentage:     pct,
-      answers:        this.answers,
+      percentage: pct,
+      answers: this.answers,
     }).subscribe({
-      next:  () => console.log(`[RaInClass] Evaluación misión ${labNum} guardada (${pct}%)`),
+      next: () => console.log(`[RaInClass] Evaluación misión ${labNum} guardada (${pct}%)`),
       error: (err) => console.warn('[RaInClass] No se pudo guardar en backend:', err),
     });
   }
@@ -801,8 +801,8 @@ export class LabEvaluacionComponent implements OnInit {
   }
 
   retryEvaluation() {
-    this.answers   = {};
+    this.answers = {};
     this.submitted = false;
-    this.score     = 0;
+    this.score = 0;
   }
 }
