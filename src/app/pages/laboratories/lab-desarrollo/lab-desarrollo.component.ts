@@ -39,12 +39,12 @@ export class LabDesarrolloComponent implements OnInit, OnDestroy {
   // Shared model map (used by both Lab 5 and Lab 6)
     models: ModelInfo[] = [
     {
-      name: 'Lenguaje',
+      name: 'Escultura "El Principito"',
       subject: 'Lenguaje',
       icon: '📖',
       modelPath: '/assets/models/pixellabs-skull-potion-3558.glb',
       color: '#ef4444',
-      description: 'Modelo 3D para la asignatura de Lenguaje. Explora el mundo de las palabras y la gramática.',
+      description: 'Escultura 3D interactiva de "El Principito" para la asignatura de Lenguaje. Explora el clásico literario de Antoine de Saint-Exupéry en tres dimensiones.',
       markerId: 0
     },
     {

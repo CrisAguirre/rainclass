@@ -854,7 +854,26 @@
     </div>
 
     <div class="glass-panel model-container">
-      <model-viewer
+      <!-- Visor embebido de Sketchfab para la asignatura de Lenguaje (Escultura "El Principito") -->
+      <div *ngIf="scannedModel.subject === 'Lenguaje'" class="sketchfab-embed-container" style="width: 100%; height: 450px; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 8px 25px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1);">
+        <iframe 
+          title="Escultura &quot;El Principito&quot;" 
+          frameborder="0" 
+          allowfullscreen 
+          mozallowfullscreen="true" 
+          webkitallowfullscreen="true" 
+          allow="autoplay; fullscreen; xr-spatial-tracking" 
+          xr-spatial-tracking 
+          execution-while-out-of-viewport 
+          execution-while-not-rendered 
+          web-share 
+          src="https://sketchfab.com/models/2a1de213dfc74d7abaf248f3066adfff/embed"
+          style="width: 100%; height: 100%; border: none;">
+        </iframe>
+      </div>
+
+      <!-- Visor model-viewer nativo para las demás asignaturas -->
+      <model-viewer *ngIf="scannedModel.subject !== 'Lenguaje'"
         [attr.src]="scannedModel.modelPath"
         alt="Modelo 3D de {{ scannedModel.subject }}"
         auto-rotate
@@ -863,10 +882,12 @@
         shadow-intensity="1"
         style="width: 100%; height: 450px; border-radius: 12px; background: radial-gradient(ellipse at center, #1a2744 0%, #0a1628 100%);">
       </model-viewer>
+
       <div class="model-controls-hint">
-        <span>🖱️ Arrastra para rotar</span>
-        <span>🔍 Scroll para zoom</span>
-        <span>👆 Pellizca para escalar (móvil)</span>
+        <span *ngIf="scannedModel.subject !== 'Lenguaje'">🖱️ Arrastra para rotar</span>
+        <span *ngIf="scannedModel.subject !== 'Lenguaje'">🔍 Scroll para zoom</span>
+        <span *ngIf="scannedModel.subject !== 'Lenguaje'">👆 Pellizca para escalar (móvil)</span>
+        <span *ngIf="scannedModel.subject === 'Lenguaje'" style="color: var(--accent-color); font-weight: 500;">✨ ¡Modelo premium Sketchfab! Usa los controles interactivos integrados para rotar, hacer zoom y explorar la escultura.</span>
       </div>
     </div>
 
