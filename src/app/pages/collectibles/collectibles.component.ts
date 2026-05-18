@@ -152,4 +152,19 @@ export class CollectiblesComponent implements OnInit, OnDestroy {
   }
 
   get earnedCount(): number { return this.myCollectibles.filter(c => c.earned).length; }
+
+  // Variables para la visualización del modelo 3D
+  selectedCollectible: Collectible | null = null;
+
+  openCollectibleModel(c: Collectible): void {
+    // Solo mostramos el modelo si el coleccionable ha sido ganado
+    const validIds = ['c1', 'c2', 'c3', 'c4', 'c5', 'c7', 'c8'];
+    if (c.earned && validIds.includes(c.id)) {
+      this.selectedCollectible = c;
+    }
+  }
+
+  closeCollectibleModel(): void {
+    this.selectedCollectible = null;
+  }
 }

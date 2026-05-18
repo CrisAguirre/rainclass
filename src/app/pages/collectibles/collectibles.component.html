@@ -16,7 +16,7 @@
       <span class="summary-label">/ {{ myCollectibles.length }} coleccionables</span>
     </div>
     <div class="collectibles-grid">
-      <div *ngFor="let c of myCollectibles" class="glass-panel collectible-card" [class.earned]="c.earned" [class.locked]="!c.earned" [class]="'rarity-' + c.rarity">
+      <div *ngFor="let c of myCollectibles" class="glass-panel collectible-card" [class.earned]="c.earned" [class.locked]="!c.earned" [class]="'rarity-' + c.rarity" (click)="openCollectibleModel(c)" [style.cursor]="c.earned && ['c1', 'c2', 'c3', 'c4', 'c5', 'c7', 'c8'].includes(c.id) ? 'pointer' : 'default'">
         <div class="rarity-tag">{{ rarityLabel(c.rarity) }}</div>
         <div class="col-icon">{{ c.icon }}</div>
         <h4>{{ c.name }}</h4>
@@ -47,4 +47,96 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal 3D Model -->
+  <div class="modal-overlay" *ngIf="selectedCollectible" (click)="closeCollectibleModel()">
+    <div class="modal-content glass-panel" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeCollectibleModel()">✕</button>
+      <h3 style="margin-top: 0;">Modelo 3D: {{ selectedCollectible.name }}</h3>
+      
+      <!-- Cubo Mágico -->
+      <div *ngIf="selectedCollectible.id === 'c1'">
+        <div class="sketchfab-embed-wrapper" style="width: 100%; height: 450px; margin-top: 15px; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 8px 25px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1);">
+          <iframe title="Cubo Mágico" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/c8fd841af430440ba197330deef21171/embed" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+        <p style="font-size: 13px; font-weight: normal; margin-top: 15px; margin-bottom: 0; color: var(--text-secondary); text-align: center;"> 
+          <a href="https://sketchfab.com/3d-models/cubo-magico-c8fd841af430440ba197330deef21171" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);"> Cubo Mágico </a> by <a href="https://sketchfab.com/Cosmik" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);"> Cosmik </a> on <a href="https://sketchfab.com" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);">Sketchfab</a>
+        </p>
+      </div>
+
+      <!-- Pincel Digital -->
+      <div *ngIf="selectedCollectible.id === 'c2'">
+        <div class="sketchfab-embed-wrapper" style="width: 100%; height: 450px; margin-top: 15px; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 8px 25px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1);">
+          <iframe title="PINCEL" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/6c86165908434cc78f05d1f17fac81c2/embed" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+        <p style="font-size: 13px; font-weight: normal; margin-top: 15px; margin-bottom: 0; color: var(--text-secondary); text-align: center;"> 
+          <a href="https://sketchfab.com/3d-models/pincel-6c86165908434cc78f05d1f17fac81c2" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);"> PINCEL </a> by <a href="https://sketchfab.com/Georgina_Tugores" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);"> Georgina_Tugores </a> on <a href="https://sketchfab.com" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);">Sketchfab</a>
+        </p>
+      </div>
+
+      <!-- Mapa del Tesoro -->
+      <div *ngIf="selectedCollectible.id === 'c3'">
+        <model-viewer
+          src="assets/models/treasure_map.glb"
+          alt="Modelo 3D del Mapa del Tesoro"
+          auto-rotate
+          camera-controls
+          touch-action="pan-y"
+          shadow-intensity="1"
+          style="width: 100%; height: 450px; margin-top: 15px; border-radius: 12px; background: radial-gradient(ellipse at center, #1a2744 0%, #0a1628 100%);">
+        </model-viewer>
+        <p style="font-size: 13px; font-weight: normal; margin-top: 15px; margin-bottom: 0; color: var(--text-secondary); text-align: center;"> 
+          <span>Explora el Mapa del Tesoro en 3D</span>
+        </p>
+      </div>
+
+      <!-- Visor VR -->
+      <div *ngIf="selectedCollectible.id === 'c4'">
+        <div class="sketchfab-embed-wrapper" style="width: 100%; height: 450px; margin-top: 15px; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 8px 25px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1);">
+          <iframe title="Futuristic Neon Visor" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/0bd5e8860c244442802a4c01b6b327cd/embed" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+        <p style="font-size: 13px; font-weight: normal; margin-top: 15px; margin-bottom: 0; color: var(--text-secondary); text-align: center;"> 
+          <a href="https://sketchfab.com/3d-models/futuristic-neon-visor-0bd5e8860c244442802a4c01b6b327cd" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);"> Futuristic Neon Visor </a> by <a href="https://sketchfab.com/isaackgamma" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);"> Isaack - Tacko The 3D Guy </a> on <a href="https://sketchfab.com" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);">Sketchfab</a>
+        </p>
+      </div>
+
+      <!-- Generador RA -->
+      <div *ngIf="selectedCollectible.id === 'c5'">
+        <div class="sketchfab-embed-wrapper" style="width: 100%; height: 450px; margin-top: 15px; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 8px 25px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1);">
+          <iframe title="Sci-Fi Composer Unit" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/15c25a18540b476d8a9b1fcfa2a5c16a/embed" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+        <p style="font-size: 13px; font-weight: normal; margin-top: 15px; margin-bottom: 0; color: var(--text-secondary); text-align: center;"> 
+          <a href="https://sketchfab.com/3d-models/sci-fi-composer-unit-15c25a18540b476d8a9b1fcfa2a5c16a" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);"> Sci-Fi Composer Unit </a> by <a href="https://sketchfab.com/ghilby" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);"> Glennosaurus </a> on <a href="https://sketchfab.com" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);">Sketchfab</a>
+        </p>
+      </div>
+
+      <!-- Mente Brillante -->
+      <div *ngIf="selectedCollectible.id === 'c7'">
+        <div class="sketchfab-embed-wrapper" style="width: 100%; height: 450px; margin-top: 15px; border-radius: 12px; overflow: hidden; background: #000; box-shadow: 0 8px 25px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.1);">
+          <iframe title="Bombilla" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/837fed3768a541eca43632de88d0caf4/embed" style="width: 100%; height: 100%; border: none;"></iframe>
+        </div>
+        <p style="font-size: 13px; font-weight: normal; margin-top: 15px; margin-bottom: 0; color: var(--text-secondary); text-align: center;"> 
+          <a href="https://sketchfab.com/3d-models/bombilla-837fed3768a541eca43632de88d0caf4" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);"> Bombilla </a> by <a href="https://sketchfab.com/.Sammael." target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);"> Sammael </a> on <a href="https://sketchfab.com" target="_blank" rel="nofollow" style="font-weight: bold; color: var(--accent-primary);">Sketchfab</a>
+        </p>
+      </div>
+
+      <!-- Coleccionista -->
+      <div *ngIf="selectedCollectible.id === 'c8'">
+        <model-viewer
+          src="assets/models/gold_star.glb"
+          alt="Modelo 3D de Estrella Dorada Coleccionista"
+          auto-rotate
+          camera-controls
+          touch-action="pan-y"
+          shadow-intensity="1"
+          style="width: 100%; height: 450px; margin-top: 15px; border-radius: 12px; background: radial-gradient(ellipse at center, #1a2744 0%, #0a1628 100%);">
+        </model-viewer>
+        <p style="font-size: 13px; font-weight: normal; margin-top: 15px; margin-bottom: 0; color: var(--text-secondary); text-align: center;"> 
+          <span>Explora la Estrella de Coleccionista en 3D</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
 </div>
